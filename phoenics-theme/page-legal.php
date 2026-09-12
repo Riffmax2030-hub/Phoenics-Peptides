@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Use Conditions, Delivery Directions & Disclaimer | Phoenics Peptide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --slate-50: #F8FAFC; --slate-100: #F1F5F9; --slate-200: #E2E8F0;
+            --slate-600: #475569; --slate-700: #334155; --slate-900: #0F172A;
+            --sapphire: #2563EB; --emerald: #059669; --amber: #D97706; --crimson: #DC2626;
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-ui: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #fff; color: var(--slate-700); font-family: var(--font-body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+        header { background: var(--slate-900); color: #fff; padding: 18px 0; }
+        .hdr-flex { display: flex; justify-content: space-between; align-items: center; }
+        .hdr-brand { font-family: var(--font-display); font-size: 22px; font-weight: 700; }
+        .hdr-back { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: #7DD3FC; text-decoration: none; }
+        .hero-banner { background: linear-gradient(135deg, #0F172A, #1E3A5F); color: #fff; padding: 60px 0 50px; border-bottom: 4px solid var(--sapphire); }
+        .tag { font-family: var(--font-ui); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #93C5FD; margin-bottom: 10px; }
+        h1 { font-family: var(--font-display); font-size: 44px; font-weight: 700; margin-bottom: 12px; }
+        .protocol-box { background: #ECFDF5; border-left: 4px solid var(--emerald); padding: 20px 24px; margin: 35px 0 25px; border-radius: 0 8px 8px 0; }
+        .section-block { margin-bottom: 44px; padding-bottom: 36px; border-bottom: 1px solid var(--slate-200); }
+        .section-block:last-child { border-bottom: none; }
+        h2 { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--slate-900); margin-bottom: 14px; }
+        p { margin-bottom: 14px; color: var(--slate-600); }
+        ul { padding-left: 20px; margin-bottom: 14px; }
+        li { margin-bottom: 8px; color: var(--slate-600); }
+        .card-box { background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 18px 20px; margin-bottom: 16px; }
+        .card-box h3 { font-family: var(--font-ui); font-size: 14px; font-weight: 700; color: var(--slate-900); margin-bottom: 6px; }
+        footer { background: var(--slate-900); color: #64748B; text-align: center; padding: 24px; font-size: 13px; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container hdr-flex">
+        <a href="index.html">
+            <img src="assets/images/logo-white.svg" alt="Phoenics Peptide" style="height:44px;" onerror="this.src='assets/images/logo.svg';">
+        </a>
+        <div style="display:flex;gap:20px;align-items:center;">
+            
+            <a href="index.html" class="hdr-back">&larr; Return to Storefront</a>
+        </div>
+    </div>
+</header>
+
+<div class="hero-banner">
+    <div class="container">
+        <div class="tag">SAFE USE &amp; PROTOCOL FRAMEWORK</div>
+        <h1>Safe Use Conditions, Delivery Directions<br>&amp; Quality Standards</h1>
+        <p style="color:#94A3B8;">Effective Date: September 2026 &bull; Verified Analytical Purity &ge;99.0% with Detailed Protocols.</p>
+    </div>
+</div>
+
+<div class="container" style="padding-top: 20px; padding-bottom: 60px;">
+
+    <div class="protocol-box">
+        <strong style="color:var(--emerald);font-family:var(--font-ui);font-size:14px;display:block;margin-bottom:6px;">📦 DIRECTIONS INCLUDED WITH DELIVERY</strong>
+        <p style="color:#065F46;font-size:14px;margin:0;">Every Phoenics Peptide shipment includes detailed, step-by-step printed instructions covering <strong>sterile reconstitution protocols, dilution ratios with bacteriostatic water, cold-storage maintenance, and safe handling procedures</strong>. Materials are formulated for research, biological assays, and personal wellness protocols.</p>
+    </div>
+
+    <div class="section-block">
+        <h2>🔬 1. Scope of Use: Research &amp; Personal Wellness</h2>
+        <p>Phoenics Peptide provides analytical-grade, third-party validated peptide compounds for both scientific laboratory research and individual wellness protocols.</p>
+        <p>By purchasing from Phoenics Peptide, you acknowledge and agree that:</p>
+        <ul>
+            <li>You are at least <strong>18 years of age</strong> and legally capable of receiving peptide compounds in your jurisdiction.</li>
+            <li>You agree to review and strictly adhere to the printed reconstitution and handling directions provided with your shipment before opening any vial.</li>
+            <li>You will maintain proper climate-controlled storage (dry lyophilized powder at -20°C, and reconstituted solution at 2°C to 8°C in sterile refrigeration).</li>
+            <li>You assume full informed responsibility for following sterile reconstitution procedures using pharmaceutical-grade bacteriostatic water.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <h2>📋 2. Delivery &amp; Reconstitution Directions</h2>
+        <p>To ensure safe and effective handling, each product package is accompanied by complete documentation:</p>
+        <div class="card-box">
+            <h3>Sterile Preparation Protocols</h3>
+            <p style="margin:0;font-size:13.5px;">Step-by-step guidance on sterilizing rubber stoppers, introducing bacteriostatic water slowly down the vial glass wall to avoid foaming, and allowing complete natural dissolution without agitation.</p>
+        </div>
+        <div class="card-box">
+            <h3>Calculated Dilution Ratios</h3>
+            <p style="margin:0;font-size:13.5px;">Accurate conversion tables (e.g. 2.0mL bacteriostatic water in a 10mg vial yielding 500mcg per 0.1mL unit) for precise measurement and zero dosage errors.</p>
+        </div>
+        <div class="card-box">
+            <h3>Cold-Chain &amp; Shelf Life Instructions</h3>
+            <p style="margin:0;font-size:13.5px;">Clear expiration and stability timelines: lyophilized cakes remain stable for up to 24 months at -20°C; reconstituted solutions should be used within 30 to 45 days when kept refrigerated.</p>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>⚖️ 3. Analytical Purity &amp; Quality Guarantee</h2>
+        <p>Public health reports have demonstrated that lower-tier online suppliers frequently distribute peptides with significant dosage errors (ranging from 50% to 200% of labeled content) and questionable purities. Phoenics Peptide sets the benchmark for quality:</p>
+        <ul>
+            <li><strong>Exact Mass Calibration:</strong> Quantitative chromatography verifies that each vial contains the precise labeled mass (&plusmn;1% tolerance).</li>
+            <li><strong>Single-Peak RP-HPLC:</strong> Mean analytical purity exceeds &ge;99.0%, ensuring the absence of synthesis deletion sequences or residual solvents.</li>
+            <li><strong>High-Resolution ESI-MS:</strong> Mass spectrometry validates the exact molecular weight and amino acid sequence against theoretical standards.</li>
+            <li><strong>Cleanroom Lyophilization:</strong> Sealed under nitrogen in USP Type 1 borosilicate glass with chlorobutyl rubber stoppers.</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <h2>⚠️ 4. Health &amp; Medical Disclaimer</h2>
+        <p>Phoenics Peptide provides high-purity chemical and peptide formulations. The information on this website and in our accompanying documentation is for educational, scientific, and protocol guidance purposes. It is not intended to replace professional medical advice, diagnose medical conditions, or promise cure of disease.</p>
+        <p>Individuals engaging in personal wellness protocols should exercise informed discretion and are encouraged to consult knowledgeable healthcare or wellness professionals regarding individual health profiles.</p>
+    </div>
+
+    <div class="section-block">
+        <h2>📦 5. Shipping &amp; Replacement Policy</h2>
+        <p>Orders are dispatched in temperature-shielded cryo freight. In the rare event of transit damage or compromised packaging, replacement shipments are guaranteed when reported within 48 hours with batch lot documentation.</p>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Phoenics Peptide Inc. All Rights Reserved. Certified Quality &bull; Safe Use Protocols Enclosed.
+</footer>
+</body>
+</html>

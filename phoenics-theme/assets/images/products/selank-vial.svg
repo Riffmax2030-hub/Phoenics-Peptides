@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlowSpray" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </radialGradient>
+    <linearGradient id="sprayBottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="30%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <filter id="sprayShadow" x="-10%" y="-5%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="480" fill="url(#bgGlowSpray)"/>
+  <ellipse cx="200" cy="435" rx="80" ry="12" fill="#0F172A" opacity="0.12"/>
+
+  <g filter="url(#sprayShadow)">
+    <!-- Spray Pump Nozzle -->
+    <path d="M 195 60 L 205 60 L 205 90 L 195 90 Z" fill="#94A3B8"/>
+    <path d="M 188 70 L 200 60 L 212 60 L 212 90 L 188 90 Z" fill="#0D9488"/>
+    <rect x="180" y="90" width="40" height="30" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <!-- Finger grip wings -->
+    <path d="M 165 110 Q 200 118 235 110 L 235 125 Q 200 133 165 125 Z" fill="#0D9488"/>
+    <!-- Collar -->
+    <rect x="175" y="125" width="50" height="25" rx="2" fill="#CBD5E1" stroke="#94A3B8"/>
+
+    <!-- HDPE Bottle Body -->
+    <rect x="140" y="150" width="120" height="260" rx="16" fill="url(#sprayBottle)" stroke="#CBD5E1" stroke-width="1.5"/>
+
+    <!-- Clinical Label -->
+    <rect x="144" y="180" width="112" height="180" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="144" y="180" width="112" height="10" rx="4" fill="#0D9488"/>
+
+    <text x="200" y="206" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="800" fill="#0D9488" text-anchor="middle" letter-spacing="1.5">METERED NASAL SPRAY</text>
+    <text x="200" y="228" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="700" fill="#0F172A" text-anchor="middle">Selank</text>
+    <text x="200" y="246" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#0D9488" text-anchor="middle">10mg (10mL)</text>
+
+    <line x1="156" y1="256" x2="244" y2="256" stroke="#E2E8F0" stroke-width="1"/>
+
+    <text x="156" y="274" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748B">PURITY:</text>
+    <text x="244" y="274" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#059669" text-anchor="end">&gt;=99.2%</text>
+
+    <text x="156" y="292" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748B">FORMAT:</text>
+    <text x="244" y="292" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#0F172A" text-anchor="end">Solution</text>
+
+    <text x="156" y="310" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748B">VOLUME:</text>
+    <text x="244" y="310" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#0F172A" text-anchor="end">10 mL</text>
+
+    <text x="200" y="348" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#94A3B8" text-anchor="middle">RESEARCH USE ONLY</text>
+  </g>
+</svg>

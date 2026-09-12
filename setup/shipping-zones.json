@@ -1,0 +1,128 @@
+[
+  {
+    "zone_name": "United States Domestic",
+    "zone_id": 1,
+    "countries": ["US"],
+    "methods": [
+      {
+        "id": "usps_priority",
+        "title": "USPS Priority Insured (2-3 Business Days)",
+        "cost": 9.99,
+        "free_threshold": 150.00,
+        "cold_chain_pack": false
+      },
+      {
+        "id": "fedex_overnight",
+        "title": "FedEx Standard Overnight (Next Day Delivery)",
+        "cost": 29.99,
+        "free_threshold": 300.00,
+        "cold_chain_pack": false
+      },
+      {
+        "id": "cold_chain_express_us",
+        "title": "Lyophilized Cold-Chain Insulated Express + Ice Gel Packs",
+        "cost": 34.99,
+        "free_threshold": 400.00,
+        "cold_chain_pack": true
+      }
+    ]
+  },
+  {
+    "zone_name": "Canada",
+    "zone_id": 2,
+    "countries": ["CA"],
+    "methods": [
+      {
+        "id": "canada_post_tracked",
+        "title": "Canada Post Expedited International (3-5 Business Days)",
+        "cost": 19.99,
+        "free_threshold": 250.00,
+        "cold_chain_pack": false
+      },
+      {
+        "id": "fedex_canada_priority",
+        "title": "FedEx International Priority (1-2 Business Days)",
+        "cost": 39.99,
+        "free_threshold": 450.00,
+        "cold_chain_pack": true
+      }
+    ]
+  },
+  {
+    "zone_name": "European Union & United Kingdom",
+    "zone_id": 3,
+    "countries": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "CH", "AT", "SE", "NO", "DK", "FI", "IE", "PL", "PT"],
+    "methods": [
+      {
+        "id": "dhl_express_eu",
+        "title": "DHL Express International Priority (2-4 Business Days)",
+        "cost": 29.99,
+        "free_threshold": 300.00,
+        "cold_chain_pack": false
+      },
+      {
+        "id": "dhl_medical_cold_eu",
+        "title": "DHL Medical Express Cold-Chain + Guaranteed Delivery",
+        "cost": 49.99,
+        "free_threshold": 500.00,
+        "cold_chain_pack": true
+      }
+    ]
+  },
+  {
+    "zone_name": "Asia & Middle East",
+    "zone_id": 4,
+    "countries": ["JP", "SG", "KR", "AE", "SA", "IN", "MY", "TH", "HK", "TW", "QA"],
+    "methods": [
+      {
+        "id": "dhl_asia_express",
+        "title": "DHL Express Worldwide (3-5 Business Days)",
+        "cost": 34.99,
+        "free_threshold": 350.00,
+        "cold_chain_pack": false
+      },
+      {
+        "id": "fedex_asia_cold",
+        "title": "FedEx International Cold-Pack Priority (3-4 Days)",
+        "cost": 54.99,
+        "free_threshold": 550.00,
+        "cold_chain_pack": true
+      }
+    ]
+  },
+  {
+    "zone_name": "Africa Regional Hub",
+    "zone_id": 5,
+    "countries": ["NG", "ZA", "KE", "EG", "GH", "RW", "MA"],
+    "methods": [
+      {
+        "id": "dhl_africa_express",
+        "title": "DHL Express Direct Air Cargo (3-6 Business Days)",
+        "cost": 39.99,
+        "free_threshold": 400.00,
+        "cold_chain_pack": false
+      },
+      {
+        "id": "aramex_africa_priority",
+        "title": "Aramex Priority Bio-Thermal Insulated Box",
+        "cost": 59.99,
+        "free_threshold": 600.00,
+        "cold_chain_pack": true
+      }
+    ]
+  },
+  {
+    "zone_name": "Rest of the World",
+    "zone_id": 6,
+    "countries": ["*"],
+    "methods": [
+      {
+        "id": "global_express",
+        "title": "International Tracked Bio-Courier Express (4-7 Days)",
+        "cost": 45.00,
+        "free_threshold": 500.00,
+        "cold_chain_pack": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: phoenics-peptides
+    env: static
+    buildCommand: ''
+    staticPublishPath: ./standalone-preview

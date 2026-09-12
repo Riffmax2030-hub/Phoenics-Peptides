@@ -1,0 +1,51 @@
+[
+  {
+    "id": "healing-recovery",
+    "name": "Healing & Tissue Recovery",
+    "slug": "healing-recovery",
+    "description": "High-purity research peptides investigating cellular repair, angiogenesis, and collagen synthesis pathways.",
+    "count": 3
+  },
+  {
+    "id": "growth-hormone",
+    "name": "Growth Hormone Secretagogues",
+    "slug": "growth-hormone",
+    "description": "Bioactive peptides modulating somatotropic axis signaling and pituitary peptide release.",
+    "count": 5
+  },
+  {
+    "id": "weight-metabolic",
+    "name": "Metabolic & Lipid Research",
+    "slug": "weight-metabolic",
+    "description": "Research ligands evaluating adipocyte lipolysis, insulin sensitivity, and glucose metabolism.",
+    "count": 2
+  },
+  {
+    "id": "cognitive-nootropic",
+    "name": "Neuroscience & Nootropic",
+    "slug": "cognitive-nootropic",
+    "description": "Synthetic neuroactive peptides designed for neurogenesis, BDNF receptor modulation, and synaptic plasticity.",
+    "count": 4
+  },
+  {
+    "id": "longevity-antiaging",
+    "name": "Longevity & Telomere Research",
+    "slug": "longevity-antiaging",
+    "description": "Anti-senescence peptide research compounds evaluating telomerase activation and cellular lifespan.",
+    "count": 2
+  },
+  {
+    "id": "sexual-vitality",
+    "name": "Receptor & Neuroendocrine Vitality",
+    "slug": "sexual-vitality",
+    "description": "Melanocortin receptor agonists and kisspeptin axis research ligands.",
+    "count": 2
+  },
+  {
+    "id": "immune-antimicrobial",
+    "name": "Immune & Host-Defense",
+    "slug": "immune-antimicrobial",
+    "description": "Thymic factors and cathelicidin peptides investigating innate immune response signaling.",
+    "count": 2
+  }
+]

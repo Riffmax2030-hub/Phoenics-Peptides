@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="Phoenics Peptide — Certified high-purity peptides for research and personal longevity protocols. Complete reconstitution directions included with delivery.">
+    <title>Phoenics Peptide | High-Purity Peptides for Research & Personal Longevity</title>
+
+    <!-- Modern Luxury & Tech Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+                :root {
+            --white:          #FFFFFF;
+            --slate-50:       #F0FDF4; /* soft mint */
+            --slate-100:      #DCFCE7; /* light mint */
+            --slate-200:      #D1FAE5; /* subtle mint border */
+            --slate-300:      #A7F3D0; /* border green */
+            --slate-400:      #6EE7B7;
+            --slate-500:      #4B5563;
+            --slate-600:      #374151;
+            --slate-700:      #1F2937;
+            --slate-800:      #111827;
+            --slate-900:      #04241B; /* deep botanical forest */
+
+            --primary:        #059669; /* core vibrant emerald */
+            --primary-dark:   #047857; /* deep emerald */
+            --primary-light:  #ECFDF5; /* mint background */
+            --primary-border: #A7F3D0; /* mint border */
+            --primary-deep:   #064E3B; /* darkest green */
+
+            --sapphire:       #059669; /* converted to emerald */
+            --sapphire-dark:  #047857;
+            --sapphire-light: #ECFDF5;
+            --sapphire-border:#A7F3D0;
+
+            --emerald:        #059669;
+            --emerald-light:  #ECFDF5;
+            --emerald-border: #A7F3D0;
+
+            --amber:          #D97706;
+            --amber-light:    #FEF3C7;
+            --gold:           #F59E0B;
+            --crimson:        #DC2626;
+
+            --font-head:      'Outfit', sans-serif;
+            --font-body:      'Plus Jakarta Sans', sans-serif;
+            --font-mono:      'JetBrains Mono', monospace;
+
+            --shadow-xs: 0 1px 3px rgba(6, 40, 30, 0.05);
+            --shadow-sm: 0 4px 14px rgba(6, 40, 30, 0.06);
+            --shadow-md: 0 12px 30px rgba(6, 40, 30, 0.08);
+            --shadow-lg: 0 24px 50px rgba(6, 40, 30, 0.12);
+
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-xl: 24px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+                body {
+            background: linear-gradient(180deg, #F0FDF4 0%, #F5FCF7 25%, #ECFDF5 60%, #F0FDF4 100%);
+            background-attachment: fixed;
+            color: var(--slate-700);
+            font-family: var(--font-body);
+            font-size: 15px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+        /* ─── TOP BAR ─────────────────────────────────────────────── */
+        .top-bar {
+            background: #04241B;
+            color: #E6F4EA;
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .top-bar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .promo-tag {
+            background: var(--crimson);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-right: 8px;
+        }
+
+        /* ─── SITE HEADER ─────────────────────────────────────────── */
+        .site-header {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(14px);
+            border-bottom: 1.5px solid #D1FAE5;
+            position: sticky;
+            top: 0;
+            z-index: 800;
+            box-shadow: 0 4px 20px rgba(6, 40, 30, 0.06);
+            padding: 6px 0;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 76px;
+        }
+        .brand-logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .brand-logo-img {
+            height: 68px;
+            width: auto;
+            display: block;
+        }
+
+        .site-nav {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        .site-nav a {
+            font-family: var(--font-body);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--slate-600);
+            transition: color 0.15s;
+        }
+        .site-nav a:hover { color: var(--sapphire); }
+
+        .btn-cart-trigger {
+            background: #04241B;
+            color: #E6F4EA;
+            border: none;
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.15s, transform 0.1s;
+        }
+        .btn-cart-trigger:hover { background: var(--sapphire); transform: translateY(-1px); }
+        .cart-count-pill {
+            background: var(--sapphire);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 10px;
+        }
+
+        /* ─── HERO WITH FADED WELLNESS/LIVING PHOTOGRAPHIC BACKDROP ─ */
+        /* ─── BRIGHT CLINICAL LAB HERO SECTION ──────────────────────── */
+                /* ─── CLEAN PHOTOGRAPHIC WELLNESS BANNER (NO TEXT ON IMAGE) ─ */
+        .hero-banner-wrap {
+            width: 100%;
+            height: 560px;
+            max-height: 58vh;
+            overflow: hidden;
+            position: relative;
+            background: #E8F5EE;
+            border-bottom: 3px solid #10B981;
+        }
+        .hero-banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            display: block;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        /* ─── HERO CONTENT SECTION (BELOW PICTURE, WORDS IN BLACK) ── */
+        .hero-content-section {
+            background: linear-gradient(180deg, #F0FDF4 0%, #FFFFFF 100%);
+            padding: 50px 0 60px;
+            border-bottom: 1px solid #D1FAE5;
+        }
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ECFDF5;
+            border: 1.5px solid #A7F3D0;
+            color: #047857;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            margin-bottom: 16px;
+        }
+        .hero-title {
+            font-family: var(--font-head);
+            font-size: 46px;
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+            color: #000000; /* PURE BLACK FOR MAXIMUM READABILITY */
+        }
+        .hero-title em {
+            color: #047857;
+            font-style: normal;
+        }
+        .hero-desc {
+            font-size: 16.5px;
+            color: #000000; /* PURE BLACK READABLE TEXT */
+            font-weight: 600;
+            line-height: 1.75;
+            max-width: 620px;
+            margin-bottom: 28px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+        .btn-secondary {
+            background: #FFFFFF;
+            color: #000000;
+            border: 1.5px solid #A7F3D0;
+            font-family: var(--font-body);
+            font-size: 14px;
+            font-weight: 800;
+            padding: 13px 24px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            transition: all 0.15s;
+            box-shadow: 0 2px 8px rgba(6, 40, 30, 0.04);
+        }
+        .btn-secondary:hover { background: #ECFDF5; border-color: #059669; }
+        .hero-stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            border-top: 1.5px solid #D1FAE5;
+            padding-top: 24px;
+        }
+        .stat-num {
+            font-family: var(--font-head);
+            font-size: 26px;
+            font-weight: 900;
+            color: #000000; /* PURE BLACK STATS */
+        }
+        .stat-desc {
+            font-size: 11.5px;
+            color: #1F2937; /* CRISP DARK LABEL */
+            font-weight: 700;
+        }
+
+        .hero-featured-card {
+            background: #FFFFFF;
+            border: 2px solid #D1FAE5;
+            border-radius: var(--radius-xl);
+            padding: 26px;
+            box-shadow: 0 12px 36px rgba(6, 40, 30, 0.08);
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
+        }
+        .hero-featured-card:hover {
+            transform: translateY(-4px);
+            border-color: #059669;
+            box-shadow: 0 16px 44px rgba(5, 150, 105, 0.16);
+        }
+        .hero-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .hero-card-img {
+            max-height: 220px;
+            width: auto;
+            margin: 0 auto 14px;
+            display: block;
+        }
+
+        /* ─── TRUST STRIP ─────────────────────────────────────────── */
+        .trust-strip {
+            background: var(--white);
+            border-bottom: 1px solid var(--slate-200);
+            padding: 26px 0;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+        .trust-box {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .trust-ico {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .trust-title {
+            font-family: var(--font-body);
+            font-size: 13.5px;
+            font-weight: 800;
+            color: var(--slate-900);
+            margin-bottom: 2px;
+        }
+        .trust-sub {
+            font-size: 12px;
+            color: var(--slate-500);
+        }
+
+        /* ─── CATALOG SECTION ─────────────────────────────────────── */
+        .catalog-section { padding: 80px 0 95px; }
+        .section-tag {
+            font-family: var(--font-body);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sapphire);
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-family: var(--font-head);
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--slate-900);
+            margin-bottom: 8px;
+        }
+        .section-subtitle {
+            font-size: 15px;
+            color: var(--slate-500);
+            margin-bottom: 28px;
+        }
+
+        /* Filter Pills */
+        .cat-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 34px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--slate-200);
+        }
+        .cat-pill {
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 24px;
+            border: 1.5px solid #A7F3D0;
+            background: #FFFFFF;
+            color: #064E3B;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .cat-pill:hover { border-color: #059669; color: #047857; background: #ECFDF5; }
+        .cat-pill.active {
+            background: #047857;
+            border-color: #047857;
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
+        }
+
+                .card-desc {
+            font-size: 12.5px;
+            color: #4B5563;
+            line-height: 1.5;
+            margin: 8px 0 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .card-focus-pill {
+            display: inline-block;
+            background: #ECFDF5;
+            border: 1px solid #A7F3D0;
+            color: #047857;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            line-height: 1.35;
+        }
+        .guide-section {
+            background: rgba(255, 255, 255, 0.92);
+            border-top: 1px solid #D1FAE5;
+            border-bottom: 1px solid #D1FAE5;
+            padding: 70px 0 80px;
+            margin-top: 40px;
+        }
+        .guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #FFFFFF;
+            border: 1px solid #D1FAE5;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(6, 40, 30, 0.04);
+            font-size: 13px;
+        }
+        .guide-table th {
+            background: #04241B;
+            color: #E6F4EA;
+            padding: 12px 14px;
+            text-align: left;
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .guide-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #E6F4EA;
+            color: #374151;
+            vertical-align: top;
+        }
+        .guide-table tr:hover td {
+            background: #F0FDF4;
+        }
+
+        /* Product Grid */
+        /* Standard Clean Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+            gap: 24px;
+            align-items: stretch;
+        }
+        .product-card {
+            background: #FFFFFF;
+            border: 1px solid #D1FAE5;
+            border-radius: var(--radius-lg);
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(6, 40, 30, 0.05);
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(5, 150, 105, 0.12);
+            border-color: #10B981;
+        }
+
+        /* Product Image Box */
+        .product-img-box {
+            position: relative;
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius-md);
+            height: 235px;
+            overflow: hidden;
+            margin-bottom: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-card-img {
+            max-height: 210px;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+            border-radius: var(--radius-sm);
+        }
+
+        .badge-sale {
+            background: var(--crimson);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+        .badge-purity {
+            background: var(--emerald-light);
+            color: var(--emerald);
+            border: 1px solid var(--emerald-border);
+            font-family: var(--font-body);
+            font-size: 10.5px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+
+        
+        .card-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .click-hint {
+            position: absolute;
+            top: 8px; left: 8px;
+            background: rgba(5, 150, 105, 0.80);
+            color: #fff;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .card-cat {
+            font-family: var(--font-body);
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--sapphire);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 2px;
+        }
+        .card-name {
+            font-family: var(--font-head);
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--slate-900);
+            line-height: 1.25;
+            margin-bottom: 4px;
+            cursor: pointer;
+            transition: color 0.15s;
+        }
+        .card-name:hover { color: var(--sapphire); }
+        .card-cas {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--slate-400);
+            margin-bottom: 12px;
+        }
+
+        .card-action-row {
+            border-top: 1px solid var(--slate-100);
+            padding-top: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price-was { font-size: 12px; color: var(--slate-400); text-decoration: line-through; }
+        .price-now { font-family: var(--font-head); font-size: 22px; font-weight: 800; color: var(--emerald); }
+        .btn-info {
+            background: var(--slate-100);
+            color: var(--slate-800);
+            border: 1px solid var(--slate-200);
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            margin-right: 6px;
+        }
+        .btn-info:hover { background: var(--slate-200); }
+        .btn-add {
+            background: var(--sapphire);
+            color: #fff;
+            border: none;
+            font-family: var(--font-body);
+            font-size: 12.5px;
+            font-weight: 800;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .btn-add:hover { background: var(--sapphire-dark); }
+
+        /* ─── QUALITY STANDARDS ───────────────────────────────────── */
+        .qa-section {
+            background: var(--slate-50);
+            border-top: 1px solid var(--slate-200);
+            border-bottom: 1px solid var(--slate-200);
+            padding: 80px 0;
+        }
+        .qa-intro { text-align: center; max-width: 740px; margin: 0 auto 48px; }
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 22px;
+        }
+        .qa-card {
+            background: var(--white);
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow-xs);
+        }
+        .qa-title {
+            font-family: var(--font-head);
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--slate-900);
+            margin-bottom: 8px;
+        }
+        .qa-text { font-size: 13.5px; color: var(--slate-600); line-height: 1.65; }
+
+        /* ─── SHIPPING DISPATCH ───────────────────────────────────── */
+        .delivery-section {
+            background: #04241B;
+            color: #E6F4EA;
+            padding: 75px 0;
+        }
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .step-card {
+            display: flex;
+            gap: 14px;
+            background: var(--slate-800);
+            border-left: 3.5px solid var(--sapphire);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 16px 20px;
+            margin-bottom: 14px;
+        }
+        .delivery-ops-box {
+            background: var(--slate-800);
+            border: 1px solid var(--slate-700);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+        }
+
+        /* ─── PRODUCT DETAILS MODAL WITH TABS ─────────────────────── */
+        .modal-overlay {
+            position: fixed; inset: 0;
+            background: rgba(11,19,41,0.75);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-box {
+            background: #fff;
+            border-radius: var(--radius-xl);
+            max-width: 940px;
+            width: 100%;
+            max-height: 92vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 32px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--slate-200);
+        }
+        .modal-close-btn {
+            position: absolute;
+            top: 20px; right: 20px;
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: var(--slate-100);
+            border: none;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 32px;
+            align-items: flex-start;
+        }
+        .modal-main-img-box {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius-md);
+            height: 310px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .modal-main-img-box img { max-height: 280px; max-width: 100%; object-fit: contain; }
+        .modal-main-img-box {
+            background: #FFFFFF;
+            border: 1.5px solid #D1FAE5;
+            border-radius: var(--radius-lg);
+            height: 330px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(5, 150, 105, 0.06);
+        }
+
+        .modal-tabs {
+            display: flex;
+            gap: 8px;
+            margin: 16px 0 14px;
+            border-bottom: 1px solid var(--slate-200);
+            padding-bottom: 8px;
+        }
+        .modal-tab-btn {
+            background: none;
+            border: none;
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--slate-500);
+            cursor: pointer;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+        .modal-tab-btn.active {
+            background: var(--slate-100);
+            color: var(--sapphire);
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12.5px;
+            margin: 10px 0;
+        }
+        .specs-table td { padding: 7px 10px; border-bottom: 1px solid var(--slate-100); }
+        .specs-table td:first-child { font-weight: 700; color: var(--slate-500); width: 35%; }
+
+        /* ─── CART DRAWER ─────────────────────────────────────────── */
+        .cart-overlay {
+            position: fixed; inset: 0;
+            background: rgba(11,19,41,0.5);
+            backdrop-filter: blur(3px);
+            z-index: 950;
+            display: none;
+        }
+        .cart-drawer {
+            position: fixed; top: 0; right: 0; bottom: 0;
+            width: 100%; max-width: 440px;
+            background: #fff;
+            box-shadow: -6px 0 25px rgba(0,0,0,0.15);
+            z-index: 960;
+            transform: translateX(100%);
+            transition: transform 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .cart-drawer.open { transform: translateX(0); }
+        .cart-header {
+            padding: 22px;
+            border-bottom: 1px solid var(--slate-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cart-items-body { flex: 1; overflow-y: auto; padding: 22px; }
+        .cart-footer {
+            padding: 22px;
+            border-top: 1px solid var(--slate-200);
+            background: var(--slate-50);
+        }
+
+        /* ─── CHECKOUT MODAL (PAYMENTS STAY STRICTLY HERE) ────────── */
+        .checkout-overlay {
+            position: fixed; inset: 0;
+            background: rgba(11,19,41,0.75);
+            z-index: 1100;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .checkout-box {
+            background: #fff;
+            border-radius: var(--radius-xl);
+            max-width: 660px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 32px;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ─── FOOTER ──────────────────────────────────────────────── */
+        .site-footer {
+            background: #04241B;
+            border-top: 1px solid rgba(16, 185, 129, 0.25);
+            color: var(--slate-400);
+            padding: 60px 0 30px;
+            font-size: 13px;
+        }
+        .legal-notice-box {
+            background: var(--slate-800);
+            border-left: 4px solid var(--gold);
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 35px;
+            color: #E2E8F0;
+            font-size: 12px;
+            line-height: 1.65;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 14px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 8px; }
+        .footer-col ul li a:hover { color: #fff; }
+
+        @media (max-width: 900px) {
+            .hero-inner, .delivery-grid, .modal-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .hero-title { font-size: 40px; }
+        }
+        @media (max-width: 600px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .hero-stats-row { grid-template-columns: 1fr 1fr; }
+            .site-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div>
+                <span class="promo-tag">PROMOTIONAL SALE</span>
+                <span><strong>20% DISCOUNT ACTIVE</strong> &bull; RECONSTITUTION &amp; HANDLING DIRECTIONS INCLUDED WITH DELIVERY</span>
+            </div>
+            <div>
+                <span style="color:#94A3B8;">Research &amp; Personal Longevity Supply &bull; Express Cold-Chain Dispatch</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SITE HEADER WITH ORIGINAL PHOENICS LOGO -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="brand-logo-wrap">
+                <img src="assets/images/logo.svg" alt="Phoenics Peptide" class="brand-logo-img">
+            </a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="#catalog-section">Peptide Catalog</a></li>
+                    <li><a href="#product-guide-section">Product Guide &amp; Specs</a></li>
+                    <li><a href="#qa-section">Purity Standards</a></li>
+                    <li><a href="#shipping-section">Cold-Chain Delivery</a></li>
+                    <li><a href="legal.html">Safe Use &amp; Directions</a></li>
+                </ul>
+            </nav>
+            <div>
+                <button class="btn-cart-trigger" onclick="openCart()">
+                    <span>🛒 Batch Cart</span>
+                    <span class="cart-count-pill" id="header-cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HIGH QUALITY WELLNESS PHOTOGRAPHIC BANNER (NO TEXT ON IMAGE) -->
+    <div class="hero-banner-wrap">
+        <img src="assets/images/hero-wellness-couple.jpg" alt="Healthy Active Living &amp; Vitality" class="hero-banner-img">
+    </div>
+
+    <!-- 2. HERO CONTENT SECTION (STARTS BELOW IMAGE, WORDS IN BLACK) -->
+    <section class="hero-content-section">
+        <div class="container hero-inner">
+            <div>
+                <div class="hero-pill">
+                    <span>🔬</span> CERTIFIED THIRD-PARTY HPLC &amp; MASS SPECTROMETRY VALIDATION
+                </div>
+                <h1 class="hero-title">
+                    High-Purity Peptides<br>
+                    <em>For Research &amp; Vitality</em>
+                </h1>
+                <p class="hero-desc">
+                    Premium bio-synthesis source for metabolic incretins (<strong>Tirzepatide, Retatrutide, Semaglutide</strong>), tissue repair pentadecapeptides (<strong>BPC-157, TB-500</strong>), and cellular longevity compounds. Exact mass calibration with step-by-step reconstitution directions included with every shipment.
+                </p>
+                <div class="hero-actions">
+                    <a href="#catalog-section" class="btn-primary">Explore Formulations &rarr;</a>
+                    <a href="#product-guide-section" class="btn-secondary">View Product Guide &amp; Protocols &rarr;</a>
+                </div>
+                <div class="hero-stats-row">
+                    <div>
+                        <div class="stat-num">&ge;99.4%</div>
+                        <div class="stat-desc">Mean HPLC Purity</div>
+                    </div>
+                    <div>
+                        <div class="stat-num" style="color:#047857;">Exact</div>
+                        <div class="stat-desc">Zero Dose Variance</div>
+                    </div>
+                    <div>
+                        <div class="stat-num" style="color:#047857;">ISO 9001</div>
+                        <div class="stat-desc">Quality Certified</div>
+                    </div>
+                    <div>
+                        <div class="stat-num" style="color:#D97706;">Included</div>
+                        <div class="stat-desc">Delivery Directions</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Featured Product Card -->
+            <div class="hero-featured-card" onclick="openProductModal(1)">
+                <div class="hero-card-top">
+                    <span class="badge-sale">FEATURED INCRETIN</span>
+                    <span class="badge-purity">HPLC 99.4% VERIFIED</span>
+                </div>
+                <img src="assets/images/products/tirzepatide-photo.jpg" alt="Tirzepatide 10mg" class="hero-card-img" onerror="this.src='assets/images/products/tirzepatide-vial.svg';">
+                <div style="border-top:1.5px solid #D1FAE5;padding-top:14px;display:flex;justify-content:space-between;align-items:center;">
+                    <div style="text-align:left;">
+                        <div style="font-size:11px;color:#047857;font-weight:800;letter-spacing:0.8px;">DUAL GIP/GLP-1 AGONIST</div>
+                        <div style="font-family:var(--font-head);font-size:22px;font-weight:900;color:#000000;">Tirzepatide 10mg</div>
+                        <div style="font-size:11.5px;color:#047857;font-weight:700;">Click to view protocol &amp; CoA &rarr;</div>
+                    </div>
+                    <div style="text-align:right;">
+                        <span class="price-was" style="color:#6B7280;text-decoration:line-through;font-size:13px;font-weight:600;">$140.00</span>
+                        <div class="price-now" style="color:#047857;font-family:var(--font-head);font-size:24px;font-weight:900;">$112.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+        <div class="container trust-grid">
+            <div class="trust-box">
+                <div class="trust-ico" style="background:var(--sapphire-light);color:var(--sapphire);">⚖️</div>
+                <div>
+                    <div class="trust-title">Exact Dose Calibration</div>
+                    <div class="trust-sub">Zero vial-to-vial mass variance</div>
+                </div>
+            </div>
+            <div class="trust-box">
+                <div class="trust-ico" style="background:var(--emerald-light);color:var(--emerald);">🔬</div>
+                <div>
+                    <div class="trust-title">&ge;99.0% HPLC &amp; MS Validated</div>
+                    <div class="trust-sub">Batch-matched analytical certificates</div>
+                </div>
+            </div>
+            <div class="trust-box">
+                <div class="trust-ico" style="background:var(--amber-light);color:var(--amber);">📋</div>
+                <div>
+                    <div class="trust-title">Directions Enclosed</div>
+                    <div class="trust-sub">Reconstitution &amp; handling guides with order</div>
+                </div>
+            </div>
+            <div class="trust-box">
+                <div class="trust-ico" style="background:var(--slate-100);color:var(--slate-800);">🛡️</div>
+                <div>
+                    <div class="trust-title">ISO Certified Facility</div>
+                    <div class="trust-sub">Class 5 Cleanroom synthesis</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATALOG SECTION -->
+    <section id="catalog-section" class="catalog-section">
+        <div class="container">
+            <div>
+                <div class="section-tag">VERIFIED BIO-CATALOG</div>
+                <h2 class="section-title">High-Purity Peptide Formulations</h2>
+                <p class="section-subtitle">Supplied for research and personal wellness protocols. Click any compound to review reconstitution instructions, dosage ratios, and analytical CoAs.</p>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="cat-pills">
+                <button class="cat-pill active" onclick="filterCategory('all', this)">All Compounds (19)</button>
+                <button class="cat-pill" onclick="filterCategory('weight-loss', this)">🔥 Weight Loss &amp; Incretins</button>
+                <button class="cat-pill" onclick="filterCategory('anti-ageing', this)">✨ Anti-Ageing &amp; Longevity</button>
+                <button class="cat-pill" onclick="filterCategory('muscle', this)">💪 Muscle &amp; GH Axis</button>
+                <button class="cat-pill" onclick="filterCategory('cognitive', this)">🧠 Cognitive &amp; Vitality</button>
+                <button class="cat-pill" onclick="filterCategory('institutional', this)">🏛 Institutional &amp; Bulk</button>
+            </div>
+
+            <div id="products-container" class="product-grid"></div>
+        </div>
+    </section>
+
+    <!-- QUALITY ASSURANCE SECTION -->
+    <section id="qa-section" class="qa-section">
+        <div class="container">
+            <div class="qa-intro">
+                <div class="section-tag">ANALYTICAL RIGOR</div>
+                <h2 class="section-title">Verified Accuracy &amp; Purity Standards</h2>
+                <p style="color:var(--slate-600);font-size:14.5px;line-height:1.7;">
+                    Recent independent tests on online peptide suppliers revealed that over 40% of unregulated sources deliver vials with dosing errors ranging from half to double labeled content. Phoenics Peptide enforces strict ISO and cGMP certified release standards on every batch:
+                </p>
+            </div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <div style="font-size:26px;margin-bottom:12px;">⚖️</div>
+                    <div class="qa-title">Quantitative Mass Assay</div>
+                    <p class="qa-text">Quantitative chromatography confirms exact milligram active content per vial (e.g. 10.0mg &plusmn; 0.1mg). No potency spikes, no under-dosing.</p>
+                </div>
+                <div class="qa-card">
+                    <div style="font-size:26px;margin-bottom:12px;">📉</div>
+                    <div class="qa-title">RP-HPLC &ge; 99.0% Purity</div>
+                    <p class="qa-text">Single-peak reverse-phase HPLC chromatograms verify complete absence of truncated sequences and residual chemical solvents.</p>
+                </div>
+                <div class="qa-card">
+                    <div style="font-size:26px;margin-bottom:12px;">🔬</div>
+                    <div class="qa-title">High-Res ESI-MS Validation</div>
+                    <p class="qa-text">Electrospray Ionization Mass Spectrometry confirms exact molecular weight and amino acid sequencing against theoretical reference standards.</p>
+                </div>
+                <div class="qa-card">
+                    <div style="font-size:26px;margin-bottom:12px;">🛡️</div>
+                    <div class="qa-title">Class 5 Cleanroom Lyophilization</div>
+                    <p class="qa-text">Lyophilized under nitrogen in USP Type 1 borosilicate glass sealed with sterile chlorobutyl rubber vacuum stoppers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DELIVERY DISPATCH SECTION -->
+    <section id="shipping-section" class="delivery-section">
+        <div class="container delivery-grid">
+            <div>
+                <div style="font-family:var(--font-body);font-size:11px;font-weight:800;letter-spacing:1.5px;color:#60A5FA;margin-bottom:8px;">SECURED LOGISTICS</div>
+                <h2 style="font-family:var(--font-head);font-size:38px;font-weight:800;margin-bottom:14px;">Temperature-Shielded Dispatch</h2>
+                <p style="color:#94A3B8;font-size:14.5px;line-height:1.7;margin-bottom:24px;">
+                    Every shipment is handled under professional temperature-shielded protocols to preserve biological integrity from facility to doorstep:
+                </p>
+                <div class="step-card">
+                    <span style="font-size:22px;">1️⃣</span>
+                    <div>
+                        <h4 style="font-size:14px;font-weight:800;">Order Confirmation &amp; Batch Reservation</h4>
+                        <p style="font-size:12.5px;color:#94A3B8;">Your specific lot is allocated immediately from -20°C climate-controlled inventory.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <span style="font-size:22px;">2️⃣</span>
+                    <div>
+                        <h4 style="font-size:14px;font-weight:800;">Protocol Guide &amp; Materials Inclusion</h4>
+                        <p style="font-size:12.5px;color:#94A3B8;">Each shipment includes printed reconstitution instructions, dilution ratio tables, and storage guides.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <span style="font-size:22px;">3️⃣</span>
+                    <div>
+                        <h4 style="font-size:14px;font-weight:800;">Cryo-Shielded Priority Dispatch</h4>
+                        <p style="font-size:12.5px;color:#94A3B8;">Assembled in insulated freight with cold packs. Real-time carrier tracking provided upon courier handover.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="delivery-ops-box">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+                    <div style="width:10px;height:10px;background:var(--emerald);border-radius:50%;box-shadow:0 0 8px var(--emerald);"></div>
+                    <strong style="color:#fff;font-size:14px;">Fulfillment Centers Operational</strong>
+                </div>
+                <div style="font-size:13px;color:#94A3B8;line-height:1.8;margin-bottom:20px;">
+                    &bull; <strong>United States &amp; Canada:</strong> Priority air via FedEx &amp; UPS Air.<br>
+                    &bull; <strong>European Union &amp; UK:</strong> Dispatched from Frankfurt cold-hub node.<br>
+                    &bull; <strong>Discreet Packaging:</strong> Neutral, non-descript exterior for complete privacy.
+                </div>
+                <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:14px;">
+                    <div style="color:#FBBF24;font-weight:800;font-size:12px;margin-bottom:3px;">⚡ Free Nationwide Shipping:</div>
+                    <div style="color:#E2E8F0;font-size:12px;">Automatic complimentary express freight on all orders over $250.00.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="legal-notice-box">
+                <strong>QUALITY ASSURANCE &amp; RESPONSIBLE USE NOTICE:</strong> Products distributed by Phoenics Peptide are synthesized to ultra-high pharmaceutical analytical purity (&ge;99.0%) for laboratory research, scientific evaluation, and personal wellness protocols. Complete step-by-step reconstitution and safe handling directions are included with every delivery. Individuals must exercise informed responsibility and adhere to safe storage guidelines.
+                <a href="legal.html" style="color:#FCD34D;font-weight:700;margin-left:4px;">Read Full Safe Use Guidelines &amp; Disclaimer &rarr;</a>
+            </div>
+            <div class="footer-grid">
+                <div>
+                    <img src="assets/images/logo-white.svg" alt="Phoenics Peptide" style="height:55px;margin-bottom:14px;" onerror="this.src='assets/images/logo.svg';">
+                    <p style="font-size:13px;line-height:1.65;margin-bottom:14px;color:#CBD5E1;">
+                        Global bio-synthesis supplier providing third-party HPLC &amp; MS validated peptides for academic research, wellness institutions, and personal longevity protocols.
+                    </p>
+                    <div style="color:var(--emerald);font-weight:800;font-size:11.5px;">&ge;99.0% PURITY GUARANTEED WITH EVERY BATCH</div>
+                </div>
+                <div class="footer-col">
+                    <h4>Weight Loss &amp; Incretins</h4>
+                    <ul style="list-style:none;">
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(1)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">Tirzepatide Dual Agonist &rarr;</a></li>
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(2)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">Retatrutide Triple GGG &rarr;</a></li>
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(3)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">Semaglutide GLP-1 &rarr;</a></li>
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(4)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">Cagrilintide Amylin &rarr;</a></li>
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(11)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">AOD-9604 Lipolytic &rarr;</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Anti-Ageing &amp; Vitality</h4>
+                    <ul style="list-style:none;">
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(7)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">GHK-Cu Copper Peptide &rarr;</a></li>
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(8)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">Epithalon Telomere &rarr;</a></li>
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(9)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">MOTS-c Mitochondrial &rarr;</a></li>
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(5)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">BPC-157 Healing &rarr;</a></li>
+                        <li style="margin-bottom:8px;"><a href="javascript:void(0)" onclick="scrollToProduct(6)" style="color:#CBD5E1;font-weight:600;text-decoration:none;">TB-500 Thymosin &rarr;</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quality Accreditations</h4>
+                    <!-- NO GATEWAY / NO CLICKABLE LINKS -->
+                    <ul style="list-style:none;color:#94A3B8;font-size:13px;line-height:2.1;">
+                        <li><span style="color:#10B981;font-weight:800;margin-right:6px;">✓</span> ISO 9001:2015 Compliant</li>
+                        <li><span style="color:#10B981;font-weight:800;margin-right:6px;">✓</span> ISO/IEC 17025 Tested</li>
+                        <li><span style="color:#10B981;font-weight:800;margin-right:6px;">✓</span> cGMP Class 5 Cleanroom</li>
+                        <li><span style="color:#10B981;font-weight:800;margin-right:6px;">✓</span> Batch HPLC &amp; MS Validated</li>
+                        <li><span style="color:#10B981;font-weight:800;margin-right:6px;">✓</span> Cold-Chain Shielded Pack</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top:1px solid var(--slate-800);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;">
+                <div>&copy; 2026 Phoenics Peptide Inc. All Rights Reserved. Certified Quality &bull; Safe Use Protocols Enclosed.</div>
+                <div style="display:flex;gap:18px;">
+                    <a href="#product-guide-section">Product Specifications</a>
+                    <a href="legal.html">Safe Use &amp; Directions</a>
+                    <a href="legal.html#privacy">Privacy Policy</a>
+                    <a href="legal.html#returns">Refunds</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT DETAIL MODAL (WITH INTERACTIVE INFO TABS) -->
+    <div id="product-modal" class="modal-overlay" onclick="closeProductModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closeProductModal()">&times;</button>
+            <div class="modal-grid">
+                <div>
+                    <div class="modal-main-img-box">
+                        <img id="modal-main-img" src="" alt="">
+                    </div>
+                    <div style="display:flex;gap:8px;justify-content:center;margin-top:10px;">
+                        <span style="display:inline-flex;align-items:center;gap:5px;background:#ECFDF5;border:1px solid #A7F3D0;color:#059669;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;">✓ Single Lot Calibrated</span>
+                        <span style="display:inline-flex;align-items:center;gap:5px;background:#F0FDF4;border:1px solid #BBF7D0;color:#047857;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;">❄ -20°C Cold Shielded</span>
+                    </div>
+                    <div style="margin-top:14px;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:8px;padding:12px;font-size:12px;color:var(--slate-600);">
+                        <strong>Safe Handling &amp; Protocols:</strong> Batch HPLC &amp; MS purity verified (&ge;99.0%). Comprehensive preparation, dilution ratio tables, and cold-storage instructions are enclosed with your delivery.
+                    </div>
+                </div>
+                <div>
+                    <div id="modal-cat-tag" style="font-family:var(--font-body);font-size:11px;color:var(--sapphire);font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;"></div>
+                    <h2 id="modal-title" style="font-family:var(--font-head);font-size:28px;font-weight:800;color:var(--slate-900);margin-bottom:8px;"></h2>
+                    <div style="display:flex;gap:8px;align-items:center;margin-bottom:14px;">
+                        <span id="modal-purity-badge" class="badge-purity"></span>
+                        <span class="badge-sale">20% SALE APPLIED</span>
+                    </div>
+
+                    <!-- Interactive Buyer Info Tabs -->
+                    <div class="modal-tabs">
+                        <button class="modal-tab-btn active" onclick="switchModalTab('tab-overview', this)">Overview</button>
+                        <button class="modal-tab-btn" onclick="switchModalTab('tab-directions', this)">Directions &amp; Dilution</button>
+                        <button class="modal-tab-btn" onclick="switchModalTab('tab-specs', this)">Analytical Specs</button>
+                    </div>
+
+                    <div id="tab-overview" class="tab-content active">
+                        <p id="modal-desc" style="font-size:14px;color:var(--slate-600);line-height:1.65;margin-bottom:15px;"></p>
+                        <table class="specs-table">
+                            <tr><td>Primary Goals:</td><td id="modal-focus" style="color:var(--sapphire);font-weight:700;"></td></tr>
+                            <tr><td>Target Mechanism:</td><td id="modal-mechanism" style="color:var(--slate-900);font-weight:600;"></td></tr>
+                            <tr><td>Storage Stability:</td><td id="modal-storage-info" style="color:var(--emerald);font-weight:600;">-20°C Powder (24 mo) / 4°C Liquid (30 days)</td></tr>
+                        </table>
+                        <div id="modal-faq-box"></div>
+                    </div>
+
+                    <div id="tab-directions" class="tab-content">
+                        <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:8px;padding:14px;margin-bottom:14px;font-size:13px;line-height:1.7;">
+                            <strong style="color:var(--slate-900);display:block;margin-bottom:4px;">Recommended Reconstitution:</strong>
+                            Add <strong>2.0 mL Bacteriostatic Water</strong> gently down the inside glass wall of the vial. Swirl gently; do not shake vigorously. Allow 2-3 minutes for complete dissolution.
+                            <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--slate-200);color:var(--sapphire);font-weight:700;">
+                                Detailed printed protocol guide with exact syringe unit conversions enclosed with your shipment.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-specs" class="tab-content">
+                        <table class="specs-table">
+                            <tr><td>CAS Registry:</td><td id="modal-cas" style="font-family:var(--font-mono);"></td></tr>
+                            <tr><td>Molecular Weight:</td><td id="modal-mw" style="font-family:var(--font-mono);"></td></tr>
+                            <tr><td>Lot Number:</td><td id="modal-lot" style="font-family:var(--font-mono);"></td></tr>
+                            <tr><td>Analytical Standard:</td><td id="modal-purity-method">RP-HPLC (C18 column, 214nm UV), confirmed by LC-MS/MS</td></tr>
+                        </table>
+                    </div>
+
+                    <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:16px;margin:18px 0;display:flex;justify-content:space-between;align-items:center;">
+                        <div>
+                            <span id="modal-price-reg" style="font-size:12px;color:var(--slate-400);text-decoration:line-through;"></span>
+                            <div id="modal-price-sale" style="font-family:var(--font-head);font-size:28px;font-weight:800;color:var(--emerald);"></div>
+                        </div>
+                        <div style="text-align:right;">
+                            <div style="font-family:var(--font-body);font-size:11px;color:var(--emerald);font-weight:800;">✓ In Climate Storage:</div>
+                            <div style="font-size:13px;font-weight:700;color:var(--slate-800);">Same-Day Cold Dispatch</div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <input type="number" id="modal-qty" value="1" min="1" max="100" style="width:70px;padding:12px;border:1.5px solid var(--slate-300);border-radius:8px;font-family:var(--font-body);font-size:15px;font-weight:800;text-align:center;outline:none;">
+                        <button id="modal-add-btn" class="btn-primary" style="flex:1;justify-content:center;padding:14px 20px;">
+                            + Add to Batch Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART DRAWER -->
+    <div id="cart-drawer-overlay" class="cart-overlay" onclick="closeCart()"></div>
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3 style="font-family:var(--font-head);font-size:22px;font-weight:800;color:var(--slate-900);">Your Batch Cart</h3>
+            <button onclick="closeCart()" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--slate-400);">&times;</button>
+        </div>
+        <div id="cart-items-container" class="cart-items-body"></div>
+        <div class="cart-footer">
+            <div style="display:flex;justify-content:space-between;font-family:var(--font-body);font-size:16px;font-weight:800;color:var(--slate-900);margin-bottom:8px;">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal-val">$0.00</span>
+            </div>
+            <div style="font-family:var(--font-body);font-size:12px;color:var(--emerald);margin-bottom:14px;font-weight:700;">
+                ✓ Step-by-step reconstitution guide included with order
+            </div>
+            <button onclick="openCheckout()" class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:14.5px;">
+                Proceed to Checkout &rarr;
+            </button>
+        </div>
+    </div>
+
+    <!-- CHECKOUT MODAL (PAYMENT OPTIONS STAY STRICTLY HERE) -->
+    <div id="checkout-modal" class="checkout-overlay" onclick="closeCheckout(event)">
+        <div class="checkout-box" onclick="event.stopPropagation()">
+            <button onclick="closeCheckout()" style="position:absolute;top:20px;right:20px;background:var(--slate-100);border:none;width:32px;height:32px;border-radius:50%;font-size:18px;font-weight:800;cursor:pointer;">&times;</button>
+            <div id="checkout-body">
+                <span style="font-family:var(--font-body);color:var(--sapphire);font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;">SECURED ORDER SETTLEMENT</span>
+                <h2 style="font-family:var(--font-head);font-size:28px;font-weight:800;color:var(--slate-900);margin:4px 0 16px;">Complete Your Order</h2>
+                
+                <form id="checkout-form" onsubmit="submitOrder(event)">
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+                        <div>
+                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Full Name *</label>
+                            <input type="text" required placeholder="John Doe" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
+                        </div>
+                        <div>
+                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Email (For Dispatch Tracking) *</label>
+                            <input type="email" id="checkout-email" required placeholder="orders@client.com" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
+                        </div>
+                    </div>
+                    <div style="margin-bottom:12px;">
+                        <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Delivery Address *</label>
+                        <input type="text" required placeholder="123 Park Avenue, Suite 400" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;">
+                        <div>
+                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">City *</label>
+                            <input type="text" required placeholder="New York" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
+                        </div>
+                        <div>
+                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">State / Region *</label>
+                            <input type="text" required placeholder="NY" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
+                        </div>
+                        <div>
+                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Country *</label>
+                            <select style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;background:#fff;">
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>United Kingdom</option>
+                                <option>Germany</option>
+                                <option>Australia</option>
+                                <option>Worldwide</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <label style="font-family:var(--font-body);font-size:12px;font-weight:800;color:var(--slate-900);display:block;margin-bottom:8px;">Select Payment Method:</label>
+                    <div style="display:grid;gap:10px;margin-bottom:20px;">
+                        <label style="display:flex;align-items:center;justify-content:space-between;background:var(--amber-light);border:1.5px solid var(--amber);padding:12px 16px;border-radius:8px;cursor:pointer;">
+                            <div style="display:flex;align-items:center;gap:10px;">
+                                <input type="radio" name="payment_method" value="crypto" checked onchange="updateCheckoutTotal()">
+                                <div>
+                                    <strong style="color:#92400E;font-family:var(--font-body);font-size:13.5px;">Bitcoin / USDT / Crypto</strong>
+                                    <div style="font-size:11.5px;color:#B45309;">Direct wallet settlement &bull; Fast confirmation</div>
+                                </div>
+                            </div>
+                            <span style="background:var(--amber);color:#fff;font-family:var(--font-body);font-size:11px;font-weight:800;padding:3px 8px;border-radius:12px;">10% DISCOUNT</span>
+                        </label>
+
+                        <label style="display:flex;align-items:center;justify-content:space-between;background:var(--sapphire-light);border:1.5px solid var(--sapphire-border);padding:12px 16px;border-radius:8px;cursor:pointer;">
+                            <div style="display:flex;align-items:center;gap:10px;">
+                                <input type="radio" name="payment_method" value="wire" onchange="updateCheckoutTotal()">
+                                <div>
+                                    <strong style="color:var(--sapphire-dark);font-family:var(--font-body);font-size:13.5px;">Bank Wire / SWIFT / ACH</strong>
+                                    <div style="font-size:11.5px;color:var(--sapphire);">Direct institutional bank transfer</div>
+                                </div>
+                            </div>
+                            <span style="background:var(--sapphire);color:#fff;font-family:var(--font-body);font-size:11px;font-weight:800;padding:3px 8px;border-radius:12px;">5% DISCOUNT</span>
+                        </label>
+
+                        <label style="display:flex;align-items:center;justify-content:space-between;background:var(--slate-50);border:1.5px solid var(--slate-300);padding:12px 16px;border-radius:8px;cursor:pointer;">
+                            <div style="display:flex;align-items:center;gap:10px;">
+                                <input type="radio" name="payment_method" value="card" onchange="updateCheckoutTotal()">
+                                <div>
+                                    <strong style="color:var(--slate-900);font-family:var(--font-body);font-size:13.5px;">Credit / Debit Card (Stripe)</strong>
+                                    <div style="font-size:11.5px;color:var(--slate-500);">Visa, MasterCard, American Express</div>
+                                </div>
+                            </div>
+                            <span style="font-family:var(--font-body);font-size:12px;color:var(--slate-500);font-weight:600;">Standard</span>
+                        </label>
+                    </div>
+
+                    <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:16px;margin-bottom:20px;">
+                        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--slate-500);margin-bottom:6px;">
+                            <span>Subtotal:</span>
+                            <span id="checkout-subtotal">$0.00</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--emerald);font-weight:700;margin-bottom:6px;" id="checkout-discount-row">
+                            <span>Payment Discount (10%):</span>
+                            <span id="checkout-discount">-$0.00</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--slate-500);margin-bottom:10px;">
+                            <span>Secured Insured Shipping:</span>
+                            <span style="color:var(--emerald);font-weight:700;">FREE</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;font-family:var(--font-head);font-size:24px;font-weight:800;color:var(--slate-900);border-top:1px solid var(--slate-200);padding-top:10px;">
+                            <span>Final Total:</span>
+                            <span id="checkout-total">$0.00</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;font-weight:800;">
+                        Confirm &amp; Place Order &rarr;
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT MASTER STORE LOGIC -->
+    <script>
+    var products = [
+        {
+            id: 1, code: "tirzepatide", name: "Tirzepatide (10mg)",
+            category: "weight-loss", cat_label: "Weight Loss & Incretins",
+            cas: "2023788-19-2", mw: "4813.45 g/mol", purity: "99.4%", lot: "PHX-TIR-9042",
+            reg_usd: 140.00, sale_usd: 112.00,
+            mechanism: "Dual GIP / GLP-1 Receptor Agonist",
+            focus: "Weight Loss, Insulin Secretion & Satiety Signaling",
+            desc: "Dual GIP and GLP-1 receptor agonist formulated as a sterile lyophilized cake. Promotes significant appetite regulation and metabolic glucose balance. Step-by-step dilution instructions included with delivery.",
+            images: [
+                "assets/images/products/tirzepatide-photo.jpg",
+                "assets/images/products/tirzepatide-coa.svg",
+                "assets/images/products/tirzepatide-pack.svg"
+            ]
+        },
+        {
+            id: 2, code: "retatrutide", name: "Retatrutide (10mg)",
+            category: "weight-loss", cat_label: "Weight Loss & Incretins",
+            cas: "2381089-83-2", mw: "4731.33 g/mol", purity: "99.3%", lot: "PHX-RET-8119",
+            reg_usd: 175.00, sale_usd: 139.00,
+            mechanism: "Triple GLP-1 / GIP / GCGR Agonist (GGG)",
+            focus: "High-Potency Weight Loss & Energy Expenditure",
+            desc: "Next-generation triple receptor agonist targeting GLP-1, GIP, and Glucagon receptors. Enhances metabolic rate, energy expenditure, and lipid clearance. Protocol guide enclosed.",
+            images: [
+                "assets/images/products/retatrutide-photo.jpg",
+                "assets/images/products/retatrutide-coa.svg",
+                "assets/images/products/retatrutide-pack.svg"
+            ]
+        },
+        {
+            id: 3, code: "semaglutide", name: "Semaglutide (5mg)",
+            category: "weight-loss", cat_label: "Weight Loss & Incretins",
+            cas: "910463-68-2", mw: "4113.58 g/mol", purity: "99.5%", lot: "PHX-SEM-7734",
+            reg_usd: 120.00, sale_usd: 96.00,
+            mechanism: "Selective GLP-1 Receptor Agonist",
+            focus: "Weight Loss & Glycemic Regulation",
+            desc: "Gold-standard GLP-1 receptor agonist with albumin-binding side chain for sustained weekly appetite suppression and glycemic control. Reconstitution table included with shipment.",
+            images: [
+                "assets/images/products/semaglutide-photo.jpg",
+                "assets/images/products/semaglutide-coa.svg",
+                "assets/images/products/semaglutide-pack.svg"
+            ]
+        },
+        {
+            id: 4, code: "cagrilintide", name: "Cagrilintide (5mg)",
+            category: "weight-loss", cat_label: "Weight Loss & Incretins",
+            cas: "1415456-99-3", mw: "4522.06 g/mol", purity: "99.2%", lot: "PHX-CAG-6521",
+            reg_usd: 135.00, sale_usd: 108.00,
+            mechanism: "Long-Acting Non-Selective Amylin Analog",
+            focus: "Synergistic Satiety Induction & Weight Loss",
+            desc: "Acylated amylin analog frequently investigated alongside GLP-1 agonists to amplify fullness, retard gastric emptying, and sustain body composition improvements.",
+            images: [
+                "assets/images/products/cagrilintide-photo.jpg",
+                "assets/images/products/cagrilintide-coa.svg",
+                "assets/images/products/cagrilintide-pack.svg"
+            ]
+        },
+        {
+            id: 5, code: "aod9604", name: "AOD-9604 (5mg)",
+            category: "weight-loss", cat_label: "Weight Loss & Incretins",
+            cas: "221231-10-3", mw: "1815.10 g/mol", purity: "99.4%", lot: "PHX-AOD-5412",
+            reg_usd: 95.00, sale_usd: 76.00,
+            mechanism: "C-Terminal hGH Fragment (176-191)",
+            focus: "Targeted Lipolysis & Adipocyte Metabolism",
+            desc: "Active lipolytic fragment of growth hormone C-terminus. Stimulates fat breakdown via beta-3 adrenergic receptors without elevating IGF-1 or altering blood sugar.",
+            images: [
+                "assets/images/products/aod9604-photo.jpg",
+                "assets/images/products/aod9604-coa.svg",
+                "assets/images/products/aod9604-pack.svg"
+            ]
+        },
+        {
+            id: 6, code: "ghkcu", name: "GHK-Cu Copper Peptide (50mg)",
+            category: "anti-ageing", cat_label: "Anti-Ageing & Skin Health",
+            cas: "49557-75-7", mw: "403.92 g/mol", purity: "99.6%", lot: "PHX-GHK-4902",
+            reg_usd: 60.00, sale_usd: 48.00,
+            mechanism: "Copper-Chelated Tripeptide (Gly-His-Lys)",
+            focus: "Skin Health, Collagen & Elastin Remodeling",
+            desc: "Royal blue crystalline powder. Stimulates collagen synthesis, decorin expression, antioxidant enzyme upregulation, and dermal extracellular matrix remodeling.",
+            images: [
+                "assets/images/products/ghkcu-photo.jpg",
+                "assets/images/products/ghkcu-coa.svg",
+                "assets/images/products/ghkcu-pack.svg"
+            ]
+        },
+        {
+            id: 7, code: "epithalon", name: "Epithalon (10mg)",
+            category: "anti-ageing", cat_label: "Anti-Ageing & Longevity",
+            cas: "307297-39-8", mw: "390.35 g/mol", purity: "99.5%", lot: "PHX-EPI-3817",
+            reg_usd: 60.00, sale_usd: 48.00,
+            mechanism: "Synthetic Pineal Tetrapeptide (Ala-Glu-Asp-Gly)",
+            focus: "Telomerase Activation & Cellular Longevity",
+            desc: "Synthetic pineal tetrapeptide researched for telomerase induction, cellular age reduction, circadian rhythm normalization, and melatonin secretion restoration.",
+            images: [
+                "assets/images/products/epithalon-photo.jpg",
+                "assets/images/products/epithalon-coa.svg",
+                "assets/images/products/epithalon-pack.svg"
+            ]
+        },
+        {
+            id: 8, code: "motsc", name: "MOTS-c (10mg)",
+            category: "anti-ageing", cat_label: "Cellular Energy & Vitality",
+            cas: "1627580-64-6", mw: "2174.65 g/mol", purity: "99.3%", lot: "PHX-MOT-2761",
+            reg_usd: 80.00, sale_usd: 64.00,
+            mechanism: "Mitochondrial-Derived Peptide (16-AA)",
+            focus: "Cellular Energy, Longevity & Metabolic Health",
+            desc: "Encodes within the mitochondrial 12S rRNA. Acts as a systemic metabolic hormone activating AMPK, enhancing glucose disposal, and boosting physical endurance.",
+            images: [
+                "assets/images/products/motsc-photo.jpg",
+                "assets/images/products/motsc-coa.svg",
+                "assets/images/products/motsc-pack.svg"
+            ]
+        },
+        {
+            id: 9, code: "bpc157", name: "BPC-157 (5mg)",
+            category: "anti-ageing", cat_label: "Tissue Repair & Healing",
+            cas: "137525-51-0", mw: "1419.53 g/mol", purity: "99.4%", lot: "PHX-BPC-1945",
+            reg_usd: 55.00, sale_usd: 44.00,
+            mechanism: "Stable Gastric Pentadecapeptide (15-AA)",
+            focus: "Tissue Healing, Angiogenesis & Gut Integrity",
+            desc: "Gastric juice-derived pentadecapeptide researched extensively for tendon-to-bone reconnection, gut mucosal lining repair, and microvascular tissue healing.",
+            images: [
+                "assets/images/products/bpc157-photo.jpg",
+                "assets/images/products/bpc157-coa.svg",
+                "assets/images/products/bpc157-pack.svg"
+            ]
+        },
+        {
+            id: 10, code: "tb500", name: "TB-500 (5mg)",
+            category: "anti-ageing", cat_label: "Tissue Repair & Flexibility",
+            cas: "77591-33-4", mw: "4963.50 g/mol", purity: "99.5%", lot: "PHX-TB5-1082",
+            reg_usd: 65.00, sale_usd: 52.00,
+            mechanism: "Thymosin Beta-4 Active Domain (Ac-LKKTETQ)",
+            focus: "Cellular Migration, Tissue Repair & Flexibility",
+            desc: "Major G-actin sequestering peptide. Accelerates cell migration to damaged tissue, promotes microvascular recruitment, and prevents scar tissue fibrosis.",
+            images: [
+                "assets/images/products/tb500-photo.jpg",
+                "assets/images/products/tb500-coa.svg",
+                "assets/images/products/tb500-pack.svg"
+            ]
+        },
+        {
+            id: 11, code: "cjcipam", name: "CJC-1295 + Ipamorelin (10mg)",
+            category: "muscle", cat_label: "Muscle & Growth Hormone Axis",
+            cas: "Dual Mix (863288-34-0)", mw: "3367 / 711 g/mol", purity: "99.3%", lot: "PHX-CJC-9923",
+            reg_usd: 85.00, sale_usd: 68.00,
+            mechanism: "Synergistic GHRH + Ghrelin Receptor Agonist",
+            focus: "Pulsatile GH Release, Deep Sleep & Lean Mass",
+            desc: "1:1 synergistic blend delivering amplified pulsatile pituitary growth hormone release and deep stage-4 sleep without elevating cortisol or prolactin.",
+            images: [
+                "assets/images/products/cjcipam-photo.jpg",
+                "assets/images/products/cjcipam-coa.svg",
+                "assets/images/products/cjcipam-pack.svg"
+            ]
+        },
+        {
+            id: 12, code: "mk677", name: "MK-677 Ibutamoren (30mL)",
+            category: "muscle", cat_label: "Muscle & Growth Hormone Axis",
+            cas: "159752-10-0", mw: "624.77 g/mol", purity: "99.1%", lot: "PHX-MK6-8841",
+            reg_usd: 70.00, sale_usd: 56.00,
+            mechanism: "Non-Peptide Oral Ghrelin Receptor Agonist",
+            focus: "Sustained IGF-1 Elevation & Nitrogen Retention",
+            desc: "Supplied in 30mL amber dropper bottle with calibrated pipette. Sustains elevated plasma GH and IGF-1 levels without blunting natural pituitary pulsatility.",
+            images: [
+                "assets/images/products/mk677-photo.jpg",
+                "assets/images/products/mk677-coa.svg",
+                "assets/images/products/mk677-pack.svg"
+            ]
+        },
+        {
+            id: 13, code: "tesamorelin", name: "Tesamorelin (10mg)",
+            category: "muscle", cat_label: "Muscle & Growth Hormone Axis",
+            cas: "218949-48-5", mw: "5135.80 g/mol", purity: "99.2%", lot: "PHX-TES-7719",
+            reg_usd: 105.00, sale_usd: 84.00,
+            mechanism: "Trans-3-hexenoyl GHRH Analog (44-AA)",
+            focus: "Visceral Adipose Mobilization & GH Secretion",
+            desc: "Potent growth hormone-releasing factor analog specifically investigated for visceral abdominal adipose reduction and hepatic lipid clearance.",
+            images: [
+                "assets/images/products/tesamorelin-photo.jpg",
+                "assets/images/products/tesamorelin-coa.svg",
+                "assets/images/products/tesamorelin-pack.svg"
+            ]
+        },
+        {
+            id: 14, code: "semax", name: "Semax Nasal Spray (30mg)",
+            category: "cognitive", cat_label: "Cognitive & Vitality",
+            cas: "80714-61-0", mw: "813.92 g/mol", purity: "99.4%", lot: "PHX-SMX-6632",
+            reg_usd: 58.00, sale_usd: 46.00,
+            mechanism: "Heptapeptide ACTH(4-10) Analog",
+            focus: "BDNF Upregulation, Focus & Neuroprotection",
+            desc: "10mL amber metered nasal spray bottle. Investigated for brain-derived neurotrophic factor stimulation, dopaminergic modulation, and neuronal stress resilience.",
+            images: [
+                "assets/images/products/semax-photo.jpg",
+                "assets/images/products/semax-coa.svg",
+                "assets/images/products/semax-pack.svg"
+            ]
+        },
+        {
+            id: 15, code: "selank", name: "Selank Nasal Spray (10mg)",
+            category: "cognitive", cat_label: "Cognitive & Vitality",
+            cas: "129954-34-3", mw: "751.87 g/mol", purity: "99.2%", lot: "PHX-SEL-5541",
+            reg_usd: 55.00, sale_usd: 44.00,
+            mechanism: "Synthetic Tuftsin Analog",
+            focus: "GABA Modulation, Anxiolysis & Memory",
+            desc: "10mL metered nasal pump dispenser. Anxiolytic heptapeptide investigated for modulation of GABAergic neurotransmission and cognitive stabilization under acute stress.",
+            images: [
+                "assets/images/products/selank-photo.jpg",
+                "assets/images/products/selank-coa.svg",
+                "assets/images/products/selank-pack.svg"
+            ]
+        },
+        {
+            id: 16, code: "pt141", name: "PT-141 Bremelanotide (10mg)",
+            category: "cognitive", cat_label: "Cognitive & Vitality",
+            cas: "189691-06-3", mw: "1025.18 g/mol", purity: "99.3%", lot: "PHX-PT1-4432",
+            reg_usd: 62.00, sale_usd: 50.00,
+            mechanism: "Central Melanocortin MC3 / MC4 Agonist",
+            focus: "Hypothalamic Receptor Signaling & Vitality",
+            desc: "Cyclic heptapeptide acting centrally across hypothalamic neural circuits to modulate libido, autonomic vitality, and drive independent of vascular mechanisms.",
+            images: [
+                "assets/images/products/pt141-photo.jpg",
+                "assets/images/products/pt141-coa.svg",
+                "assets/images/products/pt141-pack.svg"
+            ]
+        },
+        {
+            id: 17, code: "library384", name: "Custom 384-Peptide Screening Library",
+            category: "institutional", cat_label: "Institutional & Bulk",
+            cas: "CUSTOM-ARRAY-384", mw: "High-Throughput", purity: "95-99%", lot: "PHX-LIB-3840",
+            reg_usd: 23450.00, sale_usd: 18760.00,
+            mechanism: "Robotic Solid-Phase Microplate Synthesis",
+            focus: "High-Throughput Epitope & Receptor Screening",
+            desc: "Supplied in standard 384-well polypropylene microplates on automated liquid handler decks. For institutional drug discovery, alanine scanning, and receptor assays.",
+            images: [
+                "assets/images/products/library384-photo.jpg",
+                "assets/images/products/library384-coa.svg",
+                "assets/images/products/library384-pack.svg"
+            ]
+        },
+        {
+            id: 18, code: "kinase96", name: "Kinase Substrate Profiling Array (96-Well)",
+            category: "institutional", cat_label: "Institutional & Bulk",
+            cas: "KINASE-96-SUB", mw: "High-Density Array", purity: "98.5%", lot: "PHX-KIN-9601",
+            reg_usd: 8900.00, sale_usd: 7120.00,
+            mechanism: "High-Density Phosphorylation Array",
+            focus: "Enzyme Kinetics & Phosphorylation Assays",
+            desc: "96 distinct pre-arrayed peptide substrates for high-throughput kinase profiling and phosphorylation signaling screening in biotechnology consortia.",
+            images: [
+                "assets/images/products/kinase96-photo.jpg",
+                "assets/images/products/kinase96-coa.svg",
+                "assets/images/products/kinase96-pack.svg"
+            ]
+        },
+        {
+            id: 19, code: "bulk10g", name: "Bulk cGMP Tirzepatide (10-Gram Lot)",
+            category: "institutional", cat_label: "Institutional & Bulk",
+            cas: "2023788-19-2-BULK", mw: "4813.45 g/mol", purity: "99.5%", lot: "PHX-BLK-100G",
+            reg_usd: 14900.00, sale_usd: 11920.00,
+            mechanism: "Single-Lot Bulk cGMP Synthesis Reagent",
+            focus: "Pilot Animal Models & Pre-Clinical Formulations",
+            desc: "10,000mg single-batch lyophilized cake packaged in 100mL wide-mouth amber laboratory reagent jar with tamper-evident seal. Full cGMP impurity profile and residual solvent testing.",
+            images: [
+                "assets/images/products/bulk10g-photo.jpg",
+                "assets/images/products/bulk10g-coa.svg",
+                "assets/images/products/bulk10g-pack.svg"
+            ]
+        }
+    ];
+
+    var currentFilter = 'all';
+    var cart = [];
+    var carouselAngles = {};
+
+    
+    function renderGuideTable() {
+        var tbody = document.getElementById('guide-table-body');
+        if (!tbody) return;
+        var h = '';
+        products.forEach(function(p) {
+            var g = buyerGuideData[p.code] || {};
+            var reconText = '2.0 mL Bacteriostatic Water';
+            if (g.reconstitution && g.reconstitution.volume_ml) {
+                reconText = g.reconstitution.volume_ml + ' mL ' + (g.reconstitution.solvent || 'BAC Water');
+            } else if (g.administration && g.administration.route) {
+                reconText = g.administration.route + ' (' + (g.administration.capsule_strength || g.administration.spray_dose || 'Standard') + ')';
+            } else if (g.specification && g.specification.format) {
+                reconText = g.specification.format;
+            }
+
+            var storText = '-20°C (24 mo) / 2-8°C (30 days)';
+            if (g.storage) {
+                if (typeof g.storage === 'object') {
+                    storText = (g.storage.lyophilized || g.storage.capsules || g.storage.sealed_plate || '-20°C');
+                } else {
+                    storText = g.storage.substring(0, 45) + '...';
+                }
+            }
+
+            h += '<tr>';
+            h += '  <td><strong style="color:#04241B;font-size:13.5px;cursor:pointer;" onclick="openProductModal(' + p.id + ')">' + p.name + '</strong><br><span style="font-size:11px;color:#059669;font-weight:700;">' + p.cat_label + '</span></td>';
+            h += '  <td style="max-width:200px;font-size:12px;color:#374151;">' + p.focus + '</td>';
+            h += '  <td style="font-family:var(--font-mono);font-size:11.5px;color:#4B5563;">' + p.cas + '</td>';
+            h += '  <td style="font-size:12.5px;"><strong style="color:#047857;">' + reconText + '</strong></td>';
+            h += '  <td style="font-size:12px;color:#4B5563;">' + storText + '</td>';
+            h += '  <td><button onclick="openProductModal(' + p.id + ')" class="btn-info" style="padding:6px 12px;font-size:11.5px;white-space:nowrap;">View Protocol</button></td>';
+            h += '</tr>';
+        });
+        tbody.innerHTML = h;
+    }
+
+    function initStore() {
+        renderGuideTable();
+        renderProducts();
+        updateCartCount();
+    }
+
+        
+    function scrollToProduct(id) {
+        currentFilter = 'all';
+        document.querySelectorAll('.cat-pill').forEach(function(b) {
+            if (b.innerText.toLowerCase().indexOf('all') !== -1) b.classList.add('active');
+            else b.classList.remove('active');
+        });
+        renderProducts();
+        setTimeout(function() {
+            var el = document.getElementById('card-' + id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.style.boxShadow = '0 0 0 4px #10B981, 0 20px 48px rgba(16,185,129,0.35)';
+                el.style.transform = 'translateY(-6px)';
+                setTimeout(function() {
+                    el.style.boxShadow = '';
+                    el.style.transform = '';
+                }, 2500);
+            }
+        }, 80);
+    }
+
+    function renderProducts() {
+        var container = document.getElementById('products-container');
+        var filtered = products.filter(function(p) {
+            return currentFilter === 'all' || p.category === currentFilter;
+        });
+
+        var html = '';
+        filtered.forEach(function(p) {
+            var reg = '$' + p.reg_usd.toFixed(2);
+            var sale = '$' + p.sale_usd.toFixed(2);
+            var singleImg = (p.images && p.images.length > 0) ? p.images[0] : ('assets/images/products/' + p.code + '-vial.svg');
+
+            html += '<div class="product-card" id="card-' + p.id + '">';
+            html += '  <div>';
+            html += '    <div class="card-top-row">';
+            html += '      <span class="badge-sale">-20% SALE</span>';
+            html += '      <span class="badge-purity">HPLC ≥ ' + p.purity + '</span>';
+            html += '    </div>';
+
+            html += '    <div class="product-img-box" onclick="openProductModal(' + p.id + ')">';
+            html += '      <span class="click-hint">🔍 Click for Info</span>';
+            html += '      <img src="' + singleImg + '" alt="' + p.name + '" class="product-card-img" onerror="this.src=\'assets/images/products/' + p.code + '-vial.svg\';">';
+            html += '    </div>';
+
+            html += '    <div class="card-cat">' + p.cat_label + '</div>';
+            html += '    <h3 class="card-name" onclick="openProductModal(' + p.id + ')">' + p.name + '</h3>';
+            html += '    <div class="card-cas">LOT: ' + p.lot + ' &bull; Directions Enclosed</div>';
+            html += '  </div>';
+
+            html += '  <div class="card-action-row">';
+            html += '    <div>';
+            html += '      <span class="price-was">' + reg + '</span>';
+            html += '      <div class="price-now">' + sale + '</div>';
+            html += '    </div>';
+            html += '    <div style="display:flex;align-items:center;">';
+            html += '      <button class="btn-info" onclick="openProductModal(' + p.id + ')">Info</button>';
+            html += '      <button class="btn-add" onclick="addToCart(' + p.id + ', 1)">+ Add</button>';
+            html += '    </div>';
+            html += '  </div>';
+
+            html += '</div>';
+        });
+
+        container.innerHTML = html;
+    }
+
+// Single picture display active — carousel navigation removed per specification
+
+    function filterCategory(cat, btn) {
+        currentFilter = cat;
+        document.querySelectorAll('.cat-pill').forEach(function(b) {
+            b.classList.remove('active');
+        });
+        if (btn) btn.classList.add('active');
+        renderProducts();
+    }
+
+    // MODAL OPERATIONS
+    var activeModalProd = null;
+    var modalAngle = 0;
+
+    var buyerGuideData = {"tirzepatide": {"name": "Tirzepatide (10mg)", "category": "Weight Loss & Incretins", "primary_benefits": "Unprecedented weight reduction, appetite suppression, enhanced insulin sensitivity, delayed gastric emptying, and sustained glycemic control.", "mechanism": "Dual GIP (glucose-dependent insulinotropic polypeptide) and GLP-1 (glucagon-like peptide-1) receptor agonist.", "reconstitution": {"diluent": "Bacteriostatic Water (0.9% Benzyl Alcohol)", "volume_recommended": "2.0 mL", "technique": "Inject diluent gently along the inside glass wall of the vial. Do not shake vigorously; swirl gently until completely dissolved.", "yield_conversion": "2.0mL added to 10mg vial = 5mg per 1.0mL (500mcg per 10 units / 0.1mL on a standard U-100 syringe)."}, "typical_protocol": "Starting research/wellness protocol commonly begins at 2.5mg once weekly for weeks 1-4, titrating to 5.0mg weekly based on response.", "half_life": "~5 days (allows once-weekly administration)", "storage": "Unreconstituted lyophilized powder: stable at -20°C for 24 months. Reconstituted solution: refrigerate at 2°C - 8°C and use within 30-45 days. Keep shielded from light.", "faq": [{"q": "How does Tirzepatide differ from Semaglutide?", "a": "Tirzepatide targets both GIP and GLP-1 receptors simultaneously, resulting in significantly higher mean weight reduction in clinical trials (~20-22% vs ~15% for Semaglutide)."}, {"q": "Does it need to be refrigerated before reconstitution?", "a": "For short-term shipping (up to 14 days), the lyophilized powder remains stable at ambient temperatures. Long-term storage should be in a freezer at -20°C."}]}, "retatrutide": {"name": "Retatrutide (10mg)", "category": "Weight Loss & Incretins", "primary_benefits": "Triple receptor agonism for maximum fat loss, enhanced basal energy expenditure, fatty liver clearance, and profound appetite regulation.", "mechanism": "Triple GGG agonist targeting GLP-1, GIP, and Glucagon (GCGR) receptors.", "reconstitution": {"diluent": "Bacteriostatic Water (0.9% Benzyl Alcohol)", "volume_recommended": "2.0 mL", "technique": "Add 2.0mL bacteriostatic water smoothly down the vial wall. Allow 2-3 minutes for natural dissolution without agitation.", "yield_conversion": "2.0mL in 10mg vial = 500mcg per 10 units (0.1mL) on a U-100 insulin syringe."}, "typical_protocol": "Investigational protocols start at 1.0mg - 2.0mg once weekly, gradually stepping up every 4 weeks to 4.0mg - 8.0mg weekly.", "half_life": "~6 days (once-weekly protocol)", "storage": "Store powder at -20°C. Once reconstituted, refrigerate at 2°C - 8°C; use within 30 days.", "faq": [{"q": "What makes Retatrutide unique?", "a": "Its third target—the glucagon receptor—actively ramps up basal metabolic calorie expenditure and hepatic lipid burning, beyond simple appetite suppression."}]}, "semaglutide": {"name": "Semaglutide (5mg)", "category": "Weight Loss & Incretins", "primary_benefits": "Proven appetite suppression, food craving reduction, improved HbA1c, and steady fat loss.", "mechanism": "Selective Glucagon-Like Peptide-1 (GLP-1) receptor agonist with albumin-binding fatty acid side chain.", "reconstitution": {"diluent": "Bacteriostatic Water (0.9% Benzyl Alcohol)", "volume_recommended": "2.0 mL", "technique": "Gently add 2.0mL diluent. Swirl gently until clear.", "yield_conversion": "2.0mL in 5mg vial = 250mcg per 10 units (0.1mL) on a standard U-100 syringe."}, "typical_protocol": "Standard ramp starts at 0.25mg once weekly for 4 weeks, increasing to 0.5mg weekly, with a maximum maintenance of 1.7mg - 2.4mg weekly.", "half_life": "~7 days (once-weekly protocol)", "storage": "Store powder at -20°C. Reconstituted solution must be refrigerated at 2°C - 8°C (stable for 56 days).", "faq": [{"q": "What is the best time of day to administer?", "a": "Can be taken at any time of day, with or without food, on the same day each week."}]}, "cagrilintide": {"name": "Cagrilintide (5mg)", "category": "Weight Loss & Incretins", "primary_benefits": "Non-selective amylin receptor agonist that delays gastric transit, triggers early satiety signals in the brainstem, and prevents weight regain.", "mechanism": "Long-acting amylin analogue activating AMY1, AMY2, AMY3, and calcitonin receptors.", "reconstitution": {"diluent": "Bacteriostatic Water", "volume_recommended": "2.0 mL", "technique": "Slowly introduce 2.0mL BAC water. Invert gently twice.", "yield_conversion": "2.0mL in 5mg vial = 250mcg per 10 units (0.1mL)."}, "typical_protocol": "Frequently researched in tandem with Semaglutide (CagriSema stack) at 0.25mg to 2.4mg weekly.", "half_life": "~7-8 days", "storage": "Store dry powder at -20°C; reconstituted at 2°C - 8°C.", "faq": [{"q": "Can Cagrilintide be mixed in the same syringe as Semaglutide?", "a": "They should be reconstituted in separate vials; researchers often co-administer simultaneously at different injection sites."}]}, "bpc157": {"name": "BPC-157 (5mg)", "category": "Anti-Ageing & Tissue Regeneration", "primary_benefits": "Accelerated tendon, ligament, and muscle healing, gut lining repair (leaky gut, IBD), angiogenesis (blood vessel recruitment), and joint mobility.", "mechanism": "Body Protection Compound pentadecapeptide that stimulates VEGF expression, FAK/paxillin signaling, and nitric oxide synthesis.", "reconstitution": {"diluent": "Bacteriostatic Water", "volume_recommended": "2.5 mL or 5.0 mL", "technique": "Add 2.5mL for standard dosing. Yields 200mcg per 10 units (0.1mL).", "yield_conversion": "2.5mL in 5mg vial = 200mcg per 0.1mL (10 units). 5.0mL = 100mcg per 0.1mL."}, "typical_protocol": "250mcg to 500mcg administered once or twice daily for 4 to 8 weeks.", "half_life": "~4 hours", "storage": "Store at -20°C. Reconstituted: refrigerate at 2°C - 8°C and use within 28 days.", "faq": [{"q": "Does BPC-157 need to be injected near the injury?", "a": "BPC-157 exhibits strong systemic bioavailability whether injected subcutaneously in the abdomen or closer to an injured tendon."}]}, "tb500": {"name": "TB-500 (5mg)", "category": "Anti-Ageing & Tissue Regeneration", "primary_benefits": "Systemic cellular migration, flexibility and range of motion improvement, anti-fibrotic remodeling, and heart/muscle recovery.", "mechanism": "Synthetic active domain of Thymosin Beta-4, a major G-actin sequestering peptide promoting rapid microvascular recruitment.", "reconstitution": {"diluent": "Bacteriostatic Water", "volume_recommended": "2.0 mL", "technique": "Add 2.0mL BAC water smoothly.", "yield_conversion": "2.0mL in 5mg vial = 250mcg per 10 units."}, "typical_protocol": "Loading protocol: 2.0mg to 2.5mg twice weekly for 4 to 6 weeks, followed by maintenance at 2.0mg every 2 weeks.", "half_life": "~24-48 hours", "storage": "Freeze at -20°C; refrigerated once reconstituted.", "faq": [{"q": "Why is TB-500 frequently paired with BPC-157?", "a": "They act via complementary mechanisms: BPC-157 creates new blood vessels (angiogenesis) and repairs soft tissue, while TB-500 migrates actin to rebuild cellular infrastructure."}]}, "ghkcu": {"name": "GHK-Cu Copper Peptide (50mg)", "category": "Anti-Ageing & Skin Health", "primary_benefits": "Collagen type I & III synthesis, skin tightening and wrinkle reduction, scalp hair follicle stimulation, anti-inflammatory, and DNA repair gene activation.", "mechanism": "Naturally occurring copper tripeptide (Gly-His-Lys:Cu2+) regulating over 4,000 human genes associated with dermal remodeling and repair.", "reconstitution": {"diluent": "Bacteriostatic Water or Sterile Saline", "volume_recommended": "5.0 mL or 10.0 mL", "technique": "Dissolves rapidly into an intense royal blue solution upon contact with water.", "yield_conversion": "5.0mL in 50mg vial = 1.0mg (1000mcg) per 10 units (0.1mL)."}, "typical_protocol": "Subcutaneous: 1.0mg to 2.0mg daily for 30-day cycles. Topical: formulated at 1-3% in facial serums or hair sprays.", "half_life": "~1-2 hours in plasma; long-lasting tissue gene-expression effect.", "storage": "Store dry powder at -20°C. Protect from intense direct sunlight.", "faq": [{"q": "Why is the solution blue?", "a": "GHK naturally binds copper (Cu2+) ions, creating an intense azure-blue hue that confirms authentic high-purity chelation."}]}, "epithalon": {"name": "Epithalon (10mg)", "category": "Anti-Ageing & Longevity", "primary_benefits": "Telomerase enzyme activation, telomere elongation, biological age reduction, pineal gland restoration, circadian rhythm alignment, and deep sleep.", "mechanism": "Synthetic biomimetic tetrapeptide (Ala-Glu-Asp-Gly) modeled on bovine epithalamin.", "reconstitution": {"diluent": "Bacteriostatic Water", "volume_recommended": "2.0 mL", "technique": "Add 2.0mL BAC water smoothly.", "yield_conversion": "2.0mL in 10mg vial = 500mcg per 10 units (0.1mL)."}, "typical_protocol": "Classic Khavinson protocol: 5mg to 10mg daily for 10 to 20 consecutive days, repeated once or twice yearly.", "half_life": "Rapid systemic uptake; activates downstream telomerase gene transcription.", "storage": "Store at -20°C. Reconstituted: refrigerate and use within 20 days.", "faq": [{"q": "How often is an Epithalon cycle conducted?", "a": "Typically conducted as a 10-day intensive cycle every 6 to 12 months for longevity and cellular age reset."}]}, "motsc": {"name": "MOTS-c (10mg)", "category": "Cellular Energy & Metabolic Vitality", "primary_benefits": "Mitochondrial energy enhancement, exercise mimetic effects, glucose disposal, AMPK activation, metabolic flexibility, and physical endurance.", "mechanism": "Mitochondrial-derived 16-amino acid peptide that acts as an endocrine signal promoting metabolic homeostasis.", "reconstitution": {"diluent": "Bacteriostatic Water", "volume_recommended": "2.0 mL", "technique": "Add 2.0mL BAC water down vial wall.", "yield_conversion": "2.0mL in 10mg vial = 500mcg per 10 units."}, "typical_protocol": "5mg to 10mg administered 1 to 3 times weekly, often before exercise sessions, for 4 to 8 weeks.", "half_life": "~4 hours", "storage": "Store at -20°C. Reconstituted: keep at 2°C - 8°C; use within 21 days.", "faq": [{"q": "When is the best time to administer MOTS-c?", "a": "Most researchers administer MOTS-c in the morning or 1-2 hours prior to physical training sessions to optimize mitochondrial ATP production."}]}, "cjcipam": {"name": "CJC-1295 + Ipamorelin (10mg)", "category": "Muscle & Growth Hormone Axis", "primary_benefits": "Pulsatile natural growth hormone elevation, deep slow-wave stage-4 sleep, lean muscle preservation, accelerated recovery, and body fat reduction.", "mechanism": "Synergistic GHRH (Growth Hormone Releasing Hormone) analog + selective Ghrelin receptor agonist.", "reconstitution": {"diluent": "Bacteriostatic Water", "volume_recommended": "2.0 mL or 2.5 mL", "technique": "Add 2.0mL BAC water smoothly.", "yield_conversion": "2.0mL in 10mg vial = 250mcg CJC / 250mcg Ipamorelin per 10 units."}, "typical_protocol": "100mcg to 300mcg administered nightly immediately before sleep on an empty stomach.", "half_life": "Ipamorelin ~2 hours; CJC-1295 (no DAC) ~30 mins. Produces clean natural GH surge.", "storage": "Store at -20°C. Reconstituted: refrigerate at 2°C - 8°C; use within 30 days.", "faq": [{"q": "Why take it before bed?", "a": "Human growth hormone naturally pulses during early deep sleep. Taking this blend before sleep amplifies your natural physiological peak without desensitizing pituitary receptors."}]}, "aod9604": {"name": "AOD-9604 (5mg)", "category": "Weight Loss & Incretins", "cas": "221231-10-3", "molecular_weight": "1815.08 g/mol", "sequence": "Tyr-Leu-Arg-Ile-Val-Gln-Cys-Arg-Ser-Val-Glu-Gly-Ser-Cys-Gly-Phe (hGH fragment 176-191, C-terminal amide)", "reconstitution": {"solvent": "Bacteriostatic Water (0.9% benzyl alcohol)", "volume_ml": 2.0, "concentration": "2.5 mg/mL (2500 mcg/mL)", "notes": "Inject solvent slowly down the glass wall. Do NOT shake — gentle swirl until fully dissolved."}, "storage": {"lyophilized": "Stable at -20°C for 24 months; 2-8°C for 12 months", "reconstituted": "2-8°C refrigerated; use within 28 days", "protect_from": "Light, repeated freeze-thaw cycles"}, "half_life": "~12 minutes (peptide fragment)", "typical_research_dose": "250-300 mcg subcutaneous, investigated in AM fasted state", "appearance": "White to off-white lyophilized powder or cake", "solubility": "Freely soluble in bacteriostatic water; soluble in 0.1% TFA/water", "purity_method": "RP-HPLC (C18 column, 214nm UV), confirmed by LC-MS/MS", "faq": [{"q": "What is AOD-9604?", "a": "AOD-9604 is a modified 16-amino acid fragment of human growth hormone (hGH 176-191) that has been investigated for its lipolytic (fat-metabolizing) properties without the growth-promoting or diabetogenic effects of full-length hGH."}, {"q": "How should I store AOD-9604?", "a": "Store lyophilized vial at -20°C or 2-8°C. After reconstitution with bacteriostatic water, refrigerate at 2-8°C and use within 28 days."}, {"q": "What purity testing is performed?", "a": "Each lot undergoes RP-HPLC purity analysis (≥99.0%), LC-MS molecular weight confirmation, and endotoxin testing (<0.5 EU/mg)."}]}, "mk677": {"name": "MK-677 Ibutamoren (25mg capsules, 30ct)", "category": "Muscle & Growth Hormone Axis", "cas": "159634-47-6", "molecular_weight": "528.66 g/mol", "form": "Oral capsule (non-peptide GH secretagogue)", "administration": {"route": "Oral", "capsule_strength": "25 mg per capsule", "capsule_count": 30, "notes": "Swallow whole with water. Not a peptide — does not require reconstitution."}, "storage": {"capsules": "Store at room temperature (15-25°C) in a cool, dry place", "shelf_life": "24 months from manufacture date", "protect_from": "Moisture, direct sunlight, excessive heat"}, "half_life": "~24 hours (single daily dosing)", "typical_research_dose": "10-25 mg orally once daily, often investigated in PM dosing", "appearance": "White to off-white crystalline powder in vegetarian capsule shell", "solubility": "N/A (oral capsule form)", "purity_method": "RP-HPLC identity and purity, confirmed by LC-MS", "faq": [{"q": "Is MK-677 a peptide?", "a": "No. MK-677 (Ibutamoren) is a non-peptide, orally active growth hormone secretagogue that mimics ghrelin, stimulating pulsatile GH release and IGF-1 elevation."}, {"q": "Does MK-677 require injection?", "a": "No. MK-677 is taken orally as a capsule. No reconstitution or injection is needed."}, {"q": "How long can I store MK-677?", "a": "Capsules are stable at room temperature for up to 24 months. Keep the bottle tightly sealed away from moisture and direct sunlight."}]}, "tesamorelin": {"name": "Tesamorelin (10mg)", "category": "Muscle & Growth Hormone Axis", "cas": "218949-48-5", "molecular_weight": "5135.80 g/mol", "sequence": "Trans-3-hexenoic acid-modified GHRH(1-44)-NH2 (44 amino acids)", "reconstitution": {"solvent": "Bacteriostatic Water (0.9% benzyl alcohol)", "volume_ml": 5.0, "concentration": "2.0 mg/mL (2000 mcg/mL)", "notes": "Add solvent slowly against vial wall. Gently swirl — do not shake or vortex."}, "storage": {"lyophilized": "-20°C for 24 months; 2-8°C for 12 months", "reconstituted": "2-8°C refrigerated; use within 21 days", "protect_from": "Light, heat above 25°C, repeated freeze-thaw"}, "half_life": "~26 minutes (IV); ~38 minutes (SC)", "typical_research_dose": "1-2 mg subcutaneous daily, often investigated for visceral adipose reduction", "appearance": "White lyophilized sterile powder/cake", "solubility": "Freely soluble in bacteriostatic water and sterile water", "purity_method": "RP-HPLC (≥99.2%), ESI-MS molecular weight confirmation, endotoxin <1.0 EU/mg", "faq": [{"q": "What is Tesamorelin?", "a": "Tesamorelin is a synthetic analog of growth hormone-releasing hormone (GHRH) modified with a trans-3-hexenoic acid group. It is FDA-approved (as Egrifta®) for HIV-associated lipodystrophy and is investigated for visceral fat reduction and GH axis optimization."}, {"q": "How do I reconstitute Tesamorelin?", "a": "Add 5.0 mL of bacteriostatic water to the 10mg vial for a 2.0 mg/mL concentration. Inject slowly against the glass wall and gently swirl until dissolved."}, {"q": "What is the shelf life after reconstitution?", "a": "Use within 21 days when stored at 2-8°C. Do not freeze reconstituted solution."}]}, "semax": {"name": "Semax Nasal Spray (30mg / 10mL)", "category": "Cognitive & Vitality", "cas": "80714-61-0", "molecular_weight": "813.92 g/mol", "sequence": "Met-Glu-His-Phe-Pro-Gly-Pro (ACTH 4-10 analog)", "administration": {"route": "Intranasal spray", "volume": "10 mL amber metered spray bottle", "concentration": "3.0 mg/mL", "spray_dose": "~100 mcg per actuation (0.1 mL/spray)", "notes": "Prime pump with 3-4 actuations before first use. Store upright."}, "storage": {"sealed": "2-8°C refrigerated, protected from light", "after_opening": "2-8°C; use within 30 days of first actuation", "protect_from": "Direct sunlight, temperatures above 25°C"}, "half_life": "~30 seconds intranasal (rapid CNS absorption via olfactory mucosa)", "typical_research_dose": "200-600 mcg intranasally (2-6 sprays), investigated 1-2x daily", "appearance": "Clear, colorless to slightly yellow aqueous solution", "purity_method": "RP-HPLC (≥99.4%), LC-MS confirmation, sterility testing, endotoxin <0.25 EU/mL", "faq": [{"q": "What is Semax?", "a": "Semax is a synthetic heptapeptide analog of ACTH(4-10) developed in Russia for neuroprotective and nootropic applications. It upregulates BDNF and modulates dopaminergic and serotonergic systems."}, {"q": "How do I use the nasal spray?", "a": "Prime the pump 3-4 times before first use. Insert nozzle into nostril and press firmly for one actuation (~100 mcg). Alternate nostrils with each spray."}, {"q": "Does Semax require refrigeration?", "a": "Yes. Keep refrigerated at 2-8°C both before and after opening. Use within 30 days of first actuation."}]}, "selank": {"name": "Selank Nasal Spray (10mg / 10mL)", "category": "Cognitive & Vitality", "cas": "129954-34-3", "molecular_weight": "751.87 g/mol", "sequence": "Thr-Lys-Pro-Arg-Pro-Gly-Pro (Tuftsin analog + Pro-Gly-Pro extension)", "administration": {"route": "Intranasal spray", "volume": "10 mL metered pump dispenser", "concentration": "1.0 mg/mL", "spray_dose": "~75 mcg per actuation (0.075 mL/spray)", "notes": "Prime pump before first use. Tilt head slightly forward during administration."}, "storage": {"sealed": "2-8°C refrigerated, protected from light", "after_opening": "2-8°C; use within 30 days", "protect_from": "Direct sunlight, freezing, temperatures above 25°C"}, "half_life": "~2-3 minutes (rapid enzymatic degradation; functional effects last several hours via downstream GABA modulation)", "typical_research_dose": "150-300 mcg intranasally (2-4 sprays), investigated 2-3x daily", "appearance": "Clear, colorless aqueous solution", "purity_method": "RP-HPLC (≥99.2%), LC-MS confirmation, sterility and endotoxin testing", "faq": [{"q": "What is Selank?", "a": "Selank is a synthetic analog of the naturally occurring immunomodulatory peptide tuftsin, with an added Pro-Gly-Pro tail for enhanced stability. Investigated for anxiolytic effects, GABA modulation, and cognitive performance under stress."}, {"q": "How does Selank differ from Semax?", "a": "Semax is an ACTH(4-10) analog that primarily targets BDNF and dopaminergic pathways (focus/cognition). Selank is a tuftsin analog that primarily modulates GABAergic transmission (anxiolysis/calm). They are often studied together as complementary compounds."}, {"q": "Can I combine Selank with Semax?", "a": "They are frequently investigated together in nootropic research protocols. Selank (calming, anxiolytic) + Semax (focus, BDNF) target complementary neurotransmitter systems."}]}, "pt141": {"name": "PT-141 Bremelanotide (10mg)", "category": "Cognitive & Vitality", "cas": "189691-06-3", "molecular_weight": "1025.18 g/mol", "sequence": "Ac-Nle-cyclo[Asp-His-D-Phe-Arg-Trp-Lys]-OH (cyclic heptapeptide)", "reconstitution": {"solvent": "Bacteriostatic Water (0.9% benzyl alcohol)", "volume_ml": 2.0, "concentration": "5.0 mg/mL (5000 mcg/mL)", "notes": "Inject solvent slowly against vial wall. Gently swirl until fully dissolved."}, "storage": {"lyophilized": "-20°C for 24 months; 2-8°C for 12 months", "reconstituted": "2-8°C refrigerated; use within 28 days", "protect_from": "Light, excessive heat, repeated freeze-thaw"}, "half_life": "~2.7 hours (SC administration)", "typical_research_dose": "1.75 mg subcutaneous, investigated as needed (not daily); FDA-approved dose is 1.75mg SC PRN", "appearance": "White to off-white lyophilized powder", "solubility": "Freely soluble in bacteriostatic water and sterile water for injection", "purity_method": "RP-HPLC (≥99.3%), LC-MS molecular weight confirmation, endotoxin <0.5 EU/mg", "faq": [{"q": "What is PT-141 (Bremelanotide)?", "a": "PT-141 is a cyclic heptapeptide melanocortin receptor agonist (MC3R/MC4R). FDA-approved as Vyleesi® for hypoactive sexual desire disorder (HSDD) in premenopausal women. It acts centrally in the hypothalamus, unlike PDE5 inhibitors which act peripherally."}, {"q": "How is PT-141 administered?", "a": "Subcutaneous injection. Reconstitute with 2.0 mL bacteriostatic water for a 5.0 mg/mL solution. The FDA-approved dose is 1.75 mg SC administered at least 45 minutes before anticipated activity."}, {"q": "How often can PT-141 be used?", "a": "Not more than once within 24 hours, and no more than 8 doses per month per FDA labeling. Nausea is the most commonly reported side effect."}]}, "library384": {"name": "Custom 384-Peptide Screening Library", "category": "Institutional & Bulk", "cas": "CUSTOM-ARRAY-384", "form": "384-well polypropylene microplate", "specification": {"well_count": 384, "peptide_mass_per_well": "0.5-2.0 mg per well (customizable)", "purity_range": "95-99% (HPLC verified per sequence)", "format": "Lyophilized in sealed 384-well plate, compatible with automated liquid handlers", "custom_design": "Client specifies sequences; we synthesize, purify, and array"}, "storage": {"sealed_plate": "-20°C desiccated; stable for 12 months", "reconstituted": "Per individual peptide stability; generally 2-8°C for 7-14 days", "protect_from": "Moisture ingress, freeze-thaw, prolonged room temperature exposure"}, "lead_time": "4-6 weeks from sequence confirmation", "typical_applications": "Drug discovery epitope mapping, alanine scanning, structure-activity relationship (SAR) studies, receptor binding assays, high-throughput screening campaigns", "purity_method": "Each peptide individually verified by RP-HPLC and LC-MS; batch report included", "faq": [{"q": "How do I order a custom library?", "a": "Contact our institutional sales team with your sequence list (up to 384 sequences). We provide a quote within 48 hours. Lead time is 4-6 weeks from sequence confirmation."}, {"q": "What purity is guaranteed?", "a": "Standard libraries are supplied at ≥95% purity. Premium libraries at ≥98% are available at additional cost. Each well is individually QC'd by HPLC."}, {"q": "What format is the library supplied in?", "a": "Standard 384-well polypropylene microplate, lyophilized, sealed with pierceable aluminum foil. Compatible with Beckman, Hamilton, and Tecan liquid handlers."}]}, "kinase96": {"name": "Kinase Substrate Profiling Array (96-Well)", "category": "Institutional & Bulk", "cas": "KINASE-96-SUB", "form": "96-well high-density phosphorylation substrate array", "specification": {"well_count": 96, "substrates": "96 distinct pre-arrayed peptide substrates covering major kinase families (Ser/Thr, Tyr kinases)", "mass_per_well": "1.0 mg lyophilized per well", "purity": "≥98.5% (HPLC verified)", "format": "96-well plate, lyophilized, sealed with pierceable foil"}, "storage": {"sealed_plate": "-20°C desiccated; stable for 18 months", "reconstituted": "Use within 24 hours of reconstitution for optimal kinetic data", "protect_from": "Moisture, repeated freeze-thaw, light exposure"}, "lead_time": "In stock — ships within 3-5 business days", "typical_applications": "Kinase profiling, phosphorylation assay development, enzyme kinetics (Km/Vmax), drug candidate kinase selectivity screening, signal transduction pathway mapping", "purity_method": "Batch HPLC and MS verification for all 96 substrates; certificate of analysis included", "faq": [{"q": "What kinase families are covered?", "a": "The array covers substrates for major Ser/Thr kinases (PKA, PKC, CaMKII, Akt, MAPK/ERK, CDK) and Tyr kinases (Src, EGFR, Abl, JAK, PDGFR) among others."}, {"q": "How do I use the array?", "a": "Reconstitute each well with assay buffer. Add your kinase of interest and ATP (or γ-32P-ATP for radioactive assays). Measure phosphorylation by luminescence, fluorescence, or radiometric detection."}, {"q": "Is this array reusable?", "a": "No. Each well contains a single-use aliquot of lyophilized substrate. For repeat experiments, order additional plates."}]}, "bulk10g": {"name": "Bulk cGMP Tirzepatide (10-Gram Lot)", "category": "Institutional & Bulk", "cas": "2023788-19-2", "molecular_weight": "4813.45 g/mol", "form": "10,000 mg (10g) single-batch lyophilized cake in 100mL wide-mouth amber reagent jar", "specification": {"mass": "10,000 mg (10 grams)", "purity": "≥99.5% (HPLC)", "synthesis": "Full cGMP solid-phase peptide synthesis (SPPS)", "packaging": "100mL wide-mouth amber borosilicate glass jar with tamper-evident PTFE-lined cap", "documentation": "Full cGMP batch record, impurity profile, residual solvent analysis (ICH Q3C), endotoxin certification, Certificate of Analysis, Certificate of Origin"}, "storage": {"sealed_jar": "-20°C desiccated with nitrogen backfill; stable for 36 months", "after_opening": "Aliquot promptly into pre-weighed vials. Reseal under nitrogen/argon. Store aliquots at -20°C.", "protect_from": "Moisture, light, oxygen exposure, temperatures above -10°C for extended periods"}, "lead_time": "2-4 weeks (synthesis + QC); expedited available", "typical_applications": "Preclinical animal model studies, formulation development, dose-ranging studies, IND-enabling toxicology batches, compounding pharmacy supply", "purity_method": "RP-HPLC (multi-column validation), LC-MS/MS peptide mapping, Karl Fischer moisture analysis, residual solvent GC, bacterial endotoxin LAL test", "faq": [{"q": "Is this GMP-grade material?", "a": "Yes. Synthesized under current Good Manufacturing Practice (cGMP) conditions with full batch documentation, impurity profiling, and regulatory-grade analytical testing."}, {"q": "What documentation is included?", "a": "Certificate of Analysis (CoA), Certificate of Origin, full impurity profile (related substances, residual solvents per ICH Q3C), endotoxin report, and cGMP batch manufacturing record."}, {"q": "Can I request custom lot sizes?", "a": "Yes. We offer 1g, 5g, 10g, 25g, 50g, and 100g lot sizes. Contact our bulk synthesis team for custom quantity quotes."}]}};
+
+    function openProductModal(id) {
+        var p = products.find(function(item) { return item.id === id; });
+        if (!p) return;
+        activeModalProd = p;
+        modalAngle = 0;
+
+        document.getElementById('modal-cat-tag').innerText = p.cat_label;
+        document.getElementById('modal-title').innerText = p.name;
+        document.getElementById('modal-purity-badge').innerText = 'HPLC ≥ ' + p.purity + ' Validated';
+        document.getElementById('modal-desc').innerText = p.desc;
+        document.getElementById('modal-mechanism').innerText = p.mechanism;
+        document.getElementById('modal-focus').innerText = p.focus;
+        document.getElementById('modal-cas').innerText = p.cas;
+        document.getElementById('modal-mw').innerText = p.mw;
+        document.getElementById('modal-lot').innerText = p.lot;
+
+        // Dynamic Buyer Guide Data Injection
+        var guide = buyerGuideData[p.code] || {};
+        
+        // Populate Directions & Dilution Tab
+        var dirContainer = document.getElementById('tab-directions');
+        if (dirContainer) {
+            var dirHtml = '<div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:8px;padding:14px;margin-bottom:14px;font-size:13px;line-height:1.7;">';
+            if (guide.reconstitution) {
+                var r = guide.reconstitution;
+                dirHtml += '<strong style="color:var(--slate-900);display:block;margin-bottom:6px;font-size:14px;">Recommended Reconstitution Protocol:</strong>';
+                dirHtml += '<table class="specs-table" style="margin-bottom:10px;">';
+                dirHtml += '<tr><td>Solvent:</td><td><strong>' + (r.solvent || 'Bacteriostatic Water (0.9% benzyl alcohol)') + '</strong></td></tr>';
+                if (r.volume_ml) dirHtml += '<tr><td>Diluent Volume:</td><td>' + r.volume_ml + ' mL</td></tr>';
+                if (r.concentration) dirHtml += '<tr><td>Final Concentration:</td><td>' + r.concentration + '</td></tr>';
+                dirHtml += '</table>';
+                if (r.notes) {
+                    dirHtml += '<div style="background:#fff;border-left:3px solid var(--sapphire);padding:8px 12px;margin:8px 0;color:var(--slate-700);font-size:12.5px;">' + r.notes + '</div>';
+                }
+            } else if (guide.administration) {
+                var a = guide.administration;
+                dirHtml += '<strong style="color:var(--slate-900);display:block;margin-bottom:6px;font-size:14px;">Administration & Handling:</strong>';
+                dirHtml += '<table class="specs-table" style="margin-bottom:10px;">';
+                for (var key in a) {
+                    dirHtml += '<tr><td>' + key.replace(/_/g, ' ').toUpperCase() + ':</td><td>' + a[key] + '</td></tr>';
+                }
+                dirHtml += '</table>';
+            } else if (guide.specification) {
+                var s = guide.specification;
+                dirHtml += '<strong style="color:var(--slate-900);display:block;margin-bottom:6px;font-size:14px;">Array & Synthesis Specifications:</strong>';
+                dirHtml += '<table class="specs-table" style="margin-bottom:10px;">';
+                for (var skey in s) {
+                    dirHtml += '<tr><td>' + skey.replace(/_/g, ' ').toUpperCase() + ':</td><td>' + s[skey] + '</td></tr>';
+                }
+                dirHtml += '</table>';
+            } else {
+                dirHtml += '<strong style="color:var(--slate-900);display:block;margin-bottom:4px;">Reconstitution Protocol:</strong>';
+                dirHtml += 'Add 2.0 mL Bacteriostatic Water gently down the inside glass wall. Swirl gently; do not shake.';
+            }
+
+            if (guide.typical_research_dose || guide.typical_protocol) {
+                var doseVal = guide.typical_research_dose || guide.typical_protocol;
+                dirHtml += '<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--slate-200);font-size:12.5px;"><strong>Typical Protocol:</strong> ' + doseVal + '</div>';
+            }
+
+            dirHtml += '<div style="margin-top:10px;padding-top:8px;border-top:1px solid var(--slate-200);color:var(--emerald);font-weight:700;font-size:12px;">';
+            dirHtml += '✓ Full step-by-step printed protocol card & syringe calibration chart enclosed in cold shipping box.';
+            dirHtml += '</div>';
+            dirHtml += '</div>';
+            dirContainer.innerHTML = dirHtml;
+        }
+
+        // Dynamic Storage and FAQ in Overview Tab
+        var storElem = document.getElementById('modal-storage-info');
+        if (storElem && guide.storage) {
+            if (typeof guide.storage === 'object') {
+                var sText = 'Lyophilized: ' + (guide.storage.lyophilized || guide.storage.capsules || guide.storage.sealed_jar || '-20°C (24 mo)');
+                if (guide.storage.reconstituted) sText += ' | Liquid: ' + guide.storage.reconstituted;
+                storElem.innerText = sText;
+            } else {
+                storElem.innerText = guide.storage;
+            }
+        }
+
+        // Analytical Specs Method
+        var purityMethodElem = document.getElementById('modal-purity-method');
+        if (purityMethodElem) {
+            purityMethodElem.innerText = guide.purity_method || 'RP-HPLC (C18 column, 214nm UV), confirmed by LC-MS/MS';
+        }
+
+        // Render FAQs in Overview Tab if container exists
+        var faqContainer = document.getElementById('modal-faq-box');
+        if (faqContainer) {
+            if (guide.faq && guide.faq.length > 0) {
+                var fHtml = '<div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--slate-200);">';
+                fHtml += '<div style="font-size:12px;font-weight:800;color:var(--slate-800);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Frequently Asked Questions</div>';
+                guide.faq.forEach(function(item) {
+                    fHtml += '<details style="margin-bottom:8px;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:6px;padding:8px 12px;font-size:12.5px;">';
+                    fHtml += '<summary style="font-weight:700;color:var(--slate-800);cursor:pointer;">' + item.q + '</summary>';
+                    fHtml += '<div style="margin-top:6px;color:var(--slate-600);line-height:1.5;">' + item.a + '</div>';
+                    fHtml += '</details>';
+                });
+                fHtml += '</div>';
+                faqContainer.innerHTML = fHtml;
+            } else {
+                faqContainer.innerHTML = '';
+            }
+        }
+
+        document.getElementById('modal-price-reg').innerText = '$' + p.reg_usd.toFixed(2);
+        document.getElementById('modal-price-sale').innerText = '$' + p.sale_usd.toFixed(2);
+        document.getElementById('modal-qty').value = 1;
+
+        updateModalGallery();
+
+        document.getElementById('modal-add-btn').onclick = function() {
+            var qty = parseInt(document.getElementById('modal-qty').value) || 1;
+            addToCart(p.id, qty);
+            closeProductModal();
+        };
+
+        document.getElementById('product-modal').style.display = 'flex';
+    }
+
+    function switchModalTab(tabId, btn) {
+        document.querySelectorAll('.modal-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelectorAll('.tab-content').forEach(function(tc) { tc.classList.remove('active'); });
+        if (btn) btn.classList.add('active');
+        var target = document.getElementById(tabId);
+        if (target) target.classList.add('active');
+    }
+
+    function updateModalGallery() {
+        if (!activeModalProd) return;
+        var mainImg = document.getElementById('modal-main-img');
+        var singleSrc = (activeModalProd.images && activeModalProd.images.length > 0) ? activeModalProd.images[0] : ('assets/images/products/' + activeModalProd.code + '-vial.svg');
+        mainImg.src = singleSrc;
+        mainImg.onerror = function() { this.src = 'assets/images/products/' + activeModalProd.code + '-vial.svg'; };
+    }
+
+    function closeProductModal(e) {
+        if (e && e.target !== document.getElementById('product-modal')) return;
+        document.getElementById('product-modal').style.display = 'none';
+        activeModalProd = null;
+    }
+
+    // CART OPERATIONS
+    function addToCart(id, qty) {
+        var p = products.find(function(item) { return item.id === id; });
+        if (!p) return;
+        var existing = cart.find(function(item) { return item.id === id; });
+        if (existing) {
+            existing.qty += qty;
+        } else {
+            cart.push({ id: p.id, code: p.code, name: p.name, price_usd: p.sale_usd, image: p.images[0], qty: qty });
+        }
+        updateCartCount();
+        openCart();
+    }
+
+    function updateCartCount() {
+        var count = cart.reduce(function(acc, item) { return acc + item.qty; }, 0);
+        document.getElementById('header-cart-count').innerText = count;
+    }
+
+    function openCart() {
+        renderCartItems();
+        document.getElementById('cart-drawer-overlay').style.display = 'block';
+        document.getElementById('cart-drawer').classList.add('open');
+    }
+
+    function closeCart() {
+        document.getElementById('cart-drawer-overlay').style.display = 'none';
+        document.getElementById('cart-drawer').classList.remove('open');
+    }
+
+    function renderCartItems() {
+        var container = document.getElementById('cart-items-container');
+        if (cart.length === 0) {
+            container.innerHTML = '<div style="text-align:center;padding:50px 0;color:var(--slate-400);"><div style="font-size:36px;margin-bottom:10px;">🧪</div><p>Your batch cart is currently empty.</p></div>';
+            document.getElementById('cart-subtotal-val').innerText = '$0.00';
+            return;
+        }
+
+        var html = '';
+        var subtotal = 0;
+        cart.forEach(function(item, idx) {
+            var itemTotal = item.price_usd * item.qty;
+            subtotal += itemTotal;
+
+            html += '<div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--slate-100);align-items:center;">';
+            html += '  <img src="' + item.image + '" style="width:50px;height:50px;object-fit:contain;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:6px;padding:3px;" onerror="this.src=\'assets/images/products/' + item.code + '-vial.svg\';">';
+            html += '  <div style="flex:1;">';
+            html += '    <div style="font-family:var(--font-body);font-size:13px;font-weight:700;color:var(--slate-900);">' + item.name + '</div>';
+            html += '    <div style="display:flex;gap:8px;align-items:center;margin-top:4px;">';
+            html += '      <button onclick="changeQty(' + idx + ', -1)" style="width:22px;height:22px;border:1px solid var(--slate-300);border-radius:4px;background:#fff;cursor:pointer;">-</button>';
+            html += '      <span style="font-size:12px;font-weight:700;">' + item.qty + '</span>';
+            html += '      <button onclick="changeQty(' + idx + ', 1)" style="width:22px;height:22px;border:1px solid var(--slate-300);border-radius:4px;background:#fff;cursor:pointer;">+</button>';
+            html += '      <button onclick="removeFromCart(' + idx + ')" style="background:none;border:none;color:var(--crimson);font-size:11px;cursor:pointer;margin-left:8px;">Remove</button>';
+            html += '    </div>';
+            html += '  </div>';
+            html += '  <div style="font-family:var(--font-head);font-weight:800;color:var(--emerald);font-size:18px;">$' + itemTotal.toFixed(2) + '</div>';
+            html += '</div>';
+        });
+
+        container.innerHTML = html;
+        document.getElementById('cart-subtotal-val').innerText = '$' + subtotal.toFixed(2);
+    }
+
+    function changeQty(idx, delta) {
+        if (cart[idx]) {
+            cart[idx].qty += delta;
+            if (cart[idx].qty <= 0) cart.splice(idx, 1);
+            updateCartCount();
+            renderCartItems();
+        }
+    }
+
+    function removeFromCart(idx) {
+        cart.splice(idx, 1);
+        updateCartCount();
+        renderCartItems();
+    }
+
+    // CHECKOUT LOGIC
+    function openCheckout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty. Please add formulations first.');
+            return;
+        }
+        closeCart();
+        updateCheckoutTotal();
+        document.getElementById('checkout-modal').style.display = 'flex';
+    }
+
+    function closeCheckout(e) {
+        if (e && e.target !== document.getElementById('checkout-modal')) return;
+        document.getElementById('checkout-modal').style.display = 'none';
+    }
+
+    function updateCheckoutTotal() {
+        var subtotal = cart.reduce(function(acc, item) { return acc + (item.price_usd * item.qty); }, 0);
+        var method = document.querySelector('input[name="payment_method"]:checked').value;
+
+        var discountRate = 0;
+        if (method === 'crypto') {
+            discountRate = 0.10;
+        } else if (method === 'wire') {
+            discountRate = 0.05;
+        }
+
+        var discount = subtotal * discountRate;
+        var finalTotal = subtotal - discount;
+
+        document.getElementById('checkout-subtotal').innerText = '$' + subtotal.toFixed(2);
+        document.getElementById('checkout-discount').innerText = '-$' + discount.toFixed(2);
+        document.getElementById('checkout-discount-row').children[0].innerText = 'Payment Discount (' + (discountRate * 100) + '%):';
+        document.getElementById('checkout-total').innerText = '$' + finalTotal.toFixed(2);
+    }
+
+    function submitOrder(e) {
+        e.preventDefault();
+        var email = document.getElementById('checkout-email').value;
+        var method = document.querySelector('input[name="payment_method"]:checked').value;
+        var totalStr = document.getElementById('checkout-total').innerText;
+
+        var methodLabel = method === 'crypto' ? 'Bitcoin / USDT (10% Rebate Applied)' : (method === 'wire' ? 'Bank Wire / SWIFT (5% Rebate Applied)' : 'Credit Card');
+
+        document.getElementById('checkout-body').innerHTML = 
+            '<div style="text-align:center;padding:25px 10px;">' +
+            '  <div style="font-size:48px;margin-bottom:15px;">✅</div>' +
+            '  <h2 style="font-family:var(--font-head);font-size:28px;font-weight:800;color:var(--slate-900);margin-bottom:8px;">Order Confirmed</h2>' +
+            '  <p style="font-family:var(--font-body);color:var(--emerald);font-weight:800;font-size:14px;margin-bottom:15px;">ORDER #PHX-849204 Processed</p>' +
+            '  <p style="font-size:14px;color:var(--slate-600);line-height:1.7;margin-bottom:20px;">' +
+            '    Thank you for your order. We have sent your confirmation invoice and settlement instructions for <strong>' + totalStr + '</strong> (' + methodLabel + ') to <strong>' + email + '</strong>.' +
+            '  </p>' +
+            '  <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:16px;text-align:left;font-size:12.5px;color:var(--slate-700);line-height:1.7;margin-bottom:20px;">' +
+            '    &bull; <strong>Lot Reserved:</strong> Your vials are allocated in -20°C storage.<br>' +
+            '    &bull; <strong>Reconstitution Directions:</strong> Comprehensive dilution guides are enclosed in your shipment.<br>' +
+            '    &bull; <strong>Temperature-Shielded Express Freight:</strong> Your carrier tracking number will be emailed immediately upon carrier pickup.' +
+            '  </div>' +
+            '  <button onclick="closeCheckout(); cart=[]; updateCartCount();" class="btn-primary" style="padding:12px 28px;font-size:14px;">Return to Storefront</button>' +
+            '</div>';
+    }
+
+    window.addEventListener('DOMContentLoaded', initStore);
+    </script>
+</body>
+</html>

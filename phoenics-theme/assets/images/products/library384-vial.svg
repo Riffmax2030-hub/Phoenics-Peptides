@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <radialGradient id="libBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </radialGradient>
+    <filter id="libShadow" x="-10%" y="-5%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="480" fill="url(#libBg)"/>
+  <ellipse cx="200" cy="430" rx="140" ry="16" fill="#0F172A" opacity="0.12"/>
+
+  <g filter="url(#libShadow)">
+    <!-- 384-Well ANSI/SLAS Robotic Microplate -->
+    <rect x="45" y="95" width="310" height="275" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="52" y="102" width="296" height="261" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+    <!-- High-Density Array Wells (16 rows x 24 cols represented cleanly) -->
+    <g fill="#FFFFFF" stroke="#94A3B8" stroke-width="0.75">
+      <circle cx="68" cy="118" r="4.5"/>
+      <circle cx="83" cy="118" r="4.5"/>
+      <circle cx="98" cy="118" r="4.5"/>
+      <circle cx="113" cy="118" r="4.5"/>
+      <circle cx="128" cy="118" r="4.5"/>
+      <circle cx="143" cy="118" r="4.5"/>
+      <circle cx="158" cy="118" r="4.5"/>
+      <circle cx="173" cy="118" r="4.5"/>
+      <circle cx="188" cy="118" r="4.5"/>
+      <circle cx="203" cy="118" r="4.5"/>
+      <circle cx="218" cy="118" r="4.5"/>
+      <circle cx="233" cy="118" r="4.5"/>
+      <circle cx="248" cy="118" r="4.5"/>
+      <circle cx="263" cy="118" r="4.5"/>
+      <circle cx="278" cy="118" r="4.5"/>
+      <circle cx="293" cy="118" r="4.5"/>
+      <circle cx="308" cy="118" r="4.5"/>
+      <circle cx="323" cy="118" r="4.5"/>
+      <circle cx="68" cy="133" r="4.5"/>
+      <circle cx="83" cy="133" r="4.5"/>
+      <circle cx="98" cy="133" r="4.5"/>
+      <circle cx="113" cy="133" r="4.5"/>
+      <circle cx="128" cy="133" r="4.5"/>
+      <circle cx="143" cy="133" r="4.5"/>
+      <circle cx="158" cy="133" r="4.5"/>
+      <circle cx="173" cy="133" r="4.5"/>
+      <circle cx="188" cy="133" r="4.5"/>
+      <circle cx="203" cy="133" r="4.5"/>
+      <circle cx="218" cy="133" r="4.5"/>
+      <circle cx="233" cy="133" r="4.5"/>
+      <circle cx="248" cy="133" r="4.5"/>
+      <circle cx="263" cy="133" r="4.5"/>
+      <circle cx="278" cy="133" r="4.5"/>
+      <circle cx="293" cy="133" r="4.5"/>
+      <circle cx="308" cy="133" r="4.5"/>
+      <circle cx="323" cy="133" r="4.5"/>
+      <circle cx="68" cy="148" r="4.5"/>
+      <circle cx="83" cy="148" r="4.5"/>
+      <circle cx="98" cy="148" r="4.5"/>
+      <circle cx="113" cy="148" r="4.5"/>
+      <circle cx="128" cy="148" r="4.5"/>
+      <circle cx="143" cy="148" r="4.5"/>
+      <circle cx="158" cy="148" r="4.5"/>
+      <circle cx="173" cy="148" r="4.5"/>
+      <circle cx="188" cy="148" r="4.5"/>
+      <circle cx="203" cy="148" r="4.5"/>
+      <circle cx="218" cy="148" r="4.5"/>
+      <circle cx="233" cy="148" r="4.5"/>
+      <circle cx="248" cy="148" r="4.5"/>
+      <circle cx="263" cy="148" r="4.5"/>
+      <circle cx="278" cy="148" r="4.5"/>
+      <circle cx="293" cy="148" r="4.5"/>
+      <circle cx="308" cy="148" r="4.5"/>
+      <circle cx="323" cy="148" r="4.5"/>
+      <circle cx="68" cy="163" r="4.5"/>
+      <circle cx="83" cy="163" r="4.5"/>
+      <circle cx="98" cy="163" r="4.5"/>
+      <circle cx="113" cy="163" r="4.5"/>
+      <circle cx="128" cy="163" r="4.5"/>
+      <circle cx="143" cy="163" r="4.5"/>
+      <circle cx="158" cy="163" r="4.5"/>
+      <circle cx="173" cy="163" r="4.5"/>
+      <circle cx="188" cy="163" r="4.5"/>
+      <circle cx="203" cy="163" r="4.5"/>
+      <circle cx="218" cy="163" r="4.5"/>
+      <circle cx="233" cy="163" r="4.5"/>
+      <circle cx="248" cy="163" r="4.5"/>
+      <circle cx="263" cy="163" r="4.5"/>
+      <circle cx="278" cy="163" r="4.5"/>
+      <circle cx="293" cy="163" r="4.5"/>
+      <circle cx="308" cy="163" r="4.5"/>
+      <circle cx="323" cy="163" r="4.5"/>
+      <circle cx="68" cy="178" r="4.5"/>
+      <circle cx="83" cy="178" r="4.5"/>
+      <circle cx="98" cy="178" r="4.5"/>
+      <circle cx="113" cy="178" r="4.5"/>
+      <circle cx="128" cy="178" r="4.5"/>
+      <circle cx="143" cy="178" r="4.5"/>
+      <circle cx="158" cy="178" r="4.5"/>
+      <circle cx="173" cy="178" r="4.5"/>
+      <circle cx="188" cy="178" r="4.5"/>
+      <circle cx="203" cy="178" r="4.5"/>
+      <circle cx="218" cy="178" r="4.5"/>
+      <circle cx="233" cy="178" r="4.5"/>
+      <circle cx="248" cy="178" r="4.5"/>
+      <circle cx="263" cy="178" r="4.5"/>
+      <circle cx="278" cy="178" r="4.5"/>
+      <circle cx="293" cy="178" r="4.5"/>
+      <circle cx="308" cy="178" r="4.5"/>
+      <circle cx="323" cy="178" r="4.5"/>
+      <circle cx="68" cy="193" r="4.5"/>
+      <circle cx="83" cy="193" r="4.5"/>
+      <circle cx="98" cy="193" r="4.5"/>
+      <circle cx="113" cy="193" r="4.5"/>
+      <circle cx="128" cy="193" r="4.5"/>
+      <circle cx="143" cy="193" r="4.5"/>
+      <circle cx="158" cy="193" r="4.5"/>
+      <circle cx="173" cy="193" r="4.5"/>
+      <circle cx="188" cy="193" r="4.5"/>
+      <circle cx="203" cy="193" r="4.5"/>
+      <circle cx="218" cy="193" r="4.5"/>
+      <circle cx="233" cy="193" r="4.5"/>
+      <circle cx="248" cy="193" r="4.5"/>
+      <circle cx="263" cy="193" r="4.5"/>
+      <circle cx="278" cy="193" r="4.5"/>
+      <circle cx="293" cy="193" r="4.5"/>
+      <circle cx="308" cy="193" r="4.5"/>
+      <circle cx="323" cy="193" r="4.5"/>
+      <circle cx="68" cy="208" r="4.5"/>
+      <circle cx="83" cy="208" r="4.5"/>
+      <circle cx="98" cy="208" r="4.5"/>
+      <circle cx="113" cy="208" r="4.5"/>
+      <circle cx="128" cy="208" r="4.5"/>
+      <circle cx="143" cy="208" r="4.5"/>
+      <circle cx="158" cy="208" r="4.5"/>
+      <circle cx="173" cy="208" r="4.5"/>
+      <circle cx="188" cy="208" r="4.5"/>
+      <circle cx="203" cy="208" r="4.5"/>
+      <circle cx="218" cy="208" r="4.5"/>
+      <circle cx="233" cy="208" r="4.5"/>
+      <circle cx="248" cy="208" r="4.5"/>
+      <circle cx="263" cy="208" r="4.5"/>
+      <circle cx="278" cy="208" r="4.5"/>
+      <circle cx="293" cy="208" r="4.5"/>
+      <circle cx="308" cy="208" r="4.5"/>
+      <circle cx="323" cy="208" r="4.5"/>
+      <circle cx="68" cy="223" r="4.5"/>
+      <circle cx="83" cy="223" r="4.5"/>
+      <circle cx="98" cy="223" r="4.5"/>
+      <circle cx="113" cy="223" r="4.5"/>
+      <circle cx="128" cy="223" r="4.5"/>
+      <circle cx="143" cy="223" r="4.5"/>
+      <circle cx="158" cy="223" r="4.5"/>
+      <circle cx="173" cy="223" r="4.5"/>
+      <circle cx="188" cy="223" r="4.5"/>
+      <circle cx="203" cy="223" r="4.5"/>
+      <circle cx="218" cy="223" r="4.5"/>
+      <circle cx="233" cy="223" r="4.5"/>
+      <circle cx="248" cy="223" r="4.5"/>
+      <circle cx="263" cy="223" r="4.5"/>
+      <circle cx="278" cy="223" r="4.5"/>
+      <circle cx="293" cy="223" r="4.5"/>
+      <circle cx="308" cy="223" r="4.5"/>
+      <circle cx="323" cy="223" r="4.5"/>
+      <circle cx="68" cy="238" r="4.5"/>
+      <circle cx="83" cy="238" r="4.5"/>
+      <circle cx="98" cy="238" r="4.5"/>
+      <circle cx="113" cy="238" r="4.5"/>
+      <circle cx="128" cy="238" r="4.5"/>
+      <circle cx="143" cy="238" r="4.5"/>
+      <circle cx="158" cy="238" r="4.5"/>
+      <circle cx="173" cy="238" r="4.5"/>
+      <circle cx="188" cy="238" r="4.5"/>
+      <circle cx="203" cy="238" r="4.5"/>
+      <circle cx="218" cy="238" r="4.5"/>
+      <circle cx="233" cy="238" r="4.5"/>
+      <circle cx="248" cy="238" r="4.5"/>
+      <circle cx="263" cy="238" r="4.5"/>
+      <circle cx="278" cy="238" r="4.5"/>
+      <circle cx="293" cy="238" r="4.5"/>
+      <circle cx="308" cy="238" r="4.5"/>
+      <circle cx="323" cy="238" r="4.5"/>
+      <circle cx="68" cy="253" r="4.5"/>
+      <circle cx="83" cy="253" r="4.5"/>
+      <circle cx="98" cy="253" r="4.5"/>
+      <circle cx="113" cy="253" r="4.5"/>
+      <circle cx="128" cy="253" r="4.5"/>
+      <circle cx="143" cy="253" r="4.5"/>
+      <circle cx="158" cy="253" r="4.5"/>
+      <circle cx="173" cy="253" r="4.5"/>
+      <circle cx="188" cy="253" r="4.5"/>
+      <circle cx="203" cy="253" r="4.5"/>
+      <circle cx="218" cy="253" r="4.5"/>
+      <circle cx="233" cy="253" r="4.5"/>
+      <circle cx="248" cy="253" r="4.5"/>
+      <circle cx="263" cy="253" r="4.5"/>
+      <circle cx="278" cy="253" r="4.5"/>
+      <circle cx="293" cy="253" r="4.5"/>
+      <circle cx="308" cy="253" r="4.5"/>
+      <circle cx="323" cy="253" r="4.5"/>
+      <circle cx="68" cy="268" r="4.5"/>
+      <circle cx="83" cy="268" r="4.5"/>
+      <circle cx="98" cy="268" r="4.5"/>
+      <circle cx="113" cy="268" r="4.5"/>
+      <circle cx="128" cy="268" r="4.5"/>
+      <circle cx="143" cy="268" r="4.5"/>
+      <circle cx="158" cy="268" r="4.5"/>
+      <circle cx="173" cy="268" r="4.5"/>
+      <circle cx="188" cy="268" r="4.5"/>
+      <circle cx="203" cy="268" r="4.5"/>
+      <circle cx="218" cy="268" r="4.5"/>
+      <circle cx="233" cy="268" r="4.5"/>
+      <circle cx="248" cy="268" r="4.5"/>
+      <circle cx="263" cy="268" r="4.5"/>
+      <circle cx="278" cy="268" r="4.5"/>
+      <circle cx="293" cy="268" r="4.5"/>
+      <circle cx="308" cy="268" r="4.5"/>
+      <circle cx="323" cy="268" r="4.5"/>
+      <circle cx="68" cy="283" r="4.5"/>
+      <circle cx="83" cy="283" r="4.5"/>
+      <circle cx="98" cy="283" r="4.5"/>
+      <circle cx="113" cy="283" r="4.5"/>
+      <circle cx="128" cy="283" r="4.5"/>
+      <circle cx="143" cy="283" r="4.5"/>
+      <circle cx="158" cy="283" r="4.5"/>
+      <circle cx="173" cy="283" r="4.5"/>
+      <circle cx="188" cy="283" r="4.5"/>
+      <circle cx="203" cy="283" r="4.5"/>
+      <circle cx="218" cy="283" r="4.5"/>
+      <circle cx="233" cy="283" r="4.5"/>
+      <circle cx="248" cy="283" r="4.5"/>
+      <circle cx="263" cy="283" r="4.5"/>
+      <circle cx="278" cy="283" r="4.5"/>
+      <circle cx="293" cy="283" r="4.5"/>
+      <circle cx="308" cy="283" r="4.5"/>
+      <circle cx="323" cy="283" r="4.5"/>
+    </g>
+
+    <!-- Robotic Plate Footing -->
+    <rect x="45" y="325" width="310" height="45" rx="0 0 10 10" fill="#0F172A"/>
+    <text x="200" y="344" font-family="'Cormorant Garamond', serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Custom 384-Peptide Screening Library</text>
+    <text x="200" y="358" font-family="'JetBrains Mono', monospace" font-size="8" fill="#38BDF8" text-anchor="middle">ROBOTIC SOLID-PHASE SYNTHESIS &bull; INDIVIDUAL LC-MS PER WELL</text>
+  </g>
+</svg>

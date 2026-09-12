@@ -1,0 +1,544 @@
+{
+  "tirzepatide": {
+    "name": "Tirzepatide (10mg)",
+    "category": "Weight Loss & Incretins",
+    "primary_benefits": "Unprecedented weight reduction, appetite suppression, enhanced insulin sensitivity, delayed gastric emptying, and sustained glycemic control.",
+    "mechanism": "Dual GIP (glucose-dependent insulinotropic polypeptide) and GLP-1 (glucagon-like peptide-1) receptor agonist.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water (0.9% Benzyl Alcohol)",
+      "volume_recommended": "2.0 mL",
+      "technique": "Inject diluent gently along the inside glass wall of the vial. Do not shake vigorously; swirl gently until completely dissolved.",
+      "yield_conversion": "2.0mL added to 10mg vial = 5mg per 1.0mL (500mcg per 10 units / 0.1mL on a standard U-100 syringe)."
+    },
+    "typical_protocol": "Starting research/wellness protocol commonly begins at 2.5mg once weekly for weeks 1-4, titrating to 5.0mg weekly based on response.",
+    "half_life": "~5 days (allows once-weekly administration)",
+    "storage": "Unreconstituted lyophilized powder: stable at -20°C for 24 months. Reconstituted solution: refrigerate at 2°C - 8°C and use within 30-45 days. Keep shielded from light.",
+    "faq": [
+      {
+        "q": "How does Tirzepatide differ from Semaglutide?",
+        "a": "Tirzepatide targets both GIP and GLP-1 receptors simultaneously, resulting in significantly higher mean weight reduction in clinical trials (~20-22% vs ~15% for Semaglutide)."
+      },
+      {
+        "q": "Does it need to be refrigerated before reconstitution?",
+        "a": "For short-term shipping (up to 14 days), the lyophilized powder remains stable at ambient temperatures. Long-term storage should be in a freezer at -20°C."
+      }
+    ]
+  },
+  "retatrutide": {
+    "name": "Retatrutide (10mg)",
+    "category": "Weight Loss & Incretins",
+    "primary_benefits": "Triple receptor agonism for maximum fat loss, enhanced basal energy expenditure, fatty liver clearance, and profound appetite regulation.",
+    "mechanism": "Triple GGG agonist targeting GLP-1, GIP, and Glucagon (GCGR) receptors.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water (0.9% Benzyl Alcohol)",
+      "volume_recommended": "2.0 mL",
+      "technique": "Add 2.0mL bacteriostatic water smoothly down the vial wall. Allow 2-3 minutes for natural dissolution without agitation.",
+      "yield_conversion": "2.0mL in 10mg vial = 500mcg per 10 units (0.1mL) on a U-100 insulin syringe."
+    },
+    "typical_protocol": "Investigational protocols start at 1.0mg - 2.0mg once weekly, gradually stepping up every 4 weeks to 4.0mg - 8.0mg weekly.",
+    "half_life": "~6 days (once-weekly protocol)",
+    "storage": "Store powder at -20°C. Once reconstituted, refrigerate at 2°C - 8°C; use within 30 days.",
+    "faq": [
+      {
+        "q": "What makes Retatrutide unique?",
+        "a": "Its third target—the glucagon receptor—actively ramps up basal metabolic calorie expenditure and hepatic lipid burning, beyond simple appetite suppression."
+      }
+    ]
+  },
+  "semaglutide": {
+    "name": "Semaglutide (5mg)",
+    "category": "Weight Loss & Incretins",
+    "primary_benefits": "Proven appetite suppression, food craving reduction, improved HbA1c, and steady fat loss.",
+    "mechanism": "Selective Glucagon-Like Peptide-1 (GLP-1) receptor agonist with albumin-binding fatty acid side chain.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water (0.9% Benzyl Alcohol)",
+      "volume_recommended": "2.0 mL",
+      "technique": "Gently add 2.0mL diluent. Swirl gently until clear.",
+      "yield_conversion": "2.0mL in 5mg vial = 250mcg per 10 units (0.1mL) on a standard U-100 syringe."
+    },
+    "typical_protocol": "Standard ramp starts at 0.25mg once weekly for 4 weeks, increasing to 0.5mg weekly, with a maximum maintenance of 1.7mg - 2.4mg weekly.",
+    "half_life": "~7 days (once-weekly protocol)",
+    "storage": "Store powder at -20°C. Reconstituted solution must be refrigerated at 2°C - 8°C (stable for 56 days).",
+    "faq": [
+      {
+        "q": "What is the best time of day to administer?",
+        "a": "Can be taken at any time of day, with or without food, on the same day each week."
+      }
+    ]
+  },
+  "cagrilintide": {
+    "name": "Cagrilintide (5mg)",
+    "category": "Weight Loss & Incretins",
+    "primary_benefits": "Non-selective amylin receptor agonist that delays gastric transit, triggers early satiety signals in the brainstem, and prevents weight regain.",
+    "mechanism": "Long-acting amylin analogue activating AMY1, AMY2, AMY3, and calcitonin receptors.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water",
+      "volume_recommended": "2.0 mL",
+      "technique": "Slowly introduce 2.0mL BAC water. Invert gently twice.",
+      "yield_conversion": "2.0mL in 5mg vial = 250mcg per 10 units (0.1mL)."
+    },
+    "typical_protocol": "Frequently researched in tandem with Semaglutide (CagriSema stack) at 0.25mg to 2.4mg weekly.",
+    "half_life": "~7-8 days",
+    "storage": "Store dry powder at -20°C; reconstituted at 2°C - 8°C.",
+    "faq": [
+      {
+        "q": "Can Cagrilintide be mixed in the same syringe as Semaglutide?",
+        "a": "They should be reconstituted in separate vials; researchers often co-administer simultaneously at different injection sites."
+      }
+    ]
+  },
+  "bpc157": {
+    "name": "BPC-157 (5mg)",
+    "category": "Anti-Ageing & Tissue Regeneration",
+    "primary_benefits": "Accelerated tendon, ligament, and muscle healing, gut lining repair (leaky gut, IBD), angiogenesis (blood vessel recruitment), and joint mobility.",
+    "mechanism": "Body Protection Compound pentadecapeptide that stimulates VEGF expression, FAK/paxillin signaling, and nitric oxide synthesis.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water",
+      "volume_recommended": "2.5 mL or 5.0 mL",
+      "technique": "Add 2.5mL for standard dosing. Yields 200mcg per 10 units (0.1mL).",
+      "yield_conversion": "2.5mL in 5mg vial = 200mcg per 0.1mL (10 units). 5.0mL = 100mcg per 0.1mL."
+    },
+    "typical_protocol": "250mcg to 500mcg administered once or twice daily for 4 to 8 weeks.",
+    "half_life": "~4 hours",
+    "storage": "Store at -20°C. Reconstituted: refrigerate at 2°C - 8°C and use within 28 days.",
+    "faq": [
+      {
+        "q": "Does BPC-157 need to be injected near the injury?",
+        "a": "BPC-157 exhibits strong systemic bioavailability whether injected subcutaneously in the abdomen or closer to an injured tendon."
+      }
+    ]
+  },
+  "tb500": {
+    "name": "TB-500 (5mg)",
+    "category": "Anti-Ageing & Tissue Regeneration",
+    "primary_benefits": "Systemic cellular migration, flexibility and range of motion improvement, anti-fibrotic remodeling, and heart/muscle recovery.",
+    "mechanism": "Synthetic active domain of Thymosin Beta-4, a major G-actin sequestering peptide promoting rapid microvascular recruitment.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water",
+      "volume_recommended": "2.0 mL",
+      "technique": "Add 2.0mL BAC water smoothly.",
+      "yield_conversion": "2.0mL in 5mg vial = 250mcg per 10 units."
+    },
+    "typical_protocol": "Loading protocol: 2.0mg to 2.5mg twice weekly for 4 to 6 weeks, followed by maintenance at 2.0mg every 2 weeks.",
+    "half_life": "~24-48 hours",
+    "storage": "Freeze at -20°C; refrigerated once reconstituted.",
+    "faq": [
+      {
+        "q": "Why is TB-500 frequently paired with BPC-157?",
+        "a": "They act via complementary mechanisms: BPC-157 creates new blood vessels (angiogenesis) and repairs soft tissue, while TB-500 migrates actin to rebuild cellular infrastructure."
+      }
+    ]
+  },
+  "ghkcu": {
+    "name": "GHK-Cu Copper Peptide (50mg)",
+    "category": "Anti-Ageing & Skin Health",
+    "primary_benefits": "Collagen type I & III synthesis, skin tightening and wrinkle reduction, scalp hair follicle stimulation, anti-inflammatory, and DNA repair gene activation.",
+    "mechanism": "Naturally occurring copper tripeptide (Gly-His-Lys:Cu2+) regulating over 4,000 human genes associated with dermal remodeling and repair.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water or Sterile Saline",
+      "volume_recommended": "5.0 mL or 10.0 mL",
+      "technique": "Dissolves rapidly into an intense royal blue solution upon contact with water.",
+      "yield_conversion": "5.0mL in 50mg vial = 1.0mg (1000mcg) per 10 units (0.1mL)."
+    },
+    "typical_protocol": "Subcutaneous: 1.0mg to 2.0mg daily for 30-day cycles. Topical: formulated at 1-3% in facial serums or hair sprays.",
+    "half_life": "~1-2 hours in plasma; long-lasting tissue gene-expression effect.",
+    "storage": "Store dry powder at -20°C. Protect from intense direct sunlight.",
+    "faq": [
+      {
+        "q": "Why is the solution blue?",
+        "a": "GHK naturally binds copper (Cu2+) ions, creating an intense azure-blue hue that confirms authentic high-purity chelation."
+      }
+    ]
+  },
+  "epithalon": {
+    "name": "Epithalon (10mg)",
+    "category": "Anti-Ageing & Longevity",
+    "primary_benefits": "Telomerase enzyme activation, telomere elongation, biological age reduction, pineal gland restoration, circadian rhythm alignment, and deep sleep.",
+    "mechanism": "Synthetic biomimetic tetrapeptide (Ala-Glu-Asp-Gly) modeled on bovine epithalamin.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water",
+      "volume_recommended": "2.0 mL",
+      "technique": "Add 2.0mL BAC water smoothly.",
+      "yield_conversion": "2.0mL in 10mg vial = 500mcg per 10 units (0.1mL)."
+    },
+    "typical_protocol": "Classic Khavinson protocol: 5mg to 10mg daily for 10 to 20 consecutive days, repeated once or twice yearly.",
+    "half_life": "Rapid systemic uptake; activates downstream telomerase gene transcription.",
+    "storage": "Store at -20°C. Reconstituted: refrigerate and use within 20 days.",
+    "faq": [
+      {
+        "q": "How often is an Epithalon cycle conducted?",
+        "a": "Typically conducted as a 10-day intensive cycle every 6 to 12 months for longevity and cellular age reset."
+      }
+    ]
+  },
+  "motsc": {
+    "name": "MOTS-c (10mg)",
+    "category": "Cellular Energy & Metabolic Vitality",
+    "primary_benefits": "Mitochondrial energy enhancement, exercise mimetic effects, glucose disposal, AMPK activation, metabolic flexibility, and physical endurance.",
+    "mechanism": "Mitochondrial-derived 16-amino acid peptide that acts as an endocrine signal promoting metabolic homeostasis.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water",
+      "volume_recommended": "2.0 mL",
+      "technique": "Add 2.0mL BAC water down vial wall.",
+      "yield_conversion": "2.0mL in 10mg vial = 500mcg per 10 units."
+    },
+    "typical_protocol": "5mg to 10mg administered 1 to 3 times weekly, often before exercise sessions, for 4 to 8 weeks.",
+    "half_life": "~4 hours",
+    "storage": "Store at -20°C. Reconstituted: keep at 2°C - 8°C; use within 21 days.",
+    "faq": [
+      {
+        "q": "When is the best time to administer MOTS-c?",
+        "a": "Most researchers administer MOTS-c in the morning or 1-2 hours prior to physical training sessions to optimize mitochondrial ATP production."
+      }
+    ]
+  },
+  "cjcipam": {
+    "name": "CJC-1295 + Ipamorelin (10mg)",
+    "category": "Muscle & Growth Hormone Axis",
+    "primary_benefits": "Pulsatile natural growth hormone elevation, deep slow-wave stage-4 sleep, lean muscle preservation, accelerated recovery, and body fat reduction.",
+    "mechanism": "Synergistic GHRH (Growth Hormone Releasing Hormone) analog + selective Ghrelin receptor agonist.",
+    "reconstitution": {
+      "diluent": "Bacteriostatic Water",
+      "volume_recommended": "2.0 mL or 2.5 mL",
+      "technique": "Add 2.0mL BAC water smoothly.",
+      "yield_conversion": "2.0mL in 10mg vial = 250mcg CJC / 250mcg Ipamorelin per 10 units."
+    },
+    "typical_protocol": "100mcg to 300mcg administered nightly immediately before sleep on an empty stomach.",
+    "half_life": "Ipamorelin ~2 hours; CJC-1295 (no DAC) ~30 mins. Produces clean natural GH surge.",
+    "storage": "Store at -20°C. Reconstituted: refrigerate at 2°C - 8°C; use within 30 days.",
+    "faq": [
+      {
+        "q": "Why take it before bed?",
+        "a": "Human growth hormone naturally pulses during early deep sleep. Taking this blend before sleep amplifies your natural physiological peak without desensitizing pituitary receptors."
+      }
+    ]
+  },
+  "aod9604": {
+    "name": "AOD-9604 (5mg)",
+    "category": "Weight Loss & Incretins",
+    "cas": "221231-10-3",
+    "molecular_weight": "1815.08 g/mol",
+    "sequence": "Tyr-Leu-Arg-Ile-Val-Gln-Cys-Arg-Ser-Val-Glu-Gly-Ser-Cys-Gly-Phe (hGH fragment 176-191, C-terminal amide)",
+    "reconstitution": {
+      "solvent": "Bacteriostatic Water (0.9% benzyl alcohol)",
+      "volume_ml": 2.0,
+      "concentration": "2.5 mg/mL (2500 mcg/mL)",
+      "notes": "Inject solvent slowly down the glass wall. Do NOT shake — gentle swirl until fully dissolved."
+    },
+    "storage": {
+      "lyophilized": "Stable at -20°C for 24 months; 2-8°C for 12 months",
+      "reconstituted": "2-8°C refrigerated; use within 28 days",
+      "protect_from": "Light, repeated freeze-thaw cycles"
+    },
+    "half_life": "~12 minutes (peptide fragment)",
+    "typical_research_dose": "250-300 mcg subcutaneous, investigated in AM fasted state",
+    "appearance": "White to off-white lyophilized powder or cake",
+    "solubility": "Freely soluble in bacteriostatic water; soluble in 0.1% TFA/water",
+    "purity_method": "RP-HPLC (C18 column, 214nm UV), confirmed by LC-MS/MS",
+    "faq": [
+      {
+        "q": "What is AOD-9604?",
+        "a": "AOD-9604 is a modified 16-amino acid fragment of human growth hormone (hGH 176-191) that has been investigated for its lipolytic (fat-metabolizing) properties without the growth-promoting or diabetogenic effects of full-length hGH."
+      },
+      {
+        "q": "How should I store AOD-9604?",
+        "a": "Store lyophilized vial at -20°C or 2-8°C. After reconstitution with bacteriostatic water, refrigerate at 2-8°C and use within 28 days."
+      },
+      {
+        "q": "What purity testing is performed?",
+        "a": "Each lot undergoes RP-HPLC purity analysis (≥99.0%), LC-MS molecular weight confirmation, and endotoxin testing (<0.5 EU/mg)."
+      }
+    ]
+  },
+  "mk677": {
+    "name": "MK-677 Ibutamoren (25mg capsules, 30ct)",
+    "category": "Muscle & Growth Hormone Axis",
+    "cas": "159634-47-6",
+    "molecular_weight": "528.66 g/mol",
+    "form": "Oral capsule (non-peptide GH secretagogue)",
+    "administration": {
+      "route": "Oral",
+      "capsule_strength": "25 mg per capsule",
+      "capsule_count": 30,
+      "notes": "Swallow whole with water. Not a peptide — does not require reconstitution."
+    },
+    "storage": {
+      "capsules": "Store at room temperature (15-25°C) in a cool, dry place",
+      "shelf_life": "24 months from manufacture date",
+      "protect_from": "Moisture, direct sunlight, excessive heat"
+    },
+    "half_life": "~24 hours (single daily dosing)",
+    "typical_research_dose": "10-25 mg orally once daily, often investigated in PM dosing",
+    "appearance": "White to off-white crystalline powder in vegetarian capsule shell",
+    "solubility": "N/A (oral capsule form)",
+    "purity_method": "RP-HPLC identity and purity, confirmed by LC-MS",
+    "faq": [
+      {
+        "q": "Is MK-677 a peptide?",
+        "a": "No. MK-677 (Ibutamoren) is a non-peptide, orally active growth hormone secretagogue that mimics ghrelin, stimulating pulsatile GH release and IGF-1 elevation."
+      },
+      {
+        "q": "Does MK-677 require injection?",
+        "a": "No. MK-677 is taken orally as a capsule. No reconstitution or injection is needed."
+      },
+      {
+        "q": "How long can I store MK-677?",
+        "a": "Capsules are stable at room temperature for up to 24 months. Keep the bottle tightly sealed away from moisture and direct sunlight."
+      }
+    ]
+  },
+  "tesamorelin": {
+    "name": "Tesamorelin (10mg)",
+    "category": "Muscle & Growth Hormone Axis",
+    "cas": "218949-48-5",
+    "molecular_weight": "5135.80 g/mol",
+    "sequence": "Trans-3-hexenoic acid-modified GHRH(1-44)-NH2 (44 amino acids)",
+    "reconstitution": {
+      "solvent": "Bacteriostatic Water (0.9% benzyl alcohol)",
+      "volume_ml": 5.0,
+      "concentration": "2.0 mg/mL (2000 mcg/mL)",
+      "notes": "Add solvent slowly against vial wall. Gently swirl — do not shake or vortex."
+    },
+    "storage": {
+      "lyophilized": "-20°C for 24 months; 2-8°C for 12 months",
+      "reconstituted": "2-8°C refrigerated; use within 21 days",
+      "protect_from": "Light, heat above 25°C, repeated freeze-thaw"
+    },
+    "half_life": "~26 minutes (IV); ~38 minutes (SC)",
+    "typical_research_dose": "1-2 mg subcutaneous daily, often investigated for visceral adipose reduction",
+    "appearance": "White lyophilized sterile powder/cake",
+    "solubility": "Freely soluble in bacteriostatic water and sterile water",
+    "purity_method": "RP-HPLC (≥99.2%), ESI-MS molecular weight confirmation, endotoxin <1.0 EU/mg",
+    "faq": [
+      {
+        "q": "What is Tesamorelin?",
+        "a": "Tesamorelin is a synthetic analog of growth hormone-releasing hormone (GHRH) modified with a trans-3-hexenoic acid group. It is FDA-approved (as Egrifta®) for HIV-associated lipodystrophy and is investigated for visceral fat reduction and GH axis optimization."
+      },
+      {
+        "q": "How do I reconstitute Tesamorelin?",
+        "a": "Add 5.0 mL of bacteriostatic water to the 10mg vial for a 2.0 mg/mL concentration. Inject slowly against the glass wall and gently swirl until dissolved."
+      },
+      {
+        "q": "What is the shelf life after reconstitution?",
+        "a": "Use within 21 days when stored at 2-8°C. Do not freeze reconstituted solution."
+      }
+    ]
+  },
+  "semax": {
+    "name": "Semax Nasal Spray (30mg / 10mL)",
+    "category": "Cognitive & Vitality",
+    "cas": "80714-61-0",
+    "molecular_weight": "813.92 g/mol",
+    "sequence": "Met-Glu-His-Phe-Pro-Gly-Pro (ACTH 4-10 analog)",
+    "administration": {
+      "route": "Intranasal spray",
+      "volume": "10 mL amber metered spray bottle",
+      "concentration": "3.0 mg/mL",
+      "spray_dose": "~100 mcg per actuation (0.1 mL/spray)",
+      "notes": "Prime pump with 3-4 actuations before first use. Store upright."
+    },
+    "storage": {
+      "sealed": "2-8°C refrigerated, protected from light",
+      "after_opening": "2-8°C; use within 30 days of first actuation",
+      "protect_from": "Direct sunlight, temperatures above 25°C"
+    },
+    "half_life": "~30 seconds intranasal (rapid CNS absorption via olfactory mucosa)",
+    "typical_research_dose": "200-600 mcg intranasally (2-6 sprays), investigated 1-2x daily",
+    "appearance": "Clear, colorless to slightly yellow aqueous solution",
+    "purity_method": "RP-HPLC (≥99.4%), LC-MS confirmation, sterility testing, endotoxin <0.25 EU/mL",
+    "faq": [
+      {
+        "q": "What is Semax?",
+        "a": "Semax is a synthetic heptapeptide analog of ACTH(4-10) developed in Russia for neuroprotective and nootropic applications. It upregulates BDNF and modulates dopaminergic and serotonergic systems."
+      },
+      {
+        "q": "How do I use the nasal spray?",
+        "a": "Prime the pump 3-4 times before first use. Insert nozzle into nostril and press firmly for one actuation (~100 mcg). Alternate nostrils with each spray."
+      },
+      {
+        "q": "Does Semax require refrigeration?",
+        "a": "Yes. Keep refrigerated at 2-8°C both before and after opening. Use within 30 days of first actuation."
+      }
+    ]
+  },
+  "selank": {
+    "name": "Selank Nasal Spray (10mg / 10mL)",
+    "category": "Cognitive & Vitality",
+    "cas": "129954-34-3",
+    "molecular_weight": "751.87 g/mol",
+    "sequence": "Thr-Lys-Pro-Arg-Pro-Gly-Pro (Tuftsin analog + Pro-Gly-Pro extension)",
+    "administration": {
+      "route": "Intranasal spray",
+      "volume": "10 mL metered pump dispenser",
+      "concentration": "1.0 mg/mL",
+      "spray_dose": "~75 mcg per actuation (0.075 mL/spray)",
+      "notes": "Prime pump before first use. Tilt head slightly forward during administration."
+    },
+    "storage": {
+      "sealed": "2-8°C refrigerated, protected from light",
+      "after_opening": "2-8°C; use within 30 days",
+      "protect_from": "Direct sunlight, freezing, temperatures above 25°C"
+    },
+    "half_life": "~2-3 minutes (rapid enzymatic degradation; functional effects last several hours via downstream GABA modulation)",
+    "typical_research_dose": "150-300 mcg intranasally (2-4 sprays), investigated 2-3x daily",
+    "appearance": "Clear, colorless aqueous solution",
+    "purity_method": "RP-HPLC (≥99.2%), LC-MS confirmation, sterility and endotoxin testing",
+    "faq": [
+      {
+        "q": "What is Selank?",
+        "a": "Selank is a synthetic analog of the naturally occurring immunomodulatory peptide tuftsin, with an added Pro-Gly-Pro tail for enhanced stability. Investigated for anxiolytic effects, GABA modulation, and cognitive performance under stress."
+      },
+      {
+        "q": "How does Selank differ from Semax?",
+        "a": "Semax is an ACTH(4-10) analog that primarily targets BDNF and dopaminergic pathways (focus/cognition). Selank is a tuftsin analog that primarily modulates GABAergic transmission (anxiolysis/calm). They are often studied together as complementary compounds."
+      },
+      {
+        "q": "Can I combine Selank with Semax?",
+        "a": "They are frequently investigated together in nootropic research protocols. Selank (calming, anxiolytic) + Semax (focus, BDNF) target complementary neurotransmitter systems."
+      }
+    ]
+  },
+  "pt141": {
+    "name": "PT-141 Bremelanotide (10mg)",
+    "category": "Cognitive & Vitality",
+    "cas": "189691-06-3",
+    "molecular_weight": "1025.18 g/mol",
+    "sequence": "Ac-Nle-cyclo[Asp-His-D-Phe-Arg-Trp-Lys]-OH (cyclic heptapeptide)",
+    "reconstitution": {
+      "solvent": "Bacteriostatic Water (0.9% benzyl alcohol)",
+      "volume_ml": 2.0,
+      "concentration": "5.0 mg/mL (5000 mcg/mL)",
+      "notes": "Inject solvent slowly against vial wall. Gently swirl until fully dissolved."
+    },
+    "storage": {
+      "lyophilized": "-20°C for 24 months; 2-8°C for 12 months",
+      "reconstituted": "2-8°C refrigerated; use within 28 days",
+      "protect_from": "Light, excessive heat, repeated freeze-thaw"
+    },
+    "half_life": "~2.7 hours (SC administration)",
+    "typical_research_dose": "1.75 mg subcutaneous, investigated as needed (not daily); FDA-approved dose is 1.75mg SC PRN",
+    "appearance": "White to off-white lyophilized powder",
+    "solubility": "Freely soluble in bacteriostatic water and sterile water for injection",
+    "purity_method": "RP-HPLC (≥99.3%), LC-MS molecular weight confirmation, endotoxin <0.5 EU/mg",
+    "faq": [
+      {
+        "q": "What is PT-141 (Bremelanotide)?",
+        "a": "PT-141 is a cyclic heptapeptide melanocortin receptor agonist (MC3R/MC4R). FDA-approved as Vyleesi® for hypoactive sexual desire disorder (HSDD) in premenopausal women. It acts centrally in the hypothalamus, unlike PDE5 inhibitors which act peripherally."
+      },
+      {
+        "q": "How is PT-141 administered?",
+        "a": "Subcutaneous injection. Reconstitute with 2.0 mL bacteriostatic water for a 5.0 mg/mL solution. The FDA-approved dose is 1.75 mg SC administered at least 45 minutes before anticipated activity."
+      },
+      {
+        "q": "How often can PT-141 be used?",
+        "a": "Not more than once within 24 hours, and no more than 8 doses per month per FDA labeling. Nausea is the most commonly reported side effect."
+      }
+    ]
+  },
+  "library384": {
+    "name": "Custom 384-Peptide Screening Library",
+    "category": "Institutional & Bulk",
+    "cas": "CUSTOM-ARRAY-384",
+    "form": "384-well polypropylene microplate",
+    "specification": {
+      "well_count": 384,
+      "peptide_mass_per_well": "0.5-2.0 mg per well (customizable)",
+      "purity_range": "95-99% (HPLC verified per sequence)",
+      "format": "Lyophilized in sealed 384-well plate, compatible with automated liquid handlers",
+      "custom_design": "Client specifies sequences; we synthesize, purify, and array"
+    },
+    "storage": {
+      "sealed_plate": "-20°C desiccated; stable for 12 months",
+      "reconstituted": "Per individual peptide stability; generally 2-8°C for 7-14 days",
+      "protect_from": "Moisture ingress, freeze-thaw, prolonged room temperature exposure"
+    },
+    "lead_time": "4-6 weeks from sequence confirmation",
+    "typical_applications": "Drug discovery epitope mapping, alanine scanning, structure-activity relationship (SAR) studies, receptor binding assays, high-throughput screening campaigns",
+    "purity_method": "Each peptide individually verified by RP-HPLC and LC-MS; batch report included",
+    "faq": [
+      {
+        "q": "How do I order a custom library?",
+        "a": "Contact our institutional sales team with your sequence list (up to 384 sequences). We provide a quote within 48 hours. Lead time is 4-6 weeks from sequence confirmation."
+      },
+      {
+        "q": "What purity is guaranteed?",
+        "a": "Standard libraries are supplied at ≥95% purity. Premium libraries at ≥98% are available at additional cost. Each well is individually QC'd by HPLC."
+      },
+      {
+        "q": "What format is the library supplied in?",
+        "a": "Standard 384-well polypropylene microplate, lyophilized, sealed with pierceable aluminum foil. Compatible with Beckman, Hamilton, and Tecan liquid handlers."
+      }
+    ]
+  },
+  "kinase96": {
+    "name": "Kinase Substrate Profiling Array (96-Well)",
+    "category": "Institutional & Bulk",
+    "cas": "KINASE-96-SUB",
+    "form": "96-well high-density phosphorylation substrate array",
+    "specification": {
+      "well_count": 96,
+      "substrates": "96 distinct pre-arrayed peptide substrates covering major kinase families (Ser/Thr, Tyr kinases)",
+      "mass_per_well": "1.0 mg lyophilized per well",
+      "purity": "≥98.5% (HPLC verified)",
+      "format": "96-well plate, lyophilized, sealed with pierceable foil"
+    },
+    "storage": {
+      "sealed_plate": "-20°C desiccated; stable for 18 months",
+      "reconstituted": "Use within 24 hours of reconstitution for optimal kinetic data",
+      "protect_from": "Moisture, repeated freeze-thaw, light exposure"
+    },
+    "lead_time": "In stock — ships within 3-5 business days",
+    "typical_applications": "Kinase profiling, phosphorylation assay development, enzyme kinetics (Km/Vmax), drug candidate kinase selectivity screening, signal transduction pathway mapping",
+    "purity_method": "Batch HPLC and MS verification for all 96 substrates; certificate of analysis included",
+    "faq": [
+      {
+        "q": "What kinase families are covered?",
+        "a": "The array covers substrates for major Ser/Thr kinases (PKA, PKC, CaMKII, Akt, MAPK/ERK, CDK) and Tyr kinases (Src, EGFR, Abl, JAK, PDGFR) among others."
+      },
+      {
+        "q": "How do I use the array?",
+        "a": "Reconstitute each well with assay buffer. Add your kinase of interest and ATP (or γ-32P-ATP for radioactive assays). Measure phosphorylation by luminescence, fluorescence, or radiometric detection."
+      },
+      {
+        "q": "Is this array reusable?",
+        "a": "No. Each well contains a single-use aliquot of lyophilized substrate. For repeat experiments, order additional plates."
+      }
+    ]
+  },
+  "bulk10g": {
+    "name": "Bulk cGMP Tirzepatide (10-Gram Lot)",
+    "category": "Institutional & Bulk",
+    "cas": "2023788-19-2",
+    "molecular_weight": "4813.45 g/mol",
+    "form": "10,000 mg (10g) single-batch lyophilized cake in 100mL wide-mouth amber reagent jar",
+    "specification": {
+      "mass": "10,000 mg (10 grams)",
+      "purity": "≥99.5% (HPLC)",
+      "synthesis": "Full cGMP solid-phase peptide synthesis (SPPS)",
+      "packaging": "100mL wide-mouth amber borosilicate glass jar with tamper-evident PTFE-lined cap",
+      "documentation": "Full cGMP batch record, impurity profile, residual solvent analysis (ICH Q3C), endotoxin certification, Certificate of Analysis, Certificate of Origin"
+    },
+    "storage": {
+      "sealed_jar": "-20°C desiccated with nitrogen backfill; stable for 36 months",
+      "after_opening": "Aliquot promptly into pre-weighed vials. Reseal under nitrogen/argon. Store aliquots at -20°C.",
+      "protect_from": "Moisture, light, oxygen exposure, temperatures above -10°C for extended periods"
+    },
+    "lead_time": "2-4 weeks (synthesis + QC); expedited available",
+    "typical_applications": "Preclinical animal model studies, formulation development, dose-ranging studies, IND-enabling toxicology batches, compounding pharmacy supply",
+    "purity_method": "RP-HPLC (multi-column validation), LC-MS/MS peptide mapping, Karl Fischer moisture analysis, residual solvent GC, bacterial endotoxin LAL test",
+    "faq": [
+      {
+        "q": "Is this GMP-grade material?",
+        "a": "Yes. Synthesized under current Good Manufacturing Practice (cGMP) conditions with full batch documentation, impurity profiling, and regulatory-grade analytical testing."
+      },
+      {
+        "q": "What documentation is included?",
+        "a": "Certificate of Analysis (CoA), Certificate of Origin, full impurity profile (related substances, residual solvents per ICH Q3C), endotoxin report, and cGMP batch manufacturing record."
+      },
+      {
+        "q": "Can I request custom lot sizes?",
+        "a": "Yes. We offer 1g, 5g, 10g, 25g, 50g, and 100g lot sizes. Contact our bulk synthesis team for custom quantity quotes."
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation - Phoenics Peptide</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f1f5f9; margin: 0; padding: 0; }
+        .wrapper { max-width: 620px; margin: 30px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .header { background: #0d1b2a; padding: 35px 30px; text-align: center; color: #ffffff; }
+        .logo-title { font-size: 24px; font-weight: 800; letter-spacing: 2px; color: #00d2ff; margin: 0; }
+        .body-content { padding: 35px 30px; color: #334155; line-height: 1.6; }
+        .summary-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 25px 0; }
+        .product-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .product-table th { text-align: left; padding: 10px; border-bottom: 2px solid #e2e8f0; font-size: 12px; color: #64748b; }
+        .product-table td { padding: 12px 10px; border-bottom: 1px solid #e2e8f0; font-size: 14px; }
+        .btn { display: inline-block; background: #00d2ff; color: #0d1b2a; padding: 12px 28px; border-radius: 6px; font-weight: 700; text-decoration: none; margin-top: 20px; }
+        .footer { background: #070d14; padding: 25px 30px; text-align: center; color: #64748b; font-size: 12px; }
+        .notice { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px 16px; font-size: 12px; color: #92400e; margin-top: 25px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1 class="logo-title">PHOENICS PEPTIDE</h1>
+            <p style="margin:6px 0 0;font-size:12px;color:#94a3b8;letter-spacing:1px;">RESEARCH ORDER CONFIRMATION</p>
+        </div>
+        <div class="body-content">
+            <h2 style="color:#0d1b2a;margin-top:0;">Order Receipt #{{order_number}}</h2>
+            <p>Thank you for submitting your research requisition to Phoenics Peptide. Your order has entered our bio-synthesis verification queue.</p>
+            
+            <div class="summary-card">
+                <div style="font-size:12px;color:#64748b;text-transform:uppercase;font-weight:700;">Logistics & Thermal Protocol</div>
+                <div style="font-size:16px;font-weight:700;color:#0d1b2a;margin-top:4px;">❄️ Cold-Chain Lyophilized Preparation (-20°C)</div>
+                <p style="margin:8px 0 0;font-size:13px;color:#475569;">Fulfillment Hub: Boston USA / Frankfurt EU Hub • Target Carrier: DHL Express / FedEx Priority</p>
+            </div>
+
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Sequence Description</th>
+                        <th style="text-align:center;">Size</th>
+                        <th style="text-align:center;">Qty</th>
+                        <th style="text-align:right;">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{order_items}}
+                </tbody>
+            </table>
+
+            <div style="text-align:center;margin-top:25px;">
+                <a href="{{tracking_portal_url}}" class="btn">View Live Fulfillment Status &rarr;</a>
+            </div>
+
+            <div class="notice">
+                <strong>In-Vitro Research Compliance:</strong> All compounds are intended strictly for laboratory analytical testing and biomedical research. Not for human or animal application.
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; Phoenics Peptide • Boston • Frankfurt • Toronto • Singapore</p>
+        </div>
+    </div>
+</body>
+</html>

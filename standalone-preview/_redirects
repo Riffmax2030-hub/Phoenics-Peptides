@@ -1,0 +1,7 @@
+# Static SPA redirects
+/home           /index.html     301
+/catalog        /index.html     301
+/products       /index.html     301
+/compliance     /legal.html     301
+/legal          /legal.html     301
+/research-use   /legal.html     301

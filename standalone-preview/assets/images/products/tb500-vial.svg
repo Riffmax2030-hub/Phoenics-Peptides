@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </radialGradient>
+    <linearGradient id="amberGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350F" stop-opacity="0.95"/>
+      <stop offset="18%" stop-color="#D97706" stop-opacity="0.8"/>
+      <stop offset="45%" stop-color="#F59E0B" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#B45309" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#451A03" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="clearGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.4"/>
+      <stop offset="25%" stop-color="#F8FAFC" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#E2E8F0" stop-opacity="0.3"/>
+      <stop offset="75%" stop-color="#F8FAFC" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#64748B" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="crimpHood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-5%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="480" fill="url(#bgGlow)"/>
+
+  <!-- Pedestal Shadow -->
+  <ellipse cx="200" cy="435" rx="90" ry="14" fill="#0F172A" opacity="0.10"/>
+  <ellipse cx="200" cy="435" rx="60" ry="8" fill="#0F172A" opacity="0.18"/>
+
+  <!-- Vial Body with Shadow -->
+  <g filter="url(#dropShadow)">
+    <!-- Main Glass Body -->
+    <rect x="130" y="150" width="140" height="260" rx="18" fill="url(#amberGlass)" stroke="#B45309" stroke-width="1.5"/>
+
+    <!-- Lyophilized Powder Cake -->
+    <path d="M 134 380 Q 200 375 266 380 L 266 395 Q 266 406 250 406 L 150 406 Q 134 406 134 395 Z" fill="#FEF3C7" opacity="0.85"/>
+    <text x="200" y="396" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#78350F" text-anchor="middle" letter-spacing="1">LYOPHILIZED CAKE</text>
+
+    <!-- Glass Highlights -->
+    <rect x="136" y="155" width="10" height="250" rx="4" fill="#FFFFFF" opacity="0.35"/>
+    <rect x="254" y="155" width="6" height="250" rx="3" fill="#FFFFFF" opacity="0.2"/>
+
+    <!-- Vial Neck -->
+    <rect x="165" y="112" width="70" height="38" rx="4" fill="url(#amberGlass)" stroke="#B45309" stroke-width="1.5"/>
+    <rect x="168" y="114" width="6" height="34" rx="2" fill="#FFFFFF" opacity="0.4"/>
+
+    <!-- Aluminum Crimp Collar -->
+    <rect x="156" y="86" width="88" height="28" rx="3" fill="url(#crimpHood)" stroke="#94A3B8" stroke-width="1"/>
+    <!-- Crimp ridges -->
+    <line x1="162" y1="92" x2="162" y2="108" stroke="#64748B" stroke-width="1.5"/>
+    <line x1="172" y1="92" x2="172" y2="108" stroke="#64748B" stroke-width="1.5"/>
+    <line x1="228" y1="92" x2="228" y2="108" stroke="#64748B" stroke-width="1.5"/>
+    <line x1="238" y1="92" x2="238" y2="108" stroke="#64748B" stroke-width="1.5"/>
+
+    <!-- Flip-Off Plastic Cap -->
+    <rect x="152" y="62" width="96" height="26" rx="6" fill="url(#capGrad)" stroke="#1E293B" stroke-width="1"/>
+    <rect x="165" y="65" width="70" height="5" rx="2" fill="#FFFFFF" opacity="0.4"/>
+    <text x="200" y="79" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">FLIP OFF</text>
+
+    <!-- Clinical Label Wrap -->
+    <rect x="134" y="180" width="132" height="175" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    <!-- Top Accent Bar -->
+    <rect x="134" y="180" width="132" height="10" rx="4" fill="#475569"/>
+
+    <!-- Label Content -->
+    <text x="200" y="206" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="800" fill="#475569" text-anchor="middle" letter-spacing="1.5">PHOENICS RESEARCH</text>
+    <text x="200" y="228" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="700" fill="#0F172A" text-anchor="middle">TB-500</text>
+    <text x="200" y="246" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#475569" text-anchor="middle">5mg / vial</text>
+
+    <line x1="148" y1="256" x2="252" y2="256" stroke="#E2E8F0" stroke-width="1"/>
+
+    <!-- Specs Grid -->
+    <text x="148" y="272" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748B">PURITY:</text>
+    <text x="252" y="272" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#059669" text-anchor="end">&gt;=99.5%</text>
+
+    <text x="148" y="287" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748B">ASSAY:</text>
+    <text x="252" y="287" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#0F172A" text-anchor="end">RP-HPLC</text>
+
+    <text x="148" y="302" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748B">FORMAT:</text>
+    <text x="252" y="302" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#0F172A" text-anchor="end">Lyophilized</text>
+
+    <text x="148" y="317" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748B">STORAGE:</text>
+    <text x="252" y="317" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#0F172A" text-anchor="end">-20&#176;C</text>
+
+    <!-- Barcode simulation -->
+    <g transform="translate(155, 328)">
+      <rect x="0" y="0" width="2" height="14" fill="#0F172A"/>
+      <rect x="4" y="0" width="1" height="14" fill="#0F172A"/>
+      <rect x="7" y="0" width="3" height="14" fill="#0F172A"/>
+      <rect x="13" y="0" width="1" height="14" fill="#0F172A"/>
+      <rect x="16" y="0" width="2" height="14" fill="#0F172A"/>
+      <rect x="20" y="0" width="4" height="14" fill="#0F172A"/>
+      <rect x="27" y="0" width="1" height="14" fill="#0F172A"/>
+      <rect x="30" y="0" width="2" height="14" fill="#0F172A"/>
+      <rect x="35" y="0" width="3" height="14" fill="#0F172A"/>
+      <rect x="41" y="0" width="1" height="14" fill="#0F172A"/>
+      <rect x="45" y="0" width="2" height="14" fill="#0F172A"/>
+      <rect x="50" y="0" width="4" height="14" fill="#0F172A"/>
+      <rect x="57" y="0" width="2" height="14" fill="#0F172A"/>
+      <rect x="62" y="0" width="1" height="14" fill="#0F172A"/>
+      <rect x="66" y="0" width="3" height="14" fill="#0F172A"/>
+      <rect x="72" y="0" width="2" height="14" fill="#0F172A"/>
+      <rect x="77" y="0" width="3" height="14" fill="#0F172A"/>
+      <rect x="83" y="0" width="1" height="14" fill="#0F172A"/>
+      <rect x="87" y="0" width="2" height="14" fill="#0F172A"/>
+    </g>
+    <text x="200" y="349" font-family="'JetBrains Mono', monospace" font-size="6" fill="#94A3B8" text-anchor="middle">21 CFR 312.160 RUO</text>
+  </g>
+</svg>

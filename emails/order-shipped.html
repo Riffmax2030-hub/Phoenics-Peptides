@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dispatched with Tracking - Phoenics Peptide</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f1f5f9; margin: 0; padding: 0; }
+        .wrapper { max-width: 620px; margin: 30px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .header { background: #0d1b2a; padding: 35px 30px; text-align: center; color: #ffffff; }
+        .logo-title { font-size: 24px; font-weight: 800; letter-spacing: 2px; color: #00d2ff; margin: 0; }
+        .body-content { padding: 35px 30px; color: #334155; line-height: 1.6; }
+        .tracking-card { background: #0f172a; border-radius: 10px; padding: 25px; color: #ffffff; margin: 25px 0; }
+        .btn { display: inline-block; background: #00d2ff; color: #0d1b2a; padding: 13px 30px; border-radius: 6px; font-weight: 700; text-decoration: none; margin-top: 18px; }
+        .footer { background: #070d14; padding: 25px 30px; text-align: center; color: #64748b; font-size: 12px; }
+        .temp-badge { display: inline-block; background: #ecfeff; color: #0891b2; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 15px; margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1 class="logo-title">PHOENICS PEPTIDE</h1>
+            <p style="margin:6px 0 0;font-size:12px;color:#94a3b8;letter-spacing:1px;">AIR CARGO DISPATCH CONFIRMATION</p>
+        </div>
+        <div class="body-content">
+            <h2 style="color:#0d1b2a;margin-top:0;">Your Research Shipment is En Route ✈️</h2>
+            <p>Your research order <strong>#{{order_number}}</strong> has cleared analytical QC and has been transferred to our international air cargo logistics partner.</p>
+            
+            <div class="tracking-card">
+                <span class="temp-badge">❄️ COLD-CHAIN: -20°C PRESERVED</span>
+                <div style="font-size:18px;font-weight:700;margin-bottom:6px;">Carrier: {{carrier_name}} Priority Air</div>
+                <div style="font-size:14px;color:#94a3b8;margin-bottom:12px;">Air Waybill (AWB): <strong style="color:#fcd34d;font-family:monospace;font-size:16px;">{{tracking_number}}</strong></div>
+                <div style="font-size:13px;color:#cbd5e1;">Estimated Delivery Window: <strong>{{estimated_delivery}}</strong></div>
+                
+                <div style="text-align:center;">
+                    <a href="{{carrier_tracking_url}}" class="btn" target="_blank">Track Live via {{carrier_name}} &rarr;</a>
+                </div>
+            </div>
+
+            <p style="font-size:13px;color:#64748b;">
+                You can also query our satellite tracking console at any time using your order number at <a href="https://phoenicspeptide.com/track-order/" style="color:#0088fe;">phoenicspeptide.com/track-order</a>.
+            </p>
+        </div>
+        <div class="footer">
+            <p>&copy; Phoenics Peptide Logistics Division • Worldwide Research Freight</p>
+        </div>
+    </div>
+</body>
+</html>

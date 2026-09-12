@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <radialGradient id="jarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </radialGradient>
+    <linearGradient id="amberJar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#451A03"/>
+      <stop offset="20%" stop-color="#B45309"/>
+      <stop offset="48%" stop-color="#F59E0B"/>
+      <stop offset="75%" stop-color="#92400E"/>
+      <stop offset="100%" stop-color="#260E02"/>
+    </linearGradient>
+    <filter id="jarShadow" x="-10%" y="-5%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="480" fill="url(#jarGlow)"/>
+  <ellipse cx="200" cy="435" rx="110" ry="16" fill="#0F172A" opacity="0.15"/>
+
+  <g filter="url(#jarShadow)">
+    <!-- Wide-Mouth 100mL Amber Reagent Jar -->
+    <rect x="100" y="140" width="200" height="270" rx="22" fill="url(#amberJar)" stroke="#78350F" stroke-width="2"/>
+
+    <!-- Massive Lyophilized Bulk Powder Cake (10,000mg) -->
+    <path d="M 106 350 Q 200 340 294 350 L 294 396 Q 294 408 274 408 L 126 408 Q 106 408 106 396 Z" fill="#FEF3C7" opacity="0.9"/>
+    <text x="200" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#92400E" text-anchor="middle" letter-spacing="1">10,000mg cGMP BULK CAKE</text>
+
+    <!-- Glass Highlights -->
+    <rect x="110" y="146" width="14" height="256" rx="6" fill="#FFFFFF" opacity="0.3"/>
+    <rect x="276" y="146" width="8" height="256" rx="4" fill="#FFFFFF" opacity="0.2"/>
+
+    <!-- Wide Mouth Neck -->
+    <rect x="130" y="98" width="140" height="44" rx="4" fill="url(#amberJar)" stroke="#78350F" stroke-width="1.5"/>
+
+    <!-- Ribbed Phenolic Cap with Tamper-Evident Band -->
+    <rect x="120" y="60" width="160" height="42" rx="6" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <line x1="130" y1="66" x2="130" y2="96" stroke="#475569" stroke-width="2"/>
+    <line x1="145" y1="66" x2="145" y2="96" stroke="#475569" stroke-width="2"/>
+    <line x1="160" y1="66" x2="160" y2="96" stroke="#475569" stroke-width="2"/>
+    <line x1="240" y1="66" x2="240" y2="96" stroke="#475569" stroke-width="2"/>
+    <line x1="255" y1="66" x2="255" y2="96" stroke="#475569" stroke-width="2"/>
+    <line x1="270" y1="66" x2="270" y2="96" stroke="#475569" stroke-width="2"/>
+
+    <!-- Tamper Seal Ring -->
+    <rect x="124" y="102" width="152" height="12" rx="2" fill="#DC2626"/>
+    <text x="200" y="111" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">SEALED cGMP BULK REAGENT</text>
+
+    <!-- Big Clinical Label -->
+    <rect x="108" y="170" width="184" height="170" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="108" y="170" width="184" height="14" rx="6 6 0 0" fill="#B45309"/>
+
+    <text x="200" y="200" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="800" fill="#B45309" text-anchor="middle" letter-spacing="1.5">INSTITUTIONAL BULK LOT</text>
+    <text x="200" y="222" font-family="'Cormorant Garamond', serif" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">Tirzepatide Bulk Lot</text>
+    <text x="200" y="242" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#D97706" text-anchor="middle">10.0 GRAMS (10,000mg)</text>
+
+    <line x1="124" y1="252" x2="276" y2="252" stroke="#E2E8F0" stroke-width="1"/>
+
+    <text x="124" y="268" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">PURITY:</text>
+    <text x="276" y="268" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#059669" text-anchor="end">&gt;=99.5% RP-HPLC</text>
+
+    <text x="124" y="284" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">CAS:</text>
+    <text x="276" y="284" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#0F172A" text-anchor="end">2023788-19-2-BULK</text>
+
+    <text x="124" y="300" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">LOT:</text>
+    <text x="276" y="300" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#0F172A" text-anchor="end">PHX-BLK-100G</text>
+
+    <text x="124" y="316" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">STANDARD:</text>
+    <text x="276" y="316" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#0F172A" text-anchor="end">cGMP Grade</text>
+
+    <text x="200" y="332" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#94A3B8" text-anchor="middle">INCLUDES FULL SOLVENT &amp; IMPURITY PROFILE</text>
+  </g>
+</svg>
