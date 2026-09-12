@@ -2279,7 +2279,7 @@
         if (!email) return;
 
         // Send to Formspree (replace YOUR_FORM_ID with your Formspree form ID)
-        fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        fetch('https://formspree.io/f/xppzgapq', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify({ email: email, source: 'popup' })
@@ -2319,5 +2319,6 @@
     });
 
     </script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
