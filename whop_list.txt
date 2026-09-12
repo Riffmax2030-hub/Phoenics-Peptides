@@ -1,0 +1,137 @@
+### Whop Product Creation Details
+
+*Reminder: Make sure to check the **Collect shipping address** box for ALL of these!*
+
+**1. Tirzepatide (10mg)**
+- **Name:** Tirzepatide (10mg)
+- **Labels:** Weight Loss & Incretins, Research Peptide
+- **Pricing:** $112.00 (Once)
+- **Headline:** Dual GIP / GLP-1 Receptor Agonist
+- **Description:** Dual GIP and GLP-1 receptor agonist formulated as a sterile lyophilized cake. Promotes significant appetite regulation and metabolic glucose balance. Step-by-step dilution instructions included with delivery.
+---
+**2. Retatrutide (10mg)**
+- **Name:** Retatrutide (10mg)
+- **Labels:** Weight Loss & Incretins, Research Peptide
+- **Pricing:** $139.00 (Once)
+- **Headline:** Triple GLP-1 / GIP / GCGR Agonist (GGG)
+- **Description:** Next-generation triple receptor agonist targeting GLP-1, GIP, and Glucagon receptors. Enhances metabolic rate, energy expenditure, and lipid clearance. Protocol guide enclosed.
+---
+**3. Semaglutide (5mg)**
+- **Name:** Semaglutide (5mg)
+- **Labels:** Weight Loss & Incretins, Research Peptide
+- **Pricing:** $96.00 (Once)
+- **Headline:** Selective GLP-1 Receptor Agonist
+- **Description:** Gold-standard GLP-1 receptor agonist with albumin-binding side chain for sustained weekly appetite suppression and glycemic control. Reconstitution table included with shipment.
+---
+**4. Cagrilintide (5mg)**
+- **Name:** Cagrilintide (5mg)
+- **Labels:** Weight Loss & Incretins, Research Peptide
+- **Pricing:** $108.00 (Once)
+- **Headline:** Long-Acting Non-Selective Amylin Analog
+- **Description:** Acylated amylin analog frequently investigated alongside GLP-1 agonists to amplify fullness, retard gastric emptying, and sustain body composition improvements.
+---
+**5. AOD-9604 (5mg)**
+- **Name:** AOD-9604 (5mg)
+- **Labels:** Weight Loss & Incretins, Research Peptide
+- **Pricing:** $76.00 (Once)
+- **Headline:** C-Terminal hGH Fragment (176-191)
+- **Description:** Active lipolytic fragment of growth hormone C-terminus. Stimulates fat breakdown via beta-3 adrenergic receptors without elevating IGF-1 or altering blood sugar.
+---
+**6. GHK-Cu Copper Peptide (50mg)**
+- **Name:** GHK-Cu Copper Peptide (50mg)
+- **Labels:** Anti-Ageing & Skin Health, Research Peptide
+- **Pricing:** $48.00 (Once)
+- **Headline:** Copper-Chelated Tripeptide (Gly-His-Lys)
+- **Description:** Royal blue crystalline powder. Stimulates collagen synthesis, decorin expression, antioxidant enzyme upregulation, and dermal extracellular matrix remodeling.
+---
+**7. Epithalon (10mg)**
+- **Name:** Epithalon (10mg)
+- **Labels:** Anti-Ageing & Longevity, Research Peptide
+- **Pricing:** $48.00 (Once)
+- **Headline:** Synthetic Pineal Tetrapeptide (Ala-Glu-Asp-Gly)
+- **Description:** Synthetic pineal tetrapeptide researched for telomerase induction, cellular age reduction, circadian rhythm normalization, and melatonin secretion restoration.
+---
+**8. MOTS-c (10mg)**
+- **Name:** MOTS-c (10mg)
+- **Labels:** Cellular Energy & Vitality, Research Peptide
+- **Pricing:** $64.00 (Once)
+- **Headline:** Mitochondrial-Derived Peptide (16-AA)
+- **Description:** Encodes within the mitochondrial 12S rRNA. Acts as a systemic metabolic hormone activating AMPK, enhancing glucose disposal, and boosting physical endurance.
+---
+**9. BPC-157 (5mg)**
+- **Name:** BPC-157 (5mg)
+- **Labels:** Tissue Repair & Healing, Research Peptide
+- **Pricing:** $44.00 (Once)
+- **Headline:** Stable Gastric Pentadecapeptide (15-AA)
+- **Description:** Gastric juice-derived pentadecapeptide researched extensively for tendon-to-bone reconnection, gut mucosal lining repair, and microvascular tissue healing.
+---
+**10. TB-500 (5mg)**
+- **Name:** TB-500 (5mg)
+- **Labels:** Tissue Repair & Flexibility, Research Peptide
+- **Pricing:** $52.00 (Once)
+- **Headline:** Thymosin Beta-4 Active Domain (Ac-LKKTETQ)
+- **Description:** Major G-actin sequestering peptide. Accelerates cell migration to damaged tissue, promotes microvascular recruitment, and prevents scar tissue fibrosis.
+---
+**11. CJC-1295 + Ipamorelin (10mg)**
+- **Name:** CJC-1295 + Ipamorelin (10mg)
+- **Labels:** Muscle & Growth Hormone Axis, Research Peptide
+- **Pricing:** $68.00 (Once)
+- **Headline:** Synergistic GHRH + Ghrelin Receptor Agonist
+- **Description:** 1:1 synergistic blend delivering amplified pulsatile pituitary growth hormone release and deep stage-4 sleep without elevating cortisol or prolactin.
+---
+**12. MK-677 Ibutamoren (30mL)**
+- **Name:** MK-677 Ibutamoren (30mL)
+- **Labels:** Muscle & Growth Hormone Axis, Research Peptide
+- **Pricing:** $56.00 (Once)
+- **Headline:** Non-Peptide Oral Ghrelin Receptor Agonist
+- **Description:** Supplied in 30mL amber dropper bottle with calibrated pipette. Sustains elevated plasma GH and IGF-1 levels without blunting natural pituitary pulsatility.
+---
+**13. Tesamorelin (10mg)**
+- **Name:** Tesamorelin (10mg)
+- **Labels:** Muscle & Growth Hormone Axis, Research Peptide
+- **Pricing:** $84.00 (Once)
+- **Headline:** Trans-3-hexenoyl GHRH Analog (44-AA)
+- **Description:** Potent growth hormone-releasing factor analog specifically investigated for visceral abdominal adipose reduction and hepatic lipid clearance.
+---
+**14. Semax Nasal Spray (30mg)**
+- **Name:** Semax Nasal Spray (30mg)
+- **Labels:** Cognitive & Vitality, Research Peptide
+- **Pricing:** $46.00 (Once)
+- **Headline:** Heptapeptide ACTH(4-10) Analog
+- **Description:** 10mL amber metered nasal spray bottle. Investigated for brain-derived neurotrophic factor stimulation, dopaminergic modulation, and neuronal stress resilience.
+---
+**15. Selank Nasal Spray (10mg)**
+- **Name:** Selank Nasal Spray (10mg)
+- **Labels:** Cognitive & Vitality, Research Peptide
+- **Pricing:** $44.00 (Once)
+- **Headline:** Synthetic Tuftsin Analog
+- **Description:** 10mL metered nasal pump dispenser. Anxiolytic heptapeptide investigated for modulation of GABAergic neurotransmission and cognitive stabilization under acute stress.
+---
+**16. PT-141 Bremelanotide (10mg)**
+- **Name:** PT-141 Bremelanotide (10mg)
+- **Labels:** Cognitive & Vitality, Research Peptide
+- **Pricing:** $50.00 (Once)
+- **Headline:** Central Melanocortin MC3 / MC4 Agonist
+- **Description:** Cyclic heptapeptide acting centrally across hypothalamic neural circuits to modulate libido, autonomic vitality, and drive independent of vascular mechanisms.
+---
+**17. Custom 384-Peptide Screening Library**
+- **Name:** Custom 384-Peptide Screening Library
+- **Labels:** Institutional & Bulk, Research Peptide
+- **Pricing:** $18760.00 (Once)
+- **Headline:** Robotic Solid-Phase Microplate Synthesis
+- **Description:** Supplied in standard 384-well polypropylene microplates on automated liquid handler decks. For institutional drug discovery, alanine scanning, and receptor assays.
+---
+**18. Kinase Substrate Profiling Array (96-Well)**
+- **Name:** Kinase Substrate Profiling Array (96-Well)
+- **Labels:** Institutional & Bulk, Research Peptide
+- **Pricing:** $7120.00 (Once)
+- **Headline:** High-Density Phosphorylation Array
+- **Description:** 96 distinct pre-arrayed peptide substrates for high-throughput kinase profiling and phosphorylation signaling screening in biotechnology consortia.
+---
+**19. Bulk cGMP Tirzepatide (10-Gram Lot)**
+- **Name:** Bulk cGMP Tirzepatide (10-Gram Lot)
+- **Labels:** Institutional & Bulk, Research Peptide
+- **Pricing:** $11920.00 (Once)
+- **Headline:** Single-Lot Bulk cGMP Synthesis Reagent
+- **Description:** 10,000mg single-batch lyophilized cake packaged in 100mL wide-mouth amber laboratory reagent jar with tamper-evident seal. Full cGMP impurity profile and residual solvent testing.
+---
