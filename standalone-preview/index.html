@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta name="description" content="Phoenics Peptides — Certified high-purity peptides for research. 99%+ purity guaranteed. Fast USA/Canada shipping. Crypto checkout available.">
-    <title>Phoenics Peptides | High-Purity Research Peptides</title>
+    <meta name="description" content="Phoenix Chems — Certified high-purity peptides for research. 99%+ purity guaranteed. Fast USA/Canada shipping. Crypto checkout available.">
+    <title>Phoenix Chems | High-Purity Research Peptides</title>
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
@@ -16,14 +16,14 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://phoenics-peptides.onrender.com/">
-    <meta property="og:title" content="Phoenics Peptides | Premium Research Peptides">
+    <meta property="og:url" content="https://phoenix-chems.onrender.com/">
+    <meta property="og:title" content="Phoenix Chems | Premium Research Peptides">
     <meta property="og:description" content="Certified high-purity peptides (99%+ purity). Tirzepatide, Retatrutide, BPC-157 & more. Crypto checkout & fast discrete delivery.">
-    <meta property="og:image" content="https://phoenics-peptides.onrender.com/assets/images/logo.jpg">
+    <meta property="og:image" content="https://phoenix-chems.onrender.com/assets/images/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Phoenics Peptides | Premium Research Peptides">
+    <meta name="twitter:title" content="Phoenix Chems | Premium Research Peptides">
     <meta name="twitter:description" content="99%+ purity peptides. Instant crypto checkout & discrete shipping.">
-    <meta name="twitter:image" content="https://phoenics-peptides.onrender.com/assets/images/logo.jpg">
+    <meta name="twitter:image" content="https://phoenix-chems.onrender.com/assets/images/logo.jpg">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1366,6 +1366,162 @@
         .newsletter-form { flex-direction: column; align-items: stretch; }
         .newsletter-form input { min-width: 0; }
     }
+    
+    /* ── SWISSCHEMS STYLE TEXT LOGO ── */
+    .brand-text-logo {
+        font-family: var(--font);
+        font-size: 26px;
+        font-weight: 900;
+        letter-spacing: -0.8px;
+        color: #111827;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    .brand-text-logo strong {
+        color: var(--green);
+        margin-left: 2px;
+    }
+    .brand-text-logo.footer-brand {
+        font-size: 28px;
+        margin-bottom: 14px;
+        display: block;
+    }
+
+    /* ── REACTIVE ZOOM HERO BOTTLES ── */
+    .hero-bottle {
+        cursor: pointer;
+        transition: transform .45s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow .4s ease !important;
+    }
+    .hero-bottle:hover {
+        transform: translateY(-24px) scale(1.18) !important;
+        box-shadow: 0 24px 48px rgba(5, 150, 105, 0.28) !important;
+        z-index: 10 !important;
+    }
+
+    /* ── NEEDLE BUNDLE ADD-ON (VIALS ONLY) ── */
+    .needle-addon-box {
+        background: #f0fdf4;
+        border: 1.5px dashed #86efac;
+        border-radius: 8px;
+        padding: 8px 10px;
+        margin: 6px 0 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: border-color .2s, background .2s;
+    }
+    .needle-addon-box:hover {
+        border-color: var(--green);
+        background: #dcfce7;
+    }
+    .needle-addon-label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 11.5px;
+        font-weight: 700;
+        color: #166534;
+        cursor: pointer;
+        user-select: none;
+        width: 100%;
+    }
+    .needle-addon-label input[type="checkbox"] {
+        accent-color: var(--green);
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+    }
+    .needle-save-badge {
+        background: #15803d;
+        color: #fff;
+        font-size: 9.5px;
+        font-weight: 800;
+        padding: 2px 6px;
+        border-radius: 4px;
+        letter-spacing: .3px;
+        margin-left: auto;
+    }
+    .needle-was-price {
+        text-decoration: line-through;
+        opacity: .7;
+        margin-right: 3px;
+        font-size: 10px;
+    }
+
+    /* Modal Needle Bundle Banner */
+    .modal-needle-bundle {
+        background: #f0fdf4;
+        border: 2px solid #86efac;
+        border-radius: 12px;
+        padding: 14px 16px;
+        margin-top: 14px;
+    }
+    .mnb-badge {
+        display: inline-block;
+        background: #15803d;
+        color: #fff;
+        font-size: 10.5px;
+        font-weight: 800;
+        padding: 3px 8px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        letter-spacing: .4px;
+    }
+    .mnb-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+    .mnb-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .mnb-icon {
+        font-size: 26px;
+    }
+    .mnb-title {
+        font-size: 13.5px;
+        font-weight: 800;
+        color: #111827;
+        line-height: 1.2;
+    }
+    .mnb-desc {
+        font-size: 11.5px;
+        color: #4b5563;
+        margin-top: 2px;
+    }
+    .mnb-right {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+    }
+    .mnb-price {
+        font-size: 14px;
+        font-weight: 800;
+        color: #15803d;
+    }
+    .mnb-check-label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #111827;
+        cursor: pointer;
+    }
+    .mnb-check-label input {
+        accent-color: var(--green);
+        width: 16px;
+        height: 16px;
+    }
+
     </style>
 </head>
 <body>
@@ -1374,16 +1530,16 @@
 <div class="announce-bar">
     <span>🚚 Free shipping on all orders over $150 (US) and $300 (International)</span>
     <div class="announce-bar-right">
-        <span>✉️ support@phoenicspeptides.com</span>
-        <span>📞 +1 (800) PHX-PEPT</span>
+        <span>✉️ support@phoenixchems.com</span>
+        <span>📞 +1 (800) PHX-CHEMS</span>
     </div>
 </div>
 
 <!-- ══ SITE HEADER ══════════════════════════════════════════════════ -->
 <header class="site-header">
     <div class="header-inner container">
-        <a href="#" class="brand-logo-wrap">
-            <img src="assets/images/logo.svg" alt="Phoenics Peptides" class="brand-logo-img" onerror="this.src='assets/images/logo.png'">
+        <a href="#" class="brand-logo-wrap" title="Phoenix Chems">
+            <span class="brand-text-logo">PHOENIX<strong>CHEMS</strong></span>
         </a>
 
         <nav aria-label="Main navigation">
@@ -1559,7 +1715,7 @@
             <div>
                 <div class="section-accent">BE THE FIRST TO TRY OUR NEW PRODUCTS</div>
                 <h2 class="section-title" style="text-align:left">Discover the Latest Innovations</h2>
-                <p style="color:var(--gray);font-size:15px;line-height:1.75;margin-top:12px;margin-bottom:24px">Explore our fresh releases in longevity and metabolic research. Upgrade your protocol with new, exciting compounds — backed by the Phoenics Peptides quality standard.</p>
+                <p style="color:var(--gray);font-size:15px;line-height:1.75;margin-top:12px;margin-bottom:24px">Explore our fresh releases in longevity and metabolic research. Upgrade your protocol with new, exciting compounds — backed by the Phoenix Chems quality standard.</p>
                 <a href="#catalog-section" class="btn-red" onclick="setFilter('vitality')">Explore New Arrivals &rarr;</a>
             </div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
@@ -1682,8 +1838,8 @@
     <div class="container" style="padding-top:40px;max-width:800px">
         <div style="text-align:center;margin-bottom:24px">
             <div style="display:inline-block;background:var(--green-light);border:1.5px solid var(--green-mid);border-radius:99px;padding:6px 16px;font-size:13px;font-weight:700;color:var(--green-dark)">● PAYMENTS</div>
-            <h2 style="font-size:28px;font-weight:900;margin-top:14px">How To Pay At <span style="color:var(--green)">Phoenics Peptides</span></h2>
-            <p style="color:var(--gray);font-size:14px;max-width:560px;margin:10px auto 0;line-height:1.7">Phoenics Peptides accepts cryptocurrency payments for all orders. Due to industry policies and restrictions placed on peptide products by traditional payment networks, we exclusively process payments through secure crypto channels.</p>
+            <h2 style="font-size:28px;font-weight:900;margin-top:14px">How To Pay At <span style="color:var(--green)">Phoenix Chems</span></h2>
+            <p style="color:var(--gray);font-size:14px;max-width:560px;margin:10px auto 0;line-height:1.7">Phoenix Chems accepts cryptocurrency payments for all orders. Due to industry policies and restrictions placed on peptide products by traditional payment networks, we exclusively process payments through secure crypto channels.</p>
         </div>
 
         <div class="pay-tabs-bar">
@@ -1735,7 +1891,7 @@
         <div class="pay-section-wrap" id="pay-crypto">
             <div class="pay-overview-h3">Overview</div>
             <div class="pay-overview-line"></div>
-            <p class="pay-overview-body">Phoenics Peptides supports <strong>cryptocurrency payments via NOWPayments</strong>, a self-hosted payment processor. The preferred payment method for international research compound orders, this option offers <strong>fast settlement, global accessibility, and no reliance on banking systems</strong>.</p>
+            <p class="pay-overview-body">Phoenix Chems supports <strong>cryptocurrency payments via NOWPayments</strong>, a self-hosted payment processor. The preferred payment method for international research compound orders, this option offers <strong>fast settlement, global accessibility, and no reliance on banking systems</strong>.</p>
 
             <div class="crypto-methods">
                 <div class="crypto-card"><div class="crypto-icon">₿</div><div class="crypto-name">Bitcoin (BTC)</div></div>
@@ -1750,7 +1906,7 @@
 
             <div class="pay-notice" style="margin-top:28px">
                 <div class="pay-notice-label">🔐 NOWPAYMENTS IS OUR PAYMENT PROCESSOR</div>
-                <p>Your blockchain transaction receipt will show a NOWPayments wallet address. This is expected behavior. NOWPayments is our secure, regulated crypto payment gateway — all orders are fulfilled directly by Phoenics Peptides.</p>
+                <p>Your blockchain transaction receipt will show a NOWPayments wallet address. This is expected behavior. NOWPayments is our secure, regulated crypto payment gateway — all orders are fulfilled directly by Phoenix Chems.</p>
             </div>
         </div>
 
@@ -1900,8 +2056,8 @@
     <div class="container">
         <div class="footer-inner">
             <div>
-                <img src="assets/images/logo.svg" alt="Phoenics Peptides" class="footer-logo" onerror="this.src='assets/images/logo.png'">
-                <p class="footer-tagline">Reliable and innovative research compounds with top-grade materials and novel peptides tailored to lead the competitive research industry. Choose quality. Choose Phoenics Peptides.</p>
+                <span class="brand-text-logo">PHOENIX<strong>CHEMS</strong></span>
+                <p class="footer-tagline">Reliable and innovative research compounds with top-grade materials and novel peptides tailored to lead the competitive research industry. Choose quality. Choose Phoenix Chems.</p>
                 <div class="footer-payment-label">Accepted Secure Payments</div>
                 <div class="payment-logos">
                     <span class="payment-logo">₿ BTC</span>
@@ -1947,10 +2103,10 @@
         </div>
     </div>
     <div class="compliance-bar">
-        <strong>⚠️ 18+ Research Use Only</strong> — All products sold by Phoenics Peptides are intended strictly for in vitro laboratory and research purposes. They are not intended for diagnostic, therapeutic, recreational, cosmetic, household, or any other use in humans or animals. Not for human consumption. Products are not drugs, food, cosmetics, or dietary supplements, and have not been evaluated or approved by the U.S. Food and Drug Administration.
+        <strong>⚠️ 18+ Research Use Only</strong> — All products sold by Phoenix Chems are intended strictly for in vitro laboratory and research purposes. They are not intended for diagnostic, therapeutic, recreational, cosmetic, household, or any other use in humans or animals. Not for human consumption. Products are not drugs, food, cosmetics, or dietary supplements, and have not been evaluated or approved by the U.S. Food and Drug Administration.
     </div>
     <div class="footer-bottom">
-        FDA Disclaimer: All products are for laboratory developmental research USE ONLY. Not for human consumption. © Phoenics Peptides — All Rights Reserved.
+        FDA Disclaimer: All products are for laboratory developmental research USE ONLY. Not for human consumption. © Phoenix Chems — All Rights Reserved.
     </div>
 </footer>
 
@@ -2099,7 +2255,7 @@
             </div>
             <div class="auth-notice">
                 <strong>Important Notice — For Research Use Only</strong>
-                All products sold by Phoenics Peptides are intended strictly for in vitro laboratory and research purposes. They are not intended for diagnostic, therapeutic, recreational, cosmetic, household, or any other use in humans or animals.
+                All products sold by Phoenix Chems are intended strictly for in vitro laboratory and research purposes. They are not intended for diagnostic, therapeutic, recreational, cosmetic, household, or any other use in humans or animals.
             </div>
             <button onclick="closeAuthModal()" style="font-size:13px;color:var(--gray);text-align:center;margin-top:4px">Close</button>
         </div>
@@ -2172,6 +2328,25 @@
                     <option value="5" data-disc="15" selected>5× 8-Week Cycle (15% off)</option>
                     <option value="10" data-disc="25">10× Bulk (25% off)</option>
                 </select>
+                                <div class="modal-needle-bundle" id="pm-needle-bundle-box" style="display:none;">
+                    <div class="mnb-badge">RECOMMENDED VIAL ADD-ON · SAVE 20%</div>
+                    <div class="mnb-row">
+                        <div class="mnb-left">
+                            <span class="mnb-icon">💉</span>
+                            <div>
+                                <div class="mnb-title">BD Ultra-Fine™ 31G Syringes (10-Pack)</div>
+                                <div class="mnb-desc">0.5mL Sterile Micro-Fine Precision Syringes for Reconstituted Peptides</div>
+                            </div>
+                        </div>
+                        <div class="mnb-right">
+                            <div class="mnb-price"><span class="needle-was-price">$9.99</span>$7.99</div>
+                            <label class="mnb-check-label">
+                                <input type="checkbox" id="pm-needle-checkbox">
+                                <span>Add to Cart</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
                 <div class="pm-actions">
                     <button class="pm-btn-cart" onclick="addFromModal()">+ Add to Cart</button>
                     <button class="pm-btn-buy" id="pm-buy-btn">Buy Now (Crypto)</button>
@@ -2584,7 +2759,21 @@
             ],
             whop_url: "https://nowpayments.io/payment/?iid=5550403830"
         }
-    ];
+            {
+            id: 25, code: "syringes", name: "BD Ultra-Fine™ 31G Precision Insulin Syringes (100-Pack)",
+            category: "supplies", cat_label: "Delivery Systems & Supplies",
+            cas: "MEDICAL-DEVICE", mw: "31G x 5/16\"", purity: "100% Sterile", lot: "BD-UF-31G",
+            reg_usd: 39.99, sale_usd: 29.99,
+            mechanism: "0.5mL Sterile Micro-Fine Precision Needle Array",
+            focus: "Exact Micro-Dose Administration for Reconstituted Peptides",
+            desc: "Hospital-grade BD Ultra-Fine 31G (8mm, 5/16\") 0.5mL sterile insulin syringes with micro-bonded lubrication. Engineered for painless, high-accuracy peptide injection.",
+            images: [
+                "assets/images/products/syringes-photo.jpg",
+                "assets/images/products/needles-photo.jpg"
+            ],
+            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+        },
+];
 
     var currentFilter = 'all';
     var cart = [];
@@ -3265,7 +3454,7 @@
         updateAuthUI();
         syncUserToCheckout();
         closeAuthModal();
-        alert('Email verified successfully! Your Phoenics Peptides profile is ready.');
+        alert('Email verified successfully! Your Phoenix Chems profile is ready.');
     }
 
     function handleGoogleAuth() {
@@ -3395,7 +3584,7 @@
             } else if (lower.indexOf('reconstitut') !== -1 || lower.indexOf('dilut') !== -1 || lower.indexOf('water') !== -1) {
                 response = "Lyophilized vials should be reconstituted with sterile bacteriostatic water (0.9% benzyl alcohol). Allow the water to run slowly down the interior glass wall without shaking.";
             } else {
-                response = "Thank you for inquiring. Phoenics Peptides provides certified 99%+ research reference standards. All orders include analytical COA specs and our comprehensive dilution table. You can also contact our lab team directly via the Contact Us modal!";
+                response = "Thank you for inquiring. Phoenix Chems provides certified 99%+ research reference standards. All orders include analytical COA specs and our comprehensive dilution table. You can also contact our lab team directly via the Contact Us modal!";
             }
 
             var actionBtn = recId ? '<br><button onclick="addToCart(' + recId + ', 1)" class="btn-primary" style="margin-top:8px;padding:6px 12px;font-size:12px;">+ Add Recommended Product to Cart</button>' : '';
@@ -3436,28 +3625,44 @@
 // ── CAROUSEL ENGINE ─────────────────────────────────────────────────────────
 var carouselState = {};
 
+var VIAL_CODES = ['tirzepatide', 'retatrutide', 'semaglutide', 'cagrilintide', 'aod9604', 'ghkcu', 'epithalon', 'motsc', 'bpc157', 'tb500', 'cjcipam', 'tesamorelin', 'pt141'];
+
+function isVialProduct(p) {
+    return p && (VIAL_CODES.indexOf(p.code) !== -1 || (p.name && p.name.indexOf('mg') !== -1 && p.category !== 'supplies' && p.code !== 'nad' && p.code !== 'mk677'));
+}
+
 function buildCarouselCard(p) {
     var img = (p.images && p.images.length > 0) ? p.images[0] : ('assets/images/products/' + p.code + '-photo.jpg');
     var isSale = p.reg_usd > p.sale_usd;
     var pts = Math.round(p.sale_usd * 2);
     var trending = ['tirzepatide','retatrutide','wolverine'].indexOf(p.code) !== -1;
+    var isVial = isVialProduct(p);
+
     return `
     <div class="pcard" onclick="openProductModal(${p.id})">
         <div class="pcard-img-wrap">
             ${isSale ? '<span class="badge-sale">SALE</span>' : ''}
             ${trending ? '<span class="badge-trending">🔥 HOT</span>' : ''}
-            <img class="pcard-img" src="${img}" alt="${p.name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+            <img class="pcard-img" src="${img}" alt="${name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
         </div>
         <div class="pcard-body">
-            <div class="pcard-name">${p.name}</div>
+            <div class="pcard-name">${name}</div>
             <div class="pcard-sub">${p.cat_label || p.category}</div>
             <div class="pcard-points">Earn ${pts} Reward Points</div>
+            ${isVial ? `
+            <div class="needle-addon-box" onclick="event.stopPropagation()">
+                <label class="needle-addon-label">
+                    <input type="checkbox" id="c-needle-${p.id}">
+                    <span>💉 +10x Syringes</span>
+                    <span class="needle-save-badge"><span class="needle-was-price">$9.99</span>$7.99</span>
+                </label>
+            </div>` : ''}
             <div class="pcard-pricing">
                 <div>
                     ${isSale ? `<span class="pcard-was">$${p.reg_usd.toFixed(2)}</span>` : ''}
-                    <span class="pcard-price">$${p.sale_usd.toFixed(2)}</span>
+                    <span class="pcard-price">$${price.toFixed(2)}</span>
                 </div>
-                <button class="btn-cart" onclick="event.stopPropagation();addToCart(${p.id},1)" title="Add to Cart">🛒</button>
+                <button class="btn-cart" onclick="event.stopPropagation();quickAddFromCard(${p.id})" title="Add to Cart">🛒</button>
             </div>
         </div>
     </div>`;
@@ -3505,6 +3710,45 @@ function filterBySearch(q) {
     container.innerHTML = filtered.map(renderSingleCard).join('');
 }
 
+
+function quickAddFromCard(id) {
+    var needleBox = document.getElementById('c-needle-' + id);
+    var withNeedle = needleBox && needleBox.checked;
+    addToCart(id, 1);
+    if (withNeedle) {
+        addNeedleBundleToCart();
+    }
+    openCart();
+}
+
+function buyFromCardWithNeedle(id) {
+    var sel = document.getElementById('pack-' + id);
+    var qty = sel ? parseInt(sel.value) : 1;
+    var needleBox = document.getElementById('needle-card-' + id);
+    var withNeedle = needleBox && needleBox.checked;
+    addToCart(id, qty);
+    if (withNeedle) {
+        addNeedleBundleToCart();
+    }
+    openCart();
+}
+
+function addNeedleBundleToCart() {
+    // Add 10-pack syringes bundle at discounted $7.99 (reg $9.99, 20% off)
+    var needleItem = cart.find(function(item) { return item.id === 9999; });
+    if (needleItem) {
+        needleItem.qty += 1;
+    } else {
+        cart.push({
+            id: 9999,
+            qty: 1,
+            customName: "BD Ultra-Fine™ 31G Syringes (10-Pack Vial Bundle)",
+            customPrice: 7.99,
+            customImg: "assets/images/products/syringes-photo.jpg"
+        });
+    }
+}
+
 // ── PRODUCT MODAL ────────────────────────────────────────────────────────────
 var modalProductId = null;
 
@@ -3531,6 +3775,13 @@ function openProductModal(id) {
         <tr><td>Mechanism</td><td>${p.mechanism || '—'}</td></tr>
         <tr><td>Research Focus</td><td>${p.focus || '—'}</td></tr>
     `;
+        var bundleBox = document.getElementById('pm-needle-bundle-box');
+    var isVial = isVialProduct(p);
+    if (bundleBox) {
+        bundleBox.style.display = isVial ? 'block' : 'none';
+        var cb = document.getElementById('pm-needle-checkbox');
+        if (cb) cb.checked = false;
+    }
     document.getElementById('product-modal').classList.add('open');
 }
 
@@ -3554,7 +3805,12 @@ function addFromModal() {
     if (!modalProductId) return;
     var sel = document.getElementById('pm-pack');
     var qty = parseInt(sel.value);
+    var cb = document.getElementById('pm-needle-checkbox');
+    var withNeedle = cb && cb.checked;
     addToCart(modalProductId, qty);
+    if (withNeedle) {
+        addNeedleBundleToCart();
+    }
     closeProductModal();
     openCart();
 }
@@ -3606,12 +3862,12 @@ function submitNewsletter(e) {
 
 // ── FAQ DATA ─────────────────────────────────────────────────────────────────
 var faqs = [
-    { q: 'What is the purity of your peptides?', a: 'All Phoenics Peptides products are HPLC tested to a minimum 99%+ purity. Certificate of Analysis (CoA) documents are available on request for each batch lot.' },
+    { q: 'What is the purity of your peptides?', a: 'All Phoenix Chems products are HPLC tested to a minimum 99%+ purity. Certificate of Analysis (CoA) documents are available on request for each batch lot.' },
     { q: 'How do I pay for my order?', a: 'We exclusively accept cryptocurrency payments via NOWPayments. This includes Bitcoin (BTC), Ethereum (ETH), Solana (SOL), USDT, USDC, BNB, Litecoin, and many more. Card payments are not accepted due to industry policies against peptide transactions.' },
     { q: 'How fast will my order ship?', a: 'All orders are dispatched within 48 hours of payment confirmation. USA delivery takes 2–5 business days, Canada 5–10 days, and International 10–21 days. Free shipping on USA orders over $150.' },
     { q: 'Do I need to sign up to purchase?', a: 'No! You can complete a full guest checkout without creating an account. Creating an account lets you track orders and access your purchase history.' },
     { q: 'Are reconstitution instructions included?', a: 'Yes. Step-by-step BAC water reconstitution and dosing directions are included with every shipment. Our precision delivery pen is also available for purchase.' },
-    { q: 'Are these products for human consumption?', a: 'No. All products sold by Phoenics Peptides are strictly for in vitro laboratory and research purposes only. They are not intended for diagnostic, therapeutic, or any use in humans or animals.' },
+    { q: 'Are these products for human consumption?', a: 'No. All products sold by Phoenix Chems are strictly for in vitro laboratory and research purposes only. They are not intended for diagnostic, therapeutic, or any use in humans or animals.' },
     { q: 'Do you ship internationally?', a: 'Yes. We ship to the USA, Canada, and internationally. Shipping rates vary by region. Contact us for specific country eligibility.' },
 ];
 
@@ -3637,29 +3893,39 @@ function renderSingleCard(p) {
     var isSale = p.reg_usd > p.sale_usd;
     var pts = Math.round(p.sale_usd * 2);
     var trending = ['tirzepatide','retatrutide','wolverine'].indexOf(p.code) !== -1;
+    var isVial = isVialProduct(p);
+
     return `
     <div class="pcard" id="card-${p.id}" style="flex:none;width:100%" onclick="openProductModal(${p.id})">
         <div class="pcard-img-wrap">
             ${isSale ? '<span class="badge-sale">SALE</span>' : ''}
             ${trending ? '<span class="badge-trending">🔥 TRENDING</span>' : ''}
-            <img class="pcard-img" src="${img}" alt="${p.name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+            <img class="pcard-img" src="${img}" alt="${name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
         </div>
         <div class="pcard-body">
-            <div class="pcard-name">${p.name}</div>
+            <div class="pcard-name">${name}</div>
             <div class="pcard-sub">${p.cat_label || p.category}</div>
             <div class="pcard-points">Earn ${pts} Reward Points</div>
-            <select class="pcard-pack" id="pack-${p.id}" onclick="event.stopPropagation()">
+            <select class="pcard-pack" id="pack-${p.id}" onclick="event.stopPropagation()" onchange="updateCardPrice(${p.id})">
                 <option value="1">1× Trial Pack</option>
                 <option value="3" data-disc="10">3× Monthly (10% off)</option>
                 <option value="5" data-disc="15" selected>5× 8-Week Cycle (15% off)</option>
                 <option value="10" data-disc="25">10× Bulk (25% off)</option>
             </select>
+            ${isVial ? `
+            <div class="needle-addon-box" onclick="event.stopPropagation()">
+                <label class="needle-addon-label">
+                    <input type="checkbox" id="needle-card-${p.id}">
+                    <span>💉 Add 10x Precision Syringes</span>
+                    <span class="needle-save-badge"><span class="needle-was-price">$9.99</span>$7.99</span>
+                </label>
+            </div>` : ''}
             <div class="pcard-pricing">
                 <div>
                     ${isSale ? `<span class="pcard-was">$${p.reg_usd.toFixed(2)}</span>` : ''}
-                    <span class="pcard-price" id="price-${p.id}">$${p.sale_usd.toFixed(2)}</span>
+                    <span class="pcard-price" id="price-${p.id}">$${price.toFixed(2)}</span>
                 </div>
-                <button class="btn-cart" onclick="event.stopPropagation();buyFromCard(${p.id})" title="Add to Cart">🛒</button>
+                <button class="btn-cart" onclick="event.stopPropagation();buyFromCardWithNeedle(${p.id})" title="Add to Cart">🛒</button>
             </div>
         </div>
     </div>`;
@@ -3737,6 +4003,9 @@ function closeCheckout() {
 
 function updateCheckoutTotals() {
     var sub = cart.reduce(function(a, item) {
+        if (item.customPrice) {
+            return a + item.customPrice * item.qty;
+        }
         var p = products.find(function(x) { return x.id === item.id; });
         return a + (p ? p.sale_usd * item.qty : 0);
     }, 0);
