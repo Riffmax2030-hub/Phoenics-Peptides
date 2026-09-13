@@ -1522,16 +1522,130 @@
         height: 16px;
     }
 
+    
+    /* ── LARGE 3-BOTTLE HERO SHOWCASE (SwissChems style) ── */
+    .hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        align-items: center;
+        gap: 32px;
+        min-height: 500px;
+    }
+    .hero-right {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        height: 480px;
+        width: 100%;
+    }
+    .hero-showcase {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .hero-showcase-item {
+        position: absolute;
+        bottom: 10px;
+        object-fit: contain;
+        filter: drop-shadow(0 20px 30px rgba(0,0,0,0.14));
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+    }
+    /* Bottle 1: Left vial */
+    .hsi-vial {
+        left: 4%;
+        height: 330px;
+        z-index: 2;
+        bottom: 25px;
+    }
+    /* Bottle 2: Center amber bottle */
+    .hsi-amber {
+        left: 28%;
+        height: 380px;
+        z-index: 1;
+        bottom: 45px;
+        opacity: 0.95;
+    }
+    /* Bottle 3: Large foreground capsule bottle */
+    .hsi-capsule {
+        right: 4%;
+        height: 440px;
+        z-index: 3;
+        bottom: 0px;
+    }
+    .hero-showcase-item:hover {
+        transform: translateY(-24px) scale(1.10) !important;
+        filter: drop-shadow(0 28px 40px rgba(5,150,105,0.28));
+        z-index: 10;
+    }
+    @media (max-width: 1024px) {
+        .hero-inner { grid-template-columns: 1fr; }
+        .hero-right { height: 340px; }
+        .hsi-vial { height: 240px; }
+        .hsi-amber { height: 270px; }
+        .hsi-capsule { height: 310px; }
+    }
+    @media (max-width: 640px) {
+        .hero-right { height: 280px; }
+        .hsi-vial { height: 190px; left: 0; }
+        .hsi-amber { height: 210px; left: 25%; }
+        .hsi-capsule { height: 240px; right: 0; }
+    }
+
+    /* ── CATEGORY SHELVES ── */
+    .category-shelf {
+        margin-top: 48px;
+        padding-top: 32px;
+        border-top: 1px solid var(--border);
+    }
+    .shelf-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+    }
+    .shelf-title {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .shelf-count {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--green);
+        background: var(--green-light);
+        padding: 4px 10px;
+        border-radius: 99px;
+    }
+    .shelf-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 22px;
+    }
+
     </style>
 </head>
 <body>
 
 <!-- ══ ANNOUNCEMENT BAR ══════════════════════════════════════════════ -->
 <div class="announce-bar">
-    <span>🚚 Free shipping on all orders over $150 (US) and $300 (International)</span>
+    <span>Free shipping on all orders over $150 (US) and $300 (International)</span>
     <div class="announce-bar-right">
-        <span>✉️ support@phoenixchems.com</span>
-        <span>📞 +1 (800) PHX-CHEMS</span>
+        <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            support@phoenixchems.com
+        </span>
+        <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +1 (800) PHX-CHEMS
+        </span>
     </div>
 </div>
 
@@ -1603,21 +1717,27 @@
         <div class="hero-left">
             <div class="hero-pill">99% PURITY GUARANTEED</div>
             <h1 class="hero-h1">
-                48-Hour Shipping<br>
+                Same-Day Shipping<br>
                 <em>on USA Orders*</em><br>
                 99% Purity Guaranteed<br>
                 Safe &amp; Secure
             </h1>
-            <p class="hero-sub">Top-quality peptides and research compounds for laboratory use. Independently tested and certified for purity. Reconstitution directions included with every order.</p>
+            <p class="hero-sub">Top-quality peptides, SARMs, and nootropics for laboratory research. Independently tested and certified for purity. Reconstitution directions included with every order.</p>
             <div class="hero-btns">
                 <a href="#catalog-section" class="btn-red">Shop Now &rarr;</a>
-                <a href="#qa-section" class="btn-outline">View Lab Results</a>
+                <a href="#qa-section" class="btn-outline">View Test Results</a>
             </div>
         </div>
         <div class="hero-right">
-            <img class="hero-bottle" src="assets/images/products/tirzepatide-photo.jpg" alt="Tirzepatide" onerror="this.style.display='none'">
-            <img class="hero-bottle" src="assets/images/products/bpc157-photo.jpg" alt="BPC-157" onerror="this.style.display='none'">
-            <img class="hero-bottle" src="assets/images/products/semaglutide-photo.jpg" alt="Semaglutide" onerror="this.style.display='none'">
+            <div class="hero-showcase">
+                <!-- Large product mix covering right half of hero -->
+                <!-- 1. BPC-157 Glass Vial with visible powder cake -->
+                <img class="hero-showcase-item hsi-vial" src="assets/images/products/bpc157-photo.jpg" alt="BPC-157 Peptide Vial" title="BPC-157 5mg Vial" onclick="openProductModal(9)">
+                <!-- 2. Amber research supplement bottle -->
+                <img class="hero-showcase-item hsi-amber" src="assets/images/products/nad-photo.jpg" alt="NAD+ Research Formula" title="NAD+ 500mg" onclick="openProductModal(23)">
+                <!-- 3. Large foreground capsule jar with visible capsules -->
+                <img class="hero-showcase-item hsi-capsule" src="assets/images/products/mk677-photo.jpg" alt="MK-677 Capsules" title="MK-677 Ibutamoren 60 Capsules" onclick="openProductModal(12)">
+            </div>
         </div>
     </div>
 </section>
@@ -1626,12 +1746,60 @@
 <div class="trust-bar">
     <div class="trust-bar-inner">
         <div class="trust-item">
-            <div class="trust-icon">🚚</div>
+            <div class="trust-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13" rx="2"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    <line x1="1" y1="9" x2="6" y2="9"></line>
+                </svg>
+            </div>
             <div>
                 <div class="trust-title">Free Shipping</div>
                 <div class="trust-sub">Orders Over $150</div>
             </div>
         </div>
+        <div class="trust-item">
+            <div class="trust-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    <text x="7.5" y="8.5" font-size="7" font-family="sans-serif" font-weight="900" fill="currentColor">24</text>
+                </svg>
+            </div>
+            <div>
+                <div class="trust-title">24/7 Support</div>
+                <div class="trust-sub">Chat &amp; Phone</div>
+            </div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 2v7.31L4.12 20.36A2 2 0 0 0 5.88 23h12.24a2 2 0 0 0 1.76-2.64L14 9.31V2"></path>
+                    <path d="M8.5 2h7"></path>
+                    <circle cx="9" cy="18" r="1" fill="currentColor"></circle>
+                    <circle cx="14" cy="16" r="1.5" fill="currentColor"></circle>
+                </svg>
+            </div>
+            <div>
+                <div class="trust-title">Independent Testing</div>
+                <div class="trust-sub">Quality Verified</div>
+            </div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+            </div>
+            <div>
+                <div class="trust-title">100% Secure</div>
+                <div class="trust-sub">Safe Checkout</div>
+            </div>
+        </div>
+    </div>
+</div>
         <div class="trust-item">
             <div class="trust-icon">📞</div>
             <div>
@@ -1684,24 +1852,74 @@
             <div class="section-underline"></div>
         </div>
         <div class="cat-grid">
-            <div class="cat-tile" onclick="setFilter('anti-aging')">
-                <div class="cat-icon-wrap">⏳</div>
+            <!-- 1. LONGEVITY RESEARCH: Hourglass with circular arrow -->
+            <div class="cat-tile" onclick="scrollToCategoryShelf('longevity')">
+                <div class="cat-icon-wrap">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21.5 12A9.5 9.5 0 1 1 18.7 5.3L21.5 5"></path>
+                        <polyline points="21.5 1 21.5 5 17.5 5"></polyline>
+                        <path d="M8 8h8l-3 4 3 4H8l3-4-3-4z"></path>
+                        <line x1="8" y1="8" x2="16" y2="8"></line>
+                        <line x1="8" y1="16" x2="16" y2="16"></line>
+                    </svg>
+                </div>
                 <div class="cat-label">Longevity<br>Research</div>
             </div>
-            <div class="cat-tile" onclick="setFilter('weight-loss')">
-                <div class="cat-icon-wrap">🔄</div>
+
+            <!-- 2. METABOLICS: Circular 4-node metabolic cycle -->
+            <div class="cat-tile" onclick="scrollToCategoryShelf('metabolics')">
+                <div class="cat-icon-wrap">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="4" r="2.5"></circle>
+                        <circle cx="20" cy="12" r="2.5"></circle>
+                        <circle cx="12" cy="20" r="2.5"></circle>
+                        <circle cx="4" cy="12" r="2.5"></circle>
+                        <path d="M14.5 4a8 8 0 0 1 4.5 4.5"></path>
+                        <path d="M20 14.5a8 8 0 0 1-4.5 4.5"></path>
+                        <path d="M9.5 20a8 8 0 0 1-4.5-4.5"></path>
+                        <path d="M4 9.5a8 8 0 0 1 4.5-4.5"></path>
+                    </svg>
+                </div>
                 <div class="cat-label">Metabolics</div>
             </div>
-            <div class="cat-tile" onclick="setFilter('healing')">
-                <div class="cat-icon-wrap">🌿</div>
+
+            <!-- 3. HEALING & RECOVERY: 3 organic leaves cycle -->
+            <div class="cat-tile" onclick="scrollToCategoryShelf('healing')">
+                <div class="cat-icon-wrap">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2C8 5 7 9 9 12c2 3 6 4 9 2-1-4-3-7-6-12z"></path>
+                        <path d="M2 17c3-4 7-5 10-3 3 2 4 6 2 9-4-1-7-3-12-6z"></path>
+                        <path d="M19 19c1-4 0-8-3-10-3-2-7-1-9 2 3 3 5 6 12 8z"></path>
+                    </svg>
+                </div>
                 <div class="cat-label">Healing &amp;<br>Recovery</div>
             </div>
-            <div class="cat-tile" onclick="setFilter('cognitive')">
-                <div class="cat-icon-wrap">🧠</div>
+
+            <!-- 4. NOOTROPICS: Bottle with brain circuitry -->
+            <div class="cat-tile" onclick="scrollToCategoryShelf('nootropics')">
+                <div class="cat-icon-wrap">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="6" y="7" width="12" height="14" rx="2.5"></rect>
+                        <path d="M9 3h6v4H9z"></path>
+                        <path d="M12 10.5v6"></path>
+                        <path d="M9.5 12.5a2.5 2.5 0 0 1 2.5-2 2.5 2.5 0 0 1 2.5 2"></path>
+                        <path d="M9.5 15a2.5 2.5 0 0 0 2.5 2 2.5 2.5 0 0 0 2.5-2"></path>
+                    </svg>
+                </div>
                 <div class="cat-label">Nootropics</div>
             </div>
-            <div class="cat-tile" onclick="setFilter('all')">
-                <div class="cat-icon-wrap">💉</div>
+
+            <!-- 5. PEPTIDES: 3 interconnected hexagonal molecular bonds -->
+            <div class="cat-tile" onclick="scrollToCategoryShelf('all')">
+                <div class="cat-icon-wrap">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.5 4 15.5 8 12 10 8.5 8 8.5 4"></polygon>
+                        <polygon points="6.5 11 10 13 10 17 6.5 19 3 17 3 13"></polygon>
+                        <polygon points="17.5 11 21 13 21 17 17.5 19 14 17 14 13"></polygon>
+                        <line x1="12" y1="10" x2="6.5" y2="11"></line>
+                        <line x1="12" y1="10" x2="17.5" y2="11"></line>
+                    </svg>
+                </div>
                 <div class="cat-label">Peptides</div>
             </div>
         </div>
@@ -1751,36 +1969,118 @@
 <section class="section section-alt" id="catalog-section">
     <div class="container">
         <div class="section-head">
-            <h2 class="section-title">Product Category</h2>
+            <h2 class="section-title">Product Catalog</h2>
             <div class="section-underline"></div>
         </div>
 
+        <!-- Quick Filter Pills -->
         <div class="filter-pills">
-            <button class="filter-pill active" onclick="setFilter('all',this)">All Products</button>
-            <button class="filter-pill" onclick="setFilter('weight-loss',this)">Weight Loss</button>
-            <button class="filter-pill" onclick="setFilter('anti-aging',this)">Anti-Aging</button>
-            <button class="filter-pill" onclick="setFilter('healing',this)">Healing</button>
-            <button class="filter-pill" onclick="setFilter('vitality',this)">Vitality</button>
-            <button class="filter-pill" onclick="setFilter('muscle',this)">Muscle</button>
-            <button class="filter-pill" onclick="setFilter('cognitive',this)">Nootropics</button>
-            <button class="filter-pill" onclick="setFilter('bulk',this)">Bundles</button>
-            <button class="filter-pill" onclick="setFilter('supplies',this)">Supplies</button>
+            <button class="filter-pill active" onclick="setFilter('all',this)">All Products (25)</button>
+            <button class="filter-pill" onclick="setFilter('weight-loss',this)">Metabolics &amp; Incretins (5)</button>
+            <button class="filter-pill" onclick="setFilter('anti-aging',this)">Longevity &amp; Cellular (4)</button>
+            <button class="filter-pill" onclick="setFilter('healing',this)">Healing &amp; Recovery (3)</button>
+            <button class="filter-pill" onclick="setFilter('cognitive',this)">Nootropics &amp; Capsules (3)</button>
+            <button class="filter-pill" onclick="setFilter('vitality',this)">GH &amp; Vitality (3)</button>
+            <button class="filter-pill" onclick="setFilter('supplies',this)">Supplies &amp; Needles (4)</button>
+            <button class="filter-pill" onclick="setFilter('bulk',this)">Bulk &amp; Arrays (3)</button>
         </div>
 
-        <div class="carousel-wrap">
-            <button class="carousel-btn prev" onclick="slideCarousel('category', -1)">&#8249;</button>
-            <div class="carousel-viewport">
-                <div class="carousel-track" id="carousel-category"></div>
+        <!-- Single Filtered Grid (when specific pill clicked) -->
+        <div id="filtered-container-wrap" style="display:none;margin-bottom:40px;">
+            <div class="shelf-header">
+                <h3 class="shelf-title" id="filtered-shelf-title">Filtered Compounds</h3>
+                <button onclick="setFilter('all')" class="btn-outline" style="font-size:12px;padding:6px 14px;">Show All Categories</button>
             </div>
-            <button class="carousel-btn next" onclick="slideCarousel('category', 1)">&#8250;</button>
+            <div id="products-container" class="shelf-grid"></div>
         </div>
 
-        <div style="margin-top:48px">
-            <div class="section-head">
-                <h3 class="section-title" style="font-size:22px">Full Catalog</h3>
-                <div class="section-underline"></div>
+        <!-- PERMANENT CATEGORY SHELVES (Arranged cleanly into categories) -->
+        <div id="permanent-shelves-wrap">
+
+            <!-- Shelf 1: Metabolics & Incretins -->
+            <div class="category-shelf" id="shelf-metabolics">
+                <div class="shelf-header">
+                    <h3 class="shelf-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="12" cy="4" r="2.5"/><circle cx="20" cy="12" r="2.5"/><circle cx="12" cy="20" r="2.5"/><circle cx="4" cy="12" r="2.5"/><path d="M14.5 4a8 8 0 0 1 4.5 4.5"/><path d="M20 14.5a8 8 0 0 1-4.5 4.5"/><path d="M9.5 20a8 8 0 0 1-4.5-4.5"/><path d="M4 9.5a8 8 0 0 1 4.5-4.5"/></svg>
+                        Metabolics &amp; Incretins
+                    </h3>
+                    <span class="shelf-count">5 Compounds</span>
+                </div>
+                <div class="shelf-grid" id="grid-metabolics"></div>
             </div>
-            <div id="products-container"></div>
+
+            <!-- Shelf 2: Longevity & Cellular Repair -->
+            <div class="category-shelf" id="shelf-longevity">
+                <div class="shelf-header">
+                    <h3 class="shelf-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21.5 12A9.5 9.5 0 1 1 18.7 5.3L21.5 5"/><polyline points="21.5 1 21.5 5 17.5 5"/><path d="M8 8h8l-3 4 3 4H8l3-4-3-4z"/></svg>
+                        Longevity &amp; Cellular Repair
+                    </h3>
+                    <span class="shelf-count">4 Compounds</span>
+                </div>
+                <div class="shelf-grid" id="grid-longevity"></div>
+            </div>
+
+            <!-- Shelf 3: Healing & Tissue Recovery -->
+            <div class="category-shelf" id="shelf-healing">
+                <div class="shelf-header">
+                    <h3 class="shelf-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 2C8 5 7 9 9 12c2 3 6 4 9 2-1-4-3-7-6-12z"/><path d="M2 17c3-4 7-5 10-3 3 2 4 6 2 9-4-1-7-3-12-6z"/><path d="M19 19c1-4 0-8-3-10-3-2-7-1-9 2 3 3 5 6 12 8z"/></svg>
+                        Healing &amp; Tissue Recovery
+                    </h3>
+                    <span class="shelf-count">3 Protocols</span>
+                </div>
+                <div class="shelf-grid" id="grid-healing"></div>
+            </div>
+
+            <!-- Shelf 4: Nootropics & Capsules -->
+            <div class="category-shelf" id="shelf-nootropics">
+                <div class="shelf-header">
+                    <h3 class="shelf-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="6" y="7" width="12" height="14" rx="2.5"/><path d="M9 3h6v4H9z"/><path d="M12 10.5v6"/><path d="M9.5 12.5a2.5 2.5 0 0 1 2.5-2 2.5 2.5 0 0 1 2.5 2"/></svg>
+                        Nootropics &amp; Capsules
+                    </h3>
+                    <span class="shelf-count">3 Formulations</span>
+                </div>
+                <div class="shelf-grid" id="grid-nootropics"></div>
+            </div>
+
+            <!-- Shelf 5: GH & Vitality -->
+            <div class="category-shelf" id="shelf-vitality">
+                <div class="shelf-header">
+                    <h3 class="shelf-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polygon points="12 2 15.5 4 15.5 8 12 10 8.5 8 8.5 4"/><polygon points="6.5 11 10 13 10 17 6.5 19 3 17 3 13"/><polygon points="17.5 11 21 13 21 17 17.5 19 14 17 14 13"/><line x1="12" y1="10" x2="6.5" y2="11"/><line x1="12" y1="10" x2="17.5" y2="11"/></svg>
+                        Growth Hormone &amp; Vitality
+                    </h3>
+                    <span class="shelf-count">3 Peptides</span>
+                </div>
+                <div class="shelf-grid" id="grid-vitality"></div>
+            </div>
+
+            <!-- Shelf 6: Delivery Systems & Supplies -->
+            <div class="category-shelf" id="shelf-supplies">
+                <div class="shelf-header">
+                    <h3 class="shelf-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        Delivery Systems, Needles &amp; Supplies
+                    </h3>
+                    <span class="shelf-count">4 Essentials</span>
+                </div>
+                <div class="shelf-grid" id="grid-supplies"></div>
+            </div>
+
+            <!-- Shelf 7: Bulk & High-Throughput Arrays -->
+            <div class="category-shelf" id="shelf-bulk">
+                <div class="shelf-header">
+                    <h3 class="shelf-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                        Bulk Lots &amp; Screening Libraries
+                    </h3>
+                    <span class="shelf-count">3 Research Lots</span>
+                </div>
+                <div class="shelf-grid" id="grid-bulk"></div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -1938,20 +2238,20 @@
 
 <!-- ══ SHIPPING SECTION ══════════════════════════════════════════ -->
 <section class="section" id="shipping-section">
-    <div class="container" style="max-width:800px">
+    <div class="container" style="max-width:840px">
         <div class="section-head">
-            <h2 class="section-title">Shipping Information</h2>
+            <h2 class="section-title">Shipping &amp; Delivery</h2>
             <div class="section-underline"></div>
         </div>
         <table class="ship-table">
-            <thead><tr><th>Region</th><th>Cost</th><th>Estimated Time</th><th>Free Threshold</th></tr></thead>
+            <thead><tr><th>Region</th><th>Shipping Service</th><th>Rate</th><th>Free Shipping</th></tr></thead>
             <tbody>
-                <tr><td>🇺🇸 USA</td><td>$15.00</td><td>2–5 business days</td><td>Free over $150</td></tr>
-                <tr><td>🇨🇦 Canada</td><td>$25.00</td><td>5–10 business days</td><td>Free over $300</td></tr>
-                <tr><td>🌍 International</td><td>$45.00</td><td>10–21 business days</td><td>Free over $300</td></tr>
+                <tr><td>🇺🇸 United States</td><td>Same-Day Dispatch Cold-Chain</td><td>$15.00</td><td>Free over $150</td></tr>
+                <tr><td>🇨🇦 Canada</td><td>Priority Cold-Chain Delivery</td><td>$25.00</td><td>Free over $300</td></tr>
+                <tr><td>🌍 International</td><td>Worldwide Discrete Tracked</td><td>$45.00</td><td>Free over $300</td></tr>
             </tbody>
         </table>
-        <p style="font-size:13px;color:var(--gray);margin-top:16px;line-height:1.6">* All orders are dispatched within 48 hours of payment confirmation. Cold-chain packaging is included at no extra cost. Tracking number provided via email.</p>
+        <p style="font-size:13px;color:var(--gray);margin-top:16px;line-height:1.7">* All orders placed by 2:00 PM EST qualify for Same-Day Dispatch. Medical-grade temperature-shielded cold packaging is included with every shipment at no extra charge. Full blockchain transaction confirmation and tracking number provided via email.</p>
     </div>
 </section>
 
@@ -2817,6 +3117,7 @@
     }
 
     function initStore() {
+        renderAllCategoryShelves();
         renderGuideTable();
         renderProducts();
         updateCartCount();
@@ -3687,6 +3988,105 @@ function slideCarousel(id, dir) {
     track.style.transform = 'translateX(' + (-state.offset * cardW) + 'px)';
 }
 
+
+// ── PERMANENT CATEGORY SHELF RENDERER ────────────────────────────────────────
+function renderAllCategoryShelves() {
+    // 1. Metabolics
+    var metaProds = products.filter(function(p) { return p.category === 'weight-loss'; });
+    var metaGrid = document.getElementById('grid-metabolics');
+    if (metaGrid) metaGrid.innerHTML = metaProds.map(renderSingleCard).join('');
+
+    // 2. Longevity
+    var longevProds = products.filter(function(p) { return p.category === 'anti-aging'; });
+    var longevGrid = document.getElementById('grid-longevity');
+    if (longevGrid) longevGrid.innerHTML = longevProds.map(renderSingleCard).join('');
+
+    // 3. Healing
+    var healProds = products.filter(function(p) { return p.category === 'healing'; });
+    var healGrid = document.getElementById('grid-healing');
+    if (healGrid) healGrid.innerHTML = healProds.map(renderSingleCard).join('');
+
+    // 4. Nootropics
+    var nooProds = products.filter(function(p) { return p.category === 'cognitive'; });
+    var nooGrid = document.getElementById('grid-nootropics');
+    if (nooGrid) nooGrid.innerHTML = nooProds.map(renderSingleCard).join('');
+
+    // 5. Vitality & GH
+    var vitProds = products.filter(function(p) { return p.category === 'vitality' || p.category === 'muscle'; });
+    var vitGrid = document.getElementById('grid-vitality');
+    if (vitGrid) vitGrid.innerHTML = vitProds.map(renderSingleCard).join('');
+
+    // 6. Supplies & Needles
+    var supProds = products.filter(function(p) { return p.category === 'supplies'; });
+    var supGrid = document.getElementById('grid-supplies');
+    if (supGrid) supGrid.innerHTML = supProds.map(renderSingleCard).join('');
+
+    // 7. Bulk
+    var bulkProds = products.filter(function(p) { return p.category === 'bulk'; });
+    var bulkGrid = document.getElementById('grid-bulk');
+    if (bulkGrid) bulkGrid.innerHTML = bulkProds.map(renderSingleCard).join('');
+}
+
+function scrollToCategoryShelf(catKey) {
+    var shelvesWrap = document.getElementById('permanent-shelves-wrap');
+    var filteredWrap = document.getElementById('filtered-container-wrap');
+    if (shelvesWrap) shelvesWrap.style.display = 'block';
+    if (filteredWrap) filteredWrap.style.display = 'none';
+
+    var targetId = 'catalog-section';
+    if (catKey === 'longevity') targetId = 'shelf-longevity';
+    else if (catKey === 'metabolics') targetId = 'shelf-metabolics';
+    else if (catKey === 'healing') targetId = 'shelf-healing';
+    else if (catKey === 'nootropics') targetId = 'shelf-nootropics';
+    else if (catKey === 'all') targetId = 'catalog-section';
+
+    var el = document.getElementById(targetId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// Override setFilter to handle both all shelves view and specific category view
+function setFilter(cat, btn) {
+    currentFilter = cat;
+    document.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
+
+    var shelvesWrap = document.getElementById('permanent-shelves-wrap');
+    var filteredWrap = document.getElementById('filtered-container-wrap');
+
+    if (cat === 'all') {
+        if (shelvesWrap) shelvesWrap.style.display = 'block';
+        if (filteredWrap) filteredWrap.style.display = 'none';
+        renderAllCategoryShelves();
+    } else {
+        if (shelvesWrap) shelvesWrap.style.display = 'none';
+        if (filteredWrap) filteredWrap.style.display = 'block';
+        var filtered = products.filter(function(p) {
+            return p.category === cat;
+        });
+        var titleEl = document.getElementById('filtered-shelf-title');
+        if (titleEl) {
+            var labels = {
+                'weight-loss': 'Metabolics & Incretins',
+                'anti-aging': 'Longevity & Cellular Repair',
+                'healing': 'Healing & Tissue Recovery',
+                'cognitive': 'Nootropics & Cognitive Research',
+                'vitality': 'Growth Hormone & Vitality',
+                'muscle': 'Muscle & Anabolic Signaling',
+                'supplies': 'Delivery Systems, Needles & Supplies',
+                'bulk': 'Bulk Lots & Screening Libraries'
+            };
+            titleEl.textContent = labels[cat] || 'Selected Compounds';
+        }
+        var container = document.getElementById('products-container');
+        if (container) {
+            container.innerHTML = filtered.length ? filtered.map(renderSingleCard).join('') : '<p style="color:var(--gray);text-align:center;grid-column:1/-1;padding:40px">No products in this category.</p>';
+        }
+    }
+    document.getElementById('catalog-section').scrollIntoView({ behavior: 'smooth' });
+}
+
 // ── CATEGORY FILTER INTEGRATION ─────────────────────────────────────────────
 var currentFilter = 'all';
 
@@ -4015,6 +4415,8 @@ function updateCheckoutTotals() {
     document.getElementById('checkout-total').textContent = '$' + (sub + ship).toFixed(2);
 }
 
+    // Permanent instant execution
+    renderAllCategoryShelves();
 </script>
 </body>
 </html>
