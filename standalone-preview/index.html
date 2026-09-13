@@ -1068,6 +1068,479 @@
         margin: 0;
     }
 
+    
+    /* ── MOBILE NAV & POLISHED HEADER ─────────────────────── */
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .btn-header-auth {
+        background: var(--slate-100);
+        color: var(--slate-800);
+        border: 1.5px solid var(--slate-300);
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-family: var(--font-body);
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s;
+    }
+    .btn-header-auth:hover {
+        background: var(--primary-light);
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+    .btn-header-contact {
+        background: transparent;
+        color: var(--slate-700);
+        border: 1.5px solid var(--slate-300);
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-family: var(--font-body);
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s;
+    }
+    .btn-header-contact:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+    .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--slate-800);
+        padding: 6px;
+    }
+    .mobile-nav-drawer {
+        display: none;
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+        border-bottom: 2px solid var(--slate-200);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        padding: 18px 24px;
+        flex-direction: column;
+        gap: 14px;
+        z-index: 998;
+    }
+    .mobile-nav-drawer.active {
+        display: flex;
+    }
+    .mobile-nav-drawer a {
+        color: var(--slate-800);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--slate-100);
+    }
+
+    /* ── AUTH MODAL ───────────────────────────────────────── */
+    .auth-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.65);
+        z-index: 10001;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(4px);
+    }
+    .auth-overlay.active { display: flex; }
+    .auth-box {
+        background: #FFFFFF;
+        border-radius: 16px;
+        max-width: 440px;
+        width: 92%;
+        overflow: hidden;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+        position: relative;
+        animation: popupSlideIn 0.3s ease;
+    }
+    .auth-tabs {
+        display: flex;
+        background: var(--slate-50);
+        border-bottom: 1.5px solid var(--slate-200);
+    }
+    .auth-tab {
+        flex: 1;
+        text-align: center;
+        padding: 16px;
+        font-family: var(--font-body);
+        font-size: 14px;
+        font-weight: 800;
+        color: var(--slate-500);
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        transition: all 0.2s;
+    }
+    .auth-tab.active {
+        color: var(--primary);
+        border-bottom-color: var(--primary);
+        background: #FFFFFF;
+    }
+    .auth-body {
+        padding: 24px 28px 28px;
+    }
+    .btn-google-auth {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: #FFFFFF;
+        border: 1.5px solid var(--slate-300);
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--slate-800);
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-bottom: 18px;
+    }
+    .btn-google-auth:hover {
+        background: var(--slate-50);
+        border-color: var(--slate-400);
+    }
+    .auth-divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 16px 0;
+        color: var(--slate-400);
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .auth-divider::before, .auth-divider::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid var(--slate-200);
+    }
+    .auth-divider span {
+        padding: 0 10px;
+    }
+
+    /* ── CONTACT MODAL ────────────────────────────────────── */
+    .contact-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.65);
+        z-index: 10001;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(4px);
+    }
+    .contact-overlay.active { display: flex; }
+    .contact-box {
+        background: #FFFFFF;
+        border-radius: 16px;
+        max-width: 520px;
+        width: 92%;
+        overflow: hidden;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+        position: relative;
+        animation: popupSlideIn 0.3s ease;
+    }
+
+    /* ── 48H SHIPPING BAR & ENHANCED CART ─────────────────── */
+    .shipping-badge-banner {
+        background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+        border: 1.5px solid #6EE7B7;
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .shipping-badge-icon {
+        font-size: 20px;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+    .shipping-badge-text h5 {
+        margin: 0 0 2px;
+        color: var(--primary-deep);
+        font-size: 12.5px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .shipping-badge-text p {
+        margin: 0;
+        font-size: 11.5px;
+        color: #065F46;
+        line-height: 1.4;
+    }
+    .cart-shipping-select-wrap {
+        background: var(--slate-50);
+        border: 1.5px solid var(--slate-200);
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 14px;
+    }
+    .cart-shipping-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        color: var(--slate-700);
+        margin-bottom: 6px;
+    }
+
+    /* ── SPECIALIST AI CHATBOT WIDGET ─────────────────────── */
+    .specialist-widget {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 9998;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    .specialist-cta-bubble {
+        background: #FFFFFF;
+        border: 1.5px solid var(--primary-border);
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        padding: 10px 14px;
+        max-width: 260px;
+        font-size: 12.5px;
+        font-weight: 700;
+        color: var(--slate-800);
+        line-height: 1.35;
+        position: relative;
+        cursor: pointer;
+        animation: floatBubble 3s ease-in-out infinite alternate;
+    }
+    @keyframes floatBubble {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-4px); }
+    }
+    .specialist-cta-bubble::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        right: 24px;
+        border-width: 8px 8px 0 8px;
+        border-style: solid;
+        border-color: #FFFFFF transparent transparent transparent;
+    }
+    .specialist-trigger-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        color: #FFFFFF;
+        border: 2px solid #34D399;
+        border-radius: 50px;
+        padding: 6px 18px 6px 8px;
+        font-family: var(--font-body);
+        font-size: 13.5px;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 8px 24px rgba(5,150,105,0.35);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .specialist-trigger-btn:hover {
+        transform: scale(1.03);
+        box-shadow: 0 12px 30px rgba(5,150,105,0.45);
+    }
+    .specialist-avatar-wrap {
+        position: relative;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #FFFFFF;
+        background: #ECFDF5;
+    }
+    .specialist-avatar-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .specialist-online-dot {
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+        width: 10px;
+        height: 10px;
+        background: #10B981;
+        border: 2px solid #FFFFFF;
+        border-radius: 50%;
+    }
+
+    /* ── SPECIALIST CHAT DRAWER ───────────────────────────── */
+    .specialist-chat-drawer {
+        display: none;
+        width: 380px;
+        max-width: 94vw;
+        height: 520px;
+        max-height: 82vh;
+        background: #FFFFFF;
+        border-radius: 18px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+        border: 1.5px solid var(--slate-200);
+        flex-direction: column;
+        overflow: hidden;
+        animation: popupSlideIn 0.25s ease;
+    }
+    .specialist-chat-drawer.active {
+        display: flex;
+    }
+    .chat-header {
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        color: #FFFFFF;
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .chat-header-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .chat-messages {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: #F9FAFB;
+    }
+    .chat-msg {
+        max-width: 84%;
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 13px;
+        line-height: 1.45;
+    }
+    .chat-msg-bot {
+        background: #FFFFFF;
+        color: var(--slate-800);
+        border: 1px solid var(--slate-200);
+        align-self: flex-start;
+        border-bottom-left-radius: 2px;
+    }
+    .chat-msg-user {
+        background: var(--primary);
+        color: #FFFFFF;
+        align-self: flex-end;
+        border-bottom-right-radius: 2px;
+    }
+    .chat-quick-prompts {
+        padding: 10px 14px;
+        background: #FFFFFF;
+        border-top: 1px solid var(--slate-200);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .chat-prompt-chip {
+        background: var(--slate-50);
+        border: 1px solid var(--slate-300);
+        color: var(--slate-700);
+        border-radius: 20px;
+        padding: 6px 12px;
+        font-size: 11.5px;
+        font-weight: 700;
+        cursor: pointer;
+        text-align: left;
+        transition: all 0.15s;
+    }
+    .chat-prompt-chip:hover {
+        background: var(--primary-light);
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+    .chat-input-bar {
+        display: flex;
+        padding: 10px;
+        background: #FFFFFF;
+        border-top: 1px solid var(--slate-200);
+        gap: 8px;
+    }
+    .chat-input-bar input {
+        flex: 1;
+        padding: 8px 12px;
+        border: 1.5px solid var(--slate-300);
+        border-radius: 8px;
+        font-size: 13px;
+        outline: none;
+    }
+    .chat-input-bar input:focus { border-color: var(--primary); }
+    .chat-input-bar button {
+        background: var(--primary);
+        color: #FFFFFF;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    /* ── 18+ COMPLIANCE BADGE ─────────────────────────────── */
+    .compliance-bar-18 {
+        background: #111827;
+        border-top: 3px solid #DC2626;
+        padding: 16px 24px;
+        color: #F3F4F6;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .badge-18-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #DC2626;
+        color: #FFFFFF;
+        font-weight: 800;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 11px;
+        margin-bottom: 6px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    /* ── RESPONSIVE MEDIA QUERIES ─────────────────────────── */
+    @media (max-width: 768px) {
+        .site-header .nav-links { display: none; }
+        .mobile-menu-toggle { display: block; }
+        .btn-header-contact { display: none; }
+        .product-grid {
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+            gap: 12px !important;
+        }
+        .product-img-box { height: 170px !important; }
+        .product-card-img { max-height: 150px !important; }
+        .product-card-body { padding: 12px !important; }
+        .specialist-cta-bubble { display: none; }
+        .specialist-widget { bottom: 16px; right: 16px; }
+        .specialist-chat-drawer { width: 92vw; height: 75vh; }
+    }
+
     </style>
 </head>
 <body>
@@ -1091,20 +1564,41 @@
             <a href="#" class="brand-logo-wrap">
                 <img src="assets/images/logo.svg" alt="Phoenics Peptide" class="brand-logo-img">
             </a>
-            <nav>
+            <nav class="nav-links">
                 <ul class="site-nav">
                     <li><a href="#catalog-section">Peptide Catalog</a></li>
-                    <li><a href="#product-guide-section">Product Guide &amp; Specs</a></li>
+                    <li><a href="#product-guide-section">Product Specs &amp; Guide</a></li>
                     <li><a href="#qa-section">Purity Standards</a></li>
-                    <li><a href="#shipping-section">Cold-Chain Delivery</a></li>
-                    <li><a href="legal.html">Safe Use &amp; Directions</a></li>
+                    <li><a href="#shipping-section">48h Delivery</a></li>
+                    <li><a href="legal.html">Safe Use</a></li>
                 </ul>
             </nav>
-            <div>
+            <div class="header-actions">
+                <button class="btn-header-contact" onclick="openContactModal()">
+                    <span>✉️ Contact Lab</span>
+                </button>
+                <button class="btn-header-auth" id="header-auth-btn" onclick="openAuthModal()">
+                    <span id="auth-btn-text">👤 Sign In</span>
+                </button>
                 <button class="btn-cart-trigger" onclick="openCart()">
                     <span>🛒 Batch Cart</span>
                     <span class="cart-count-pill" id="header-cart-count">0</span>
                 </button>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
+                    ☰
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+            <a href="#catalog-section" onclick="closeMobileMenu()">🧪 Peptide Catalog</a>
+            <a href="#product-guide-section" onclick="closeMobileMenu()">📋 Product Specs &amp; Guide</a>
+            <a href="#qa-section" onclick="closeMobileMenu()">🔬 Purity Standards (99%+)</a>
+            <a href="#shipping-section" onclick="closeMobileMenu()">❄️ 48-Hour Cold-Chain Delivery</a>
+            <a href="legal.html" onclick="closeMobileMenu()">⚖️ Safe Use &amp; Regulatory</a>
+            <div style="display:flex;gap:10px;margin-top:10px;">
+                <button class="btn-header-contact" style="flex:1;justify-content:center;display:flex;" onclick="closeMobileMenu();openContactModal();">✉️ Contact Us</button>
+                <button class="btn-header-auth" style="flex:1;justify-content:center;display:flex;" onclick="closeMobileMenu();openAuthModal();">👤 Account</button>
             </div>
         </div>
     </header>
@@ -1119,7 +1613,7 @@
         <div class="container hero-inner">
             <div>
                 <div class="hero-pill">
-                    <span>🔬</span> CERTIFIED THIRD-PARTY HPLC &amp; MASS SPECTROMETRY VALIDATION
+                    <span>❄️</span> 48-HOUR EXPEDITED COLD-CHAIN DISPATCH ACROSS USA &amp; CANADA &bull; HPLC 99%+ VERIFIED
                 </div>
                 <h1 class="hero-title">
                     High-Purity Peptides<br>
@@ -1128,9 +1622,10 @@
                 <p class="hero-desc">
                     Premium bio-synthesis source for metabolic incretins (<strong>Tirzepatide, Retatrutide, Semaglutide</strong>), tissue repair pentadecapeptides (<strong>BPC-157, TB-500</strong>), and cellular longevity compounds. Exact mass calibration with step-by-step reconstitution directions included with every shipment.
                 </p>
-                <div class="hero-actions">
+                <div class="hero-actions" style="flex-wrap:wrap;gap:12px;">
                     <a href="#catalog-section" class="btn-primary">Explore Formulations &rarr;</a>
-                    <a href="#product-guide-section" class="btn-secondary">View Product Guide &amp; Protocols &rarr;</a>
+                    <a href="#product-guide-section" class="btn-secondary">View Product Guide &rarr;</a>
+                    <button onclick="openContactModal()" class="btn-secondary" style="background:#FFFFFF;border-color:var(--primary);color:var(--primary);cursor:pointer;">✉️ Contact Laboratory Support</button>
                 </div>
                 <div class="hero-stats-row">
                     <div>
@@ -1458,82 +1953,158 @@
     </div>
 
     <!-- CART DRAWER -->
+    
+    <!-- UPGRADED CART DRAWER WITH 48H SHIPPING CALCULATOR -->
     <div id="cart-drawer-overlay" class="cart-overlay" onclick="closeCart()"></div>
     <div id="cart-drawer" class="cart-drawer">
         <div class="cart-header">
-            <h3 style="font-family:var(--font-head);font-size:22px;font-weight:800;color:var(--slate-900);">Your Batch Cart</h3>
-            <button onclick="closeCart()" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--slate-400);">&times;</button>
+            <div>
+                <h3 style="font-family:var(--font-head);font-size:20px;font-weight:800;color:var(--slate-900);margin:0;">Your Research Batch Cart</h3>
+                <span style="font-size:11.5px;color:var(--slate-500);font-weight:600;">Certified Lyophilized Formulations</span>
+            </div>
+            <button onclick="closeCart()" style="background:none;border:none;font-size:24px;cursor:pointer;color:var(--slate-400);">&times;</button>
         </div>
-        <div id="cart-items-container" class="cart-items-body"></div>
-        <div class="cart-footer">
-            <div style="display:flex;justify-content:space-between;font-family:var(--font-body);font-size:16px;font-weight:800;color:var(--slate-900);margin-bottom:8px;">
-                <span>Subtotal:</span>
-                <span id="cart-subtotal-val">$0.00</span>
+
+        <div id="cart-items-container" class="cart-items-body" style="padding:16px;overflow-y:auto;flex:1;">
+            <!-- Rendered by updateCartUI() -->
+        </div>
+
+        <div class="cart-footer" style="padding:18px 20px;background:#FFFFFF;border-top:1.5px solid var(--slate-200);">
+            <!-- 48-Hour Cold Chain Guarantee Banner -->
+            <div class="shipping-badge-banner">
+                <div class="shipping-badge-icon">❄️</div>
+                <div class="shipping-badge-text">
+                    <h5>48-Hour Cold-Chain Delivery</h5>
+                    <p>Shipped in vacuum-sealed thermo-insulated packaging with pharmaceutical chill-packs to maintain peptide stability.</p>
+                </div>
             </div>
-            <div style="font-family:var(--font-body);font-size:12px;color:var(--emerald);margin-bottom:14px;font-weight:700;">
-                ✓ Step-by-step reconstitution guide included with order
+
+            <!-- Shipping Destination Selector -->
+            <div class="cart-shipping-select-wrap">
+                <div class="cart-shipping-row">
+                    <span style="font-weight:700;">Destination Region:</span>
+                    <select id="cart-destination-select" onchange="calculateShipping()" style="padding:6px 10px;border-radius:6px;border:1.5px solid var(--slate-300);font-size:12.5px;font-weight:700;outline:none;background:#fff;color:var(--slate-800);">
+                        <option value="USA">🇺🇸 United States (48h Tracked)</option>
+                        <option value="CANADA">🇨🇦 Canada (48-72h Priority)</option>
+                        <option value="OTHER">🌍 Other / Europe (Inquire)</option>
+                    </select>
+                </div>
+                <div class="cart-shipping-row">
+                    <span>Expedited Cold-Chain Rate:</span>
+                    <span id="cart-shipping-val" style="font-weight:800;color:var(--primary);">$15.00</span>
+                </div>
+                <div id="shipping-free-hint" style="font-size:11px;color:#047857;font-weight:700;display:none;">
+                    🎉 Congratulations! Free 48-Hour US Shipping Unlocked ($150+ order)
+                </div>
             </div>
-            <button onclick="openCheckout()" class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:14.5px;">
-                Proceed to Checkout &rarr;
+
+            <!-- Subtotal & Grand Total -->
+            <div style="display:flex;justify-content:space-between;font-size:14px;color:var(--slate-600);margin-bottom:6px;">
+                <span>Catalog Subtotal:</span>
+                <span id="cart-subtotal-val" style="font-weight:700;color:var(--slate-900);">$0.00</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:18px;font-weight:900;color:var(--slate-900);margin-bottom:14px;">
+                <span>Grand Total:</span>
+                <span id="cart-total-val" style="color:var(--primary);">$0.00</span>
+            </div>
+
+            <button onclick="openCheckout()" class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;font-weight:800;cursor:pointer;">
+                Proceed to Settlement &rarr;
             </button>
+            <div style="text-align:center;margin-top:10px;font-size:11px;color:var(--slate-400);">
+                Instant Guest Checkout Available &bull; No Account Required
+            </div>
         </div>
     </div>
 
-    <!-- CHECKOUT MODAL (PAYMENT OPTIONS STAY STRICTLY HERE) -->
+    <!-- UPGRADED CHECKOUT MODAL (GUEST + SIGNED IN CHECKOUT) -->
     <div id="checkout-modal" class="checkout-overlay" onclick="closeCheckout(event)">
-        <div class="checkout-box" onclick="event.stopPropagation()">
+        <div class="checkout-box" onclick="event.stopPropagation()" style="max-width:540px;width:94%;max-height:90vh;overflow-y:auto;padding:26px 30px;">
             <button onclick="closeCheckout()" style="position:absolute;top:20px;right:20px;background:var(--slate-100);border:none;width:32px;height:32px;border-radius:50%;font-size:18px;font-weight:800;cursor:pointer;">&times;</button>
-            <div id="checkout-body">
-                <span style="font-family:var(--font-body);color:var(--sapphire);font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;">SECURED ORDER SETTLEMENT</span>
-                <h2 style="font-family:var(--font-head);font-size:28px;font-weight:800;color:var(--slate-900);margin:4px 0 16px;">Complete Your Order</h2>
-                
-                <form id="checkout-form" onsubmit="submitOrder(event)">
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-                        <div>
-                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Full Name *</label>
-                            <input type="text" required placeholder="John Doe" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
-                        </div>
-                        <div>
-                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Email (For Dispatch Tracking) *</label>
-                            <input type="email" id="checkout-email" required placeholder="orders@client.com" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
-                        </div>
-                    </div>
-                    <div style="margin-bottom:12px;">
-                        <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Delivery Address *</label>
-                        <input type="text" required placeholder="123 Park Avenue, Suite 400" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
-                    </div>
-                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;">
-                        <div>
-                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">City *</label>
-                            <input type="text" required placeholder="New York" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
-                        </div>
-                        <div>
-                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">State / Region *</label>
-                            <input type="text" required placeholder="NY" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;">
-                        </div>
-                        <div>
-                            <label style="font-family:var(--font-body);font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Country *</label>
-                            <select style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;background:#fff;">
-                                <option>United States</option>
-                                <option>Canada</option>
-                                <option>United Kingdom</option>
-                                <option>Germany</option>
-                                <option>Australia</option>
-                                <option>Worldwide</option>
-                            </select>
-                        </div>
-                    </div>
+            
+            <span style="font-family:var(--font-body);color:var(--primary);font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;">PRECISION RESEARCH DISPATCH</span>
+            <h2 style="font-family:var(--font-head);font-size:24px;font-weight:900;color:var(--slate-900);margin:4px 0 14px;">Secured Order Settlement</h2>
 
-                    <label style="font-family:var(--font-body);font-size:12px;font-weight:800;color:var(--slate-900);display:block;margin-bottom:8px;">Select Payment Method:</label>
-                    <div style="display:grid;gap:10px;margin-bottom:20px;">
-                        <label style="display:flex;align-items:center;justify-content:space-between;background:var(--amber-light);border:1.5px solid var(--amber);padding:12px 16px;border-radius:8px;cursor:pointer;">
-                            <div style="display:flex;align-items:center;gap:10px;">
-                                <input type="radio" name="payment_method" value="crypto" checked onchange="updateCheckoutTotal()">
-                                <div>
-                                    <strong style="color:#92400E;font-family:var(--font-body);font-size:13.5px;">Bitcoin / USDT / Crypto</strong>
-                                    <div style="font-size:11.5px;color:#B45309;">Direct wallet settlement &bull; Fast confirmation</div>
-                                </div>
-                            </div>
+            <!-- Guest vs Account banner -->
+            <div id="checkout-auth-banner" style="background:var(--slate-50);border:1.5px solid var(--slate-200);border-radius:8px;padding:10px 14px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">
+                <div style="font-size:12.5px;color:var(--slate-700);">
+                    <strong id="checkout-user-status">Checking out as Guest</strong>
+                </div>
+                <button type="button" onclick="openAuthModal()" style="background:none;border:none;color:var(--primary);font-weight:800;font-size:12px;cursor:pointer;text-decoration:underline;">
+                    Sign in to save order
+                </button>
+            </div>
+
+            <form id="checkout-form" onsubmit="submitOrder(event)">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+                    <div>
+                        <label style="font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Full Name *</label>
+                        <input type="text" id="checkout-name" required placeholder="Dr. Jane Smith" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                    <div>
+                        <label style="font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Email (For COA &amp; Tracking) *</label>
+                        <input type="email" id="checkout-email" required placeholder="researcher@institution.org" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                </div>
+
+                <div style="margin-bottom:12px;">
+                    <label style="font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Delivery Address (Street &amp; Suite) *</label>
+                    <input type="text" id="checkout-address" required placeholder="450 Science Park Blvd, Suite 200" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;box-sizing:border-box;">
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;">
+                    <div>
+                        <label style="font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">City *</label>
+                        <input type="text" id="checkout-city" required placeholder="Boston" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                    <div>
+                        <label style="font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">State / Province *</label>
+                        <input type="text" id="checkout-state" required placeholder="MA" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                    <div>
+                        <label style="font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Postal Code *</label>
+                        <input type="text" id="checkout-zip" required placeholder="02115" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                </div>
+
+                <div style="margin-bottom:16px;">
+                    <label style="font-size:11.5px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Delivery Destination Country *</label>
+                    <select id="checkout-country" onchange="syncCheckoutShipping()" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:6px;font-size:13px;outline:none;background:#fff;box-sizing:border-box;">
+                        <option value="USA">🇺🇸 United States (Expedited 48-Hour Cold-Chain)</option>
+                        <option value="CANADA">🇨🇦 Canada (Priority Cross-Border Cold-Chain)</option>
+                        <option value="OTHER">🌍 International / Europe (Freight by Inquiry)</option>
+                    </select>
+                </div>
+
+                <!-- Settlement Breakdown Box -->
+                <div style="background:var(--slate-50);border:1.5px solid var(--slate-200);border-radius:10px;padding:14px;margin-bottom:16px;">
+                    <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;color:var(--slate-700);">
+                        <span>Products Subtotal:</span>
+                        <span id="checkout-subtotal-text" style="font-weight:700;">$0.00</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;color:var(--slate-700);">
+                        <span>48-Hour Cold-Chain Dispatch:</span>
+                        <span id="checkout-shipping-text" style="font-weight:700;color:var(--primary);">$15.00</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;font-size:16px;font-weight:900;border-top:1px solid var(--slate-300);padding-top:8px;color:var(--slate-900);">
+                        <span>Total Settlement Amount:</span>
+                        <span id="checkout-total-text" style="color:var(--primary);">$0.00</span>
+                    </div>
+                </div>
+
+                <!-- 18+ Checkbox -->
+                <label style="display:flex;align-items:flex-start;gap:10px;font-size:12px;color:var(--slate-700);margin-bottom:18px;cursor:pointer;">
+                    <input type="checkbox" required style="margin-top:2px;">
+                    <span>I confirm that I am at least 18 years of age and that all ordered formulations will be utilized strictly for laboratory research and in vitro testing in compliance with local laws.</span>
+                </label>
+
+                <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:15px;font-size:15px;font-weight:800;cursor:pointer;">
+                    Complete Order Settlement via Crypto &rarr;
+                </button>
+            </form>
+        </div>
+    </div>
+
                             <span style="background:var(--amber);color:#fff;font-family:var(--font-body);font-size:11px;font-weight:800;padding:3px 8px;border-radius:12px;">10% DISCOUNT</span>
                         </label>
 
@@ -1588,6 +2159,188 @@
     </div>
 
     <!-- JAVASCRIPT MASTER STORE LOGIC -->
+    
+    <!-- ── AUTHENTICATION MODAL (GUEST / SIGN IN / SIGN UP / GOOGLE) ── -->
+    <div id="auth-modal" class="auth-overlay" onclick="closeAuthModal(event)">
+        <div class="auth-box" onclick="event.stopPropagation()">
+            <button onclick="closeAuthModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:var(--slate-400);">&times;</button>
+            
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="tab-btn-signin" onclick="switchAuthTab('signin')">Sign In</div>
+                <div class="auth-tab" id="tab-btn-signup" onclick="switchAuthTab('signup')">Create Account</div>
+            </div>
+
+            <div class="auth-body">
+                <!-- Google Sign In Button -->
+                <button type="button" class="btn-google-auth" onclick="handleGoogleAuth()">
+                    <svg width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M17.64 9.2c0-.63-.06-1.25-.16-1.84H9v3.49h4.84a4.14 4.14 0 0 1-1.8 2.71v2.26h2.92c1.71-1.57 2.68-3.89 2.68-6.62z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.83.86-3.04.86-2.34 0-4.32-1.58-5.03-3.71H.95v2.33C2.43 15.98 5.48 18 9 18z"/><path fill="#FBBC05" d="M3.97 10.71A5.4 5.4 0 0 1 3.69 9c0-.6.1-1.18.28-1.71V4.96H.95A8.99 8.99 0 0 0 0 9c0 1.45.35 2.82.95 4.04l3.02-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.59C13.46.89 11.43 0 9 0 5.48 0 2.43 2.02.95 4.96l3.02 2.33c.71-2.13 2.69-3.71 5.03-3.71z"/></svg>
+                    Continue with Google
+                </button>
+
+                <div class="auth-divider"><span>OR WITH EMAIL</span></div>
+
+                <!-- SIGN IN FORM -->
+                <form id="form-signin" onsubmit="handleEmailSignIn(event)">
+                    <div style="margin-bottom:12px;">
+                        <label style="font-size:12px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Email Address</label>
+                        <input type="email" id="signin-email" required placeholder="researcher@lab.org" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:8px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                    <div style="margin-bottom:14px;">
+                        <label style="font-size:12px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Password</label>
+                        <input type="password" id="signin-password" required placeholder="••••••••" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:8px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:14px;font-weight:800;cursor:pointer;">
+                        Sign In &rarr;
+                    </button>
+                </form>
+
+                <!-- SIGN UP FORM -->
+                <form id="form-signup" style="display:none;" onsubmit="handleEmailSignUp(event)">
+                    <div style="margin-bottom:12px;">
+                        <label style="font-size:12px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Full Name</label>
+                        <input type="text" id="signup-name" required placeholder="Dr. Jane Doe" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:8px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                    <div style="margin-bottom:12px;">
+                        <label style="font-size:12px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Email Address</label>
+                        <input type="email" id="signup-email" required placeholder="researcher@lab.org" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:8px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                    <div style="margin-bottom:14px;">
+                        <label style="font-size:12px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Create Password</label>
+                        <input type="password" id="signup-password" required minlength="6" placeholder="At least 6 characters" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:8px;font-size:13px;outline:none;box-sizing:border-box;">
+                    </div>
+                    <label style="display:flex;align-items:flex-start;gap:8px;font-size:11.5px;color:var(--slate-600);margin-bottom:14px;cursor:pointer;">
+                        <input type="checkbox" required style="margin-top:2px;">
+                        <span>I am 18+ years of age and ordering exclusively for laboratory research purposes.</span>
+                    </label>
+                    <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:14px;font-weight:800;cursor:pointer;">
+                        Create Account &rarr;
+                    </button>
+                </form>
+
+                <!-- Email Verification Feedback Screen -->
+                <div id="auth-verification-notice" style="display:none;text-align:center;padding:16px 0;">
+                    <div style="font-size:42px;margin-bottom:8px;">✉️</div>
+                    <h4 style="color:var(--primary);margin:0 0 6px;font-size:18px;font-weight:800;">Verification Link Dispatched</h4>
+                    <p style="font-size:13px;color:var(--slate-600);line-height:1.45;margin:0 0 16px;">
+                        We sent a secure verification email to <strong id="verification-target-email"></strong>. Please check your inbox and click verify to activate your researcher profile.
+                    </p>
+                    <button onclick="simulateEmailVerified()" class="btn-primary" style="width:100%;justify-content:center;padding:10px;font-size:13px;cursor:pointer;">
+                        Simulate / Confirm Verification &rarr;
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── CONTACT US MODAL (FORMSPREE INTEGRATED) ─────────── -->
+    <div id="contact-modal" class="contact-overlay" onclick="closeContactModal(event)">
+        <div class="contact-box" onclick="event.stopPropagation()" style="padding:28px 32px;">
+            <button onclick="closeContactModal()" style="position:absolute;top:18px;right:20px;background:var(--slate-100);border:none;width:32px;height:32px;border-radius:50%;font-size:18px;font-weight:800;cursor:pointer;">&times;</button>
+            
+            <span style="font-family:var(--font-body);color:var(--primary);font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;">LABORATORY SUPPORT &amp; INQUIRIES</span>
+            <h2 style="font-family:var(--font-head);font-size:24px;font-weight:900;color:var(--slate-900);margin:4px 0 10px;">Contact Phoenics Peptides</h2>
+            <p style="font-size:13px;color:var(--slate-600);margin:0 0 18px;line-height:1.45;">
+                Direct inquiries to our analytical chemists and synthesis logistics team. Inquiries concerning custom libraries, reconstitution protocols, or cold-chain delivery are answered promptly.
+            </p>
+
+            <form id="contact-form" onsubmit="submitContactUs(event)">
+                <div style="margin-bottom:12px;">
+                    <label style="font-size:12px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Your Email Address *</label>
+                    <input type="email" id="contact-user-email" required placeholder="researcher@institution.org" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:8px;font-size:13px;outline:none;box-sizing:border-box;">
+                </div>
+                <div style="margin-bottom:12px;">
+                    <label style="font-size:12px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Inquiry Classification *</label>
+                    <select id="contact-subject" style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:8px;font-size:13px;outline:none;background:#fff;box-sizing:border-box;">
+                        <option>Order Status &amp; 48-Hour Cold-Chain Dispatch</option>
+                        <option>Peptide Reconstitution &amp; Dilution Protocol Guidance</option>
+                        <option>Custom 384-Peptide Screening Library Synthesis</option>
+                        <option>Bulk / Institutional Order (&ge;10g) &amp; COA Request</option>
+                        <option>General Biochemical Inquiry</option>
+                    </select>
+                </div>
+                <div style="margin-bottom:16px;">
+                    <label style="font-size:12px;font-weight:700;color:var(--slate-600);display:block;margin-bottom:4px;">Detailed Message *</label>
+                    <textarea id="contact-message" rows="4" required placeholder="Specify batch numbers, concentration requirements, or question details..." style="width:100%;padding:10px;border:1.5px solid var(--slate-300);border-radius:8px;font-size:13px;outline:none;resize:vertical;box-sizing:border-box;"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:13px;font-size:14.5px;font-weight:800;cursor:pointer;">
+                    Transmit Inquiry to Laboratory &rarr;
+                </button>
+            </form>
+            <div id="contact-success-msg" style="display:none;text-align:center;padding:20px 0;">
+                <div style="font-size:40px;margin-bottom:8px;">✅</div>
+                <h4 style="color:var(--primary);margin:0 0 6px;font-size:18px;">Inquiry Transmitted Successfully</h4>
+                <p style="font-size:13px;color:var(--slate-600);margin:0;">Phoenics Laboratory Support has received your transmission and will reply within 4 business hours.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── PEPTIDE RESEARCH SPECIALIST AI CHATBOT WIDGET ────── -->
+    <div id="specialist-widget" class="specialist-widget">
+        <!-- Callout bubble above avatar -->
+        <div class="specialist-cta-bubble" onclick="toggleSpecialistChat()">
+            🔬 <strong>Before you buy:</strong> Talk with a specialist to make the right choice of products selection.
+        </div>
+
+        <!-- Floating Specialist Trigger Button -->
+        <button class="specialist-trigger-btn" onclick="toggleSpecialistChat()" aria-label="Talk to Specialist">
+            <div class="specialist-avatar-wrap">
+                <img src="assets/images/specialist-avatar.png" alt="Dr. Elena Vance" onerror="this.src='assets/images/logo.svg'">
+                <div class="specialist-online-dot"></div>
+            </div>
+            <div>
+                <div style="font-size:12px;color:#D1FAE5;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;">Live Research Specialist</div>
+                <div style="font-size:14px;color:#FFFFFF;font-weight:900;">Talk to Dr. Elena</div>
+            </div>
+        </button>
+
+        <!-- Expandable Chatbot Drawer -->
+        <div id="specialist-chat-drawer" class="specialist-chat-drawer">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div style="width:36px;height:36px;border-radius:50%;overflow:hidden;border:2px solid #FFFFFF;background:#ECFDF5;">
+                        <img src="assets/images/specialist-avatar.png" alt="Dr. Elena Vance" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div>
+                        <div style="font-size:14px;font-weight:900;">Dr. Elena Vance</div>
+                        <div style="font-size:11px;color:#A7F3D0;font-weight:700;">Senior Peptide Specialist &bull; Online</div>
+                    </div>
+                </div>
+                <button onclick="toggleSpecialistChat()" style="background:none;border:none;color:#FFFFFF;font-size:22px;cursor:pointer;">&times;</button>
+            </div>
+
+            <!-- Messages Stream -->
+            <div id="chat-messages" class="chat-messages">
+                <div class="chat-msg chat-msg-bot">
+                    <strong>Hello! I am Dr. Elena Vance.</strong><br>
+                    Welcome to Phoenics Peptides. Before you finalize an order, I can assist you with compound selection, mechanism comparisons, or exact dilution volumes. Tap a common topic below or ask me anything!
+                </div>
+            </div>
+
+            <!-- 4 Quick-Tap Prompt Chips -->
+            <div class="chat-quick-prompts">
+                <button class="chat-prompt-chip" onclick="handleQuickPrompt(0)">
+                    🩹 Best peptide for tissue repair &amp; joint healing?
+                </button>
+                <button class="chat-prompt-chip" onclick="handleQuickPrompt(1)">
+                    ⚖️ What's the difference between Tirzepatide &amp; Retatrutide?
+                </button>
+                <button class="chat-prompt-chip" onclick="handleQuickPrompt(2)">
+                    💧 How to calculate reconstitution volume with bacteriostatic water?
+                </button>
+                <button class="chat-prompt-chip" onclick="handleQuickPrompt(3)">
+                    📦 How fast is 48-hour cold-chain shipping to USA &amp; Canada?
+                </button>
+            </div>
+
+            <!-- Chat Input Bar -->
+            <form class="chat-input-bar" onsubmit="handleChatSubmit(event)">
+                <input type="text" id="chat-user-input" placeholder="Ask Dr. Elena about any peptide..." required autocomplete="off">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+
     <script>
     var products = [
         {
@@ -2150,197 +2903,489 @@
         activeModalProd = null;
     }
 
-    // CART OPERATIONS
+    // Legacy cart block replaced by unified 48h Cold-Chain Cart Engine
+
+    // ═════════════════════════════════════════════════════════════════════
+    // PHOENICS PEPTIDES: UPGRADED CART, SHIPPING, AUTH & SPECIALIST AI
+    // ═════════════════════════════════════════════════════════════════════
+
+    // ── 1. CART & 48H SHIPPING ENGINE ────────────────────────────────────
+    var cart = [];
+    var selectedShippingZone = 'USA';
+    var shippingCost = 15.00;
+
     function addToCart(id, qty) {
-        var p = products.find(function(x) { return x.id === id; });
+        qty = qty || 1;
+        var p = products.find(function(item) { return item.id === id; });
         if (!p) return;
-        
-        if (p.whop_url && p.whop_url !== '') {
-            window.location.href = p.whop_url;
+
+        var existing = cart.find(function(item) { return item.id === id; });
+        if (existing) {
+            existing.qty += qty;
         } else {
-            alert('Checkout link for ' + p.name + ' is being prepared. Please check back shortly!');
+            var itemImg = (p.images && p.images.length > 0) ? p.images[0] : 'assets/images/products/' + p.code + '-photo.jpg';
+            cart.push({
+                id: p.id,
+                code: p.code,
+                name: p.name,
+                price: p.sale_usd,
+                image: itemImg,
+                qty: qty
+            });
+        }
+        updateCartUI();
+        openCart();
+    }
+
+    function removeFromCart(id) {
+        cart = cart.filter(function(item) { return item.id !== id; });
+        updateCartUI();
+    }
+
+    function changeCartQty(id, delta) {
+        var item = cart.find(function(item) { return item.id === id; });
+        if (!item) return;
+        item.qty += delta;
+        if (item.qty <= 0) {
+            removeFromCart(id);
+        } else {
+            updateCartUI();
         }
     }
 
-    function updateCartCount() {
+    function calculateShipping() {
+        var zoneSelect = document.getElementById('cart-destination-select');
+        if (zoneSelect) {
+            selectedShippingZone = zoneSelect.value;
+        }
+
+        var subtotal = cart.reduce(function(acc, item) { return acc + (item.price * item.qty); }, 0);
+        var freeHint = document.getElementById('shipping-free-hint');
+
+        if (selectedShippingZone === 'USA') {
+            if (subtotal >= 150) {
+                shippingCost = 0.00;
+                if (freeHint) freeHint.style.display = 'block';
+            } else {
+                shippingCost = 15.00;
+                if (freeHint) freeHint.style.display = 'none';
+            }
+        } else if (selectedShippingZone === 'CANADA') {
+            shippingCost = 25.00;
+            if (freeHint) freeHint.style.display = 'none';
+        } else {
+            shippingCost = 45.00;
+            if (freeHint) freeHint.style.display = 'none';
+        }
+
+        var total = subtotal > 0 ? (subtotal + shippingCost) : 0.00;
+
+        // Update Cart Drawer DOM
+        var subEl = document.getElementById('cart-subtotal-val');
+        var shipEl = document.getElementById('cart-shipping-val');
+        var totEl = document.getElementById('cart-total-val');
+
+        if (subEl) subEl.innerText = '$' + subtotal.toFixed(2);
+        if (shipEl) {
+            shipEl.innerText = shippingCost === 0.00 ? 'FREE (Orders $150+)' : '$' + shippingCost.toFixed(2);
+        }
+        if (totEl) totEl.innerText = '$' + total.toFixed(2);
+
+        // Sync to Checkout Modal if open
+        var ckSub = document.getElementById('checkout-subtotal-text');
+        var ckShip = document.getElementById('checkout-shipping-text');
+        var ckTot = document.getElementById('checkout-total-text');
+        if (ckSub) ckSub.innerText = '$' + subtotal.toFixed(2);
+        if (ckShip) ckShip.innerText = shippingCost === 0.00 ? 'FREE' : '$' + shippingCost.toFixed(2);
+        if (ckTot) ckTot.innerText = '$' + total.toFixed(2);
+    }
+
+    function updateCartUI() {
         var count = cart.reduce(function(acc, item) { return acc + item.qty; }, 0);
-        document.getElementById('header-cart-count').innerText = count;
+        var countPill = document.getElementById('header-cart-count');
+        if (countPill) countPill.innerText = count;
+
+        var container = document.getElementById('cart-items-container');
+        if (!container) return;
+
+        if (cart.length === 0) {
+            container.innerHTML = '<div style="text-align:center;padding:48px 16px;color:var(--slate-400);">' +
+                '<div style="font-size:42px;margin-bottom:12px;">🔬</div>' +
+                '<h4 style="color:var(--slate-800);margin:0 0 6px;">Your Cart is Empty</h4>' +
+                '<p style="font-size:13px;margin:0 0 16px;">Select research compounds from our precision catalog to begin.</p>' +
+                '<button onclick="closeCart()" class="btn-primary" style="margin:0 auto;padding:10px 18px;font-size:13px;">Browse Catalog</button>' +
+                '</div>';
+        } else {
+            var html = '';
+            cart.forEach(function(item) {
+                html += '<div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--slate-200);">' +
+                    '<img src="' + item.image + '" alt="' + item.name + '" style="width:52px;height:52px;object-fit:contain;background:#F0FDF4;border-radius:8px;padding:4px;border:1px solid #D1FAE5;" onerror="this.src=\'assets/images/products/' + item.code + '-vial.svg\';">' +
+                    '<div style="flex:1;">' +
+                        '<div style="font-size:13.5px;font-weight:800;color:var(--slate-900);line-height:1.25;">' + item.name + '</div>' +
+                        '<div style="font-size:12.5px;color:var(--primary);font-weight:700;">$' + item.price.toFixed(2) + ' each</div>' +
+                    '</div>' +
+                    '<div style="display:flex;align-items:center;gap:6px;">' +
+                        '<button onclick="changeCartQty(' + item.id + ', -1)" style="width:26px;height:26px;background:var(--slate-100);border:1px solid var(--slate-300);border-radius:4px;cursor:pointer;font-weight:800;">-</button>' +
+                        '<span style="font-size:13px;font-weight:800;width:18px;text-align:center;">' + item.qty + '</span>' +
+                        '<button onclick="changeCartQty(' + item.id + ', 1)" style="width:26px;height:26px;background:var(--slate-100);border:1px solid var(--slate-300);border-radius:4px;cursor:pointer;font-weight:800;">+</button>' +
+                    '</div>' +
+                    '<button onclick="removeFromCart(' + item.id + ')" style="background:none;border:none;color:#EF4444;font-size:16px;cursor:pointer;padding:4px;" title="Remove">&times;</button>' +
+                '</div>';
+            });
+            container.innerHTML = html;
+        }
+
+        calculateShipping();
     }
 
     function openCart() {
-        renderCartItems();
-        document.getElementById('cart-drawer-overlay').style.display = 'block';
-        document.getElementById('cart-drawer').classList.add('open');
+        document.getElementById('cart-drawer-overlay').classList.add('active');
+        document.getElementById('cart-drawer').classList.add('active');
     }
 
     function closeCart() {
-        document.getElementById('cart-drawer-overlay').style.display = 'none';
-        document.getElementById('cart-drawer').classList.remove('open');
+        document.getElementById('cart-drawer-overlay').classList.remove('active');
+        document.getElementById('cart-drawer').classList.remove('active');
     }
 
-    function renderCartItems() {
-        var container = document.getElementById('cart-items-container');
-        if (cart.length === 0) {
-            container.innerHTML = '<div style="text-align:center;padding:50px 0;color:var(--slate-400);"><div style="font-size:36px;margin-bottom:10px;">🧪</div><p>Your batch cart is currently empty.</p></div>';
-            document.getElementById('cart-subtotal-val').innerText = '$0.00';
-            return;
-        }
-
-        var html = '';
-        var subtotal = 0;
-        cart.forEach(function(item, idx) {
-            var itemTotal = item.price_usd * item.qty;
-            subtotal += itemTotal;
-
-            html += '<div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--slate-100);align-items:center;">';
-            html += '  <img src="' + item.image + '" style="width:50px;height:50px;object-fit:contain;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:6px;padding:3px;" onerror="this.src=\'assets/images/products/' + item.code + '-vial.svg\';">';
-            html += '  <div style="flex:1;">';
-            html += '    <div style="font-family:var(--font-body);font-size:13px;font-weight:700;color:var(--slate-900);">' + item.name + '</div>';
-            html += '    <div style="display:flex;gap:8px;align-items:center;margin-top:4px;">';
-            html += '      <button onclick="changeQty(' + idx + ', -1)" style="width:22px;height:22px;border:1px solid var(--slate-300);border-radius:4px;background:#fff;cursor:pointer;">-</button>';
-            html += '      <span style="font-size:12px;font-weight:700;">' + item.qty + '</span>';
-            html += '      <button onclick="changeQty(' + idx + ', 1)" style="width:22px;height:22px;border:1px solid var(--slate-300);border-radius:4px;background:#fff;cursor:pointer;">+</button>';
-            html += '      <button onclick="removeFromCart(' + idx + ')" style="background:none;border:none;color:var(--crimson);font-size:11px;cursor:pointer;margin-left:8px;">Remove</button>';
-            html += '    </div>';
-            html += '  </div>';
-            html += '  <div style="font-family:var(--font-head);font-weight:800;color:var(--emerald);font-size:18px;">$' + itemTotal.toFixed(2) + '</div>';
-            html += '</div>';
-        });
-
-        container.innerHTML = html;
-        document.getElementById('cart-subtotal-val').innerText = '$' + subtotal.toFixed(2);
-    }
-
-    function changeQty(idx, delta) {
-        if (cart[idx]) {
-            cart[idx].qty += delta;
-            if (cart[idx].qty <= 0) cart.splice(idx, 1);
-            updateCartCount();
-            renderCartItems();
-        }
-    }
-
-    function removeFromCart(idx) {
-        cart.splice(idx, 1);
-        updateCartCount();
-        renderCartItems();
-    }
-
-    // CHECKOUT LOGIC
     function openCheckout() {
         if (cart.length === 0) {
-            alert('Your cart is empty. Please add formulations first.');
+            alert('Your batch cart is currently empty. Please select peptides before proceeding to settlement.');
             return;
         }
         closeCart();
-        updateCheckoutTotal();
-        document.getElementById('checkout-modal').style.display = 'flex';
+        syncCheckoutShipping();
+        syncUserToCheckout();
+        document.getElementById('checkout-modal').classList.add('active');
     }
 
     function closeCheckout(e) {
-        if (e && e.target !== document.getElementById('checkout-modal')) return;
-        document.getElementById('checkout-modal').style.display = 'none';
+        if (e && e.target !== document.getElementById('checkout-modal') && !e.target.classList.contains('checkout-box')) return;
+        document.getElementById('checkout-modal').classList.remove('active');
     }
 
-    function updateCheckoutTotal() {
-        var subtotal = cart.reduce(function(acc, item) { return acc + (item.price_usd * item.qty); }, 0);
-        var method = document.querySelector('input[name="payment_method"]:checked').value;
-
-        var discountRate = 0;
-        if (method === 'crypto') {
-            discountRate = 0.10;
-        } else if (method === 'wire') {
-            discountRate = 0.05;
+    function syncCheckoutShipping() {
+        var ckCountry = document.getElementById('checkout-country');
+        var cartCountry = document.getElementById('cart-destination-select');
+        if (ckCountry && cartCountry) {
+            cartCountry.value = ckCountry.value;
         }
-
-        var discount = subtotal * discountRate;
-        var finalTotal = subtotal - discount;
-
-        document.getElementById('checkout-subtotal').innerText = '$' + subtotal.toFixed(2);
-        document.getElementById('checkout-discount').innerText = '-$' + discount.toFixed(2);
-        document.getElementById('checkout-discount-row').children[0].innerText = 'Payment Discount (' + (discountRate * 100) + '%):';
-        document.getElementById('checkout-total').innerText = '$' + finalTotal.toFixed(2);
+        calculateShipping();
     }
 
     function submitOrder(e) {
         e.preventDefault();
+        var name = document.getElementById('checkout-name').value;
         var email = document.getElementById('checkout-email').value;
-        var method = document.querySelector('input[name="payment_method"]:checked').value;
-        var totalStr = document.getElementById('checkout-total').innerText;
+        var address = document.getElementById('checkout-address').value;
+        var city = document.getElementById('checkout-city').value;
+        var country = document.getElementById('checkout-country').value;
 
-        var methodLabel = method === 'crypto' ? 'Bitcoin / USDT (10% Rebate Applied)' : (method === 'wire' ? 'Bank Wire / SWIFT (5% Rebate Applied)' : 'Credit Card');
+        var subtotal = cart.reduce(function(acc, item) { return acc + (item.price * item.qty); }, 0);
+        var total = subtotal + shippingCost;
+        var orderId = 'PHX-' + Math.floor(100000 + Math.random() * 900000);
 
-        document.getElementById('checkout-body').innerHTML = 
-            '<div style="text-align:center;padding:25px 10px;">' +
-            '  <div style="font-size:48px;margin-bottom:15px;">✅</div>' +
-            '  <h2 style="font-family:var(--font-head);font-size:28px;font-weight:800;color:var(--slate-900);margin-bottom:8px;">Order Confirmed</h2>' +
-            '  <p style="font-family:var(--font-body);color:var(--emerald);font-weight:800;font-size:14px;margin-bottom:15px;">ORDER #PHX-849204 Processed</p>' +
-            '  <p style="font-size:14px;color:var(--slate-600);line-height:1.7;margin-bottom:20px;">' +
-            '    Thank you for your order. We have sent your confirmation invoice and settlement instructions for <strong>' + totalStr + '</strong> (' + methodLabel + ') to <strong>' + email + '</strong>.' +
-            '  </p>' +
-            '  <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:16px;text-align:left;font-size:12.5px;color:var(--slate-700);line-height:1.7;margin-bottom:20px;">' +
-            '    &bull; <strong>Lot Reserved:</strong> Your vials are allocated in -20°C storage.<br>' +
-            '    &bull; <strong>Reconstitution Directions:</strong> Comprehensive dilution guides are enclosed in your shipment.<br>' +
-            '    &bull; <strong>Temperature-Shielded Express Freight:</strong> Your carrier tracking number will be emailed immediately upon carrier pickup.' +
-            '  </div>' +
-            '  <button onclick="closeCheckout(); cart=[]; updateCartCount();" class="btn-primary" style="padding:12px 28px;font-size:14px;">Return to Storefront</button>' +
-            '</div>';
+        var modalBox = document.querySelector('#checkout-modal .checkout-box');
+        if (modalBox) {
+            modalBox.innerHTML = '<div style="text-align:center;padding:24px 12px;">' +
+                '<div style="font-size:48px;margin-bottom:12px;">🧪</div>' +
+                '<span style="font-size:11px;color:var(--primary);font-weight:800;letter-spacing:1px;text-transform:uppercase;">ORDER TRANSMITTED</span>' +
+                '<h2 style="font-family:var(--font-head);font-size:24px;color:var(--slate-900);margin:6px 0 10px;">Order Reference #' + orderId + '</h2>' +
+                '<p style="font-size:13.5px;color:var(--slate-600);line-height:1.5;margin-bottom:18px;">' +
+                    'Thank you, <strong>' + name + '</strong>. Your research order has been queued for expedited 48-hour cold-chain dispatch to <strong>' + city + ', ' + country + '</strong>.' +
+                '</p>' +
+                '<div style="background:#F0FDF4;border:1.5px solid #A7F3D0;border-radius:12px;padding:16px;text-align:left;margin-bottom:20px;">' +
+                    '<div style="font-size:12px;font-weight:800;color:var(--primary-deep);margin-bottom:6px;">SETTLEMENT SUMMARY:</div>' +
+                    '<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;"><span>Batch Subtotal:</span><strong>$' + subtotal.toFixed(2) + '</strong></div>' +
+                    '<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;"><span>48h Cold-Chain Shipping:</span><strong>$' + shippingCost.toFixed(2) + '</strong></div>' +
+                    '<div style="display:flex;justify-content:space-between;font-size:15px;font-weight:900;border-top:1px solid #6EE7B7;padding-top:6px;color:var(--primary-deep);">' +
+                        '<span>Total Payable:</span><span>$' + total.toFixed(2) + '</span>' +
+                    '</div>' +
+                '</div>' +
+                '<p style="font-size:12.5px;color:var(--slate-500);margin-bottom:16px;">' +
+                    'Full batch Analytical COA documentation and automated crypto settlement instructions have been dispatched to <strong>' + email + '</strong>.' +
+                '</p>' +
+                '<button onclick="location.reload()" class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:14px;">Return to Storefront &rarr;</button>' +
+                '</div>';
+        }
+        cart = [];
+        updateCartUI();
     }
 
-    window.addEventListener('DOMContentLoaded', initStore);
-    
-    // ── EMAIL POPUP LOGIC ─────────────────────────────────────────────────
-    function closeEmailPopup() {
-        document.getElementById('email-popup-overlay').classList.remove('active');
-        sessionStorage.setItem('phx_popup_shown', '1');
+
+    // ── 2. AUTHENTICATION & GUEST SYSTEM ──────────────────────────────────
+    var currentUser = null;
+
+    function initAuthState() {
+        var saved = localStorage.getItem('phx_user');
+        if (saved) {
+            try { currentUser = JSON.parse(saved); } catch (e) { currentUser = null; }
+        }
+        updateAuthUI();
     }
 
-    function submitEmailPopup(e) {
+    function updateAuthUI() {
+        var btnText = document.getElementById('auth-btn-text');
+        var userStatus = document.getElementById('checkout-user-status');
+        if (currentUser && currentUser.name) {
+            if (btnText) btnText.innerText = '👤 ' + currentUser.name.split(' ')[0];
+            if (userStatus) userStatus.innerText = 'Signed in as ' + currentUser.name + ' (' + currentUser.email + ')';
+        } else {
+            if (btnText) btnText.innerText = '👤 Sign In';
+            if (userStatus) userStatus.innerText = 'Checking out as Guest';
+        }
+    }
+
+    function syncUserToCheckout() {
+        if (currentUser) {
+            var nameField = document.getElementById('checkout-name');
+            var emailField = document.getElementById('checkout-email');
+            if (nameField && currentUser.name) nameField.value = currentUser.name;
+            if (emailField && currentUser.email) emailField.value = currentUser.email;
+        }
+    }
+
+    function openAuthModal(tab) {
+        tab = tab || 'signin';
+        switchAuthTab(tab);
+        document.getElementById('auth-modal').classList.add('active');
+    }
+
+    function closeAuthModal(e) {
+        if (e && e.target !== document.getElementById('auth-modal')) return;
+        document.getElementById('auth-modal').classList.remove('active');
+    }
+
+    function switchAuthTab(tab) {
+        var signinBtn = document.getElementById('tab-btn-signin');
+        var signupBtn = document.getElementById('tab-btn-signup');
+        var signinForm = document.getElementById('form-signin');
+        var signupForm = document.getElementById('form-signup');
+        var verifyNotice = document.getElementById('auth-verification-notice');
+
+        if (verifyNotice) verifyNotice.style.display = 'none';
+
+        if (tab === 'signin') {
+            if (signinBtn) signinBtn.classList.add('active');
+            if (signupBtn) signupBtn.classList.remove('active');
+            if (signinForm) signinForm.style.display = 'block';
+            if (signupForm) signupForm.style.display = 'none';
+        } else {
+            if (signinBtn) signinBtn.classList.remove('active');
+            if (signupBtn) signupBtn.classList.add('active');
+            if (signinForm) signinForm.style.display = 'none';
+            if (signupForm) signupForm.style.display = 'block';
+        }
+    }
+
+    function handleEmailSignIn(e) {
         e.preventDefault();
-        var email = document.getElementById('popup-email').value;
-        if (!email) return;
+        var email = document.getElementById('signin-email').value;
+        currentUser = {
+            name: email.split('@')[0],
+            email: email,
+            verified: true,
+            provider: 'email'
+        };
+        localStorage.setItem('phx_user', JSON.stringify(currentUser));
+        updateAuthUI();
+        syncUserToCheckout();
+        closeAuthModal();
+        alert('Welcome back, ' + currentUser.name + '! Your researcher session is active.');
+    }
 
-        // Send to Formspree (replace YOUR_FORM_ID with your Formspree form ID)
+    function handleEmailSignUp(e) {
+        e.preventDefault();
+        var name = document.getElementById('signup-name').value;
+        var email = document.getElementById('signup-email').value;
+
+        currentUser = {
+            name: name,
+            email: email,
+            verified: false,
+            provider: 'email'
+        };
+
+        document.getElementById('form-signup').style.display = 'none';
+        var notice = document.getElementById('auth-verification-notice');
+        var targetEmail = document.getElementById('verification-target-email');
+        if (targetEmail) targetEmail.innerText = email;
+        if (notice) notice.style.display = 'block';
+    }
+
+    function simulateEmailVerified() {
+        if (currentUser) {
+            currentUser.verified = true;
+            localStorage.setItem('phx_user', JSON.stringify(currentUser));
+        }
+        updateAuthUI();
+        syncUserToCheckout();
+        closeAuthModal();
+        alert('Email verified successfully! Your Phoenics Peptides profile is ready.');
+    }
+
+    function handleGoogleAuth() {
+        // Ready hook for Google Identity Services / Firebase Auth
+        var simulatedEmail = 'researcher@gmail.com';
+        currentUser = {
+            name: 'Google Researcher',
+            email: simulatedEmail,
+            verified: true,
+            provider: 'google'
+        };
+        localStorage.setItem('phx_user', JSON.stringify(currentUser));
+        updateAuthUI();
+        syncUserToCheckout();
+        closeAuthModal();
+        alert('Signed in with Google account: ' + simulatedEmail);
+    }
+
+
+    // ── 3. CONTACT US MODAL ENGINE ────────────────────────────────────────
+    function openContactModal() {
+        var successMsg = document.getElementById('contact-success-msg');
+        var form = document.getElementById('contact-form');
+        if (successMsg) successMsg.style.display = 'none';
+        if (form) form.style.display = 'block';
+        document.getElementById('contact-modal').classList.add('active');
+    }
+
+    function closeContactModal(e) {
+        if (e && e.target !== document.getElementById('contact-modal')) return;
+        document.getElementById('contact-modal').classList.remove('active');
+    }
+
+    function submitContactUs(e) {
+        e.preventDefault();
+        var email = document.getElementById('contact-user-email').value;
+        var subject = document.getElementById('contact-subject').value;
+        var msg = document.getElementById('contact-message').value;
+
         fetch('https://formspree.io/f/xppzgapq', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify({ email: email, source: 'popup' })
-        }).then(function(res) {
-            console.log('Email submitted:', res.status);
-        }).catch(function(err) {
-            console.log('Submit error:', err);
+            body: JSON.stringify({ email: email, subject: subject, message: msg, source: 'contact_modal' })
+        }).then(function() {
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('contact-success-msg').style.display = 'block';
+            setTimeout(function() { closeContactModal(); }, 3500);
+        }).catch(function() {
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('contact-success-msg').style.display = 'block';
+            setTimeout(function() { closeContactModal(); }, 3500);
         });
-
-        // Show success regardless (don't make user wait)
-        document.querySelector('.popup-form').style.display = 'none';
-        document.getElementById('popup-success').style.display = 'block';
-        sessionStorage.setItem('phx_popup_shown', '1');
-        setTimeout(function() { closeEmailPopup(); }, 3500);
     }
 
-    // Show popup after 6 seconds if not shown this session
+
+    // ── 4. PEPTIDE RESEARCH SPECIALIST AI CHATBOT ENGINE ──────────────────
+    function toggleSpecialistChat() {
+        var drawer = document.getElementById('specialist-chat-drawer');
+        if (drawer) {
+            drawer.classList.toggle('active');
+        }
+    }
+
+    var quickPromptsData = [
+        {
+            q: "Which peptide is best for tissue repair & joint healing?",
+            a: "For tissue repair and joint integrity, <strong>BPC-157 (5mg)</strong> and <strong>TB-500 (5mg)</strong> are the gold standard. BPC-157 promotes tendon-to-bone collagen synthesis, while TB-500 sequesters G-actin to accelerate cellular migration to damaged tissue. Many researchers investigate them in a synergistic recovery protocol.",
+            recId: 9
+        },
+        {
+            q: "What's the difference between Tirzepatide & Retatrutide?",
+            a: "<strong>Tirzepatide</strong> is a dual GIP/GLP-1 receptor agonist with balanced appetite regulation and glucose metabolism. <strong>Retatrutide</strong> is the next-generation triple agonist (GLP-1 + GIP + Glucagon / GGG), adding direct glucagon receptor stimulation to accelerate resting metabolic rate and lipid clearance.",
+            recId: 2
+        },
+        {
+            q: "How to calculate reconstitution volume with bacteriostatic water?",
+            a: "Use the standard laboratory concentration formula: <em>Concentration (mg/mL) = Peptide (mg) / Water (mL)</em>.<br><br>For example: Adding <strong>2.0 mL of bacteriostatic water</strong> to a <strong>10mg Tirzepatide vial</strong> yields <strong>5.0 mg/mL</strong>. In a standard U-100 syringe, each 10-unit mark equals exactly 0.5mg.",
+            recId: 1
+        },
+        {
+            q: "How fast is 48-hour cold-chain shipping to USA & Canada?",
+            a: "All orders destined for the <strong>United States and Canada</strong> are dispatched within 24 business hours inside thermo-insulated cold-packs. Domestic transit is completed within <strong>48 hours</strong> with end-to-end tracking provided immediately upon carrier induction.",
+            recId: null
+        }
+    ];
+
+    function handleQuickPrompt(index) {
+        var data = quickPromptsData[index];
+        if (!data) return;
+        addChatMessage(data.q, 'user');
+        setTimeout(function() {
+            var actionBtn = data.recId ? '<br><button onclick="addToCart(' + data.recId + ', 1)" class="btn-primary" style="margin-top:8px;padding:6px 12px;font-size:12px;">+ Add ' + products.find(function(p){return p.id===data.recId;}).name + ' to Cart</button>' : '';
+            addChatMessage(data.a + actionBtn, 'bot');
+        }, 400);
+    }
+
+    function handleChatSubmit(e) {
+        e.preventDefault();
+        var input = document.getElementById('chat-user-input');
+        var text = input.value.trim();
+        if (!text) return;
+        addChatMessage(text, 'user');
+        input.value = '';
+
+        setTimeout(function() {
+            var lower = text.toLowerCase();
+            var response = "";
+            var recId = null;
+
+            if (lower.indexOf('tirzepatide') !== -1) {
+                response = "<strong>Tirzepatide (10mg)</strong> is our ultra-high purity (&ge;99.4%) dual GIP/GLP-1 receptor agonist formulated as a sterile lyophilized cake. Promotes significant appetite regulation and metabolic glucose balance.";
+                recId = 1;
+            } else if (lower.indexOf('retatrutide') !== -1) {
+                response = "<strong>Retatrutide (10mg)</strong> is the cutting-edge triple agonist (GLP-1 / GIP / Glucagon). Highly researched for energy expenditure and lipid clearance.";
+                recId = 2;
+            } else if (lower.indexOf('bpc') !== -1 || lower.indexOf('157') !== -1) {
+                response = "<strong>BPC-157 (5mg)</strong> is a stable gastric pentadecapeptide investigated for tendon reconnection, mucosal lining repair, and microvascular tissue healing.";
+                recId = 9;
+            } else if (lower.indexOf('tb-500') !== -1 || lower.indexOf('tb500') !== -1) {
+                response = "<strong>TB-500 (5mg)</strong> accelerates actin sequestration, reduces scar tissue fibrosis, and restores structural joint flexibility.";
+                recId = 10;
+            } else if (lower.indexOf('ghk') !== -1) {
+                response = "<strong>GHK-Cu Copper Peptide (50mg)</strong> is a royal blue crystalline powder researched for collagen stimulation and dermal tissue remodeling.";
+                recId = 6;
+            } else if (lower.indexOf('shipping') !== -1 || lower.indexOf('canada') !== -1 || lower.indexOf('usa') !== -1) {
+                response = "We provide <strong>48-hour cold-chain shipping</strong> across the USA ($15 / FREE over $150) and Canada ($25). Insulated packaging with cold-packs ensures maximum peptide integrity.";
+            } else if (lower.indexOf('reconstitut') !== -1 || lower.indexOf('dilut') !== -1 || lower.indexOf('water') !== -1) {
+                response = "Lyophilized vials should be reconstituted with sterile bacteriostatic water (0.9% benzyl alcohol). Allow the water to run slowly down the interior glass wall without shaking.";
+            } else {
+                response = "Thank you for inquiring. Phoenics Peptides provides certified 99%+ research reference standards. All orders include analytical COA specs and our comprehensive dilution table. You can also contact our lab team directly via the Contact Us modal!";
+            }
+
+            var actionBtn = recId ? '<br><button onclick="addToCart(' + recId + ', 1)" class="btn-primary" style="margin-top:8px;padding:6px 12px;font-size:12px;">+ Add Recommended Product to Cart</button>' : '';
+            addChatMessage(response + actionBtn, 'bot');
+        }, 500);
+    }
+
+    function addChatMessage(html, sender) {
+        var msgs = document.getElementById('chat-messages');
+        if (!msgs) return;
+        var msgDiv = document.createElement('div');
+        msgDiv.className = 'chat-msg ' + (sender === 'user' ? 'chat-msg-user' : 'chat-msg-bot');
+        msgDiv.innerHTML = html;
+        msgs.appendChild(msgDiv);
+        msgs.scrollTop = msgs.scrollHeight;
+    }
+
+
+    // ── 5. MOBILE MENU TOGGLE ─────────────────────────────────────────────
+    function toggleMobileMenu() {
+        var drawer = document.getElementById('mobile-nav-drawer');
+        if (drawer) drawer.classList.toggle('active');
+    }
+    function closeMobileMenu() {
+        var drawer = document.getElementById('mobile-nav-drawer');
+        if (drawer) drawer.classList.remove('active');
+    }
+
+    // Initialize state on window load
     window.addEventListener('load', function() {
-        if (!sessionStorage.getItem('phx_popup_shown')) {
-            setTimeout(function() {
-                document.getElementById('email-popup-overlay').classList.add('active');
-            }, 6000);
-        }
-    });
-
-    // Exit-intent: show popup when mouse leaves the top of viewport
-    document.addEventListener('mouseleave', function(e) {
-        if (e.clientY < 10 && !sessionStorage.getItem('phx_popup_shown')) {
-            document.getElementById('email-popup-overlay').classList.add('active');
-            sessionStorage.setItem('phx_popup_shown', '1');
-        }
-    });
-
-    // Close popup when clicking the dark overlay
-    document.getElementById('email-popup-overlay').addEventListener('click', function(e) {
-        if (e.target === this) closeEmailPopup();
+        initAuthState();
+        updateCartUI();
     });
 
     </script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
