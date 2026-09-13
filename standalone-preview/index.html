@@ -2092,29 +2092,7 @@
         </div>
     </div>
 </div>
-        <div class="trust-item">
-            <div class="trust-icon">📞</div>
-            <div>
-                <div class="trust-title">24/7 Support</div>
-                <div class="trust-sub">Chat &amp; Email</div>
-            </div>
-        </div>
-        <div class="trust-item">
-            <div class="trust-icon">🔬</div>
-            <div>
-                <div class="trust-title">Independent Testing</div>
-                <div class="trust-sub">Quality Verified</div>
-            </div>
-        </div>
-        <div class="trust-item">
-            <div class="trust-icon">🔒</div>
-            <div>
-                <div class="trust-title">100% Secure</div>
-                <div class="trust-sub">Safe Checkout</div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- ══ MOST POPULAR CAROUSEL ══════════════════════════════════════ -->
 <section class="section">
@@ -3690,139 +3668,171 @@ function initStore() {
     var selectedShippingZone = 'USA';
     var shippingCost = 15.00;
 
-    function addToCart(id, qty) {
-        qty = qty || 1;
-        var p = products.find(function(item) { return item.id === id; });
-        if (!p) return;
+    
+// ── ROBUST SHOPPING CART ENGINE ─────────────────────────────────────────────
+var cart = [];
+var currentShipZone = 'usa';
 
-        var existing = cart.find(function(item) { return item.id === id; });
-        if (existing) {
-            existing.qty += qty;
-        } else {
-            var itemImg = (p.images && p.images.length > 0) ? p.images[0] : 'assets/images/products/' + p.code + '-photo.jpg';
-            cart.push({
-                id: p.id,
-                code: p.code,
-                name: p.name,
-                price: p.sale_usd,
-                image: itemImg,
-                qty: qty
-            });
-        }
-        updateCartUI();
-        openCart();
+function setShipZone(zone) {
+    currentShipZone = zone;
+    document.querySelectorAll('.zone-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+    var activeBtn = document.getElementById('zone-' + zone);
+    if (activeBtn) activeBtn.classList.add('active');
+    updateCartUI();
+}
+
+function openCart() {
+    var ov = document.getElementById('cart-overlay') || document.getElementById('cart-drawer-overlay');
+    var dr = document.getElementById('cart-drawer');
+    if (ov) {
+        ov.classList.add('open');
+        ov.classList.add('active');
+    }
+    if (dr) {
+        dr.classList.add('open');
+        dr.classList.add('active');
+    }
+    updateCartUI();
+}
+
+function closeCart() {
+    var ov = document.getElementById('cart-overlay') || document.getElementById('cart-drawer-overlay');
+    var dr = document.getElementById('cart-drawer');
+    if (ov) {
+        ov.classList.remove('open');
+        ov.classList.remove('active');
+    }
+    if (dr) {
+        dr.classList.remove('open');
+        dr.classList.remove('active');
+    }
+}
+
+function addToCart(id, qty) {
+    qty = parseInt(qty) || 1;
+    var p = products.find(function(item) { return item.id === id; });
+    if (!p) return;
+
+    var existing = cart.find(function(item) { return item.id === id; });
+    if (existing) {
+        existing.qty += qty;
+    } else {
+        var itemImg = (p.images && p.images.length > 0) ? p.images[0] : ('assets/images/products/' + p.code + '-photo.jpg');
+        cart.push({
+            id: p.id,
+            code: p.code,
+            name: p.name,
+            price: p.sale_usd,
+            image: itemImg,
+            qty: qty
+        });
+    }
+    updateCartUI();
+    openCart();
+}
+
+function addNeedleBundleToCart() {
+    var needleItem = cart.find(function(item) { return item.id === 9999; });
+    if (needleItem) {
+        needleItem.qty += 1;
+    } else {
+        cart.push({
+            id: 9999,
+            code: 'syringes',
+            name: "BD Ultra-Fine™ 31G Syringes (10-Pack Bundle)",
+            customName: "BD Ultra-Fine™ 31G Syringes (10-Pack Bundle)",
+            price: 7.99,
+            customPrice: 7.99,
+            image: "assets/images/products/syringes-photo.jpg",
+            customImg: "assets/images/products/syringes-photo.jpg",
+            qty: 1
+        });
+    }
+    updateCartUI();
+}
+
+function updateCartCount() {
+    var count = cart.reduce(function(a, item) { return a + item.qty; }, 0);
+    var badge = document.getElementById('header-cart-count');
+    if (badge) badge.textContent = count;
+}
+
+function updateCartUI() {
+    updateCartCount();
+
+    var container = document.getElementById('cart-items-list') || document.getElementById('cart-items-container');
+    if (!container) return;
+
+    if (cart.length === 0) {
+        container.innerHTML = `
+            <div class="drawer-empty" style="text-align:center;padding:48px 16px;color:var(--gray);">
+                <div style="font-size:42px;margin-bottom:12px;">🛒</div>
+                <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px">Your cart is empty</div>
+                <div style="font-size:13px;margin-bottom:16px">Select research compounds from the catalog to begin.</div>
+                <button onclick="closeCart()" class="btn-primary" style="margin:0 auto;padding:10px 20px;font-size:13px;border-radius:12px;background:var(--green);color:#fff;border:none;cursor:pointer;">Browse Catalog</button>
+            </div>`;
+    } else {
+        container.innerHTML = cart.map(function(item) {
+            var itemImg = item.image || ('assets/images/products/' + (item.code || 'tirzepatide') + '-photo.jpg');
+            var itemPrice = item.price || 0;
+            var itemName = item.name || 'Research Product';
+            var itemTotal = (itemPrice * item.qty).toFixed(2);
+            return `
+            <div class="cart-item-row" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #e2e8f0;">
+                <img src="${itemImg}" alt="${itemName}" style="width:54px;height:54px;object-fit:contain;background:#f0fdf4;border-radius:12px;padding:4px;border:1.5px solid #d1fae5;" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+                <div style="flex:1;min-width:0;">
+                    <div style="font-size:13.5px;font-weight:800;color:var(--dark);line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${itemName}">${itemName}</div>
+                    <div style="font-size:13px;color:var(--green);font-weight:800;margin-top:2px;">$${itemPrice.toFixed(2)} each</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;">
+                    <button onclick="changeCartQty(${item.id}, -1)" style="width:26px;height:26px;background:#f3f4f6;border:1px solid #d1d5db;border-radius:6px;cursor:pointer;font-weight:800;">-</button>
+                    <span style="font-size:13px;font-weight:800;min-width:18px;text-align:center;">${item.qty}</span>
+                    <button onclick="changeCartQty(${item.id}, 1)" style="width:26px;height:26px;background:#f3f4f6;border:1px solid #d1d5db;border-radius:6px;cursor:pointer;font-weight:800;">+</button>
+                </div>
+                <button onclick="removeFromCart(${item.id})" style="background:none;border:none;color:#ef4444;font-size:18px;cursor:pointer;padding:4px;font-weight:bold;" title="Remove">&times;</button>
+            </div>`;
+        }).join('');
     }
 
-    function removeFromCart(id) {
-        cart = cart.filter(function(item) { return item.id !== id; });
-        updateCartUI();
+    // Subtotal & Shipping calculation
+    var subtotal = cart.reduce(function(acc, item) {
+        var p = item.price || 0;
+        return acc + (p * item.qty);
+    }, 0);
+
+    var shipRate = 15.00;
+    var freeOver = 150.00;
+    if (currentShipZone === 'canada') {
+        shipRate = 25.00;
+        freeOver = 300.00;
+    } else if (currentShipZone === 'intl') {
+        shipRate = 45.00;
+        freeOver = 300.00;
     }
 
-    function changeCartQty(id, delta) {
-        var item = cart.find(function(item) { return item.id === id; });
-        if (!item) return;
-        item.qty += delta;
-        if (item.qty <= 0) {
-            removeFromCart(id);
-        } else {
-            updateCartUI();
-        }
-    }
+    var shipping = (subtotal >= freeOver || subtotal === 0) ? 0.00 : shipRate;
+    var total = subtotal + shipping;
 
-    function calculateShipping() {
-        var zoneSelect = document.getElementById('cart-destination-select');
-        if (zoneSelect) {
-            selectedShippingZone = zoneSelect.value;
-        }
+    var elSub = document.getElementById('drawer-subtotal');
+    if (elSub) elSub.textContent = '$' + subtotal.toFixed(2);
 
-        var subtotal = cart.reduce(function(acc, item) { return acc + (item.price * item.qty); }, 0);
-        var freeHint = document.getElementById('shipping-free-hint');
+    var elShip = document.getElementById('drawer-shipping');
+    if (elShip) elShip.textContent = shipping === 0 ? 'FREE' : '$' + shipping.toFixed(2);
 
-        if (selectedShippingZone === 'USA') {
-            if (subtotal >= 150) {
-                shippingCost = 0.00;
-                if (freeHint) freeHint.style.display = 'block';
-            } else {
-                shippingCost = 15.00;
-                if (freeHint) freeHint.style.display = 'none';
-            }
-        } else if (selectedShippingZone === 'CANADA') {
-            shippingCost = 25.00;
-            if (freeHint) freeHint.style.display = 'none';
-        } else {
-            shippingCost = 45.00;
-            if (freeHint) freeHint.style.display = 'none';
-        }
+    var elTot = document.getElementById('drawer-total');
+    if (elTot) elTot.textContent = '$' + total.toFixed(2);
 
-        var total = subtotal > 0 ? (subtotal + shippingCost) : 0.00;
+    // Also update checkout modal if open
+    var ckSub = document.getElementById('ck-subtotal');
+    if (ckSub) ckSub.textContent = '$' + subtotal.toFixed(2);
+    var ckShip = document.getElementById('ck-shipping');
+    if (ckShip) ckShip.textContent = shipping === 0 ? 'FREE' : '$' + shipping.toFixed(2);
+    var ckTot = document.getElementById('ck-total');
+    if (ckTot) ckTot.textContent = '$' + total.toFixed(2);
+}
 
-        // Update Cart Drawer DOM
-        var subEl = document.getElementById('cart-subtotal-val');
-        var shipEl = document.getElementById('cart-shipping-val');
-        var totEl = document.getElementById('cart-total-val');
-
-        if (subEl) subEl.innerText = '$' + subtotal.toFixed(2);
-        if (shipEl) {
-            shipEl.innerText = shippingCost === 0.00 ? 'FREE (Orders $150+)' : '$' + shippingCost.toFixed(2);
-        }
-        if (totEl) totEl.innerText = '$' + total.toFixed(2);
-
-        // Sync to Checkout Modal if open
-        var ckSub = document.getElementById('checkout-subtotal-text');
-        var ckShip = document.getElementById('checkout-shipping-text');
-        var ckTot = document.getElementById('checkout-total-text');
-        if (ckSub) ckSub.innerText = '$' + subtotal.toFixed(2);
-        if (ckShip) ckShip.innerText = shippingCost === 0.00 ? 'FREE' : '$' + shippingCost.toFixed(2);
-        if (ckTot) ckTot.innerText = '$' + total.toFixed(2);
-    }
-
-    function updateCartUI() {
-        var count = cart.reduce(function(acc, item) { return acc + item.qty; }, 0);
-        var countPill = document.getElementById('header-cart-count');
-        if (countPill) countPill.innerText = count;
-
-        var container = document.getElementById('cart-items-container');
-        if (!container) return;
-
-        if (cart.length === 0) {
-            container.innerHTML = '<div style="text-align:center;padding:48px 16px;color:var(--slate-400);">' +
-                '<div style="font-size:42px;margin-bottom:12px;">🔬</div>' +
-                '<h4 style="color:var(--slate-800);margin:0 0 6px;">Your Cart is Empty</h4>' +
-                '<p style="font-size:13px;margin:0 0 16px;">Select research compounds from our precision catalog to begin.</p>' +
-                '<button onclick="closeCart()" class="btn-primary" style="margin:0 auto;padding:10px 18px;font-size:13px;">Browse Catalog</button>' +
-                '</div>';
-        } else {
-            var html = '';
-            cart.forEach(function(item) {
-                html += '<div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--slate-200);">' +
-                    '<img src="' + item.image + '" alt="' + item.name + '" style="width:52px;height:52px;object-fit:contain;background:#F0FDF4;border-radius:8px;padding:4px;border:1px solid #D1FAE5;" onerror="this.src=\'assets/images/products/' + item.code + '-vial.svg\';">' +
-                    '<div style="flex:1;">' +
-                        '<div style="font-size:13.5px;font-weight:800;color:var(--slate-900);line-height:1.25;">' + item.name + '</div>' +
-                        '<div style="font-size:12.5px;color:var(--primary);font-weight:700;">$' + item.price.toFixed(2) + ' each</div>' +
-                    '</div>' +
-                    '<div style="display:flex;align-items:center;gap:6px;">' +
-                        '<button onclick="changeCartQty(' + item.id + ', -1)" style="width:26px;height:26px;background:var(--slate-100);border:1px solid var(--slate-300);border-radius:4px;cursor:pointer;font-weight:800;">-</button>' +
-                        '<span style="font-size:13px;font-weight:800;width:18px;text-align:center;">' + item.qty + '</span>' +
-                        '<button onclick="changeCartQty(' + item.id + ', 1)" style="width:26px;height:26px;background:var(--slate-100);border:1px solid var(--slate-300);border-radius:4px;cursor:pointer;font-weight:800;">+</button>' +
-                    '</div>' +
-                    '<button onclick="removeFromCart(' + item.id + ')" style="background:none;border:none;color:#EF4444;font-size:16px;cursor:pointer;padding:4px;" title="Remove">&times;</button>' +
-                '</div>';
-            });
-            container.innerHTML = html;
-        }
-
-        calculateShipping();
-    }
-
-    function openCart() {
-        document.getElementById('cart-drawer-overlay').classList.add('active');
-        document.getElementById('cart-drawer').classList.add('active');
-    }
-
-    function closeCart() {
-        document.getElementById('cart-drawer-overlay').classList.remove('active');
-        document.getElementById('cart-drawer').classList.remove('active');
-    }
 
     function openCheckout() {
         if (cart.length === 0) {
@@ -4322,19 +4332,23 @@ function buyFromCardWithNeedle(id) {
 }
 
 function addNeedleBundleToCart() {
-    // Add 10-pack syringes bundle at discounted $7.99 (reg $9.99, 20% off)
     var needleItem = cart.find(function(item) { return item.id === 9999; });
     if (needleItem) {
         needleItem.qty += 1;
     } else {
         cart.push({
             id: 9999,
-            qty: 1,
-            customName: "BD Ultra-Fine™ 31G Syringes (10-Pack Vial Bundle)",
+            code: 'syringes',
+            name: "BD Ultra-Fine™ 31G Syringes (10-Pack Bundle)",
+            customName: "BD Ultra-Fine™ 31G Syringes (10-Pack Bundle)",
+            price: 7.99,
             customPrice: 7.99,
-            customImg: "assets/images/products/syringes-photo.jpg"
+            image: "assets/images/products/syringes-photo.jpg",
+            customImg: "assets/images/products/syringes-photo.jpg",
+            qty: 1
         });
     }
+    updateCartUI();
 }
 
 // ── PRODUCT MODAL ────────────────────────────────────────────────────────────
