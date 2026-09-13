@@ -2105,61 +2105,6 @@
         </div>
     </div>
 
-                            <span style="background:var(--amber);color:#fff;font-family:var(--font-body);font-size:11px;font-weight:800;padding:3px 8px;border-radius:12px;">10% DISCOUNT</span>
-                        </label>
-
-                        <label style="display:flex;align-items:center;justify-content:space-between;background:var(--sapphire-light);border:1.5px solid var(--sapphire-border);padding:12px 16px;border-radius:8px;cursor:pointer;">
-                            <div style="display:flex;align-items:center;gap:10px;">
-                                <input type="radio" name="payment_method" value="wire" onchange="updateCheckoutTotal()">
-                                <div>
-                                    <strong style="color:var(--sapphire-dark);font-family:var(--font-body);font-size:13.5px;">Bank Wire / SWIFT / ACH</strong>
-                                    <div style="font-size:11.5px;color:var(--sapphire);">Direct institutional bank transfer</div>
-                                </div>
-                            </div>
-                            <span style="background:var(--sapphire);color:#fff;font-family:var(--font-body);font-size:11px;font-weight:800;padding:3px 8px;border-radius:12px;">5% DISCOUNT</span>
-                        </label>
-
-                        <label style="display:flex;align-items:center;justify-content:space-between;background:var(--slate-50);border:1.5px solid var(--slate-300);padding:12px 16px;border-radius:8px;cursor:pointer;">
-                            <div style="display:flex;align-items:center;gap:10px;">
-                                <input type="radio" name="payment_method" value="card" onchange="updateCheckoutTotal()">
-                                <div>
-                                    <strong style="color:var(--slate-900);font-family:var(--font-body);font-size:13.5px;">Credit / Debit Card (Stripe)</strong>
-                                    <div style="font-size:11.5px;color:var(--slate-500);">Visa, MasterCard, American Express</div>
-                                </div>
-                            </div>
-                            <span style="font-family:var(--font-body);font-size:12px;color:var(--slate-500);font-weight:600;">Standard</span>
-                        </label>
-                    </div>
-
-                    <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:16px;margin-bottom:20px;">
-                        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--slate-500);margin-bottom:6px;">
-                            <span>Subtotal:</span>
-                            <span id="checkout-subtotal">$0.00</span>
-                        </div>
-                        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--emerald);font-weight:700;margin-bottom:6px;" id="checkout-discount-row">
-                            <span>Payment Discount (10%):</span>
-                            <span id="checkout-discount">-$0.00</span>
-                        </div>
-                        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--slate-500);margin-bottom:10px;">
-                            <span>Secured Insured Shipping:</span>
-                            <span style="color:var(--emerald);font-weight:700;">FREE</span>
-                        </div>
-                        <div style="display:flex;justify-content:space-between;font-family:var(--font-head);font-size:24px;font-weight:800;color:var(--slate-900);border-top:1px solid var(--slate-200);padding-top:10px;">
-                            <span>Final Total:</span>
-                            <span id="checkout-total">$0.00</span>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;font-weight:800;">
-                        Confirm &amp; Place Order &rarr;
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- JAVASCRIPT MASTER STORE LOGIC -->
-    
     <!-- ── AUTHENTICATION MODAL (GUEST / SIGN IN / SIGN UP / GOOGLE) ── -->
     <div id="auth-modal" class="auth-overlay" onclick="closeAuthModal(event)">
         <div class="auth-box" onclick="event.stopPropagation()">
@@ -2627,6 +2572,71 @@
                 "assets/images/products/bulk10g-pack.svg"
             ],
             whop_url: "https://nowpayments.io/payment/?iid=4406076672"
+        },
+        {
+            id: 20, code: "pen", name: "Reusable Precision Injectable Delivery Pen (3mL)",
+            category: "supplies", cat_label: "Delivery Systems & Supplies",
+            cas: "MEDICAL-GRADE", mw: "Micro-Dose Dial (0.01mL)", purity: "ISO 11608 Compliant", lot: "PHX-PEN-3001",
+            reg_usd: 65.00, sale_usd: 48.00,
+            mechanism: "Variable Micro-Dose Dial (0.01mL to 0.60mL Increments)",
+            focus: "Precision Peptide Delivery & Cartridge Administration",
+            desc: "Ergonomic anodized aluminum precision delivery pen with calibrated dose dial. Compatible with standard 3.0mL multi-dose cartridges. Ideal for precise increment micro-dosing protocols.",
+            images: [
+                "assets/images/products/pen-photo.jpg"
+            ],
+            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+        },
+        {
+            id: 21, code: "bacwater", name: "Bacteriostatic Water (30mL Sterile Reagent Vial)",
+            category: "supplies", cat_label: "Delivery Systems & Supplies",
+            cas: "7732-18-5", mw: "18.02 g/mol", purity: "USP Grade 0.9% Benzyl Alcohol", lot: "PHX-BAC-3012",
+            reg_usd: 18.00, sale_usd: 12.00,
+            mechanism: "Bacteriostatic Sterile Dissolution Reagent",
+            focus: "Peptide Reconstitution, Solubilization & Storage Stability",
+            desc: "Sterile USP water containing 0.9% benzyl alcohol preservative. Formulated specifically to reconstitute lyophilized peptide cakes and prevent bacterial proliferation in multi-dose research storage.",
+            images: [
+                "assets/images/products/bacwater-photo.jpg"
+            ],
+            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+        },
+        {
+            id: 22, code: "kit", name: "Complete Peptide Reconstitution & Analytical Prep Kit",
+            category: "supplies", cat_label: "Delivery Systems & Supplies",
+            cas: "KIT-ANALYTICAL", mw: "Complete Sterile Reconstitution Pack", purity: "ISO Class 7 Cleanroom Packaged", lot: "PHX-KIT-8821",
+            reg_usd: 45.00, sale_usd: 34.00,
+            mechanism: "Comprehensive Sterile Handling & Dilution Assembly",
+            focus: "Turnkey Preparation Protocol for All Lyophilized Peptides",
+            desc: "All-in-one laboratory preparation kit including 1x 30mL Bacteriostatic Water, 10x sterile 3mL reconstitution syringes with 21G needles, 20x sterile alcohol swabs, and step-by-step dilution reference guides.",
+            images: [
+                "assets/images/products/kit-photo.jpg"
+            ],
+            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+        },
+        {
+            id: 23, code: "nad", name: "NAD+ Nicotinamide Adenine Dinucleotide (500mg)",
+            category: "vitality", cat_label: "Cellular Energy & Vitality",
+            cas: "53-84-9", mw: "663.43 g/mol", purity: "99.5%", lot: "PHX-NAD-5022",
+            reg_usd: 95.00, sale_usd: 74.00,
+            mechanism: "Essential Co-Enzyme / Sirtuin (SIRT1-7) & PARP Activator",
+            focus: "Mitochondrial Bio-Energetics, DNA Repair & Longevity Signaling",
+            desc: "Highly pure lyophilized NAD+ coenzyme essential for cellular ATP synthesis, sirtuin longevity gene expression, and metabolic cellular rejuvenation. Top trending compound in modern longevity research.",
+            images: [
+                "assets/images/products/nad-photo.jpg"
+            ],
+            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+        },
+        {
+            id: 24, code: "wolverine", name: "The Wolverine Healing Protocol (BPC-157 5mg + TB-500 5mg Bundle)",
+            category: "healing", cat_label: "Tissue Repair & Healing",
+            cas: "COMBO-STACK", mw: "BPC-157 (1419.5) + TB-500 (4963.5)", purity: "99.3% Combined", lot: "PHX-WOLV-7740",
+            reg_usd: 115.00, sale_usd: 82.00,
+            mechanism: "Synergistic Angiogenic Collagen Repair + Cellular Actin Migration",
+            focus: "High-Potency Connective Tissue, Tendon, Muscle & Microvascular Regeneration",
+            desc: "The premier research recovery stack across social media and biohacking forums. Combines 1 vial of BPC-157 (5mg) with 1 vial of TB-500 (5mg) for synergistic microvascular repair and rapid connective tissue recovery.",
+            images: [
+                "assets/images/products/wolverine-photo.jpg"
+            ],
+            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
         }
     ];
 
@@ -2699,8 +2709,10 @@
         }, 80);
     }
 
-    function renderProducts() {
+        function renderProducts() {
         var container = document.getElementById('products-container');
+        if (!container) return;
+
         var filtered = products.filter(function(p) {
             return currentFilter === 'all' || p.category === currentFilter;
         });
@@ -2709,33 +2721,63 @@
         filtered.forEach(function(p) {
             var reg = '$' + p.reg_usd.toFixed(2);
             var sale = '$' + p.sale_usd.toFixed(2);
-            var singleImg = (p.images && p.images.length > 0) ? p.images[0] : ('assets/images/products/' + p.code + '-vial.svg');
+            var singleImg = (p.images && p.images.length > 0) ? p.images[0] : ('assets/images/products/' + p.code + '-photo.jpg');
 
-            html += '<div class="product-card" id="card-' + p.id + '">';
+            // High-End Trending & Protocol Badges based on TikTok/X popularity
+            var trendBadge = '';
+            if (p.code === 'tirzepatide' || p.code === 'retatrutide' || p.code === 'wolverine') {
+                trendBadge = '<span class="badge-sale" style="background:#EF4444;color:#fff;">🔥 TRENDING ON SOCIAL MEDIA</span>';
+            } else if (p.code === 'bpc157' || p.code === 'tb500') {
+                trendBadge = '<span class="badge-sale" style="background:#059669;color:#fff;">⚡ TOP RECOVERY PROTOCOL</span>';
+            } else if (p.code === 'nad' || p.code === 'epithalon' || p.code === 'ghkcu') {
+                trendBadge = '<span class="badge-sale" style="background:#8B5CF6;color:#fff;">✨ LONGEVITY ESSENTIAL</span>';
+            } else if (p.code === 'pen' || p.code === 'bacwater' || p.code === 'kit') {
+                trendBadge = '<span class="badge-sale" style="background:#0284C7;color:#fff;">🛠️ RECONSTITUTION SUPPLY</span>';
+            } else {
+                trendBadge = '<span class="badge-sale">-20% RESEARCH SALE</span>';
+            }
+
+            html += '<div class="product-card" id="card-' + p.id + '" style="display:flex;flex-direction:column;justify-content:space-between;">';
             html += '  <div>';
-            html += '    <div class="card-top-row">';
-            html += '      <span class="badge-sale">-20% SALE</span>';
-            html += '      <span class="badge-purity">HPLC ≥ ' + p.purity + '</span>';
+            html += '    <div class="card-top-row" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">';
+            html += '      ' + trendBadge;
+            html += '      <span class="badge-purity">HPLC ' + (p.purity.indexOf('99') !== -1 ? '≥ 99%' : 'VERIFIED') + '</span>';
             html += '    </div>';
 
             html += '    <div class="product-img-box" onclick="openProductModal(' + p.id + ')">';
-            html += '      <span class="click-hint">🔍 Click for Info</span>';
-            html += '      <img src="' + singleImg + '" alt="' + p.name + '" class="product-card-img" onerror="this.src=\'assets/images/products/' + p.code + '-vial.svg\';">';
+            html += '      <span class="click-hint">🔍 Analytical Specs</span>';
+            html += '      <img src="' + singleImg + '" alt="' + p.name + '" class="product-card-img" onerror="this.src=\'assets/images/products/' + p.code + '-photo.jpg\';">';
             html += '    </div>';
 
-            html += '    <div class="card-cat">' + p.cat_label + '</div>';
-            html += '    <h3 class="card-name" onclick="openProductModal(' + p.id + ')">' + p.name + '</h3>';
-            html += '    <div class="card-cas">LOT: ' + p.lot + ' &bull; Directions Enclosed</div>';
+            html += '    <div class="card-cat" style="font-size:11px;color:var(--primary);font-weight:800;letter-spacing:0.5px;text-transform:uppercase;margin:8px 0 4px;">' + p.cat_label + '</div>';
+            html += '    <h3 class="card-name" onclick="openProductModal(' + p.id + ')" style="cursor:pointer;font-size:16px;font-weight:800;color:var(--slate-900);line-height:1.3;margin:0 0 6px;">' + p.name + '</h3>';
+            html += '    <div class="card-cas" style="font-size:11.5px;color:var(--slate-500);margin-bottom:12px;">LOT: ' + p.lot + ' &bull; Directions Enclosed</div>';
             html += '  </div>';
 
-            html += '  <div class="card-action-row">';
-            html += '    <div>';
-            html += '      <span class="price-was">' + reg + '</span>';
-            html += '      <div class="price-now">' + sale + '</div>';
+            // Protocol Multi-Pack Selector (How people actually buy peptides)
+            html += '  <div>';
+            html += '    <div style="background:#F0FDF4;border:1px solid #D1FAE5;border-radius:8px;padding:8px 10px;margin-bottom:10px;">';
+            html += '      <div style="font-size:11px;font-weight:800;color:#065F46;margin-bottom:4px;display:flex;justify-content:space-between;">';
+            html += '        <span>PROTOCOL BUNDLE:</span>';
+            html += '        <span style="color:#059669;">Tiered Savings</span>';
+            html += '      </div>';
+            html += '      <select id="pack-select-' + p.id + '" onchange="updateCardPrice(' + p.id + ')" style="width:100%;padding:6px 8px;border-radius:6px;border:1.5px solid #A7F3D0;font-size:12px;font-weight:700;outline:none;background:#fff;color:#1F2937;">';
+            html += '        <option value="1">1x Single Unit &bull; Trial</option>';
+            html += '        <option value="3">3x Protocol Pack &bull; 10% Off</option>';
+            html += '        <option value="5" selected>5x Complete Cycle Box &bull; 15% Off</option>';
+            html += '        <option value="10">10x Research Bulk Kit &bull; 25% Off</option>';
+            html += '      </select>';
             html += '    </div>';
-            html += '    <div style="display:flex;align-items:center;">';
-            html += '      <button class="btn-info" onclick="openProductModal(' + p.id + ')">Info</button>';
-            html += '      <button class="btn-add" onclick="addToCart(' + p.id + ', 1)">Buy</button>';
+
+            html += '    <div class="card-action-row" style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--slate-100);">';
+            html += '      <div>';
+            html += '        <span class="price-was" id="card-reg-' + p.id + '" style="font-size:12px;color:var(--slate-400);text-decoration:line-through;">$' + (p.reg_usd * 5).toFixed(2) + '</span>';
+            html += '        <div class="price-now" id="card-sale-' + p.id + '" style="font-size:20px;font-weight:900;color:var(--primary);">$' + ((p.sale_usd * 5) * 0.85).toFixed(2) + '</div>';
+            html += '      </div>';
+            html += '      <div style="display:flex;align-items:center;gap:6px;">';
+            html += '        <button class="btn-info" onclick="openProductModal(' + p.id + ')" style="padding:8px 12px;font-size:12px;cursor:pointer;">Specs</button>';
+            html += '        <button class="btn-add" onclick="buyFromCard(' + p.id + ')" style="padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;background:var(--primary);color:#fff;border:none;border-radius:6px;">Buy &rarr;</button>';
+            html += '      </div>';
             html += '    </div>';
             html += '  </div>';
 
@@ -2744,6 +2786,62 @@
 
         container.innerHTML = html;
     }
+
+    function updateCardPrice(id) {
+        var p = products.find(function(x) { return x.id === id; });
+        if (!p) return;
+        var select = document.getElementById('pack-select-' + id);
+        if (!select) return;
+
+        var count = parseInt(select.value) || 1;
+        var discount = 1.0;
+        if (count === 3) discount = 0.90;      // 10% off
+        else if (count === 5) discount = 0.85; // 15% off
+        else if (count === 10) discount = 0.75;// 25% off
+
+        var totalSale = (p.sale_usd * count * discount).toFixed(2);
+        var totalReg = (p.reg_usd * count).toFixed(2);
+
+        var regEl = document.getElementById('card-reg-' + id);
+        var saleEl = document.getElementById('card-sale-' + id);
+        if (regEl) regEl.innerText = '$' + totalReg;
+        if (saleEl) saleEl.innerText = '$' + totalSale;
+    }
+
+    function buyFromCard(id) {
+        var p = products.find(function(x) { return x.id === id; });
+        if (!p) return;
+        var select = document.getElementById('pack-select-' + id);
+        var count = select ? (parseInt(select.value) || 1) : 1;
+        
+        var discount = 1.0;
+        var packLabel = "Single Unit";
+        if (count === 3) { discount = 0.90; packLabel = "3-Pack Protocol (10% Off)"; }
+        else if (count === 5) { discount = 0.85; packLabel = "5-Pack Cycle Box (15% Off)"; }
+        else if (count === 10) { discount = 0.75; packLabel = "10-Pack Bulk Kit (25% Off)"; }
+
+        var discountedPrice = p.sale_usd * discount;
+        
+        // Add to cart with pack details
+        var existing = cart.find(function(item) { return item.id === id && item.packCount === count; });
+        if (existing) {
+            existing.qty += 1;
+        } else {
+            var itemImg = (p.images && p.images.length > 0) ? p.images[0] : 'assets/images/products/' + p.code + '-photo.jpg';
+            cart.push({
+                id: p.id,
+                code: p.code,
+                name: p.name + ' [' + packLabel + ']',
+                price: discountedPrice * count,
+                image: itemImg,
+                qty: 1,
+                packCount: count
+            });
+        }
+        updateCartUI();
+        openCart();
+    }
+
 
 // Single picture display active — carousel navigation removed per specification
 
@@ -3382,6 +3480,7 @@
 
     // Initialize state on window load
     window.addEventListener('load', function() {
+        initStore();
         initAuthState();
         updateCartUI();
     });
