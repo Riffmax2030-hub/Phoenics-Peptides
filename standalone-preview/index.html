@@ -1727,6 +1727,207 @@
         .protocol-cards-grid { grid-template-columns: 1fr; gap: 20px; }
     }
 
+    
+    /* ── 4-COLUMN ENLARGED PRODUCT GRID (SwissChems style) ── */
+    .products-main-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 28px !important;
+        margin-top: 24px !important;
+    }
+    @media (max-width: 1240px) {
+        .products-main-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 22px !important; }
+    }
+    @media (max-width: 880px) {
+        .products-main-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; }
+    }
+    @media (max-width: 540px) {
+        .products-main-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+    }
+
+    /* ── BOLD 2D POP-OUT PRODUCT CARDS ── */
+    .pcard {
+        background: var(--white) !important;
+        border: 2.5px solid #e2e8f0 !important;
+        border-radius: 22px !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+        transition: transform 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.25s ease, box-shadow 0.25s ease !important;
+        overflow: hidden !important;
+        cursor: pointer !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .pcard:hover {
+        transform: translateY(-8px) scale(1.02) !important;
+        border-color: var(--green) !important;
+        box-shadow: 0 20px 40px rgba(5, 150, 105, 0.18) !important;
+    }
+    .pcard-img-wrap {
+        background: #f0fdf4 !important;
+        padding: 24px 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 250px !important;
+        border-bottom: 2px solid #d1fae5 !important;
+        position: relative !important;
+    }
+    .pcard-img {
+        max-height: 215px !important;
+        width: auto !important;
+        object-fit: contain !important;
+        filter: drop-shadow(0 10px 18px rgba(0,0,0,0.10)) !important;
+        transition: transform 0.35s ease !important;
+    }
+    .pcard:hover .pcard-img {
+        transform: scale(1.08) !important;
+    }
+    .pcard-body {
+        padding: 22px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 !important;
+        gap: 8px !important;
+    }
+    .pcard-name {
+        font-size: 17.5px !important;
+        font-weight: 800 !important;
+        color: var(--dark) !important;
+        line-height: 1.3 !important;
+    }
+    .pcard-sub {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: var(--gray) !important;
+    }
+    .pcard-points {
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        color: var(--green) !important;
+        background: var(--green-light) !important;
+        display: inline-block !important;
+        padding: 3px 8px !important;
+        border-radius: 6px !important;
+        width: fit-content !important;
+    }
+    .pcard-pack {
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        padding: 9px 12px !important;
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 12px !important;
+        background: #fff !important;
+        margin-top: 4px !important;
+        outline: none !important;
+        cursor: pointer !important;
+        transition: border-color 0.2s !important;
+    }
+    .pcard-pack:hover, .pcard-pack:focus {
+        border-color: var(--green) !important;
+    }
+    .pcard-price {
+        font-size: 22px !important;
+        font-weight: 900 !important;
+        color: var(--green) !important;
+    }
+    .pcard-was {
+        font-size: 14px !important;
+        color: var(--gray) !important;
+        text-decoration: line-through !important;
+        margin-right: 6px !important;
+    }
+    .btn-cart {
+        background: var(--green) !important;
+        color: #fff !important;
+        border: none !important;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 12px !important;
+        font-size: 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        box-shadow: 0 4px 12px rgba(5,150,105,0.25) !important;
+        transition: all 0.2s !important;
+    }
+    .btn-cart:hover {
+        background: var(--green-dark) !important;
+        transform: scale(1.08) !important;
+    }
+
+    /* ── BOLD 2D POP-OUT MODALS & DRAWERS ── */
+    .product-modal-box {
+        background: var(--white) !important;
+        border: 2.5px solid var(--green) !important;
+        border-radius: 28px !important;
+        box-shadow: 0 30px 70px rgba(0,0,0,0.28) !important;
+        padding: 38px !important;
+        animation: modalPopOut 0.32s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    }
+    @keyframes modalPopOut {
+        from { transform: scale(0.92) translateY(20px); opacity: 0; }
+        to { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .auth-box {
+        border-radius: 28px !important;
+        border: 2.5px solid var(--green) !important;
+        box-shadow: 0 30px 70px rgba(0,0,0,0.28) !important;
+        overflow: hidden !important;
+    }
+    .contact-modal-box {
+        border-radius: 28px !important;
+        border: 2.5px solid var(--green) !important;
+        box-shadow: 0 30px 70px rgba(0,0,0,0.28) !important;
+    }
+    .cart-drawer {
+        border-top-left-radius: 28px !important;
+        border-bottom-left-radius: 28px !important;
+        border-left: 3px solid var(--green) !important;
+        box-shadow: -10px 0 40px rgba(0,0,0,0.20) !important;
+    }
+    .chat-window {
+        border-radius: 24px !important;
+        border: 2.5px solid var(--green) !important;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.22) !important;
+    }
+
+    /* ── ENLARGED 5 CATEGORY FILTER PILLS ── */
+    .filter-pills {
+        display: flex !important;
+        gap: 16px !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        margin-bottom: 38px !important;
+    }
+    .filter-pill {
+        font-family: var(--font) !important;
+        font-size: 16.5px !important;
+        font-weight: 800 !important;
+        padding: 13px 32px !important;
+        border-radius: 99px !important;
+        border: 2px solid #e2e8f0 !important;
+        background: var(--white) !important;
+        color: var(--dark) !important;
+        cursor: pointer !important;
+        transition: all 0.22s ease !important;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.04) !important;
+    }
+    .filter-pill:hover {
+        border-color: var(--green) !important;
+        background: var(--green-light) !important;
+        color: var(--green-dark) !important;
+        transform: translateY(-3px) !important;
+        box-shadow: 0 6px 16px rgba(5,150,105,0.15) !important;
+    }
+    .filter-pill.active {
+        background: var(--green) !important;
+        color: var(--white) !important;
+        border-color: var(--green) !important;
+        box-shadow: 0 6px 20px rgba(5,150,105,0.35) !important;
+        transform: translateY(-2px) !important;
+    }
+
     </style>
 </head>
 <body>
@@ -1827,7 +2028,7 @@
         </div>
         <div class="hero-right">
             <div class="hero-stage-wrap">
-                <img class="hero-stage-img" src="assets/images/hero-lab-stage.png" alt="Phoenix Chems Laboratory Compound Showcase" title="Phoenix Chems Research Compounds">
+                <img class="hero-stage-img" src="assets/images/hero-phoenix-stage.png" alt="Phoenix Chems Laboratory Compound Showcase" title="Phoenix Chems Research Compounds">
             </div>
         </div>
     </div>
@@ -2066,14 +2267,11 @@
 
         <!-- Filter Pills -->
         <div class="filter-pills">
-            <button class="filter-pill active" onclick="setFilter('all',this)">All Products (25)</button>
-            <button class="filter-pill" onclick="setFilter('weight-loss',this)">Metabolics &amp; Incretins (5)</button>
-            <button class="filter-pill" onclick="setFilter('anti-aging',this)">Longevity &amp; Cellular (4)</button>
-            <button class="filter-pill" onclick="setFilter('healing',this)">Healing &amp; Recovery (3)</button>
-            <button class="filter-pill" onclick="setFilter('cognitive',this)">Nootropics &amp; Capsules (3)</button>
-            <button class="filter-pill" onclick="setFilter('vitality',this)">GH &amp; Vitality (3)</button>
-            <button class="filter-pill" onclick="setFilter('supplies',this)">Supplies &amp; Needles (4)</button>
-            <button class="filter-pill" onclick="setFilter('bulk',this)">Bulk &amp; Arrays (3)</button>
+            <button class="filter-pill active" onclick="setFilter('all',this)">All Peptides</button>
+            <button class="filter-pill" onclick="setFilter('weight-loss',this)">Metabolics</button>
+            <button class="filter-pill" onclick="setFilter('anti-aging',this)">Longevity</button>
+            <button class="filter-pill" onclick="setFilter('healing',this)">Healing &amp; Recovery</button>
+            <button class="filter-pill" onclick="setFilter('cognitive',this)">Nootropics</button>
         </div>
 
         <!-- Single Clean Product Grid Showing All 25 Products with 2D Photos -->
@@ -3142,6 +3340,18 @@ function updateCartCount() {
     if (!badge) return;
     var count = (typeof cart !== 'undefined' && Array.isArray(cart)) ? cart.reduce(function(a, item) { return a + item.qty; }, 0) : 0;
     badge.textContent = count;
+}
+
+
+// ── SECURITY & INPUT SANITIZATION ───────────────────────────────────────────
+function escapeHTML(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
 }
 
 function initStore() {
