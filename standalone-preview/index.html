@@ -1630,6 +1630,103 @@
         gap: 22px;
     }
 
+    
+    /* ── HERO LAB STAGE SHOWCASE (SwissChems style) ── */
+    .hero-stage-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-stage-img {
+        width: 100%;
+        max-height: 480px;
+        object-fit: contain;
+        border-radius: 16px;
+        filter: drop-shadow(0 20px 30px rgba(0,0,0,0.12));
+        transition: transform 0.4s ease;
+        cursor: pointer;
+    }
+    .hero-stage-img:hover {
+        transform: scale(1.04);
+    }
+
+    /* ── PRODUCTS MAIN GRID ── */
+    .products-main-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 24px;
+        margin-top: 10px;
+    }
+
+    /* ── LARGE PROTOCOL CARDS ── */
+    .protocol-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        margin-top: 40px;
+    }
+    .protocol-card {
+        background: var(--white);
+        border: 2px solid var(--border);
+        border-radius: 18px;
+        padding: 36px 28px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .protocol-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--green);
+        box-shadow: 0 12px 32px rgba(5,150,105,0.15);
+    }
+    .proto-icon-box {
+        width: 80px;
+        height: 80px;
+        background: var(--green-light);
+        border: 2px solid var(--green-mid);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+        transition: transform 0.3s ease;
+    }
+    .protocol-card:hover .proto-icon-box {
+        transform: scale(1.08);
+        background: #dcfce7;
+    }
+    .proto-card-title {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--dark);
+        line-height: 1.25;
+    }
+    .proto-card-desc {
+        font-size: 14px;
+        color: var(--gray);
+        line-height: 1.65;
+        flex: 1;
+    }
+    .proto-badge {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--green-dark);
+        background: var(--green-light);
+        border: 1px solid var(--green-mid);
+        padding: 5px 14px;
+        border-radius: 99px;
+        letter-spacing: 0.3px;
+    }
+    @media (max-width: 1024px) {
+        .protocol-cards-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+
     </style>
 </head>
 <body>
@@ -1729,14 +1826,8 @@
             </div>
         </div>
         <div class="hero-right">
-            <div class="hero-showcase">
-                <!-- Large product mix covering right half of hero -->
-                <!-- 1. BPC-157 Glass Vial with visible powder cake -->
-                <img class="hero-showcase-item hsi-vial" src="assets/images/products/bpc157-photo.jpg" alt="BPC-157 Peptide Vial" title="BPC-157 5mg Vial" onclick="openProductModal(9)">
-                <!-- 2. Amber research supplement bottle -->
-                <img class="hero-showcase-item hsi-amber" src="assets/images/products/nad-photo.jpg" alt="NAD+ Research Formula" title="NAD+ 500mg" onclick="openProductModal(23)">
-                <!-- 3. Large foreground capsule jar with visible capsules -->
-                <img class="hero-showcase-item hsi-capsule" src="assets/images/products/mk677-photo.jpg" alt="MK-677 Capsules" title="MK-677 Ibutamoren 60 Capsules" onclick="openProductModal(12)">
+            <div class="hero-stage-wrap">
+                <img class="hero-stage-img" src="assets/images/hero-lab-stage.png" alt="Phoenix Chems Laboratory Compound Showcase" title="Phoenix Chems Research Compounds">
             </div>
         </div>
     </div>
@@ -1973,7 +2064,7 @@
             <div class="section-underline"></div>
         </div>
 
-        <!-- Quick Filter Pills -->
+        <!-- Filter Pills -->
         <div class="filter-pills">
             <button class="filter-pill active" onclick="setFilter('all',this)">All Products (25)</button>
             <button class="filter-pill" onclick="setFilter('weight-loss',this)">Metabolics &amp; Incretins (5)</button>
@@ -1985,103 +2076,8 @@
             <button class="filter-pill" onclick="setFilter('bulk',this)">Bulk &amp; Arrays (3)</button>
         </div>
 
-        <!-- Single Filtered Grid (when specific pill clicked) -->
-        <div id="filtered-container-wrap" style="display:none;margin-bottom:40px;">
-            <div class="shelf-header">
-                <h3 class="shelf-title" id="filtered-shelf-title">Filtered Compounds</h3>
-                <button onclick="setFilter('all')" class="btn-outline" style="font-size:12px;padding:6px 14px;">Show All Categories</button>
-            </div>
-            <div id="products-container" class="shelf-grid"></div>
-        </div>
-
-        <!-- PERMANENT CATEGORY SHELVES (Arranged cleanly into categories) -->
-        <div id="permanent-shelves-wrap">
-
-            <!-- Shelf 1: Metabolics & Incretins -->
-            <div class="category-shelf" id="shelf-metabolics">
-                <div class="shelf-header">
-                    <h3 class="shelf-title">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="12" cy="4" r="2.5"/><circle cx="20" cy="12" r="2.5"/><circle cx="12" cy="20" r="2.5"/><circle cx="4" cy="12" r="2.5"/><path d="M14.5 4a8 8 0 0 1 4.5 4.5"/><path d="M20 14.5a8 8 0 0 1-4.5 4.5"/><path d="M9.5 20a8 8 0 0 1-4.5-4.5"/><path d="M4 9.5a8 8 0 0 1 4.5-4.5"/></svg>
-                        Metabolics &amp; Incretins
-                    </h3>
-                    <span class="shelf-count">5 Compounds</span>
-                </div>
-                <div class="shelf-grid" id="grid-metabolics"></div>
-            </div>
-
-            <!-- Shelf 2: Longevity & Cellular Repair -->
-            <div class="category-shelf" id="shelf-longevity">
-                <div class="shelf-header">
-                    <h3 class="shelf-title">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21.5 12A9.5 9.5 0 1 1 18.7 5.3L21.5 5"/><polyline points="21.5 1 21.5 5 17.5 5"/><path d="M8 8h8l-3 4 3 4H8l3-4-3-4z"/></svg>
-                        Longevity &amp; Cellular Repair
-                    </h3>
-                    <span class="shelf-count">4 Compounds</span>
-                </div>
-                <div class="shelf-grid" id="grid-longevity"></div>
-            </div>
-
-            <!-- Shelf 3: Healing & Tissue Recovery -->
-            <div class="category-shelf" id="shelf-healing">
-                <div class="shelf-header">
-                    <h3 class="shelf-title">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 2C8 5 7 9 9 12c2 3 6 4 9 2-1-4-3-7-6-12z"/><path d="M2 17c3-4 7-5 10-3 3 2 4 6 2 9-4-1-7-3-12-6z"/><path d="M19 19c1-4 0-8-3-10-3-2-7-1-9 2 3 3 5 6 12 8z"/></svg>
-                        Healing &amp; Tissue Recovery
-                    </h3>
-                    <span class="shelf-count">3 Protocols</span>
-                </div>
-                <div class="shelf-grid" id="grid-healing"></div>
-            </div>
-
-            <!-- Shelf 4: Nootropics & Capsules -->
-            <div class="category-shelf" id="shelf-nootropics">
-                <div class="shelf-header">
-                    <h3 class="shelf-title">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="6" y="7" width="12" height="14" rx="2.5"/><path d="M9 3h6v4H9z"/><path d="M12 10.5v6"/><path d="M9.5 12.5a2.5 2.5 0 0 1 2.5-2 2.5 2.5 0 0 1 2.5 2"/></svg>
-                        Nootropics &amp; Capsules
-                    </h3>
-                    <span class="shelf-count">3 Formulations</span>
-                </div>
-                <div class="shelf-grid" id="grid-nootropics"></div>
-            </div>
-
-            <!-- Shelf 5: GH & Vitality -->
-            <div class="category-shelf" id="shelf-vitality">
-                <div class="shelf-header">
-                    <h3 class="shelf-title">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polygon points="12 2 15.5 4 15.5 8 12 10 8.5 8 8.5 4"/><polygon points="6.5 11 10 13 10 17 6.5 19 3 17 3 13"/><polygon points="17.5 11 21 13 21 17 17.5 19 14 17 14 13"/><line x1="12" y1="10" x2="6.5" y2="11"/><line x1="12" y1="10" x2="17.5" y2="11"/></svg>
-                        Growth Hormone &amp; Vitality
-                    </h3>
-                    <span class="shelf-count">3 Peptides</span>
-                </div>
-                <div class="shelf-grid" id="grid-vitality"></div>
-            </div>
-
-            <!-- Shelf 6: Delivery Systems & Supplies -->
-            <div class="category-shelf" id="shelf-supplies">
-                <div class="shelf-header">
-                    <h3 class="shelf-title">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                        Delivery Systems, Needles &amp; Supplies
-                    </h3>
-                    <span class="shelf-count">4 Essentials</span>
-                </div>
-                <div class="shelf-grid" id="grid-supplies"></div>
-            </div>
-
-            <!-- Shelf 7: Bulk & High-Throughput Arrays -->
-            <div class="category-shelf" id="shelf-bulk">
-                <div class="shelf-header">
-                    <h3 class="shelf-title">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-                        Bulk Lots &amp; Screening Libraries
-                    </h3>
-                    <span class="shelf-count">3 Research Lots</span>
-                </div>
-                <div class="shelf-grid" id="grid-bulk"></div>
-            </div>
-
-        </div>
+        <!-- Single Clean Product Grid Showing All 25 Products with 2D Photos -->
+        <div id="products-container" class="products-main-grid"></div>
     </div>
 </section>
 
@@ -2236,24 +2232,7 @@
     </div>
 </section>
 
-<!-- ══ SHIPPING SECTION ══════════════════════════════════════════ -->
-<section class="section" id="shipping-section">
-    <div class="container" style="max-width:840px">
-        <div class="section-head">
-            <h2 class="section-title">Shipping &amp; Delivery</h2>
-            <div class="section-underline"></div>
-        </div>
-        <table class="ship-table">
-            <thead><tr><th>Region</th><th>Shipping Service</th><th>Rate</th><th>Free Shipping</th></tr></thead>
-            <tbody>
-                <tr><td>🇺🇸 United States</td><td>Same-Day Dispatch Cold-Chain</td><td>$15.00</td><td>Free over $150</td></tr>
-                <tr><td>🇨🇦 Canada</td><td>Priority Cold-Chain Delivery</td><td>$25.00</td><td>Free over $300</td></tr>
-                <tr><td>🌍 International</td><td>Worldwide Discrete Tracked</td><td>$45.00</td><td>Free over $300</td></tr>
-            </tbody>
-        </table>
-        <p style="font-size:13px;color:var(--gray);margin-top:16px;line-height:1.7">* All orders placed by 2:00 PM EST qualify for Same-Day Dispatch. Medical-grade temperature-shielded cold packaging is included with every shipment at no extra charge. Full blockchain transaction confirmation and tracking number provided via email.</p>
-    </div>
-</section>
+
 
 <!-- ══ PURITY / QA SECTION ══════════════════════════════════════ -->
 <section class="section section-alt" id="qa-section">
@@ -2311,28 +2290,69 @@
 </section>
 
 <!-- ══ PROTOCOLS SECTION ══════════════════════════════════════ -->
-<section class="section section-alt" id="protocols-section">
-    <div class="container" style="max-width:800px">
+<section class="section" id="protocols-section">
+    <div class="container">
         <div class="section-head">
             <h2 class="section-title">Research Protocols</h2>
             <div class="section-underline"></div>
+            <p style="color:var(--gray);font-size:15px;max-width:680px;margin:12px auto 0;line-height:1.7">All protocols are for laboratory and research use only. Review standard research handling and supply parameters below.</p>
         </div>
-        <p style="text-align:center;color:var(--gray);font-size:15px;margin-bottom:32px">All protocols are for <strong>laboratory and research use only</strong>. Select a compound category below to view suggested research administration parameters.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px">
-            <div class="cat-tile" style="cursor:default">
-                <div class="cat-icon-wrap" style="font-size:22px">💉</div>
-                <div class="cat-label">Reconstitution Included</div>
-                <div style="font-size:12px;color:var(--gray);text-align:center">Step-by-step BAC water dilution guide shipped with every order</div>
+
+        <div class="protocol-cards-grid">
+            <!-- Protocol 1: Reconstitution Guide -->
+            <div class="protocol-card">
+                <div class="proto-icon-box">
+                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Vial outline with measurement level -->
+                        <rect x="7" y="5" width="10" height="16" rx="2"></rect>
+                        <path d="M9 2h6v3H9z"></path>
+                        <line x1="10" y1="10" x2="14" y2="10"></line>
+                        <line x1="10" y1="13" x2="13" y2="13"></line>
+                        <line x1="10" y1="16" x2="14" y2="16"></line>
+                        <!-- Syringe tip / droplet -->
+                        <path d="M17 3l4 4-2.5 2.5-4-4z"></path>
+                        <line x1="15" y1="5" x2="19" y2="9"></line>
+                        <line x1="13" y1="7" x2="12" y2="8"></line>
+                    </svg>
+                </div>
+                <h3 class="proto-card-title">Reconstitution Included</h3>
+                <p class="proto-card-desc">Step-by-step dilution and handling directions shipped with every order. Includes exact BAC water volume, reconstitution ratios, and U-100 syringe conversions.</p>
+                <div class="proto-badge">Directions With Every Shipment</div>
             </div>
-            <div class="cat-tile" style="cursor:default">
-                <div class="cat-icon-wrap" style="font-size:22px">📦</div>
-                <div class="cat-label">Protocol Packs Available</div>
-                <div style="font-size:12px;color:var(--gray);text-align:center">1x Trial · 3x Monthly · 5x Cycle · 10x Bulk</div>
+
+            <!-- Protocol 2: Protocol Multi-Packs -->
+            <div class="protocol-card">
+                <div class="proto-icon-box">
+                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- 3 Modular supply packages -->
+                        <rect x="2" y="3" width="9" height="8" rx="1.5"></rect>
+                        <rect x="13" y="3" width="9" height="8" rx="1.5"></rect>
+                        <rect x="7.5" y="13" width="9" height="8" rx="1.5"></rect>
+                        <line x1="6.5" y1="7" x2="6.51" y2="7" stroke-width="2.5"></line>
+                        <line x1="17.5" y1="7" x2="17.51" y2="7" stroke-width="2.5"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17" stroke-width="2.5"></line>
+                    </svg>
+                </div>
+                <h3 class="proto-card-title">Protocol Multi-Pack Tiers</h3>
+                <p class="proto-card-desc">Save up to 25% with flexible study sizing. Select from 1× Trial Pack, 3× Monthly Supply (10% off), 5× Full Research Cycle (15% off), or 10× Bulk (25% off).</p>
+                <div class="proto-badge">Save Up To 25% on Multi-Packs</div>
             </div>
-            <div class="cat-tile" style="cursor:default">
-                <div class="cat-icon-wrap" style="font-size:22px">🌡️</div>
-                <div class="cat-label">Cold-Chain Packaging</div>
-                <div style="font-size:12px;color:var(--gray);text-align:center">Lyophilized peptides remain stable at room temp for 90 days</div>
+
+            <!-- Protocol 3: Cold-Chain Monitored Packaging -->
+            <div class="protocol-card">
+                <div class="proto-icon-box">
+                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Insulated thermal shield with snowflake / temperature wave -->
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <line x1="12" y1="8" x2="12" y2="16"></line>
+                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                    </svg>
+                </div>
+                <h3 class="proto-card-title">Cold-Chain Monitored Packaging</h3>
+                <p class="proto-card-desc">Shipped in temperature-shielded insulated packaging. Lyophilized peptides remain 100% bio-active and stable at ambient temperature for up to 90 days.</p>
+                <div class="proto-badge">Insulated Cold Packaging</div>
             </div>
         </div>
     </div>
@@ -2392,7 +2412,7 @@
                 <div class="footer-col-title">Help &amp; Trust</div>
                 <ul class="footer-links">
                     <li><a href="#" onclick="openContactModal()" class="green">Contact Us</a></li>
-                    <li><a href="#shipping-section">Shipping</a></li>
+                    <li><a href="#faq-section">Shipping</a></li>
                     <li><a href="#faq-section">FAQs</a></li>
                     <li><a href="#" onclick="openContactModal()">Refund &amp; Return Policy</a></li>
                     <li><a href="#qa-section">Quality Assurance</a></li>
@@ -2674,7 +2694,7 @@
                 <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit" class="btn-red">Claim 10% Off</button>
             </form>
-            <div class="email-popup-skip" onclick="closeEmailPopup()">No thanks, I'll pay full price</div>
+            <div class="email-popup-skip" onclick="closeEmailPopup()">No thanks, I will pay full price</div>
         </div>
     </div>
 </div>
@@ -3058,8 +3078,8 @@
                 "assets/images/products/wolverine-photo.jpg"
             ],
             whop_url: "https://nowpayments.io/payment/?iid=5550403830"
-        }
-            {
+        },
+        {
             id: 25, code: "syringes", name: "BD Ultra-Fine™ 31G Precision Insulin Syringes (100-Pack)",
             category: "supplies", cat_label: "Delivery Systems & Supplies",
             cas: "MEDICAL-DEVICE", mw: "31G x 5/16\"", purity: "100% Sterile", lot: "BD-UF-31G",
@@ -3116,12 +3136,24 @@
         tbody.innerHTML = h;
     }
 
-    function initStore() {
-        renderAllCategoryShelves();
-        renderGuideTable();
-        renderProducts();
-        updateCartCount();
+    
+function updateCartCount() {
+    var badge = document.getElementById('header-cart-count');
+    if (!badge) return;
+    var count = (typeof cart !== 'undefined' && Array.isArray(cart)) ? cart.reduce(function(a, item) { return a + item.qty; }, 0) : 0;
+    badge.textContent = count;
+}
+
+function initStore() {
+    renderGuideTable();
+    renderProducts();
+    updateCartCount();
+    if (typeof initCarousel === 'function') {
+        initCarousel('popular', products.slice(0, 8));
+        initCarousel('category', products);
+        initCarousel('sale', products.filter(function(p) { return p.reg_usd > p.sale_usd; }));
     }
+}
 
         
     function scrollToProduct(id) {
@@ -3943,11 +3975,11 @@ function buildCarouselCard(p) {
     <div class="pcard" onclick="openProductModal(${p.id})">
         <div class="pcard-img-wrap">
             ${isSale ? '<span class="badge-sale">SALE</span>' : ''}
-            ${trending ? '<span class="badge-trending">🔥 HOT</span>' : ''}
-            <img class="pcard-img" src="${img}" alt="${name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+            ${trending ? '<span class="badge-trending">HOT</span>' : ''}
+            <img class="pcard-img" src="${img}" alt="${p.name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
         </div>
         <div class="pcard-body">
-            <div class="pcard-name">${name}</div>
+            <div class="pcard-name">${p.name}</div>
             <div class="pcard-sub">${p.cat_label || p.category}</div>
             <div class="pcard-points">Earn ${pts} Reward Points</div>
             ${isVial ? `
@@ -3961,7 +3993,7 @@ function buildCarouselCard(p) {
             <div class="pcard-pricing">
                 <div>
                     ${isSale ? `<span class="pcard-was">$${p.reg_usd.toFixed(2)}</span>` : ''}
-                    <span class="pcard-price">$${price.toFixed(2)}</span>
+                    <span class="pcard-price">$${p.sale_usd.toFixed(2)}</span>
                 </div>
                 <button class="btn-cart" onclick="event.stopPropagation();quickAddFromCard(${p.id})" title="Add to Cart">🛒</button>
             </div>
@@ -3989,102 +4021,48 @@ function slideCarousel(id, dir) {
 }
 
 
-// ── PERMANENT CATEGORY SHELF RENDERER ────────────────────────────────────────
-function renderAllCategoryShelves() {
-    // 1. Metabolics
-    var metaProds = products.filter(function(p) { return p.category === 'weight-loss'; });
-    var metaGrid = document.getElementById('grid-metabolics');
-    if (metaGrid) metaGrid.innerHTML = metaProds.map(renderSingleCard).join('');
 
-    // 2. Longevity
-    var longevProds = products.filter(function(p) { return p.category === 'anti-aging'; });
-    var longevGrid = document.getElementById('grid-longevity');
-    if (longevGrid) longevGrid.innerHTML = longevProds.map(renderSingleCard).join('');
+// ── RENDER PRODUCTS (Direct Instant Render of All 25 Products) ──────────────
+function renderProducts() {
+    var container = document.getElementById('products-container');
+    if (!container) return;
 
-    // 3. Healing
-    var healProds = products.filter(function(p) { return p.category === 'healing'; });
-    var healGrid = document.getElementById('grid-healing');
-    if (healGrid) healGrid.innerHTML = healProds.map(renderSingleCard).join('');
+    var filtered = products.filter(function(p) {
+        return currentFilter === 'all' || p.category === currentFilter;
+    });
 
-    // 4. Nootropics
-    var nooProds = products.filter(function(p) { return p.category === 'cognitive'; });
-    var nooGrid = document.getElementById('grid-nootropics');
-    if (nooGrid) nooGrid.innerHTML = nooProds.map(renderSingleCard).join('');
+    if (filtered.length === 0) {
+        container.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--gray);font-size:16px;">No products found in this category.</div>';
+        return;
+    }
 
-    // 5. Vitality & GH
-    var vitProds = products.filter(function(p) { return p.category === 'vitality' || p.category === 'muscle'; });
-    var vitGrid = document.getElementById('grid-vitality');
-    if (vitGrid) vitGrid.innerHTML = vitProds.map(renderSingleCard).join('');
+    container.innerHTML = filtered.map(renderSingleCard).join('');
+}
 
-    // 6. Supplies & Needles
-    var supProds = products.filter(function(p) { return p.category === 'supplies'; });
-    var supGrid = document.getElementById('grid-supplies');
-    if (supGrid) supGrid.innerHTML = supProds.map(renderSingleCard).join('');
-
-    // 7. Bulk
-    var bulkProds = products.filter(function(p) { return p.category === 'bulk'; });
-    var bulkGrid = document.getElementById('grid-bulk');
-    if (bulkGrid) bulkGrid.innerHTML = bulkProds.map(renderSingleCard).join('');
+function setFilter(cat, btn) {
+    currentFilter = cat;
+    document.querySelectorAll('.filter-pill').forEach(function(b) {
+        b.classList.remove('active');
+    });
+    if (btn) btn.classList.add('active');
+    renderProducts();
+    var catSection = document.getElementById('catalog-section');
+    if (catSection) catSection.scrollIntoView({ behavior: 'smooth' });
 }
 
 function scrollToCategoryShelf(catKey) {
-    var shelvesWrap = document.getElementById('permanent-shelves-wrap');
-    var filteredWrap = document.getElementById('filtered-container-wrap');
-    if (shelvesWrap) shelvesWrap.style.display = 'block';
-    if (filteredWrap) filteredWrap.style.display = 'none';
-
-    var targetId = 'catalog-section';
-    if (catKey === 'longevity') targetId = 'shelf-longevity';
-    else if (catKey === 'metabolics') targetId = 'shelf-metabolics';
-    else if (catKey === 'healing') targetId = 'shelf-healing';
-    else if (catKey === 'nootropics') targetId = 'shelf-nootropics';
-    else if (catKey === 'all') targetId = 'catalog-section';
-
-    var el = document.getElementById(targetId);
-    if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-}
-
-// Override setFilter to handle both all shelves view and specific category view
-function setFilter(cat, btn) {
-    currentFilter = cat;
-    document.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
-    if (btn) btn.classList.add('active');
-
-    var shelvesWrap = document.getElementById('permanent-shelves-wrap');
-    var filteredWrap = document.getElementById('filtered-container-wrap');
-
-    if (cat === 'all') {
-        if (shelvesWrap) shelvesWrap.style.display = 'block';
-        if (filteredWrap) filteredWrap.style.display = 'none';
-        renderAllCategoryShelves();
-    } else {
-        if (shelvesWrap) shelvesWrap.style.display = 'none';
-        if (filteredWrap) filteredWrap.style.display = 'block';
-        var filtered = products.filter(function(p) {
-            return p.category === cat;
-        });
-        var titleEl = document.getElementById('filtered-shelf-title');
-        if (titleEl) {
-            var labels = {
-                'weight-loss': 'Metabolics & Incretins',
-                'anti-aging': 'Longevity & Cellular Repair',
-                'healing': 'Healing & Tissue Recovery',
-                'cognitive': 'Nootropics & Cognitive Research',
-                'vitality': 'Growth Hormone & Vitality',
-                'muscle': 'Muscle & Anabolic Signaling',
-                'supplies': 'Delivery Systems, Needles & Supplies',
-                'bulk': 'Bulk Lots & Screening Libraries'
-            };
-            titleEl.textContent = labels[cat] || 'Selected Compounds';
-        }
-        var container = document.getElementById('products-container');
-        if (container) {
-            container.innerHTML = filtered.length ? filtered.map(renderSingleCard).join('') : '<p style="color:var(--gray);text-align:center;grid-column:1/-1;padding:40px">No products in this category.</p>';
-        }
-    }
-    document.getElementById('catalog-section').scrollIntoView({ behavior: 'smooth' });
+    var mapping = {
+        'longevity': 'anti-aging',
+        'metabolics': 'weight-loss',
+        'healing': 'healing',
+        'nootropics': 'cognitive',
+        'all': 'all'
+    };
+    var targetCat = mapping[catKey] || catKey;
+    var btn = Array.from(document.querySelectorAll('.filter-pill')).find(function(b) {
+        return b.getAttribute('onclick') && b.getAttribute('onclick').indexOf(targetCat) !== -1;
+    });
+    setFilter(targetCat, btn);
 }
 
 // ── CATEGORY FILTER INTEGRATION ─────────────────────────────────────────────
@@ -4257,7 +4235,7 @@ function submitNewsletter(e) {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email, source: 'newsletter' })
     });
-    e.target.innerHTML = '<p style="color:#fff;font-weight:700;font-size:18px">✅ You're subscribed! Welcome to the Phoenics community.</p>';
+    e.target.innerHTML = '<p style="color:#fff;font-weight:700;font-size:18px">✅ You are subscribed! Welcome to the Phoenics community.</p>';
 }
 
 // ── FAQ DATA ─────────────────────────────────────────────────────────────────
@@ -4299,11 +4277,11 @@ function renderSingleCard(p) {
     <div class="pcard" id="card-${p.id}" style="flex:none;width:100%" onclick="openProductModal(${p.id})">
         <div class="pcard-img-wrap">
             ${isSale ? '<span class="badge-sale">SALE</span>' : ''}
-            ${trending ? '<span class="badge-trending">🔥 TRENDING</span>' : ''}
-            <img class="pcard-img" src="${img}" alt="${name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+            ${trending ? '<span class="badge-trending">HOT</span>' : ''}
+            <img class="pcard-img" src="${img}" alt="${p.name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
         </div>
         <div class="pcard-body">
-            <div class="pcard-name">${name}</div>
+            <div class="pcard-name">${p.name}</div>
             <div class="pcard-sub">${p.cat_label || p.category}</div>
             <div class="pcard-points">Earn ${pts} Reward Points</div>
             <select class="pcard-pack" id="pack-${p.id}" onclick="event.stopPropagation()" onchange="updateCardPrice(${p.id})">
@@ -4323,7 +4301,7 @@ function renderSingleCard(p) {
             <div class="pcard-pricing">
                 <div>
                     ${isSale ? `<span class="pcard-was">$${p.reg_usd.toFixed(2)}</span>` : ''}
-                    <span class="pcard-price" id="price-${p.id}">$${price.toFixed(2)}</span>
+                    <span class="pcard-price" id="price-${p.id}">$${p.sale_usd.toFixed(2)}</span>
                 </div>
                 <button class="btn-cart" onclick="event.stopPropagation();buyFromCardWithNeedle(${p.id})" title="Add to Cart">🛒</button>
             </div>
@@ -4416,7 +4394,7 @@ function updateCheckoutTotals() {
 }
 
     // Permanent instant execution
-    renderAllCategoryShelves();
+    renderProducts();
 </script>
 </body>
 </html>
