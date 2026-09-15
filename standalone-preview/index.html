@@ -1928,7 +1928,97 @@
         transform: translateY(-2px) !important;
     }
 
-    </style>
+    
+    /* ── MODERN PRODUCT CARD ACTION BUTTON ── */
+    .pcard-btn-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        padding: 9px 16px;
+        font-size: 13px;
+        font-weight: 700;
+        font-family: inherit;
+        letter-spacing: 0.2px;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(5, 150, 105, 0.28);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        white-space: nowrap;
+    }
+    .pcard-btn-action:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(5, 150, 105, 0.42);
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    }
+    .pcard-btn-action:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 8px rgba(5, 150, 105, 0.2);
+    }
+    .pcard-btn-action.added {
+        background: #047857 !important;
+        box-shadow: 0 0 16px rgba(16, 185, 129, 0.6) !important;
+    }
+
+    /* ── SLEEK CART DRAWER QUANTITY STEPPER ── */
+    .drawer-qty-stepper {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
+        background: #f8fafc;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 2px 4px;
+    }
+    .drawer-qty-btn {
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        color: #1e293b;
+        font-size: 14px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.15s;
+    }
+    .drawer-qty-btn:hover {
+        background: #059669;
+        color: #ffffff;
+        border-color: #059669;
+    }
+    .drawer-qty-val {
+        font-size: 13px;
+        font-weight: 800;
+        color: #0f172a;
+        min-width: 22px;
+        text-align: center;
+    }
+    .drawer-remove-btn {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(239, 68, 68, 0.08);
+        border: 1px solid rgba(239, 68, 68, 0.2);
+        border-radius: 8px;
+        color: #ef4444;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.15s;
+    }
+    .drawer-remove-btn:hover {
+        background: #ef4444;
+        color: #ffffff;
+    }
+</style>
 
     <!-- Performance: preconnect and resource hints -->
     <link rel="dns-prefetch" href="https://nowpayments.io">
@@ -2020,10 +2110,7 @@
             <span class="brand-text-logo">PHOENIX<strong>CHEMS</strong></span>
         </a>
 
-        <!-- ══ RUO COMPLIANCE BANNER ══════════════════════════════════════ -->
-<div id="ruo-banner" style="background:#0f1f14;border-bottom:1px solid #064e3b;color:#6ee7b7;font-size:12px;font-weight:600;text-align:center;padding:7px 16px;letter-spacing:0.04em;font-family:var(--font);">
-    FOR LABORATORY &amp; SCIENTIFIC RESEARCH USE ONLY &nbsp;·&nbsp; NOT FOR HUMAN CONSUMPTION &nbsp;·&nbsp; 21+ ONLY &nbsp;·&nbsp; ALL PRODUCTS COMPLY WITH US FEDERAL RESEARCH CHEMICAL STANDARDS
-</div>
+        
 <nav aria-label="Main navigation">
             <ul class="site-nav">
                 <li><a href="#catalog-section"><span class="nav-dot active"></span> SHOP <span class="nav-chevron">▾</span></a></li>
@@ -2074,7 +2161,8 @@
         <a href="#qa-section" onclick="toggleMobileMenu()">Verify Purity</a>
         <hr>
         <div class="mp-label">Account</div>
-        <button onclick="toggleMobileMenu();openAuthModal()">Sign In / Register</button>
+        <button onclick="toggleMobileMenu();openAuthModal('signin')">Sign In</button>
+        <button onclick="toggleMobileMenu();openAuthModal('signup')">Register</button>
         <button onclick="toggleMobileMenu();openContactModal()">Contact Lab</button>
     </div>
 </div>
@@ -2978,18 +3066,18 @@
                 </div>
 
                 <!-- NOWPayments CTA -->
-                <button id="btn-nowpayments" onclick="launchNOWPayments()" style="
+                <a id="btn-nowpayments" href="#" onclick="launchNOWPayments(event)" style="
                     width:100%;background:linear-gradient(135deg,#059669,#047857);
                     color:#fff;border:none;border-radius:12px;
                     padding:16px;font-size:15px;font-weight:800;
                     cursor:pointer;font-family:inherit;
                     display:flex;align-items:center;justify-content:center;gap:10px;
                     box-shadow:0 4px 20px rgba(5,150,105,0.35);
-                    transition:all .2s;
+                    transition:all .2s;text-decoration:none;
                 " onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 28px rgba(5,150,105,0.45)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(5,150,105,0.35)'">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
                     Pay Now via NOWPayments
-                </button>
+                </a>
 
                 <p style="text-align:center;font-size:11.5px;color:#6b7280;margin-top:10px;line-height:1.6;">
                     Clicking will open NOWPayments secure checkout for the exact amount above. Choose any supported cryptocurrency. Payment confirmation sent to your email.
@@ -3016,7 +3104,7 @@
 
 <!-- ══ AUTH MODAL ══════════════════════════════════════════════ -->
 <div class="auth-overlay" id="auth-modal">
-    <div class="auth-box">
+    <div class="auth-box" style="position:relative;"><button class="btn-close-drawer auth-close" onclick="closeAuthModal()" style="position:absolute;top:14px;right:14px;z-index:10;">&times;</button>
         <div class="auth-left">
             <div class="auth-left-sub">RESEARCH-GRADE QUALITY</div>
             <h2 class="auth-left-h2">Third-Party Tested. 99% Purity Guaranteed.</h2>
@@ -3037,8 +3125,8 @@
         </div>
         <div class="auth-right">
             <div class="auth-tabs">
-                <div class="auth-tab active" onclick="switchAuthTab('signin')">Login</div>
-                <div class="auth-tab" onclick="switchAuthTab('signup')">Register</div>
+                <div class="auth-tab active" id="tab-btn-signin" onclick="switchAuthTab('signin')">Sign In</div>
+                <div class="auth-tab" id="tab-btn-signup" onclick="switchAuthTab('signup')">Register</div>
             </div>
             <div class="auth-form-wrap active" id="auth-signin-wrap">
                 <div class="form-group">
@@ -4076,6 +4164,25 @@ function updateCartCount() {
     if (badge) badge.textContent = count;
 }
 
+
+// ── CART QUANTITY STEPPERS & REMOVAL ──────────────────────────────────
+function changeCartQty(id, delta) {
+    var item = cart.find(function(x) { return x.id === id; });
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) {
+        cart = cart.filter(function(x) { return x.id !== id; });
+    }
+    updateCartUI();
+    if (typeof refreshCheckoutSummary === 'function') refreshCheckoutSummary();
+}
+
+function removeFromCart(id) {
+    cart = cart.filter(function(x) { return x.id !== id; });
+    updateCartUI();
+    if (typeof refreshCheckoutSummary === 'function') refreshCheckoutSummary();
+}
+
 function updateCartUI() {
     updateCartCount();
 
@@ -4101,14 +4208,14 @@ function updateCartUI() {
                 <img src="${itemImg}" alt="${itemName}" style="width:54px;height:54px;object-fit:contain;background:#f0fdf4;border-radius:12px;padding:4px;border:1.5px solid #d1fae5;" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'" loading="lazy" decoding="async">
                 <div style="flex:1;min-width:0;">
                     <div style="font-size:13.5px;font-weight:800;color:var(--dark);line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${itemName}">${itemName}</div>
-                    <div style="font-size:13px;color:var(--green);font-weight:800;margin-top:2px;">$${itemPrice.toFixed(2)} each</div>
+                    <div style="font-size:13px;color:var(--green);font-weight:800;margin-top:2px;">$${itemPrice.toFixed(2)} × ${item.qty} = <span style="color:#0f172a;">$${itemTotal}</span></div>
                 </div>
-                <div style="display:flex;align-items:center;gap:6px;">
-                    <button onclick="changeCartQty(${item.id}, -1)" style="width:26px;height:26px;background:#f3f4f6;border:1px solid #d1d5db;border-radius:6px;cursor:pointer;font-weight:800;">-</button>
-                    <span style="font-size:13px;font-weight:800;min-width:18px;text-align:center;">${item.qty}</span>
-                    <button onclick="changeCartQty(${item.id}, 1)" style="width:26px;height:26px;background:#f3f4f6;border:1px solid #d1d5db;border-radius:6px;cursor:pointer;font-weight:800;">+</button>
+                <div class="drawer-qty-stepper">
+                    <button class="drawer-qty-btn" onclick="changeCartQty(${item.id}, -1)" title="Decrease">−</button>
+                    <span class="drawer-qty-val">${item.qty}</span>
+                    <button class="drawer-qty-btn" onclick="changeCartQty(${item.id}, 1)" title="Increase">+</button>
                 </div>
-                <button onclick="removeFromCart(${item.id})" style="background:none;border:none;color:#ef4444;font-size:18px;cursor:pointer;padding:4px;font-weight:bold;" title="Remove">&times;</button>
+                <button class="drawer-remove-btn" onclick="removeFromCart(${item.id})" title="Remove item">&times;</button>
             </div>`;
         }).join('');
     }
@@ -4280,6 +4387,28 @@ function goToPaymentStep() {
         '<span>TOTAL</span><span>$' + window.pendingOrder.total.toFixed(2) + '</span></div>';
     }
 
+    // Precompute NOWPayments direct URL
+    var total = window.pendingOrder.total.toFixed(2);
+    var desc = window.pendingOrder.cart.map(function(i) { return (i.qty || 1) + 'x ' + (i.name || ''); }).join(', ');
+    var shortDesc = desc.length > 200 ? desc.substring(0, 197) + '...' : desc;
+
+    var payUrl = 'https://nowpayments.io/payment?' +
+        'apiKey=' + encodeURIComponent(NOWPAYMENTS_API_KEY) +
+        '&amount=' + encodeURIComponent(total) +
+        '&currency=usd' +
+        '&order_id=' + encodeURIComponent(orderId) +
+        '&order_description=' + encodeURIComponent('Phoenix Chems Order ' + orderId + ': ' + shortDesc);
+
+    window.pendingOrder.payUrl = payUrl;
+
+    var payBtn = document.getElementById('btn-nowpayments');
+    if (payBtn) {
+        payBtn.setAttribute('href', payUrl);
+        payBtn.setAttribute('target', '_blank');
+        payBtn.setAttribute('rel', 'noopener noreferrer');
+        payBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg> Pay Now via NOWPayments ($' + total + ') &rarr;';
+    }
+
     // Switch to payment step
     document.getElementById('checkout-step-form').style.display = 'none';
     document.getElementById('checkout-step-payment').style.display = 'block';
@@ -4290,39 +4419,17 @@ function backToFormStep() {
     document.getElementById('checkout-step-payment').style.display = 'none';
 }
 
-function launchNOWPayments() {
-    if (!window.pendingOrder) { alert('Order details missing. Please go back and fill the form.'); return; }
+function launchNOWPayments(e) {
+    if (!window.pendingOrder) {
+        if (e) e.preventDefault();
+        alert('Order details missing. Please go back and fill the form.');
+        return;
+    }
 
     var order = window.pendingOrder;
     var total = order.total.toFixed(2);
     var orderId = order.id;
-    var desc = order.cart.map(function(i) { return i.qty + 'x ' + i.name; }).join(', ');
-    var shortDesc = desc.length > 200 ? desc.substring(0, 197) + '...' : desc;
-
-    // Build NOWPayments hosted payment URL with cart total
-    // Replace NOWPAYMENTS_API_KEY with your key from nowpayments.io dashboard
-    var payUrl;
-    if (NOWPAYMENTS_API_KEY && NOWPAYMENTS_API_KEY !== 'REPLACE_WITH_YOUR_NOWPAYMENTS_API_KEY') {
-        payUrl = 'https://nowpayments.io/payment?' +
-            'apiKey=' + encodeURIComponent(NOWPAYMENTS_API_KEY) +
-            '&amount=' + encodeURIComponent(total) +
-            '&currency=usd' +
-            '&order_id=' + encodeURIComponent(orderId) +
-            '&order_description=' + encodeURIComponent('Phoenix Chems Order ' + orderId + ': ' + shortDesc);
-    } else {
-        // Fallback: open NOWPayments invoice base URL (user contacts to complete)
-        payUrl = '';
-        // Show amount instructions overlay on top
-        var btn = document.getElementById('btn-nowpayments');
-        if (btn) {
-            btn.insertAdjacentHTML('afterend',
-                '<div style="background:#fffbeb;border:1px solid #f59e0b;border-radius:8px;padding:12px 14px;margin-top:10px;font-size:12px;color:#92400e;">' +
-                '<strong>Note:</strong> Set your NOWPayments API key in the site JS to enable direct $' + total + ' cart payment. ' +
-                'Current fallback opens general payment page — please mention order <strong>' + orderId + '</strong> and amount <strong>$' + total + '</strong>.' +
-                '</div>'
-            );
-        }
-    }
+    var payUrl = order.payUrl || ('https://nowpayments.io/payment?apiKey=' + encodeURIComponent(NOWPAYMENTS_API_KEY) + '&amount=' + encodeURIComponent(total) + '&currency=usd&order_id=' + encodeURIComponent(orderId));
 
     // Save order to Phoenix Chems database
     // Save order to Local Vault (Resilient storage for admin portal)
@@ -4370,23 +4477,18 @@ function launchNOWPayments() {
         console.log('DB save skipped (offline/static mode) — order:', orderId);
     });
 
-    // Open NOWPayments in new tab
-    window.open(payUrl, '_blank', 'noopener,noreferrer');
+    // Direct unblocked navigation + Fallback UI
+    var payBtn = document.getElementById('btn-nowpayments');
+    if (payBtn) {
+        payBtn.innerHTML = '<span>Opening Secure NOWPayments Portal...</span>';
+        payBtn.style.opacity = '0.7';
+        payBtn.disabled = true;
+    }
 
-    // Show confirmation UI after launch
+    // Direct top-level navigation (immune to popup blockers)
     setTimeout(function() {
-        var step2 = document.getElementById('checkout-step-payment');
-        if (step2) {
-            step2.insertAdjacentHTML('beforeend',
-                '<div style="background:#f0fdf4;border:1.5px solid #059669;border-radius:10px;padding:16px;margin-top:14px;text-align:center;">' +
-                '<div style="font-size:20px;font-weight:800;color:#059669;margin-bottom:6px;">Payment Window Opened</div>' +
-                '<p style="font-size:13px;color:#374151;margin-bottom:10px;">Complete payment in the NOWPayments tab. Your order reference is <strong style="font-family:monospace;color:#059669;">' + orderId + '</strong>.</p>' +
-                '<p style="font-size:12px;color:#6b7280;">Once paid, email your payment confirmation + order ID to <strong>support@phoenixchems.com</strong>. We dispatch within 24h.</p>' +
-                '<button onclick="closeCheckout();cart=[];updateCartUI();" style="margin-top:12px;background:#059669;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-weight:700;cursor:pointer;font-family:inherit;">Done — Close & Return to Store</button>' +
-                '</div>'
-            );
-        }
-    }, 1500);
+        window.location.href = payUrl;
+    }, 400);
 }
 
 function submitOrder(e) {
@@ -4428,38 +4530,42 @@ function submitOrder(e) {
         }
     }
 
-    function openAuthModal(tab) {
-        tab = tab || 'signin';
+    
+// ── AUTHENTICATION MODAL ENGINE ────────────────────────────────────────
+function openAuthModal(tab) {
+    tab = tab || 'signin';
+    var modal = document.getElementById('auth-modal');
+    if (modal) {
+        modal.classList.add('open');
         switchAuthTab(tab);
-        document.getElementById('auth-modal').classList.add('active');
     }
+}
 
-    function closeAuthModal(e) {
-        if (e && e.target !== document.getElementById('auth-modal')) return;
-        document.getElementById('auth-modal').classList.remove('active');
+function closeAuthModal(e) {
+    if (e && e.target !== document.getElementById('auth-modal') && !e.target.classList.contains('auth-close')) return;
+    var modal = document.getElementById('auth-modal');
+    if (modal) modal.classList.remove('open');
+}
+
+function switchAuthTab(tab) {
+    var signinTab = document.getElementById('tab-btn-signin');
+    var signupTab = document.getElementById('tab-btn-signup');
+    var signinWrap = document.getElementById('auth-signin-wrap');
+    var signupWrap = document.getElementById('auth-signup-wrap');
+
+    if (tab === 'signup') {
+        if (signinTab) signinTab.classList.remove('active');
+        if (signupTab) signupTab.classList.add('active');
+        if (signinWrap) signinWrap.classList.remove('active');
+        if (signupWrap) signupWrap.classList.add('active');
+    } else {
+        if (signinTab) signinTab.classList.add('active');
+        if (signupTab) signupTab.classList.remove('active');
+        if (signinWrap) signinWrap.classList.add('active');
+        if (signupWrap) signupWrap.classList.remove('active');
     }
+}
 
-    function switchAuthTab(tab) {
-        var signinBtn = document.getElementById('tab-btn-signin');
-        var signupBtn = document.getElementById('tab-btn-signup');
-        var signinForm = document.getElementById('form-signin');
-        var signupForm = document.getElementById('form-signup');
-        var verifyNotice = document.getElementById('auth-verification-notice');
-
-        if (verifyNotice) verifyNotice.style.display = 'none';
-
-        if (tab === 'signin') {
-            if (signinBtn) signinBtn.classList.add('active');
-            if (signupBtn) signupBtn.classList.remove('active');
-            if (signinForm) signinForm.style.display = 'block';
-            if (signupForm) signupForm.style.display = 'none';
-        } else {
-            if (signinBtn) signinBtn.classList.remove('active');
-            if (signupBtn) signupBtn.classList.add('active');
-            if (signinForm) signinForm.style.display = 'none';
-            if (signupForm) signupForm.style.display = 'block';
-        }
-    }
 
     function handleEmailSignIn(e) {
         e.preventDefault();
@@ -4715,7 +4821,14 @@ function buildCarouselCard(p) {
                     ${isSale ? `<span class="pcard-was">$${p.reg_usd.toFixed(2)}</span>` : ''}
                     <span class="pcard-price">$${p.sale_usd.toFixed(2)}</span>
                 </div>
-                <button class="btn-cart" onclick="event.stopPropagation();quickAddFromCard(${p.id})" title="Add to Cart">🛒</button>
+                <button class="pcard-btn-action" id="btn-quick-add-${p.id}" onclick="event.stopPropagation();quickAddFromCard(${p.id})" title="Add to Cart">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </div>`;
@@ -4827,6 +4940,18 @@ function buyFromCardWithNeedle(id) {
     addToCart(id, qty);
     if (withNeedle) {
         addNeedleBundleToCart();
+    }
+
+    // Modern tactile button feedback
+    var btn = document.getElementById('btn-add-' + id);
+    if (btn) {
+        var origContent = btn.innerHTML;
+        btn.classList.add('added');
+        btn.innerHTML = '<span style="font-weight:800;">✓ Added!</span>';
+        setTimeout(function() {
+            btn.classList.remove('added');
+            btn.innerHTML = origContent;
+        }, 1100);
     }
     openCart();
 }
@@ -5038,7 +5163,14 @@ function renderSingleCard(p) {
                     ${isSale ? `<span class="pcard-was">$${p.reg_usd.toFixed(2)}</span>` : ''}
                     <span class="pcard-price" id="price-${p.id}">$${p.sale_usd.toFixed(2)}</span>
                 </div>
-                <button class="btn-cart" onclick="event.stopPropagation();buyFromCardWithNeedle(${p.id})" title="Add to Cart">🛒</button>
+                <button class="pcard-btn-action" id="btn-add-${p.id}" onclick="event.stopPropagation();buyFromCardWithNeedle(${p.id})" title="Add to Cart">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     </div>`;
@@ -5090,12 +5222,8 @@ function openContactModal() {
 function closeContactModal() {
     document.getElementById('contact-modal').classList.remove('open');
 }
-function openAuthModal() {
-    document.getElementById('auth-modal').classList.add('open');
-}
-function closeAuthModal() {
-    document.getElementById('auth-modal').classList.remove('open');
-}
+
+
 function openCart() {
     document.getElementById('cart-overlay').classList.add('open');
     document.getElementById('cart-drawer').classList.add('open');
