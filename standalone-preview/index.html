@@ -2843,66 +2843,167 @@
 </div>
 
 <!-- ══ CHECKOUT MODAL ══════════════════════════════════════════ -->
-<div class="modal-overlay" id="checkout-modal">
-    <div class="modal-box">
-        <div class="modal-head">
-            <h3>🔐 Secure Checkout</h3>
-            <button class="btn-close-drawer" onclick="closeCheckout()">×</button>
+<!-- ══ CHECKOUT MODAL ══════════════════════════════════════════ -->
+<div class="modal-overlay" id="checkout-modal" onclick="if(event.target===this)closeCheckout()" style="display:none;align-items:center;justify-content:center;">
+    <div class="modal-box" style="max-width:520px;max-height:92vh;overflow-y:auto;">
+
+        <!-- STEP 1: Order Form -->
+        <div id="checkout-step-form">
+            <div class="modal-head">
+                <div>
+                    <h3 style="font-size:17px;font-weight:800;color:#111827;margin:0;">Secure Checkout</h3>
+                    <p style="font-size:12px;color:#6b7280;margin:2px 0 0;">Step 1 of 2 — Contact &amp; Shipping</p>
+                </div>
+                <button class="btn-close-drawer" onclick="closeCheckout()">×</button>
+            </div>
+
+            <!-- RUO Notice -->
+            <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;margin:14px 16px 0;font-size:12px;color:#065f46;line-height:1.55;">
+                <strong>Research Use Only</strong> — Crypto payment only. Products are for <em>in vitro</em> laboratory research. Not for human consumption.
+            </div>
+
+            <!-- Order Summary -->
+            <div style="margin:12px 16px 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px 14px;">
+                <div style="font-size:11px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">Your Order</div>
+                <div id="ck-items-summary" style="font-size:12.5px;color:#4b5563;max-height:120px;overflow-y:auto;"></div>
+                <div style="border-top:1px solid #e5e7eb;margin-top:8px;padding-top:8px;">
+                    <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#6b7280;margin-bottom:4px;">
+                        <span>Subtotal</span><span id="ck-subtotal">$0.00</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#6b7280;margin-bottom:6px;">
+                        <span>Shipping</span><span id="ck-shipping">$15.00</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;font-size:15px;font-weight:800;color:#111827;">
+                        <span>Total (USD)</span><span id="ck-total" style="color:#059669;">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Fields -->
+            <div class="modal-body" style="padding:14px 16px;">
+                <div class="form-group">
+                    <label class="form-label">Full Name *</label>
+                    <input id="ck-name" class="form-input" type="text" placeholder="John Smith" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email Address *</label>
+                    <input id="ck-email" class="form-input" type="email" placeholder="you@lab.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Shipping Address *</label>
+                    <input id="ck-address" class="form-input" type="text" placeholder="Street address" required>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                    <div class="form-group">
+                        <label class="form-label">City *</label>
+                        <input id="ck-city" class="form-input" type="text" placeholder="New York" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">State / ZIP *</label>
+                        <input id="ck-zip" class="form-input" type="text" placeholder="NY 10001" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Country *</label>
+                    <select id="ck-country" class="form-input" required onchange="updateCheckoutShipping()">
+                        <option value="">Select country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="SE">Sweden</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Special Instructions</label>
+                    <textarea id="ck-notes" class="form-input" placeholder="Any special instructions..." style="min-height:60px;resize:vertical;"></textarea>
+                </div>
+
+                <!-- ToS Agreement -->
+                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:12px 14px;margin-top:4px;">
+                    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;">
+                        <input type="checkbox" id="tos-agreement" style="margin-top:3px;accent-color:#059669;flex-shrink:0;width:15px;height:15px;">
+                        <span style="font-size:12px;color:#065f46;line-height:1.6;">
+                            I confirm I am <strong>21 years or older</strong>, purchasing these compounds <strong>for laboratory/scientific research use only</strong>, and I agree to the <a href="#" style="color:#059669;text-decoration:underline;">Terms of Service</a>. Not for human consumption.
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Continue Button -->
+                <button onclick="goToPaymentStep()" style="width:100%;margin-top:14px;background:#059669;color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .2s;" onmouseover="this.style.background='#047857'" onmouseout="this.style.background='#059669'">
+                    Continue to Payment &rarr;
+                </button>
+                <p style="text-align:center;font-size:11px;color:#9ca3af;margin-top:8px;">Crypto payment only via NOWPayments. No card data collected.</p>
+            </div>
         </div>
-        <form class="modal-body" onsubmit="submitOrder(event)">
-            <div class="checkout-notice">
-                <strong>✅ Crypto Payment Only</strong>
-                Due to payment network restrictions on peptide products, we exclusively accept cryptocurrency payments via NOWPayments. Fast, secure, and private.
+
+        <!-- STEP 2: Payment -->
+        <div id="checkout-step-payment" style="display:none;">
+            <div class="modal-head">
+                <div>
+                    <h3 style="font-size:17px;font-weight:800;color:#111827;margin:0;">Complete Payment</h3>
+                    <p style="font-size:12px;color:#6b7280;margin:2px 0 0;">Step 2 of 2 — Crypto Settlement</p>
+                </div>
+                <button class="btn-close-drawer" onclick="closeCheckout()">×</button>
             </div>
-            <div class="form-group">
-                <label class="form-label">Full Name *</label>
-                <input class="form-input" type="text" placeholder="John Smith" required>
+            <div style="padding:16px;">
+                <!-- Order ID -->
+                <div style="background:#0f1f14;border:1px solid #064e3b;border-radius:10px;padding:14px 16px;margin-bottom:14px;text-align:center;">
+                    <div style="font-size:11px;font-weight:700;color:#6ee7b7;letter-spacing:.06em;margin-bottom:4px;">ORDER REFERENCE</div>
+                    <div id="pay-order-id" style="font-size:20px;font-weight:800;color:#fff;font-family:monospace;letter-spacing:1px;"></div>
+                </div>
+
+                <!-- Amount Due -->
+                <div style="background:#f0fdf4;border:2px solid #059669;border-radius:12px;padding:18px;margin-bottom:14px;text-align:center;">
+                    <div style="font-size:12px;font-weight:700;color:#065f46;letter-spacing:.06em;margin-bottom:6px;">TOTAL AMOUNT DUE</div>
+                    <div id="pay-total-usd" style="font-size:36px;font-weight:900;color:#059669;"></div>
+                    <div style="font-size:12px;color:#6b7280;margin-top:4px;">Payable in BTC · ETH · USDT · USDC · SOL · BNB · and 300+ more coins</div>
+                </div>
+
+                <!-- Cart Summary on Payment Step -->
+                <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px 14px;margin-bottom:14px;">
+                    <div style="font-size:11px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">Items in Order</div>
+                    <div id="pay-items-list" style="font-size:12.5px;color:#4b5563;"></div>
+                </div>
+
+                <!-- NOWPayments CTA -->
+                <button id="btn-nowpayments" onclick="launchNOWPayments()" style="
+                    width:100%;background:linear-gradient(135deg,#059669,#047857);
+                    color:#fff;border:none;border-radius:12px;
+                    padding:16px;font-size:15px;font-weight:800;
+                    cursor:pointer;font-family:inherit;
+                    display:flex;align-items:center;justify-content:center;gap:10px;
+                    box-shadow:0 4px 20px rgba(5,150,105,0.35);
+                    transition:all .2s;
+                " onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 28px rgba(5,150,105,0.45)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(5,150,105,0.35)'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    Pay Now via NOWPayments
+                </button>
+
+                <p style="text-align:center;font-size:11.5px;color:#6b7280;margin-top:10px;line-height:1.6;">
+                    Clicking will open NOWPayments secure checkout for the exact amount above. Choose any supported cryptocurrency. Payment confirmation sent to your email.
+                </p>
+
+                <!-- After payment instructions -->
+                <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;margin-top:12px;">
+                    <div style="font-size:11.5px;color:#78350f;line-height:1.7;">
+                        <strong>After Payment:</strong><br>
+                        1. Copy your order reference: <strong id="pay-order-id-copy" style="font-family:monospace;"></strong><br>
+                        2. Send payment confirmation + order ID to <strong>support@phoenixchems.com</strong><br>
+                        3. We dispatch within 24h of payment confirmation.
+                    </div>
+                </div>
+
+                <button onclick="backToFormStep()" style="width:100%;margin-top:12px;background:transparent;color:#6b7280;border:1px solid #d1d5db;border-radius:8px;padding:10px;font-size:13px;cursor:pointer;font-family:inherit;">
+                    &larr; Back to Order Details
+                </button>
             </div>
-            <div class="form-group">
-                <label class="form-label">Email Address *</label>
-                <input class="form-input" type="email" placeholder="you@example.com" required>
-            </div>
-            <div class="form-group">
-                <label class="form-label">Shipping Address *</label>
-                <input class="form-input" type="text" placeholder="Street address, city, state/province, ZIP" required>
-            </div>
-            <div class="form-group">
-                <label class="form-label">Country *</label>
-                <select class="form-select" required>
-                    <option value="">Select country</option>
-                    <option>United States</option>
-                    <option>Canada</option>
-                    <option>United Kingdom</option>
-                    <option>Australia</option>
-                    <option>Germany</option>
-                    <option>France</option>
-                    <option>Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label class="form-label">Special Instructions</label>
-                <textarea class="form-textarea" placeholder="Any special instructions for your order..." style="min-height:70px"></textarea>
-            </div>
-            <label class="compliance-check">
-                <input type="checkbox" required>
-                I confirm I am 18+ years old and that these products are for laboratory/research use only. I am not purchasing for human consumption.
-            </label>
-        </form>
-        <div class="modal-foot">
-            <div class="checkout-total-row"><span>Subtotal</span><span id="checkout-subtotal">$0.00</span></div>
-            <div class="checkout-total-row"><span>Shipping</span><span id="checkout-shipping">$15.00</span></div>
-            <div class="checkout-grand"><span>Grand Total</span><span id="checkout-total">$15.00</span></div>
-            <button class="btn-pay" onclick="submitOrder(event)">
-                <div style="margin-bottom:14px;">
-    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:12.5px;color:#9ca3af;line-height:1.5;">
-        <input type="checkbox" id="tos-agreement" style="margin-top:2px;accent-color:#059669;flex-shrink:0;width:14px;height:14px;" required>
-        <span>I confirm I am purchasing these compounds <strong style="color:#6ee7b7;">for laboratory/research use only</strong>, I am 21+ years old, and I agree to the <a href="#" style="color:#6ee7b7;text-decoration:underline;">Terms of Service</a>. Not for human consumption.</span>
-    </label>
-</div>
-🔐 Pay with Crypto via NOWPayments
-            </button>
-            <p style="text-align:center;font-size:11px;color:var(--gray)">You will be redirected to NOWPayments to complete your crypto payment securely.</p>
         </div>
+
     </div>
 </div>
 
@@ -4069,69 +4170,203 @@ function updateCartUI() {
 }
 
 
-    function openCheckout() {
-        if (cart.length === 0) {
-            alert('Your batch cart is currently empty. Please select peptides before proceeding to settlement.');
-            return;
-        }
-        closeCart();
-        syncCheckoutShipping();
-        syncUserToCheckout();
-        document.getElementById('checkout-modal').classList.add('active');
+    
+// ══════════════════════════════════════════════════════════════════
+// NOWPAYMENTS UNIFIED CART CHECKOUT
+// Set your NOWPayments API key below (from nowpayments.io dashboard)
+// ══════════════════════════════════════════════════════════════════
+var NOWPAYMENTS_API_KEY = 'REPLACE_WITH_YOUR_NOWPAYMENTS_API_KEY';
+// Payment URL template — NOWPayments hosted checkout with custom amount
+// Docs: https://documenter.getpostman.com/view/7907941/S1a32n38
+// ══════════════════════════════════════════════════════════════════
+
+function openCheckout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty. Add research compounds before checking out.');
+        return;
     }
-
-    function closeCheckout(e) {
-        if (e && e.target !== document.getElementById('checkout-modal') && !e.target.classList.contains('checkout-box')) return;
-        document.getElementById('checkout-modal').classList.remove('active');
+    closeCart();
+    // Reset to step 1
+    document.getElementById('checkout-step-form').style.display = 'block';
+    document.getElementById('checkout-step-payment').style.display = 'none';
+    // Populate order summary
+    refreshCheckoutSummary();
+    // Open modal
+    var modal = document.getElementById('checkout-modal');
+    if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.add('active');
     }
+}
 
-    function syncCheckoutShipping() {
-        var ckCountry = document.getElementById('checkout-country');
-        var cartCountry = document.getElementById('cart-destination-select');
-        if (ckCountry && cartCountry) {
-            cartCountry.value = ckCountry.value;
-        }
-        calculateShipping();
+function closeCheckout() {
+    var modal = document.getElementById('checkout-modal');
+    if (modal) {
+        modal.style.display = 'none';
+        modal.classList.remove('active');
     }
+}
 
-    function submitOrder(e) {
-        e.preventDefault();
-        var name = document.getElementById('checkout-name').value;
-        var email = document.getElementById('checkout-email').value;
-        var address = document.getElementById('checkout-address').value;
-        var city = document.getElementById('checkout-city').value;
-        var country = document.getElementById('checkout-country').value;
+function refreshCheckoutSummary() {
+    var subtotal = cart.reduce(function(acc, item) { return acc + (item.price * item.qty); }, 0);
+    var total = subtotal + shippingCost;
 
-        var subtotal = cart.reduce(function(acc, item) { return acc + (item.price * item.qty); }, 0);
-        var total = subtotal + shippingCost;
-        var orderId = 'PHX-' + Math.floor(100000 + Math.random() * 900000);
-
-        var modalBox = document.querySelector('#checkout-modal .checkout-box');
-        if (modalBox) {
-            modalBox.innerHTML = '<div style="text-align:center;padding:24px 12px;">' +
-                '<div style="font-size:48px;margin-bottom:12px;">🧪</div>' +
-                '<span style="font-size:11px;color:var(--primary);font-weight:800;letter-spacing:1px;text-transform:uppercase;">ORDER TRANSMITTED</span>' +
-                '<h2 style="font-family:var(--font-head);font-size:24px;color:var(--slate-900);margin:6px 0 10px;">Order Reference #' + orderId + '</h2>' +
-                '<p style="font-size:13.5px;color:var(--slate-600);line-height:1.5;margin-bottom:18px;">' +
-                    'Thank you, <strong>' + name + '</strong>. Your research order has been queued for expedited 48-hour cold-chain dispatch to <strong>' + city + ', ' + country + '</strong>.' +
-                '</p>' +
-                '<div style="background:#F0FDF4;border:1.5px solid #A7F3D0;border-radius:12px;padding:16px;text-align:left;margin-bottom:20px;">' +
-                    '<div style="font-size:12px;font-weight:800;color:var(--primary-deep);margin-bottom:6px;">SETTLEMENT SUMMARY:</div>' +
-                    '<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;"><span>Batch Subtotal:</span><strong>$' + subtotal.toFixed(2) + '</strong></div>' +
-                    '<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;"><span>48h Cold-Chain Shipping:</span><strong>$' + shippingCost.toFixed(2) + '</strong></div>' +
-                    '<div style="display:flex;justify-content:space-between;font-size:15px;font-weight:900;border-top:1px solid #6EE7B7;padding-top:6px;color:var(--primary-deep);">' +
-                        '<span>Total Payable:</span><span>$' + total.toFixed(2) + '</span>' +
-                    '</div>' +
-                '</div>' +
-                '<p style="font-size:12.5px;color:var(--slate-500);margin-bottom:16px;">' +
-                    'Full batch Analytical COA documentation and automated crypto settlement instructions have been dispatched to <strong>' + email + '</strong>.' +
-                '</p>' +
-                '<button onclick="location.reload()" class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:14px;">Return to Storefront &rarr;</button>' +
+    // Step 1 summary
+    var summaryEl = document.getElementById('ck-items-summary');
+    if (summaryEl) {
+        summaryEl.innerHTML = cart.map(function(item) {
+            return '<div style="display:flex;justify-content:space-between;margin-bottom:4px;">' +
+                '<span>' + item.qty + '× ' + item.name + '</span>' +
+                '<span style="font-weight:600;">$' + (item.price * item.qty).toFixed(2) + '</span>' +
                 '</div>';
-        }
-        cart = [];
-        updateCartUI();
+        }).join('');
     }
+    var ckSub = document.getElementById('ck-subtotal');
+    var ckShip = document.getElementById('ck-shipping');
+    var ckTotal = document.getElementById('ck-total');
+    if (ckSub) ckSub.textContent = '$' + subtotal.toFixed(2);
+    if (ckShip) ckShip.textContent = '$' + shippingCost.toFixed(2);
+    if (ckTotal) ckTotal.textContent = '$' + total.toFixed(2);
+}
+
+function updateCheckoutShipping() {
+    var country = document.getElementById('ck-country');
+    if (!country) return;
+    if (country.value === 'US') { shippingCost = subtotalForFreeShip() >= 150 ? 0 : 15; }
+    else if (country.value === 'CA') { shippingCost = subtotalForFreeShip() >= 300 ? 0 : 25; }
+    else { shippingCost = subtotalForFreeShip() >= 300 ? 0 : 45; }
+    refreshCheckoutSummary();
+}
+
+function subtotalForFreeShip() {
+    return cart.reduce(function(acc, item) { return acc + (item.price * item.qty); }, 0);
+}
+
+function goToPaymentStep() {
+    // Validate form fields
+    var name = document.getElementById('ck-name');
+    var email = document.getElementById('ck-email');
+    var address = document.getElementById('ck-address');
+    var city = document.getElementById('ck-city');
+    var zip = document.getElementById('ck-zip');
+    var country = document.getElementById('ck-country');
+    var tos = document.getElementById('tos-agreement');
+
+    if (!name || !name.value.trim()) { alert('Please enter your full name.'); name.focus(); return; }
+    if (!email || !email.value.trim() || !email.value.includes('@')) { alert('Please enter a valid email address.'); email.focus(); return; }
+    if (!address || !address.value.trim()) { alert('Please enter your shipping address.'); address.focus(); return; }
+    if (!city || !city.value.trim()) { alert('Please enter your city.'); city.focus(); return; }
+    if (!zip || !zip.value.trim()) { alert('Please enter your state/ZIP.'); zip.focus(); return; }
+    if (!country || !country.value) { alert('Please select your country.'); country.focus(); return; }
+    if (!tos || !tos.checked) { alert('Please confirm the research-use-only agreement before proceeding.'); return; }
+
+    // Generate order ID
+    var orderId = 'PHX-' + Date.now().toString(36).toUpperCase().slice(-6);
+
+    // Store order details in window for payment step
+    window.pendingOrder = {
+        id: orderId,
+        name: name.value.trim(),
+        email: email.value.trim(),
+        address: address.value.trim() + ', ' + city.value.trim() + ', ' + zip.value.trim(),
+        country: country.options[country.selectedIndex].text,
+        notes: document.getElementById('ck-notes') ? document.getElementById('ck-notes').value : '',
+        cart: JSON.parse(JSON.stringify(cart)),
+        subtotal: cart.reduce(function(acc, item) { return acc + (item.price * item.qty); }, 0),
+        shipping: shippingCost
+    };
+    window.pendingOrder.total = window.pendingOrder.subtotal + window.pendingOrder.shipping;
+
+    // Populate payment step
+    var ordEl = document.getElementById('pay-order-id');
+    var ordEl2 = document.getElementById('pay-order-id-copy');
+    var totalEl = document.getElementById('pay-total-usd');
+    var itemsEl = document.getElementById('pay-items-list');
+
+    if (ordEl) ordEl.textContent = orderId;
+    if (ordEl2) ordEl2.textContent = orderId;
+    if (totalEl) totalEl.textContent = '$' + window.pendingOrder.total.toFixed(2);
+    if (itemsEl) {
+        itemsEl.innerHTML = window.pendingOrder.cart.map(function(item) {
+            return '<div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid #f3f4f6;">' +
+                '<span>' + item.qty + '× ' + item.name + '</span>' +
+                '<span style="font-weight:600;color:#059669;">$' + (item.price * item.qty).toFixed(2) + '</span>' +
+                '</div>';
+        }).join('') +
+        '<div style="display:flex;justify-content:space-between;padding:6px 0;font-weight:700;color:#111827;">' +
+        '<span>Shipping</span><span>$' + window.pendingOrder.shipping.toFixed(2) + '</span></div>' +
+        '<div style="display:flex;justify-content:space-between;padding:4px 0;font-size:15px;font-weight:900;color:#059669;">' +
+        '<span>TOTAL</span><span>$' + window.pendingOrder.total.toFixed(2) + '</span></div>';
+    }
+
+    // Switch to payment step
+    document.getElementById('checkout-step-form').style.display = 'none';
+    document.getElementById('checkout-step-payment').style.display = 'block';
+}
+
+function backToFormStep() {
+    document.getElementById('checkout-step-form').style.display = 'block';
+    document.getElementById('checkout-step-payment').style.display = 'none';
+}
+
+function launchNOWPayments() {
+    if (!window.pendingOrder) { alert('Order details missing. Please go back and fill the form.'); return; }
+
+    var order = window.pendingOrder;
+    var total = order.total.toFixed(2);
+    var orderId = order.id;
+    var desc = order.cart.map(function(i) { return i.qty + 'x ' + i.name; }).join(', ');
+    var shortDesc = desc.length > 200 ? desc.substring(0, 197) + '...' : desc;
+
+    // Build NOWPayments hosted payment URL with cart total
+    // Replace NOWPAYMENTS_API_KEY with your key from nowpayments.io dashboard
+    var payUrl;
+    if (NOWPAYMENTS_API_KEY && NOWPAYMENTS_API_KEY !== 'REPLACE_WITH_YOUR_NOWPAYMENTS_API_KEY') {
+        payUrl = 'https://nowpayments.io/payment?' +
+            'apiKey=' + encodeURIComponent(NOWPAYMENTS_API_KEY) +
+            '&amount=' + encodeURIComponent(total) +
+            '&currency=usd' +
+            '&order_id=' + encodeURIComponent(orderId) +
+            '&order_description=' + encodeURIComponent('Phoenix Chems Order ' + orderId + ': ' + shortDesc);
+    } else {
+        // Fallback: open NOWPayments invoice base URL (user contacts to complete)
+        payUrl = 'https://nowpayments.io/payment/?iid=4855058126';
+        // Show amount instructions overlay on top
+        var btn = document.getElementById('btn-nowpayments');
+        if (btn) {
+            btn.insertAdjacentHTML('afterend',
+                '<div style="background:#fffbeb;border:1px solid #f59e0b;border-radius:8px;padding:12px 14px;margin-top:10px;font-size:12px;color:#92400e;">' +
+                '<strong>Note:</strong> Set your NOWPayments API key in the site JS to enable direct $' + total + ' cart payment. ' +
+                'Current fallback opens general payment page — please mention order <strong>' + orderId + '</strong> and amount <strong>$' + total + '</strong>.' +
+                '</div>'
+            );
+        }
+    }
+
+    // Open NOWPayments in new tab
+    window.open(payUrl, '_blank', 'noopener,noreferrer');
+
+    // Show confirmation UI after launch
+    setTimeout(function() {
+        var step2 = document.getElementById('checkout-step-payment');
+        if (step2) {
+            step2.insertAdjacentHTML('beforeend',
+                '<div style="background:#f0fdf4;border:1.5px solid #059669;border-radius:10px;padding:16px;margin-top:14px;text-align:center;">' +
+                '<div style="font-size:20px;font-weight:800;color:#059669;margin-bottom:6px;">Payment Window Opened</div>' +
+                '<p style="font-size:13px;color:#374151;margin-bottom:10px;">Complete payment in the NOWPayments tab. Your order reference is <strong style="font-family:monospace;color:#059669;">' + orderId + '</strong>.</p>' +
+                '<p style="font-size:12px;color:#6b7280;">Once paid, email your payment confirmation + order ID to <strong>support@phoenixchems.com</strong>. We dispatch within 24h.</p>' +
+                '<button onclick="closeCheckout();cart=[];updateCartUI();" style="margin-top:12px;background:#059669;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-weight:700;cursor:pointer;font-family:inherit;">Done — Close & Return to Store</button>' +
+                '</div>'
+            );
+        }
+    }, 1500);
+}
+
+function submitOrder(e) {
+    if (e) e.preventDefault();
+    goToPaymentStep();
+}
+
 
 
     // ── 2. AUTHENTICATION & GUEST SYSTEM ──────────────────────────────────
@@ -4606,7 +4841,15 @@ function openProductModal(id) {
     document.getElementById('pm-was').textContent = p.reg_usd > p.sale_usd ? '$' + p.reg_usd.toFixed(2) : '';
     document.getElementById('pm-price').textContent = '$' + p.sale_usd.toFixed(2);
     document.getElementById('pm-desc').textContent = p.desc || '';
-    document.getElementById('pm-buy-btn').onclick = function() { window.open(p.whop_url, '_blank'); };
+    document.getElementById('pm-buy-btn').onclick = function() {
+        addToCart({id: p.id, name: p.name, price: p.sale_usd, qty: 1});
+        document.getElementById('pm-buy-btn').textContent = 'Added to Cart!';
+        document.getElementById('pm-buy-btn').style.background = '#059669';
+        setTimeout(function() {
+            closeProductModal();
+            openCart();
+        }, 800);
+    };
     document.getElementById('pm-spec-table').innerHTML = `
         <tr><td>CAS Number</td><td>${p.cas || '—'}</td></tr>
         <tr><td>Molecular Weight</td><td>${p.mw || '—'}</td></tr>
