@@ -1,0 +1,11 @@
+# Database files
+database/*.db
+database/*.db-shm
+database/*.db-wal
+
+# Node
+node_modules/
+npm-debug.log*
+.env
+.env.local
+

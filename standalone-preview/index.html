@@ -1929,6 +1929,13 @@
     }
 
     </style>
+
+    <!-- Performance: preconnect and resource hints -->
+    <link rel="dns-prefetch" href="https://nowpayments.io">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://nowpayments.io" crossorigin>
+    <!-- Image performance -->
+    <meta name="theme-color" content="#059669">
 </head>
 <body>
 <!-- ══ AGE VERIFICATION GATE ══════════════════════════════════════════ -->
@@ -2273,7 +2280,7 @@
                 <div class="pcard" style="flex:none;width:100%" onclick="openProductModal(23)">
                     <div class="pcard-img-wrap">
                         <span class="badge-new">NEW</span>
-                        <img class="pcard-img" src="assets/images/products/nad-photo.jpg" alt="NAD+" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+                        <img class="pcard-img" src="assets/images/products/nad-photo.jpg" alt="NAD+" loading="lazy" decoding="async" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
                     </div>
                     <div class="pcard-body">
                         <div class="pcard-name">NAD+ (500mg)</div>
@@ -2285,7 +2292,7 @@
                     <div class="pcard-img-wrap">
                         <span class="badge-new">NEW</span>
                         <span class="badge-trending" style="top:12px;left:auto;right:12px">🔥 HOT</span>
-                        <img class="pcard-img" src="assets/images/products/wolverine-photo.jpg" alt="Wolverine Stack" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+                        <img class="pcard-img" src="assets/images/products/wolverine-photo.jpg" alt="Wolverine Stack" loading="lazy" decoding="async" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
                     </div>
                     <div class="pcard-body">
                         <div class="pcard-name">Wolverine Protocol Bundle</div>
@@ -3232,8 +3239,7 @@
                 "assets/images/products/tirzepatide-photo.jpg",
                 "assets/images/products/tirzepatide-coa.svg",
                 "assets/images/products/tirzepatide-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+            ]
         },
         {
             id: 2, code: "retatrutide", name: "Retatrutide (10mg)",
@@ -3247,8 +3253,7 @@
                 "assets/images/products/retatrutide-photo.jpg",
                 "assets/images/products/retatrutide-coa.svg",
                 "assets/images/products/retatrutide-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5920852146"
+            ]
         },
         {
             id: 3, code: "semaglutide", name: "Semaglutide (5mg)",
@@ -3262,8 +3267,7 @@
                 "assets/images/products/semaglutide-photo.jpg",
                 "assets/images/products/semaglutide-coa.svg",
                 "assets/images/products/semaglutide-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=4467596192"
+            ]
         },
         {
             id: 4, code: "cagrilintide", name: "Cagrilintide (5mg)",
@@ -3277,8 +3281,7 @@
                 "assets/images/products/cagrilintide-photo.jpg",
                 "assets/images/products/cagrilintide-coa.svg",
                 "assets/images/products/cagrilintide-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=4660536382"
+            ]
         },
         {
             id: 5, code: "aod9604", name: "AOD-9604 (5mg)",
@@ -3292,8 +3295,7 @@
                 "assets/images/products/aod9604-photo.jpg",
                 "assets/images/products/aod9604-coa.svg",
                 "assets/images/products/aod9604-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=6203594333"
+            ]
         },
         {
             id: 6, code: "ghkcu", name: "GHK-Cu Copper Peptide (50mg)",
@@ -3307,8 +3309,7 @@
                 "assets/images/products/ghkcu-photo.jpg",
                 "assets/images/products/ghkcu-coa.svg",
                 "assets/images/products/ghkcu-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5245180931"
+            ]
         },
         {
             id: 7, code: "epithalon", name: "Epitalon (10mg)",
@@ -3323,8 +3324,7 @@
                 "assets/images/products/epithalon-photo.jpg",
                 "assets/images/products/epithalon-coa.svg",
                 "assets/images/products/epithalon-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=4654173268"
+            ]
         },
         {
             id: 8, code: "motsc", name: "MOTS-c (10mg)",
@@ -3339,8 +3339,7 @@
                 "assets/images/products/motsc-photo.jpg",
                 "assets/images/products/motsc-coa.svg",
                 "assets/images/products/motsc-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=4855058126"
+            ]
         },
         {
             id: 9, code: "bpc157", name: "BPC-157 (5mg)",
@@ -3355,8 +3354,7 @@
                 "assets/images/products/bpc157-photo.jpg",
                 "assets/images/products/bpc157-coa.svg",
                 "assets/images/products/bpc157-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5678968005"
+            ]
         },
         {
             id: 26, code: "kpv", name: "KPV (5mg)",
@@ -3371,8 +3369,7 @@
                 "assets/images/products/kpv-photo.jpg",
                 "assets/images/products/bpc157-coa.svg",
                 "assets/images/products/bpc157-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5678968005"
+            ]
         },
         {
             id: 10, code: "tb500", name: "TB-500 (5mg)",
@@ -3387,8 +3384,7 @@
                 "assets/images/products/tb500-photo.jpg",
                 "assets/images/products/tb500-coa.svg",
                 "assets/images/products/tb500-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5497899515"
+            ]
         },
         {
             id: 11, code: "cjcipam", name: "CJC-1295 + Ipamorelin (10mg)",
@@ -3402,8 +3398,7 @@
                 "assets/images/products/cjcipam-photo.jpg",
                 "assets/images/products/cjcipam-coa.svg",
                 "assets/images/products/cjcipam-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=6060667106"
+            ]
         },
         {
             id: 12, code: "mk677", name: "MK-677 Ibutamoren (30mL)",
@@ -3417,8 +3412,7 @@
                 "assets/images/products/mk677-photo.jpg",
                 "assets/images/products/mk677-coa.svg",
                 "assets/images/products/mk677-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5616384834"
+            ]
         },
         {
             id: 13, code: "tesamorelin", name: "Tesamorelin (10mg)",
@@ -3432,8 +3426,7 @@
                 "assets/images/products/tesamorelin-photo.jpg",
                 "assets/images/products/tesamorelin-coa.svg",
                 "assets/images/products/tesamorelin-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=4754061172"
+            ]
         },
         {
             id: 14, code: "semax", name: "Semax Nasal Spray (30mg)",
@@ -3448,8 +3441,7 @@
                 "assets/images/products/semax-photo.jpg",
                 "assets/images/products/semax-coa.svg",
                 "assets/images/products/semax-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=6323120345"
+            ]
         },
         {
             id: 15, code: "selank", name: "Selank Nasal Spray (10mg)",
@@ -3463,8 +3455,7 @@
                 "assets/images/products/selank-photo.jpg",
                 "assets/images/products/selank-coa.svg",
                 "assets/images/products/selank-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=4542695072"
+            ]
         },
         {
             id: 16, code: "pt141", name: "PT-141 Bremelanotide (10mg)",
@@ -3478,8 +3469,7 @@
                 "assets/images/products/pt141-photo.jpg",
                 "assets/images/products/pt141-coa.svg",
                 "assets/images/products/pt141-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5543850798"
+            ]
         },
         {
             id: 17, code: "library384", name: "Custom 384-Peptide Screening Library",
@@ -3493,8 +3483,7 @@
                 "assets/images/products/library384-photo.jpg",
                 "assets/images/products/library384-coa.svg",
                 "assets/images/products/library384-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5086645454"
+            ]
         },
         {
             id: 18, code: "kinase96", name: "Kinase Substrate Profiling Array (96-Well)",
@@ -3508,8 +3497,7 @@
                 "assets/images/products/kinase96-photo.jpg",
                 "assets/images/products/kinase96-coa.svg",
                 "assets/images/products/kinase96-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5412376980"
+            ]
         },
         {
             id: 19, code: "bulk10g", name: "Bulk cGMP Tirzepatide (10-Gram Lot)",
@@ -3523,8 +3511,7 @@
                 "assets/images/products/bulk10g-photo.jpg",
                 "assets/images/products/bulk10g-coa.svg",
                 "assets/images/products/bulk10g-pack.svg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=4406076672"
+            ]
         },
         {
             id: 20, code: "pen", name: "Reusable Precision Injectable Delivery Pen (3mL)",
@@ -3536,8 +3523,7 @@
             desc: "Ergonomic anodized aluminum precision delivery pen with calibrated dose dial. Compatible with standard 3.0mL multi-dose cartridges. Ideal for precise increment micro-dosing protocols.",
             images: [
                 "assets/images/products/pen-photo.jpg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+            ]
         },
         {
             id: 21, code: "bacwater", name: "Bacteriostatic Water (30mL Sterile Reagent Vial)",
@@ -3549,8 +3535,7 @@
             desc: "Sterile USP water containing 0.9% benzyl alcohol preservative. Formulated specifically to reconstitute lyophilized peptide cakes and prevent bacterial proliferation in multi-dose research storage.",
             images: [
                 "assets/images/products/bacwater-photo.jpg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+            ]
         },
         {
             id: 22, code: "kit", name: "Complete Peptide Reconstitution & Analytical Prep Kit",
@@ -3562,8 +3547,7 @@
             desc: "All-in-one laboratory preparation kit including 1x 30mL Bacteriostatic Water, 10x sterile 3mL reconstitution syringes with 21G needles, 20x sterile alcohol swabs, and step-by-step dilution reference guides.",
             images: [
                 "assets/images/products/kit-photo.jpg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+            ]
         },
         {
             id: 23, code: "nad", name: "NAD+ Nicotinamide Adenine Dinucleotide (500mg)",
@@ -3575,8 +3559,7 @@
             desc: "Highly pure lyophilized NAD+ coenzyme essential for cellular ATP synthesis, sirtuin longevity gene expression, and metabolic cellular rejuvenation. Top trending compound in modern longevity research.",
             images: [
                 "assets/images/products/nad-photo.jpg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+            ]
         },
         {
             id: 24, code: "wolverine", name: "The Wolverine Healing Protocol (BPC-157 5mg + TB-500 5mg Bundle)",
@@ -3588,8 +3571,7 @@
             desc: "The premier research recovery stack across social media and biohacking forums. Combines 1 vial of BPC-157 (5mg) with 1 vial of TB-500 (5mg) for synergistic microvascular repair and rapid connective tissue recovery.",
             images: [
                 "assets/images/products/wolverine-photo.jpg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+            ]
         },
         {
             id: 25, code: "syringes", name: "BD Ultra-Fine™ 31G Precision Insulin Syringes (100-Pack)",
@@ -3602,8 +3584,7 @@
             images: [
                 "assets/images/products/syringes-photo.jpg",
                 "assets/images/products/needles-photo.jpg"
-            ],
-            whop_url: "https://nowpayments.io/payment/?iid=5550403830"
+            ]
         },
 ];
 
@@ -4117,7 +4098,7 @@ function updateCartUI() {
             var itemTotal = (itemPrice * item.qty).toFixed(2);
             return `
             <div class="cart-item-row" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #e2e8f0;">
-                <img src="${itemImg}" alt="${itemName}" style="width:54px;height:54px;object-fit:contain;background:#f0fdf4;border-radius:12px;padding:4px;border:1.5px solid #d1fae5;" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+                <img src="${itemImg}" alt="${itemName}" style="width:54px;height:54px;object-fit:contain;background:#f0fdf4;border-radius:12px;padding:4px;border:1.5px solid #d1fae5;" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'" loading="lazy" decoding="async">
                 <div style="flex:1;min-width:0;">
                     <div style="font-size:13.5px;font-weight:800;color:var(--dark);line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${itemName}">${itemName}</div>
                     <div style="font-size:13px;color:var(--green);font-weight:800;margin-top:2px;">$${itemPrice.toFixed(2)} each</div>
@@ -4175,7 +4156,7 @@ function updateCartUI() {
 // NOWPAYMENTS UNIFIED CART CHECKOUT
 // Set your NOWPayments API key below (from nowpayments.io dashboard)
 // ══════════════════════════════════════════════════════════════════
-var NOWPAYMENTS_API_KEY = 'REPLACE_WITH_YOUR_NOWPAYMENTS_API_KEY';
+var NOWPAYMENTS_API_KEY = 'CMCXC48-ATXMAVB-GZFB0F8-DBZBJGK';
 // Payment URL template — NOWPayments hosted checkout with custom amount
 // Docs: https://documenter.getpostman.com/view/7907941/S1a32n38
 // ══════════════════════════════════════════════════════════════════
@@ -4330,7 +4311,7 @@ function launchNOWPayments() {
             '&order_description=' + encodeURIComponent('Phoenix Chems Order ' + orderId + ': ' + shortDesc);
     } else {
         // Fallback: open NOWPayments invoice base URL (user contacts to complete)
-        payUrl = 'https://nowpayments.io/payment/?iid=4855058126';
+        payUrl = '';
         // Show amount instructions overlay on top
         var btn = document.getElementById('btn-nowpayments');
         if (btn) {
@@ -4342,6 +4323,31 @@ function launchNOWPayments() {
             );
         }
     }
+
+    // Save order to Phoenix Chems database
+    var orderPayload = {
+        order_id: orderId,
+        name: order.name,
+        email: order.email,
+        address: order.address,
+        country: order.country,
+        notes: order.notes,
+        items: order.cart,
+        subtotal: order.subtotal,
+        shipping: order.shipping,
+        total: order.total,
+        status: 'pending_payment',
+        created_at: new Date().toISOString()
+    };
+    fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderPayload)
+    }).then(function(r) {
+        if (r.ok) console.log('Order saved to database:', orderId);
+    }).catch(function() {
+        console.log('DB save skipped (offline/static mode) — order:', orderId);
+    });
 
     // Open NOWPayments in new tab
     window.open(payUrl, '_blank', 'noopener,noreferrer');
@@ -4668,7 +4674,7 @@ function buildCarouselCard(p) {
         <div class="pcard-img-wrap">
             ${isSale ? '<span class="badge-sale">SALE</span>' : ''}
             ${trending ? '<span class="badge-trending">HOT</span>' : ''}
-            <img class="pcard-img" src="${img}" alt="${p.name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+            <img class="pcard-img" src="${img}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
             ${fdaBadge}
         </div>
         <div class="pcard-body">
@@ -4985,7 +4991,7 @@ function renderSingleCard(p) {
         <div class="pcard-img-wrap">
             ${isSale ? '<span class="badge-sale">SALE</span>' : ''}
             ${trending ? '<span class="badge-trending">HOT</span>' : ''}
-            <img class="pcard-img" src="${img}" alt="${p.name}" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
+            <img class="pcard-img" src="${img}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.src='assets/images/products/tirzepatide-photo.jpg'">
             ${fdaBadge}
         </div>
         <div class="pcard-body">
@@ -5163,6 +5169,27 @@ function filterByFDA(btn) {
     container.innerHTML = fdaApproved.map(renderSingleCard).join('');
 }
 
+</script>
+<script>
+// ── IMAGE LAZY LOAD (IntersectionObserver) ────────────────────────────────
+(function() {
+    if ('loading' in HTMLImageElement.prototype) return; // native lazy load supported
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                observer.unobserve(img);
+            }
+        });
+    }, { rootMargin: '200px' });
+    document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
+        observer.observe(img);
+    });
+})();
 </script>
 </body>
 </html>

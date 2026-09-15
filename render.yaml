@@ -1,6 +1,17 @@
 services:
   - type: web
-    name: phoenics-peptides
-    env: static
-    buildCommand: ''
-    staticPublishPath: ./standalone-preview
+    name: phoenixchems
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: ADMIN_KEY
+        generateValue: true
+      - key: NODE_ENV
+        value: production
+    disk:
+      name: phoenixchems-db
+      mountPath: /opt/render/project/src/database
+      sizeGB: 1
