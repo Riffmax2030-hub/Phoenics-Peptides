@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Chems | Admin Management Portal</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0a0f18;
+            --bg-card: #111827;
+            --bg-card-hover: #1f2937;
+            --border: #1f2937;
+            --border-highlight: #374151;
+            --green: #059669;
+            --green-light: #10b981;
+            --green-glow: rgba(16, 185, 129, 0.15);
+            --amber: #f59e0b;
+            --red: #ef4444;
+            --blue: #3b82f6;
+            --text-main: #f9fafb;
+            --text-sub: #9ca3af;
+            --text-dim: #6b7280;
+            --font: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font);
+            background: var(--bg-base);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+        }
+
+        /* Top Nav */
+        header {
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .brand-name {
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            color: #fff;
+        }
+        .brand-badge {
+            background: rgba(5, 150, 105, 0.2);
+            color: var(--green-light);
+            border: 1px solid rgba(5, 150, 105, 0.4);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .db-status-pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(31, 41, 55, 0.8);
+            border: 1px solid var(--border-highlight);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green-light);
+            box-shadow: 0 0 8px var(--green-light);
+        }
+        .status-dot.amber { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+
+        .btn-nav {
+            background: #1f2937;
+            border: 1px solid #374151;
+            color: var(--text-main);
+            padding: 7px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-nav:hover { background: #374151; }
+
+        /* Container */
+        main {
+            flex: 1;
+            max-width: 1320px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 28px 24px;
+        }
+
+        /* Metric Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+        .metric-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .metric-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--border-highlight);
+        }
+        .metric-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-sub);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .metric-value {
+            font-size: 28px;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        .metric-sub {
+            font-size: 12px;
+            color: var(--text-dim);
+            margin-top: 6px;
+        }
+
+        /* Action Toolbar */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-highlight);
+            border-radius: 10px;
+            padding: 8px 14px;
+            min-width: 320px;
+        }
+        .search-box input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 14px;
+            width: 100%;
+            font-family: inherit;
+        }
+        .filter-select {
+            background: var(--bg-card);
+            border: 1px solid var(--border-highlight);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-family: inherit;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn-action {
+            background: var(--green);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 10px;
+            font-size: 13.5px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s;
+        }
+        .btn-action:hover { background: var(--green-light); }
+
+        /* Orders Table Card */
+        .table-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 13.5px;
+        }
+        thead {
+            background: #0d131f;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            padding: 14px 18px;
+            font-size: 11.5px;
+            font-weight: 800;
+            color: var(--text-sub);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+        tbody tr {
+            border-bottom: 1px solid var(--border);
+            transition: background 0.15s;
+        }
+        tbody tr:hover { background: rgba(255,255,255,0.02); }
+        td {
+            padding: 16px 18px;
+            vertical-align: middle;
+        }
+
+        .order-id-badge {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--green-light);
+            background: rgba(5, 150, 105, 0.12);
+            padding: 4px 8px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+        .order-id-badge:hover { background: rgba(5, 150, 105, 0.25); }
+
+        .customer-name {
+            font-weight: 700;
+            color: #fff;
+        }
+        .customer-sub {
+            font-size: 12px;
+            color: var(--text-dim);
+            margin-top: 2px;
+        }
+
+        .status-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+        }
+        .status-tag.pending {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        .status-tag.paid {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--green-light);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .status-tag.shipped {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--blue);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .order-total {
+            font-weight: 800;
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .items-preview {
+            max-width: 280px;
+            color: var(--text-sub);
+            font-size: 12.5px;
+            line-height: 1.4;
+        }
+
+        /* Empty State */
+        .empty-state {
+            padding: 60px 20px;
+            text-align: center;
+            color: var(--text-dim);
+        }
+        .empty-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        /* Login Modal */
+        .auth-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 15, 24, 0.96);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .auth-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-highlight);
+            border-radius: 18px;
+            padding: 36px 32px;
+            max-width: 440px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .auth-input {
+            width: 100%;
+            background: #0d131f;
+            border: 1px solid var(--border-highlight);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: inherit;
+            margin: 18px 0 14px;
+            outline: none;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        .auth-input:focus { border-color: var(--green); }
+
+        /* Order Details Modal */
+        .details-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 500;
+            padding: 20px;
+        }
+        .details-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-highlight);
+            border-radius: 16px;
+            max-width: 580px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <header>
+        <div class="brand-area">
+            <span style="font-size:22px;">🧪</span>
+            <div>
+                <span class="brand-name">PHOENIX CHEMS</span>
+                <span class="brand-badge">ADMIN</span>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="db-status-pill" id="db-status-pill">
+                <div class="status-dot" id="status-dot"></div>
+                <span id="status-text">Checking Database...</span>
+            </div>
+            <a href="index.html" class="btn-nav" target="_blank">Storefront &nearr;</a>
+            <button class="btn-nav" onclick="changeAdminKey()">Change Key</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Metrics -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-title">Total Orders Placed</div>
+                <div class="metric-value" id="metric-orders">0</div>
+                <div class="metric-sub" id="metric-orders-sub">All-time research lot inquiries</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Total Order Volume</div>
+                <div class="metric-value" id="metric-revenue" style="color:var(--green-light);">$0.00</div>
+                <div class="metric-sub">Gross checkout batch value (USD)</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Paid / Settled Orders</div>
+                <div class="metric-value" id="metric-paid">0</div>
+                <div class="metric-sub">Confirmed via NOWPayments / Manual</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Subscribers / Inquiries</div>
+                <div class="metric-value" id="metric-subs">0</div>
+                <div class="metric-sub">Lab newsletter &amp; CoA requests</div>
+            </div>
+        </div>
+
+        <!-- Action Toolbar -->
+        <div class="toolbar">
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                <div class="search-box">
+                    <span style="color:var(--text-dim);">🔍</span>
+                    <input type="text" id="search-input" placeholder="Search order ID, buyer, email, country..." oninput="filterOrders()">
+                </div>
+                <select class="filter-select" id="status-filter" onchange="filterOrders()">
+                    <option value="all">All Statuses</option>
+                    <option value="pending_payment">Pending Payment</option>
+                    <option value="paid">Paid / Confirmed</option>
+                    <option value="shipped">Shipped / Dispatched</option>
+                </select>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <button class="btn-action" onclick="refreshOrders()">
+                    <span>↻</span> Refresh
+                </button>
+                <button class="btn-action" style="background:#1f2937;border:1px solid #374151;" onclick="exportCSV()">
+                    <span>📥</span> Export CSV
+                </button>
+            </div>
+        </div>
+
+        <!-- Orders Table -->
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Buyer &amp; Destination</th>
+                        <th>Items / Compounds</th>
+                        <th>Total (USD)</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-tbody">
+                    <!-- Loaded dynamically -->
+                </tbody>
+            </table>
+            <div class="empty-state" id="empty-state" style="display:none;">
+                <div class="empty-icon">📦</div>
+                <h3 style="color:#fff;font-size:16px;margin-bottom:6px;">No Orders Found</h3>
+                <p style="font-size:13px;max-width:380px;margin:0 auto 16px;">Orders placed through the store checkout will appear here automatically with full buyer and item details.</p>
+                <button class="btn-action" onclick="seedSampleOrder()" style="font-size:12px;padding:7px 14px;">Add Test Order</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Admin Key Modal -->
+    <div class="auth-overlay" id="auth-overlay" style="display:none;">
+        <div class="auth-card">
+            <div style="font-size:42px;margin-bottom:8px;">🔐</div>
+            <h2 style="font-size:20px;font-weight:800;color:#fff;margin-bottom:6px;">Admin Access Required</h2>
+            <p style="font-size:13px;color:var(--text-sub);line-height:1.6;">
+                Please enter your Phoenix Chems admin key to view orders and manage database records.
+            </p>
+            <input type="password" id="auth-key-input" class="auth-input" placeholder="Enter Admin Key" onkeypress="if(event.key==='Enter')submitAuthKey()">
+            <div style="font-size:11.5px;color:var(--text-dim);margin-bottom:16px;">
+                Default key: <strong style="color:var(--green-light);font-family:var(--font-mono);">phoenix-admin-2026</strong>
+            </div>
+            <button class="btn-action" style="width:100%;justify-content:center;padding:12px;" onclick="submitAuthKey()">
+                Unlock Admin Portal &rarr;
+            </button>
+        </div>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div class="details-modal" id="details-modal" onclick="if(event.target===this)closeDetailsModal()">
+        <div class="details-box" id="details-content">
+            <!-- Populated dynamically -->
+        </div>
+    </div>
+
+    <script>
+        var currentOrders = [];
+        var activeAdminKey = localStorage.getItem('phx_admin_key') || getUrlParam('key') || 'phoenix-admin-2026';
+
+        function getUrlParam(p) {
+            var m = new RegExp('[?&]' + p + '=([^&#]*)').exec(window.location.search);
+            return m ? decodeURIComponent(m[1]) : null;
+        }
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', function() {
+            if (!activeAdminKey) {
+                document.getElementById('auth-overlay').style.display = 'flex';
+                return;
+            }
+            localStorage.setItem('phx_admin_key', activeAdminKey);
+            initDashboard();
+        });
+
+        function submitAuthKey() {
+            var val = document.getElementById('auth-key-input').value.trim();
+            if (!val) return;
+            activeAdminKey = val;
+            localStorage.setItem('phx_admin_key', val);
+            document.getElementById('auth-overlay').style.display = 'none';
+            initDashboard();
+        }
+
+        function changeAdminKey() {
+            var newKey = prompt('Enter your Phoenix Chems Admin Key:', activeAdminKey);
+            if (newKey && newKey.trim()) {
+                activeAdminKey = newKey.trim();
+                localStorage.setItem('phx_admin_key', activeAdminKey);
+                initDashboard();
+            }
+        }
+
+        function initDashboard() {
+            checkDatabaseConnection();
+            loadOrders();
+            loadSubscribers();
+        }
+
+        // Test SQLite Backend vs Client Storage
+        function checkDatabaseConnection() {
+            var pill = document.getElementById('db-status-pill');
+            var dot = document.getElementById('status-dot');
+            var txt = document.getElementById('status-text');
+
+            fetch('/health')
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (data && data.status === 'ok') {
+                        dot.className = 'status-dot';
+                        txt.textContent = 'SQLite Database Connected';
+                        pill.title = 'Node.js Express + SQLite backend active on Render';
+                    } else {
+                        setFallbackMode();
+                    }
+                })
+                .catch(function() {
+                    setFallbackMode();
+                });
+        }
+
+        function setFallbackMode() {
+            var dot = document.getElementById('status-dot');
+            var txt = document.getElementById('status-text');
+            var pill = document.getElementById('db-status-pill');
+            dot.className = 'status-dot amber';
+            txt.textContent = 'Local Database (Browser Vault)';
+            pill.title = 'Running in resilient client mode. All orders are stored in browser vault & synced to NOWPayments.';
+        }
+
+        // Load Orders
+        function loadOrders() {
+            // First attempt to fetch from Node.js backend
+            fetch('/api/admin/orders?key=' + encodeURIComponent(activeAdminKey))
+                .then(function(r) {
+                    if (r.status === 401) {
+                        document.getElementById('auth-overlay').style.display = 'flex';
+                        throw new Error('Unauthorized');
+                    }
+                    return r.json();
+                })
+                .then(function(data) {
+                    if (data && Array.isArray(data.orders)) {
+                        currentOrders = data.orders.map(normalizeOrder);
+                        renderOrdersTable(currentOrders);
+                        updateMetrics(currentOrders);
+                    } else {
+                        loadFromLocalStorage();
+                    }
+                })
+                .catch(function(err) {
+                    if (err.message !== 'Unauthorized') {
+                        loadFromLocalStorage();
+                    }
+                });
+        }
+
+        function loadFromLocalStorage() {
+            try {
+                var stored = JSON.parse(localStorage.getItem('phx_orders') || '[]');
+                currentOrders = stored.map(normalizeOrder);
+                renderOrdersTable(currentOrders);
+                updateMetrics(currentOrders);
+            } catch(e) {
+                currentOrders = [];
+                renderOrdersTable([]);
+            }
+        }
+
+        function normalizeOrder(o) {
+            var items = o.items || [];
+            if (typeof o.items_json === 'string') {
+                try { items = JSON.parse(o.items_json); } catch(e){}
+            }
+            return {
+                id: o.order_id || o.id || 'PHX-ORDER',
+                name: o.name || 'Anonymous Researcher',
+                email: o.email || '',
+                address: o.address || '',
+                country: o.country || 'USA',
+                notes: o.notes || '',
+                items: items,
+                subtotal: parseFloat(o.subtotal) || 0,
+                shipping: parseFloat(o.shipping) || 0,
+                total: parseFloat(o.total) || 0,
+                status: o.status || 'pending_payment',
+                created_at: o.created_at || new Date().toISOString()
+            };
+        }
+
+        function renderOrdersTable(list) {
+            var tbody = document.getElementById('orders-tbody');
+            var empty = document.getElementById('empty-state');
+
+            if (!list || list.length === 0) {
+                tbody.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+            empty.style.display = 'none';
+
+            tbody.innerHTML = list.map(function(o, idx) {
+                var itemsText = o.items.map(function(i) {
+                    return (i.qty || 1) + '× ' + (i.name || 'Compound');
+                }).join('<br>');
+                if (!itemsText) itemsText = '1× Custom Compound Lot';
+
+                var statusClass = 'pending';
+                var statusLabel = 'Pending Payment';
+                if (o.status === 'paid' || o.status === 'confirmed') {
+                    statusClass = 'paid';
+                    statusLabel = '✓ Paid';
+                } else if (o.status === 'shipped') {
+                    statusClass = 'shipped';
+                    statusLabel = '✈ Shipped';
+                }
+
+                var dateStr = new Date(o.created_at).toLocaleDateString() + ' ' + new Date(o.created_at).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+                return '<tr>' +
+                    '<td><span class="order-id-badge" onclick="copyText('' + o.id + '')" title="Click to copy">' + o.id + ' 📋</span></td>' +
+                    '<td><div class="customer-name">' + escapeHtml(o.name) + '</div><div class="customer-sub">' + escapeHtml(o.email) + ' · ' + escapeHtml(o.country) + '</div></td>' +
+                    '<td><div class="items-preview">' + itemsText + '</div></td>' +
+                    '<td><span class="order-total">$' + o.total.toFixed(2) + '</span></td>' +
+                    '<td><span class="status-tag ' + statusClass + '" onclick="cycleStatus(' + idx + ')" title="Click to toggle status">' + statusLabel + '</span></td>' +
+                    '<td style="color:var(--text-sub);font-size:12.5px;">' + dateStr + '</td>' +
+                    '<td>' +
+                        '<button class="btn-nav" style="padding:4px 10px;font-size:12px;" onclick="viewOrderDetails(' + idx + ')">Details</button>' +
+                    '</td>' +
+                '</tr>';
+            }).join('');
+        }
+
+        function updateMetrics(list) {
+            var count = list.length;
+            var totalRev = list.reduce(function(acc, o) { return acc + o.total; }, 0);
+            var paidCount = list.filter(function(o) { return o.status === 'paid' || o.status === 'shipped'; }).length;
+
+            document.getElementById('metric-orders').textContent = count;
+            document.getElementById('metric-revenue').textContent = '$' + totalRev.toFixed(2);
+            document.getElementById('metric-paid').textContent = paidCount;
+        }
+
+        function filterOrders() {
+            var q = document.getElementById('search-input').value.toLowerCase().trim();
+            var st = document.getElementById('status-filter').value;
+
+            var filtered = currentOrders.filter(function(o) {
+                var matchesQuery = !q ||
+                    o.id.toLowerCase().includes(q) ||
+                    o.name.toLowerCase().includes(q) ||
+                    o.email.toLowerCase().includes(q) ||
+                    o.country.toLowerCase().includes(q);
+
+                var matchesStatus = (st === 'all') || (o.status === st);
+                return matchesQuery && matchesStatus;
+            });
+
+            renderOrdersTable(filtered);
+        }
+
+        function cycleStatus(idx) {
+            var o = currentOrders[idx];
+            if (!o) return;
+            var nextMap = {
+                'pending_payment': 'paid',
+                'paid': 'shipped',
+                'shipped': 'pending_payment'
+            };
+            o.status = nextMap[o.status] || 'paid';
+            saveLocalOrders(currentOrders);
+            renderOrdersTable(currentOrders);
+            updateMetrics(currentOrders);
+        }
+
+        function saveLocalOrders(orders) {
+            try {
+                localStorage.setItem('phx_orders', JSON.stringify(orders));
+            } catch(e){}
+        }
+
+        function viewOrderDetails(idx) {
+            var o = currentOrders[idx];
+            if (!o) return;
+            var modal = document.getElementById('details-modal');
+            var content = document.getElementById('details-content');
+
+            var itemsHtml = o.items.map(function(i) {
+                return '<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1f2937;">' +
+                    '<span>' + (i.qty || 1) + '× ' + escapeHtml(i.name) + '</span>' +
+                    '<span style="font-weight:700;color:var(--green-light);">$' + ((i.price || 0) * (i.qty || 1)).toFixed(2) + '</span>' +
+                '</div>';
+            }).join('');
+
+            content.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">' +
+                '<h3 style="font-size:18px;color:#fff;font-weight:800;">Order ' + o.id + '</h3>' +
+                '<button class="btn-nav" onclick="closeDetailsModal()">✕</button>' +
+            '</div>' +
+            '<div style="background:#0d131f;padding:14px;border-radius:10px;margin-bottom:16px;">' +
+                '<div style="font-size:12px;color:var(--text-sub);margin-bottom:4px;">BUYER INFORMATION:</div>' +
+                '<div style="font-size:14px;font-weight:700;color:#fff;">' + escapeHtml(o.name) + '</div>' +
+                '<div style="font-size:13px;color:var(--text-sub);">' + escapeHtml(o.email) + '</div>' +
+                '<div style="font-size:13px;color:var(--text-sub);margin-top:6px;">' + escapeHtml(o.address) + ' · ' + escapeHtml(o.country) + '</div>' +
+                (o.notes ? '<div style="font-size:12px;color:var(--amber);margin-top:6px;">Notes: ' + escapeHtml(o.notes) + '</div>' : '') +
+            '</div>' +
+            '<div style="margin-bottom:16px;">' +
+                '<div style="font-size:12px;color:var(--text-sub);margin-bottom:6px;">COMPOUNDS &amp; LOTS:</div>' +
+                itemsHtml +
+            '</div>' +
+            '<div style="display:flex;justify-content:space-between;font-size:15px;font-weight:800;color:#fff;padding-top:10px;border-top:1px solid var(--border-highlight);">' +
+                '<span>Total Amount:</span><span style="color:var(--green-light);">$' + o.total.toFixed(2) + '</span>' +
+            '</div>' +
+            '<div style="margin-top:20px;display:flex;gap:10px;">' +
+                '<button class="btn-action" style="flex:1;justify-content:center;" onclick="markPaid(' + idx + ')">Mark as Paid</button>' +
+                '<button class="btn-action" style="flex:1;justify-content:center;background:var(--blue);" onclick="markShipped(' + idx + ')">Mark as Shipped</button>' +
+            '</div>';
+
+            modal.style.display = 'flex';
+        }
+
+        function markPaid(idx) {
+            if (currentOrders[idx]) {
+                currentOrders[idx].status = 'paid';
+                saveLocalOrders(currentOrders);
+                renderOrdersTable(currentOrders);
+                updateMetrics(currentOrders);
+                closeDetailsModal();
+            }
+        }
+        function markShipped(idx) {
+            if (currentOrders[idx]) {
+                currentOrders[idx].status = 'shipped';
+                saveLocalOrders(currentOrders);
+                renderOrdersTable(currentOrders);
+                updateMetrics(currentOrders);
+                closeDetailsModal();
+            }
+        }
+
+        function closeDetailsModal() {
+            document.getElementById('details-modal').style.display = 'none';
+        }
+
+        function copyText(txt) {
+            navigator.clipboard.writeText(txt).then(function() {
+                alert('Copied ' + txt + ' to clipboard!');
+            });
+        }
+
+        function escapeHtml(s) {
+            if (!s) return '';
+            return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        function refreshOrders() {
+            loadOrders();
+        }
+
+        function exportCSV() {
+            if (!currentOrders.length) { alert('No orders to export.'); return; }
+            var csv = 'Order ID,Name,Email,Country,Address,Items,Subtotal,Shipping,Total,Status,Created At\n';
+            currentOrders.forEach(function(o) {
+                var itemsStr = o.items.map(function(i) { return (i.qty||1) + 'x ' + (i.name||''); }).join('; ');
+                csv += [
+                    o.id,
+                    '"' + (o.name||'').replace(/"/g, '""') + '"',
+                    '"' + (o.email||'').replace(/"/g, '""') + '"',
+                    '"' + (o.country||'').replace(/"/g, '""') + '"',
+                    '"' + (o.address||'').replace(/"/g, '""') + '"',
+                    '"' + itemsStr.replace(/"/g, '""') + '"',
+                    o.subtotal,
+                    o.shipping,
+                    o.total,
+                    o.status,
+                    o.created_at
+                ].join(',') + '\n';
+            });
+
+            var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'phoenix-chems-orders-' + new Date().toISOString().slice(0,10) + '.csv';
+            a.click();
+        }
+
+        function seedSampleOrder() {
+            var sample = {
+                order_id: 'PHX-DEMO' + Math.floor(1000 + Math.random()*9000),
+                name: 'Dr. Michael Vance',
+                email: 'vance.lab@biotech-research.org',
+                address: '450 Innovation Way, Suite 300, Cambridge, MA 02142',
+                country: 'United States',
+                notes: 'Include CoA certificates with lot PHX-BPC-1945',
+                items: [
+                    { id: 9, name: 'BPC-157 (5mg)', qty: 2, price: 44.00 },
+                    { id: 25, name: 'BD Ultra-Fine™ 31G Syringes (10-Pack Bundle)', qty: 1, price: 7.99 }
+                ],
+                subtotal: 95.99,
+                shipping: 15.00,
+                total: 110.99,
+                status: 'paid',
+                created_at: new Date().toISOString()
+            };
+            currentOrders.unshift(sample);
+            saveLocalOrders(currentOrders);
+            renderOrdersTable(currentOrders);
+            updateMetrics(currentOrders);
+        }
+
+        function loadSubscribers() {
+            var storedSubs = JSON.parse(localStorage.getItem('phx_subscribers') || '[]');
+            document.getElementById('metric-subs').textContent = storedSubs.length;
+        }
+    </script>
+</body>
+</html>

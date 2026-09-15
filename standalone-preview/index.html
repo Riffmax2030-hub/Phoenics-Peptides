@@ -4325,6 +4325,27 @@ function launchNOWPayments() {
     }
 
     // Save order to Phoenix Chems database
+    // Save order to Local Vault (Resilient storage for admin portal)
+    try {
+        var localOrders = JSON.parse(localStorage.getItem('phx_orders') || '[]');
+        var newEntry = {
+            order_id: orderId,
+            name: order.name,
+            email: order.email,
+            address: order.address,
+            country: order.country,
+            notes: order.notes,
+            items: order.cart,
+            subtotal: order.subtotal,
+            shipping: order.shipping,
+            total: order.total,
+            status: 'pending_payment',
+            created_at: new Date().toISOString()
+        };
+        localOrders.unshift(newEntry);
+        localStorage.setItem('phx_orders', JSON.stringify(localOrders.slice(0, 150)));
+    } catch(err) {}
+
     var orderPayload = {
         order_id: orderId,
         name: order.name,

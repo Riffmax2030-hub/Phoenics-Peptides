@@ -158,19 +158,37 @@ app.post('/api/nowpayments-webhook', function(req, res) {
         });
 });
 
-// Admin orders (requires ADMIN_KEY env var)
+const DEFAULT_ADMIN_KEY = 'phoenix-admin-2026';
+const ADMIN_KEY = process.env.ADMIN_KEY || DEFAULT_ADMIN_KEY;
+
+function checkAdminAuth(req) {
+    var key = req.headers['x-admin-key'] || req.query.key;
+    return key && key === ADMIN_KEY;
+}
+
+// Serve visual Admin Dashboard HTML at /admin and /admin.html
+app.get(['/admin', '/admin.html'], function(req, res) {
+    res.sendFile(path.join(__dirname, 'standalone-preview', 'admin.html'));
+});
+
+// Admin orders API
 app.get('/api/admin/orders', function(req, res) {
-    if ((req.headers['x-admin-key']||req.query.key) !== process.env.ADMIN_KEY) return res.status(401).json({ error:'Unauthorized' });
-    db.all('SELECT * FROM orders ORDER BY created_at DESC LIMIT 500', function(err,rows) {
+    if (!checkAdminAuth(req)) {
+        return res.status(401).json({
+            error: 'Unauthorized',
+            message: 'Invalid or missing admin key. Pass ?key=YOUR_ADMIN_KEY (default: phoenix-admin-2026)'
+        });
+    }
+    db.all('SELECT * FROM orders ORDER BY created_at DESC LIMIT 500', function(err, rows) {
         if (err) return res.status(500).json({ error: err.message });
         res.json({ orders: rows, count: rows.length });
     });
 });
 
-// Admin subscribers
+// Admin subscribers API
 app.get('/api/admin/subscribers', function(req, res) {
-    if ((req.headers['x-admin-key']||req.query.key) !== process.env.ADMIN_KEY) return res.status(401).json({ error:'Unauthorized' });
-    db.all('SELECT email,source,created_at FROM subscribers ORDER BY created_at DESC', function(err,rows) {
+    if (!checkAdminAuth(req)) return res.status(401).json({ error:'Unauthorized' });
+    db.all('SELECT email,source,created_at FROM subscribers ORDER BY created_at DESC', function(err, rows) {
         if (err) return res.status(500).json({ error: err.message });
         res.json({ subscribers: rows, count: rows.length });
     });

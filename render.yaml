@@ -1,17 +1,13 @@
 services:
   - type: web
-    name: phoenixchems
+    name: phoenics-peptides
     env: node
     buildCommand: npm install
     startCommand: node server.js
     envVars:
       - key: PORT
         value: 10000
-      - key: ADMIN_KEY
-        generateValue: true
       - key: NODE_ENV
         value: production
-    disk:
-      name: phoenixchems-db
-      mountPath: /opt/render/project/src/database
-      sizeGB: 1
+      - key: ADMIN_KEY
+        value: phoenix-admin-2026
